@@ -1,0 +1,43 @@
+{
+  "call_id": "l3-judge-2609.29808-full_reference-sensitivity-gemini",
+  "attempt": 1,
+  "arm_id": "l3-blind-judge-gemini",
+  "provider": "gemini",
+  "model_id_sent": "gemini-3.5-flash-lite",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+  "call_start_utc": "2026-09-26T23:03:54Z",
+  "settings": {
+    "thinkingConfig": {
+      "thinkingLevel": "low"
+    },
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 1500,
+    "blind": true
+  },
+  "http_status": 200,
+  "latency_ms": 25633,
+  "usage": {
+    "input_tokens": 9270,
+    "output_tokens": 159,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": null,
+    "mapping": {
+      "input": "usageMetadata.promptTokenCount",
+      "output": "usageMetadata.candidatesTokenCount",
+      "cached_input": "usageMetadata.cachedContentTokenCount"
+    }
+  },
+  "cost": {
+    "amount": 0.0031785,
+    "rates_used_usd_per_million": {
+      "input": 0.3,
+      "cached_input": 0.3,
+      "output": 2.5
+    },
+    "rate_source": "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC",
+    "tier": null
+  },
+  "output": "{\"blind_label\": \"A\", \"faithfulness\": 4, \"evidence_support\": 4, \"depth\": 3, \"novelty\": 3, \"systems_relevance\": 4, \"actionability\": 4, \"compression\": 3, \"uncertainty_calibration\": 2, \"durable_memory_precision\": 3, \"justification\": \"Candidate A provides a comprehensive, well-structured analysis of the dual-plane containment architecture. It accurately cites specific page numbers and quotes regarding benchmarks, threat models, and empirical findings. The evaluation matches the agenda topics well (agent reliability, harness/runtime, tool use), and the scoring follows the instructions faithfully, including marking uncertainty calibration as 2 due to unobservable provenance.\"}",
+  "provider_response_model_version": "gemini-3.5-flash-lite",
+  "artifact": "raw/responses/l3/judges/gemini/l3-judge-2609.29808-full_reference-sensitivity-gemini-a1.json"
+}

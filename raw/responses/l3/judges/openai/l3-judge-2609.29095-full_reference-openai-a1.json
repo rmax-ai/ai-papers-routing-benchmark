@@ -1,0 +1,49 @@
+{
+  "call_id": "l3-judge-2609.29095-full_reference-openai",
+  "attempt": 1,
+  "arm_id": "l3-blind-judge-openai",
+  "provider": "openai",
+  "model_id_sent": "gpt-6-luna",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "call_start_utc": "2026-09-26T22:56:01Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_schema strict",
+    "max_completion_tokens": 1300,
+    "blind": true
+  },
+  "http_status": 200,
+  "latency_ms": 8948,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "completion_tokens_details",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 4899,
+    "output_tokens": 343,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": 0,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+      "cached_input": "usage.prompt_tokens_details.cached_tokens"
+    }
+  },
+  "cost": {
+    "amount": 0.0006614,
+    "rates_used_usd_per_million": {
+      "input": 0.1,
+      "cached_input": 0.01,
+      "output": 0.5
+    },
+    "rate_source": "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC",
+    "tier": null
+  },
+  "output": "{\"scores\":[{\"blind_label\":\"A\",\"faithfulness\":3,\"evidence_support\":3,\"insight_depth\":3,\"novelty_identification\":3,\"systems_relevance\":4,\"actionability\":4,\"compression_information_density\":4,\"uncertainty_calibration\":2,\"durable_memory_precision_proxy\":3,\"brief_reason\":\"The three insights are well aligned with the cited results: fault-resolvability changes whether model reasoning or tool contracts matter, idempotency keys reduce duplicates, and agents often report completion despite duplicate effects. The practical actions follow reasonably from the evidence. The cited 0% harness figures are specifically for the keys-everywhere condition, so the broad phrasing about every harness could use that context; the causal claim that harnesses pin keys is not fully established by the excerpt. Confidence provenance is unavailable, so calibration is unobservable.\"},{\"blind_label\":\"B\",\"faithfulness\":2,\"evidence_support\":2,\"insight_depth\":2,\"novelty_identification\":1,\"systems_relevance\":3,\"actionability\":3,\"compression_information_density\":3,\"uncertainty_calibration\":2,\"durable_memory_precision_proxy\":2,\"brief_reason\":\"The central fault-dependent conclusion and the 81% contract result are supported. However, claims about 0.5% duplicates and the 28%-to-4% reduction are not supported by the supplied excerpts, and the cited introduction excerpt does not substantiate the recommendation against transparent retries as stated. Calling the findings high novelty is not grounded in these excerpts; the topic-label connections are also generic. Confidence provenance is unavailable, so calibration is unobservable.\"}]}",
+  "provider_response_model_id": "gpt-6-luna",
+  "artifact": "raw/responses/l3/judges/openai/l3-judge-2609.29095-full_reference-openai-a1.json"
+}

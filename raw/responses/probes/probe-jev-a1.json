@@ -1,0 +1,46 @@
+{
+  "call_id": "probe-jev",
+  "attempt": 1,
+  "arm_id": "capability-jev",
+  "provider": "jev",
+  "model_id_sent": "typesafe-ai/jev",
+  "endpoint": "https://ai-gateway.vercel.sh/v4/ai/evaluation-model",
+  "call_start_utc": "2026-09-25T14:57:20Z",
+  "settings": {
+    "protocol": "AI Gateway evaluation v4",
+    "questions": {
+      "answer_is_two": {
+        "type": "boolean",
+        "instructions": "Does the state say that the answer is 2?"
+      }
+    },
+    "providerOptions": {}
+  },
+  "http_status": 200,
+  "latency_ms": 932,
+  "usage": {
+    "input_tokens": 283,
+    "output_tokens": 22,
+    "cached_input_tokens": null,
+    "reasoning_tokens": null,
+    "mapping": {
+      "input": "usage.inputTokens",
+      "output": "usage.outputTokens"
+    },
+    "raw_usage_fields": [
+      "inputTokens",
+      "outputTokens"
+    ]
+  },
+  "cost": {
+    "amount": 1.1886e-05,
+    "rates_used_usd_per_million": {
+      "input": 0.042,
+      "cached_input": 0.042,
+      "output": 0.0
+    },
+    "rate_source": "prior-art compare.ts reviewed fallback $0.042/1M input, $0 output; live table not queried",
+    "tier": null
+  },
+  "output": "{\"answer_is_two\": {\"type\": \"boolean\", \"probability\": 0.7}}"
+}

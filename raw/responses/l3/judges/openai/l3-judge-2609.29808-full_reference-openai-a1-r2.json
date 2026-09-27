@@ -1,0 +1,49 @@
+{
+  "call_id": "l3-judge-2609.29808-full_reference-openai",
+  "attempt": 1,
+  "arm_id": "l3-blind-judge-openai",
+  "provider": "openai",
+  "model_id_sent": "gpt-6-luna",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "call_start_utc": "2026-09-26T22:54:55Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_schema strict",
+    "max_completion_tokens": 1300,
+    "blind": true
+  },
+  "http_status": 200,
+  "latency_ms": 8667,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "completion_tokens_details",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 7276,
+    "output_tokens": 305,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": 0,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+      "cached_input": "usage.prompt_tokens_details.cached_tokens"
+    }
+  },
+  "cost": {
+    "amount": 0.0008801,
+    "rates_used_usd_per_million": {
+      "input": 0.1,
+      "cached_input": 0.01,
+      "output": 0.5
+    },
+    "rate_source": "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC",
+    "tier": null
+  },
+  "output": "{\"scores\":[{\"blind_label\":\"A\",\"faithfulness\":3,\"evidence_support\":3,\"insight_depth\":2,\"novelty_identification\":1,\"systems_relevance\":3,\"actionability\":3,\"compression_information_density\":2,\"uncertainty_calibration\":2,\"durable_memory_precision_proxy\":2,\"brief_reason\":\"Captures several source claims accurately and connects them to runtime controls, but the claimed novelty is asserted rather than established, limitations are omitted, and the incident and guardrail-paradox claims rely on the paper’s account rather than independently shown evidence. The kernel-detection claim is supported indirectly by a quote that does not itself give the 82%/100% figures. Confidence provenance is unavailable, so calibration is unobservable.\"},{\"blind_label\":\"B\",\"faithfulness\":3,\"evidence_support\":3,\"insight_depth\":3,\"novelty_identification\":3,\"systems_relevance\":4,\"actionability\":4,\"compression_information_density\":3,\"uncertainty_calibration\":2,\"durable_memory_precision_proxy\":3,\"brief_reason\":\"Provides useful runtime-oriented synthesis, actionable proposals, and important caveats about replication, host assumptions, and incident sourcing. Most claims track the cited excerpts; some evidence is incomplete for the formal soundness claim and the 100% detection figure is a test result, not a general guarantee. Novelty language is appropriately qualified. Confidence provenance is unavailable, so calibration is unobservable.\"}]}",
+  "provider_response_model_id": "gpt-6-luna",
+  "artifact": "raw/responses/l3/judges/openai/l3-judge-2609.29808-full_reference-openai-a1-r2.json"
+}

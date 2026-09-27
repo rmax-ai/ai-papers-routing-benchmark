@@ -1,0 +1,49 @@
+{
+  "call_id": "l3-2609.28585-selective-openai",
+  "attempt": 1,
+  "arm_id": "l3-selective-openai",
+  "provider": "openai",
+  "model_id_sent": "gpt-6-luna",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "call_start_utc": "2026-09-26T22:47:00Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_schema strict",
+    "max_completion_tokens": 3600,
+    "prompt_revision": "concise-v4"
+  },
+  "http_status": 200,
+  "latency_ms": 18668,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "completion_tokens_details",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 8057,
+    "output_tokens": 1508,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": 0,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+      "cached_input": "usage.prompt_tokens_details.cached_tokens"
+    }
+  },
+  "cost": {
+    "amount": 0.0015597,
+    "rates_used_usd_per_million": {
+      "input": 0.1,
+      "cached_input": 0.01,
+      "output": 0.5
+    },
+    "rate_source": "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"paper\": {\n    \"contribution\": \"The paper studies persistent billable state in tool-calling agents and evaluates attacks, host-side controls, workflow utility, and code-visible safeguards; its evidence is limited to the reported experiments and repository scan. [p.2, “We study it end to end”]\",\n    \"key_claims\": [\n      {\n        \"claim\": \"In 243 executions across six model families, maximum per-session input CAF reached 14,293×. [measured]\",\n        \"evidence_refs\": [\n          {\n            \"page\": 2,\n            \"section\": \"RQ1\",\n            \"quote\": \"maximum per-session input-token Cost Amplification Factor (CAF) reaches 14,293×\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"Full history raised mean effective session cost versus comparison policies by 21.2–35.9% in the reported provider reruns. [measured]\",\n        \"evidence_refs\": [\n          {\n            \"page\": 21,\n            \"section\": \"Table 13\",\n            \"quote\": \"∆cost [95% CI]\"\n          },\n          {\n            \"page\": 2,\n            \"section\": \"RQ2\",\n            \"quote\": \"Full raises mean effective session cost by 21.2–35.9%\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"The reported repository scan found safeguards proxies in 71/3,830 repositories and none covering all four families. [measured]\",\n        \"evidence_refs\": [\n          {\n            \"page\": 22,\n            \"section\": \"Figure 14\",\n            \"quote\": \"All four 0/71 (0%)\"\n          }\n        ]\n      }\n    ],\n    \"evidence\": [\n      {\n        \"claim\": \"Compression preserved more history-dependent task successes than deletion in the reported evaluation. [measured]\",\n        \"evidence_refs\": [\n          {\n            \"page\": 2,\n            \"section\": \"RQ2\",\n            \"quote\": \"compression preserves 10/12 and 11/12 successes\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"A progress-authorized policy achieved 22/24 oracle-verified successes, versus 13/24 under a fixed cap. [measured]\",\n        \"evidence_refs\": [\n          {\n            \"page\": 2,\n            \"section\": \"RQ3\",\n            \"quote\": \"achieves 22/24 oracle-verified task successes\"\n          },\n          {\n            \"page\": 2,\n            \"section\": \"RQ3\",\n            \"quote\": \"versus 13/24 under a fixed $0.10 cap\"\n          }\n        ]\n      }\n    ],\n    \"limitations\": [\n      \"The supplied excerpt only visually examines pages 1, 2, 21, and 22; mechanisms and results on other pages cannot be independently checked here.\",\n      \"The provided evidence does not establish generalization beyond the studied model families, providers, workflows, replay corpus, or repository corpus.\",\n      \"The repository scan measures code-visible safeguard proxies, not deployed runtime effectiveness or actual protection.\",\n      \"Host-side invariants and deterministic history transformation are proposed defenses; the excerpt does not supply broad real-world deployment evidence.\"\n    ]\n  },\n  \"insights\": [\n    {\n      \"insight\": \"Treat a tool return’s later reingestion as a separate authorization boundary from tool admission.\",\n      \"why_it_matters\": \"A permitted tool can still create recurring billed work when its output persists; the host controls whether that content returns to billable context.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Introduction\",\n          \"quote\": \"persistence determines whether its returned content can become future spend\"\n        },\n        {\n          \"page\": 2,\n          \"section\": \"RQ3\",\n          \"quote\": \"before reingestion\"\n        }\n      ],\n      \"confidence\": 0.88,\n      \"novelty\": \"The paper frames this as a host-side boundary; the excerpt does not establish priority beyond the paper’s own claim.\",\n      \"related_rmax_topics\": [\n        \"agent reliability\",\n        \"harness/runtime\",\n        \"MCP/governance\",\n        \"tool use\"\n      ],\n      \"possible_action\": \"Add host middleware that screens, transforms, and budgets tool-return history before every provider call.\"\n    },\n    {\n      \"insight\": \"History management is a reliability–cost tradeoff, not simply retain versus delete.\",\n      \"why_it_matters\": \"Deletion reduces carried state but can lose task continuity; the reported compression results suggest a possible middle policy, though they do not prove universal benefit.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 2,\n          \"section\": \"RQ2\",\n          \"quote\": \"compression preserves 10/12 and 11/12 successes\"\n        },\n        {\n          \"page\": 21,\n          \"section\": \"Table 13\",\n          \"quote\": \"Necessary Full/Drop\"\n        }\n      ],\n      \"confidence\": 0.81,\n      \"novelty\": \"The evidence is task- and provider-bounded; do not infer that compression is always safe or cheaper.\",\n      \"related_rmax_topics\": [\n        \"agent reliability\",\n        \"evaluation/assurance\",\n        \"harness/runtime\",\n        \"long-running workflows\"\n      ],\n      \"possible_action\": \"Evaluate compression, deletion, and raw retention on matched tasks with both cost and oracle-verified completion measures.\"\n    },\n    {\n      \"insight\": \"Long-running workflow controls should test both bounded spend and task completion.\",\n      \"why_it_matters\": \"The reported fixed cap interrupted more workflows than progress-authorized spend, showing why a cost limit alone may not represent operational success in this evaluation.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 2,\n          \"section\": \"RQ3\",\n          \"quote\": \"22/24 oracle-verified task successes\"\n        },\n        {\n          \"page\": 2,\n          \"section\": \"RQ3\",\n          \"quote\": \"versus 13/24 under a fixed $0.10 cap\"\n        }\n      ],\n      \"confidence\": 0.78,\n      \"novelty\": \"This is evidence from 24 Mistral Small 4 workflows, not a general comparison across deployments.\",\n      \"related_rmax_topics\": [\n        \"evaluation/assurance\",\n        \"harness/runtime\",\n        \"long-running workflows\",\n        \"agent reliability\"\n      ],\n      \"possible_action\": \"Track spend-bound compliance and oracle-verified completion jointly when evaluating runtime budget policies.\"\n    }\n  ],\n  \"connections\": [],\n  \"followups\": {\n    \"experiments\": [\n      \"Compare raw retention, deterministic compression, and deletion across more providers and task types, reporting cost and task success together.\"\n    ],\n    \"implementation_ideas\": [\n      \"Instrument the pre-reingestion boundary with auditable limits for prompt mass, context growth, recursive opportunity, and cumulative spend.\"\n    ],\n    \"research_questions\": [\n      \"How well do the reported controls generalize to deployed agent runtimes and workflows beyond the evaluated corpus?\"\n    ]\n  }\n}",
+  "provider_response_model_id": "gpt-6-luna",
+  "artifact": "raw/responses/l3/selective/openai/l3-2609.28585-selective-openai-a1.json"
+}

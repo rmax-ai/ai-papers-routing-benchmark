@@ -1,0 +1,49 @@
+{
+  "call_id": "l3-2609.28586-selective-openai",
+  "attempt": 1,
+  "arm_id": "l3-selective-openai",
+  "provider": "openai",
+  "model_id_sent": "gpt-6-luna",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "call_start_utc": "2026-09-26T22:48:53Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_schema strict",
+    "max_completion_tokens": 3600,
+    "prompt_revision": "concise-v4"
+  },
+  "http_status": 200,
+  "latency_ms": 18354,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "completion_tokens_details",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 7650,
+    "output_tokens": 1437,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": 0,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+      "cached_input": "usage.prompt_tokens_details.cached_tokens"
+    }
+  },
+  "cost": {
+    "amount": 0.0014835,
+    "rates_used_usd_per_million": {
+      "input": 0.1,
+      "cached_input": 0.01,
+      "output": 0.5
+    },
+    "rate_source": "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"paper\": {\n    \"contribution\": \"The paper formalizes approval laundering as a gap between an approved entry invocation and its workflow’s transitive effects, measures record coverage, and evaluates pre-authorization effect predictions and binding.\",\n    \"key_claims\": [\n      {\n        \"claim\": \"Approval records can faithfully identify an invocation while omitting effects of its activated workflow.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"a durable record faithfully names the entry invocation yet omits effects exercised within its workflow.\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"Across 111 fixed approval-object/trace pairs, residual records decrease from 40 to 17 to 13 across the reported information views.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"residual records fall from 40 under explicit fields to 17 with command semantics and 13\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"Frozen prospective predictions on 17 target-executed workflows reached 0.926 macro recall and 0.941 macro precision; binding reduced residual effects from 10 to 3.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"predictions achieve 0.926 macro recall and 0.941 macro precision; binding them cuts residual effects from 10 to 3.\"\n          }\n        ]\n      }\n    ],\n    \"evidence\": [\n      {\n        \"claim\": \"Across 11 fixed-SHA executions, the retrospective ladder reached zero metadata residuals.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"Across 11 fixed-SHA executions, the ladder reaches zero metadata residuals\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"The prototype carries frozen effect-bound records through Claude Code’s permission path without automatic approval.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"carries the frozen record through the permission path without automatic approval.\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"Confirmatory-B misses concentrate in file effects, with three cases missing a file effect.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 19,\n            \"section\": \"Appendix B.B\",\n            \"quote\": \"three cases miss a file effect\"\n          }\n        ]\n      }\n    ],\n    \"limitations\": [\n      \"The supplied paper text covers only pages 1, 2, 18, and 19, so full methods, benchmark construction, and results cannot be independently assessed.\",\n      \"Prospective outcome metrics use 17 target-executed workflows; one prespecified workflow did not reach target execution.\",\n      \"The Claude Code integration is described as a proof of concept, not evidence of production deployment or improved security outcomes.\",\n      \"The supplied evidence does not establish generalization beyond the evaluated workflows, projects, and frontends.\"\n    ]\n  },\n  \"insights\": [\n    {\n      \"insight\": \"Approval reliability requires auditing workflow-effect coverage, not merely confirming that the recorded command or tool call matches what was authorized.\",\n      \"why_it_matters\": \"A truthful invocation record may still fail to represent effects exercised by the launched workflow.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"a durable record faithfully names the entry invocation yet omits effects\"\n        }\n      ],\n      \"confidence\": 0.94,\n      \"novelty\": \"The paper frames this as a measurable record-coverage failure; broader novelty cannot be independently assessed from the supplied excerpts.\",\n      \"related_rmax_topics\": [\n        \"agent reliability\",\n        \"evaluation/assurance\",\n        \"harness/runtime\",\n        \"MCP/governance\",\n        \"tool use\"\n      ],\n      \"possible_action\": \"Evaluate approval records against post-execution workflow effects, separately from invocation-identity checks.\"\n    },\n    {\n      \"insight\": \"Effect prediction plus provenance binding is a promising pre-authorization repair in the evaluated workflows, but residual effects and missed file effects remain.\",\n      \"why_it_matters\": \"The reported reduction is substantial but not complete, so prediction should not be treated as a guarantee.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"Binding them cuts residual effects from 10 to 3.\"\n        },\n        {\n          \"page\": 19,\n          \"section\": \"Appendix B.B\",\n          \"quote\": \"three cases miss a file effect\"\n        }\n      ],\n      \"confidence\": 0.88,\n      \"novelty\": \"This is a paper-reported prospective evaluation; comparative novelty is not assessable from the supplied text.\",\n      \"related_rmax_topics\": [\n        \"agent reliability\",\n        \"evaluation/assurance\",\n        \"harness/runtime\",\n        \"tool use\",\n        \"long-running workflows\"\n      ],\n      \"possible_action\": \"Prototype frozen effect predictions with source provenance, and measure residual effects and class-specific misses.\"\n    },\n    {\n      \"insight\": \"MCP and other tool workflows merit explicit effect-bound approval records because the paper treats server-side tool calls as potential authority-expansion paths.\",\n      \"why_it_matters\": \"A named tool invocation may not fully communicate the network or other effects exercised downstream.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Introduction\",\n          \"quote\": \"a named tools/call invokes server-exposed behavior that can interact with external systems\"\n        }\n      ],\n      \"confidence\": 0.72,\n      \"novelty\": \"The excerpt describes MCP as an evaluated case but does not provide enough detail here to assess generality.\",\n      \"related_rmax_topics\": [\n        \"MCP/governance\",\n        \"tool use\",\n        \"evaluation/assurance\"\n      ],\n      \"possible_action\": \"Test whether approval records bind MCP tool identity, relevant server configuration, and predicted external effects.\"\n    }\n  ],\n  \"connections\": [],\n  \"followups\": {\n    \"experiments\": [\n      \"Replicate effect-coverage measurement on additional MCP servers and long-running workflows, recording fixed decision-time metadata and post-run effects.\"\n    ],\n    \"implementation_ideas\": [\n      \"Preserve a pre-authorization record containing the invocation, frozen predicted effects, source provenance, permission outcome, and post-run evidence hashes.\"\n    ],\n    \"research_questions\": [\n      \"How stable are source-backed effect predictions under changing dependencies, server behavior, and workflow configuration?\"\n    ]\n  }\n}",
+  "provider_response_model_id": "gpt-6-luna",
+  "artifact": "raw/responses/l3/selective/openai/l3-2609.28586-selective-openai-a1.json"
+}

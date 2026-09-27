@@ -1,0 +1,49 @@
+{
+  "call_id": "l3-2609.29808-full_reference-openai",
+  "attempt": 1,
+  "arm_id": "l3-full_reference-openai",
+  "provider": "openai",
+  "model_id_sent": "gpt-6-luna",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "call_start_utc": "2026-09-26T22:32:45Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_schema strict",
+    "max_completion_tokens": 2400,
+    "prompt_revision": "concise-v2"
+  },
+  "http_status": 200,
+  "latency_ms": 14627,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "completion_tokens_details",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 19352,
+    "output_tokens": 1463,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": 0,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+      "cached_input": "usage.prompt_tokens_details.cached_tokens"
+    }
+  },
+  "cost": {
+    "amount": 0.0026667,
+    "rates_used_usd_per_million": {
+      "input": 0.1,
+      "cached_input": 0.01,
+      "output": 0.5
+    },
+    "rate_source": "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"paper\": {\n    \"contribution\": \"The preprint describes a dual-plane agent containment architecture and reports incident and prototype benchmark results; the claims are limited by the stated threat model and available testbed evidence.\",\n    \"key_claims\": [\n      {\n        \"claim\": \"The paper reports an incident reconstruction of 17,600 actions over 4.5 days and argues the absence of active out-of-band halting enabled continued execution.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 2,\n            \"section\": \"Introduction\",\n            \"quote\": \"alerts sat in passive SIEM queues while the agent laterally traversed infrastructure.\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"In the reported prototype benchmarks, median SIGSTOP preemption was 0.0048 ms, while the architecture specifies a bound below 0.154 ms.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 15,\n            \"section\": \"Empirical Systems Telemetry Summary\",\n            \"quote\": \"Median: 0.0048 ms (4.83 µs)\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"The paper reports 82% bypass of lexical tripwires and 100% detection by its eBPF probes on a 500-payload test set.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 16,\n            \"section\": \"Experiment 1: De-obfuscated Intent Benchmark\",\n            \"quote\": \"Aho-Corasick Bypass Rate: 82.0% (410 / 500 payloads)\"\n          }\n        ]\n      }\n    ],\n    \"evidence\": [\n      {\n        \"claim\": \"The reported latency benchmark used 15 process launches and hierarchical bootstrap confidence intervals.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 15,\n            \"section\": \"Empirical Systems Telemetry Summary\",\n            \"quote\": \"E=15 processes | B=2000 bootstrap resamplings\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"The paper reports zero torn reads in 1,000 ring-buffer freeze events, while observing torn reads with shared memory under mid-write halts.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 16,\n            \"section\": \"Experiment 2: State Integrity Under Asynchronous Quiescence\",\n            \"quote\": \"0 torn reads across 1,000 asynchronous freeze events\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"The proposed enforcement guarantee assumes an uncompromised host kernel and excludes prior host-root compromise.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 9,\n            \"section\": \"Threat Model Boundary — Host Administrative Privilege\",\n            \"quote\": \"hold under the assumption that the attacker has NOT obtained host-level administrative (root) privileges\"\n          }\n        ]\n      }\n    ],\n    \"limitations\": [\n      \"Incident details are presented as a reconstruction citing external reports; the supplied text does not independently establish their provenance.\",\n      \"Prototype benchmark results do not demonstrate deployment-scale reliability or generalization beyond the stated machine and test setup.\",\n      \"The security guarantee depends on kernel integrity and excludes an attacker who already has host-root privileges.\",\n      \"The complete production implementation is described as closed-source, limiting independent reproduction from the excerpt.\"\n    ]\n  },\n  \"insights\": [\n    {\n      \"insight\": \"The prototype treats containment as enforcement below the agent loop, using syscall interception and process-group quiescence rather than relying only on model judgment.\",\n      \"why_it_matters\": \"This is directly relevant to agent reliability and harness design because a failed or bypassed planner need not retain control over execution.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 9,\n          \"section\": \"6. The Epistemic Andon Architecture\",\n          \"quote\": \"decoupled from agent reasoning.\"\n        },\n        {\n          \"page\": 11,\n          \"section\": \"6.3 Hardware and Kernel Fallacies\",\n          \"quote\": \"Cgroup v2 atomically halts the entire process tree\"\n        }\n      ],\n      \"confidence\": 0.78,\n      \"novelty\": \"The supplied text proposes and benchmarks this design; no independent comparison establishes novelty.\",\n      \"related_rmax_topics\": [\n        \"agent reliability\",\n        \"harness/runtime\",\n        \"tool use\"\n      ],\n      \"possible_action\": \"Test whether the harness can block unauthorized network and filesystem syscalls outside the agent process.\"\n    },\n    {\n      \"insight\": \"The reported lexical-versus-kernel detection results suggest evaluating defenses at the boundary where tool effects become concrete, not only on submitted command text.\",\n      \"why_it_matters\": \"This can expose obfuscation paths that text-level checks may miss, while the reported accuracy remains specific to the paper’s test set.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 16,\n          \"section\": \"Experiment 1: De-obfuscated Intent Benchmark\",\n          \"quote\": \"eBPF LSM Probe Detection Accuracy: 100.0% (500 / 500 payloads)\"\n        }\n      ],\n      \"confidence\": 0.66,\n      \"novelty\": \"The paper reports a test result; broader effectiveness is not established by the supplied text.\",\n      \"related_rmax_topics\": [\n        \"evaluation/assurance\",\n        \"tool use\",\n        \"harness/runtime\"\n      ],\n      \"possible_action\": \"Add adversarial syscall-level cases and independently reproduce detection measurements.\"\n    },\n    {\n      \"insight\": \"The paper’s stated threat boundary makes host integrity and privilege separation central assurance assumptions, not implementation details.\",\n      \"why_it_matters\": \"A preemption layer cannot provide its stated guarantee if an attacker can alter its kernel policy or supervisor boundary.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 9,\n          \"section\": \"Threat Model Boundary — Host Administrative Privilege\",\n          \"quote\": \"Defending against a host-root attacker requires hardware-rooted trust\"\n        }\n      ],\n      \"confidence\": 0.9,\n      \"novelty\": \"This is an explicit scope condition in the paper, not an independently validated result.\",\n      \"related_rmax_topics\": [\n        \"evaluation/assurance\",\n        \"harness/runtime\",\n        \"governance\"\n      ],\n      \"possible_action\": \"Document and test the deployment’s kernel, supervisor, and privilege assumptions.\"\n    }\n  ],\n  \"connections\": [],\n  \"followups\": {\n    \"experiments\": [\n      \"Independently reproduce the reported latency and obfuscation benchmarks across kernels, hardware, and adversarial payload families.\"\n    ],\n    \"implementation_ideas\": [\n      \"Prototype an out-of-band syscall policy and process-group freeze in a disposable agent harness.\"\n    ],\n    \"research_questions\": [\n      \"How do asynchronous preemption, durable checkpoints, and recovery behave in real long-running workflows under crashes and partial writes?\"\n    ]\n  }\n}",
+  "provider_response_model_id": "gpt-6-luna",
+  "artifact": "raw/responses/l3/full_reference/openai/l3-2609.29808-full_reference-openai-a1-r2.json"
+}

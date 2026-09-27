@@ -1,0 +1,54 @@
+{
+  "call_id": "l1-2609.28585-deepseek",
+  "attempt": 1,
+  "arm_id": "l1-deepseek",
+  "provider": "deepseek",
+  "model_id_sent": "deepseek-flash",
+  "endpoint": "https://api.deepseek.com/chat/completions",
+  "call_start_utc": "2026-09-25T15:10:16Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_object",
+    "max_tokens": 1200
+  },
+  "http_status": 200,
+  "latency_ms": 1075,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "prompt_cache_hit_tokens",
+      "prompt_cache_miss_tokens",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 778,
+    "output_tokens": 66,
+    "cached_input_tokens": 128,
+    "reasoning_tokens": null,
+    "reasoning_content_present": false,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "cached_input": "usage.prompt_cache_hit_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+    }
+  },
+  "cost": {
+    "amount": 0.000137484,
+    "rates_used_usd_per_million": {
+      "input": 0.15,
+      "cached_input": 0.003,
+      "output": 0.6
+    },
+    "rate_source": "https://api-docs.deepseek.com/quick_start/pricing/; prior-art compare.ts constants reviewed 2026-09-24 UTC",
+    "tier": "offpeak"
+  },
+  "output": "{\"relevance\":true,\"relevance_probability\":0.96,\"empirical\":true,\"empirical_probability\":0.95,\"best_topic\":\"mcp_governance\",\"worth_escalating\":true,\"worth_escalating_probability\":0.9,\"implementation_relevance\":4}",
+  "provider_response_model_id": "deepseek-flash",
+  "artifact": "raw/responses/l1/deepseek/l1-2609.28585-deepseek-a1.json",
+  "paper_id": "2609.28585",
+  "stratum": "high_value_proxy",
+  "input_sha256": "6f21cd4fcba8e2fc2d13591cfcdff53f6574e9a222ff40aaec960a1fa8a2f995",
+  "input_source": "title+authors+categories+arXiv abstract"
+}

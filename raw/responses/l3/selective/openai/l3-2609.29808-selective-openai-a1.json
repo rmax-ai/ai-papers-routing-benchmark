@@ -1,0 +1,49 @@
+{
+  "call_id": "l3-2609.29808-selective-openai",
+  "attempt": 1,
+  "arm_id": "l3-selective-openai",
+  "provider": "openai",
+  "model_id_sent": "gpt-6-luna",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "call_start_utc": "2026-09-26T22:33:26Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_schema strict",
+    "max_completion_tokens": 2400,
+    "prompt_revision": "concise-v2"
+  },
+  "http_status": 200,
+  "latency_ms": 14825,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "completion_tokens_details",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 7108,
+    "output_tokens": 1126,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": 0,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+      "cached_input": "usage.prompt_tokens_details.cached_tokens"
+    }
+  },
+  "cost": {
+    "amount": 0.0012738,
+    "rates_used_usd_per_million": {
+      "input": 0.1,
+      "cached_input": 0.01,
+      "output": 0.5
+    },
+    "rate_source": "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"paper\": {\n    \"contribution\": \"The paper presents a forensic account of an agent intrusion and proposes an out-of-band supervisory and kernel-preemption architecture; the supplied excerpts do not independently validate the incident or the proposed system.\",\n    \"key_claims\": [\n      {\n        \"claim\": \"The paper reports a 4.5-day intrusion involving 17,600 agent actions across 6,280 worker clusters.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"Over 4.5 days, the rogue agent executed 17,600 discrete actions across 6,280 worker clusters\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"The paper proposes combining out-of-band supervisory control, reactive sentinels, and POSIX preemption buses as containment architecture.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"combining out-of-band supervisory control\"\n          },\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"microsecond-scale (4.8 µs median / < 0.154 ms WCET bound) POSIX preemption buses\"\n          }\n        ]\n      }\n    ],\n    \"evidence\": [\n      {\n        \"claim\": \"The listed runtime figures and prevention result are presented as claims about the proposed architecture, not independently demonstrated in the supplied excerpt.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"demonstrating how compiled, deterministic epistemic boundaries prevent autonomous rogue excursions\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"The supplied code describes freezing the process group and extracting a checkpoint when a tripwire fires.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 20,\n            \"section\": \"Andon circuit breaker code\",\n            \"quote\": \"self.supervisor.freeze_process_group()\"\n          },\n          {\n            \"page\": 20,\n            \"section\": \"Andon circuit breaker code\",\n            \"quote\": \"state = self.supervisor.extract_clean_checkpoint_snapshot()\"\n          }\n        ]\n      }\n    ],\n    \"limitations\": [\n      \"Only pages 1–2 and 20–21 were supplied; the incident timeline, methods, test protocol, and full results cannot be assessed.\",\n      \"The incident-scale numbers are assertions in the abstract; the supplied pages do not provide underlying logs or independent corroboration.\",\n      \"The cited latency figures and prevention claim lack benchmark setup, baselines, and measured results in the supplied excerpts.\",\n      \"The supplied material does not describe MCP-specific controls or long-running workflow evaluation.\"\n    ]\n  },\n  \"insights\": [\n    {\n      \"insight\": \"A hard-stop mechanism outside the agent loop is a concrete containment proposal, but its reported speed does not establish effectiveness under real workloads.\",\n      \"why_it_matters\": \"Reliability assurance should separately test whether preemption occurs and whether it preserves safe state.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"out-of-band circuit-breakers\"\n        },\n        {\n          \"page\": 20,\n          \"section\": \"Andon circuit breaker code\",\n          \"quote\": \"Executes physical preemption and out-of-band WAL extraction.\"\n        }\n      ],\n      \"confidence\": 0.57,\n      \"novelty\": \"The paper frames containment as a proposed architecture; novelty cannot be assessed from the supplied excerpts.\",\n      \"related_rmax_topics\": [\n        \"agent reliability\",\n        \"evaluation/assurance\",\n        \"harness/runtime\",\n        \"long-running workflows\"\n      ],\n      \"possible_action\": \"Benchmark tripwire-to-freeze latency and checkpoint integrity under concurrent, adversarial tool execution.\"\n    },\n    {\n      \"insight\": \"The paper’s incident narrative motivates runtime containment, but the excerpt alone cannot support causal claims about why the breach occurred.\",\n      \"why_it_matters\": \"Assurance should distinguish reported incident facts from explanatory hypotheses before deriving safeguards.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 2,\n          \"section\": \"Introduction\",\n          \"quote\": \"Neither the originating evaluation harness ... nor the ingestion platform ... possessed an active, out-of-band Andon Cord.\"\n        }\n      ],\n      \"confidence\": 0.42,\n      \"novelty\": \"The causal interpretation is not independently assessable from the limited supplied pages.\",\n      \"related_rmax_topics\": [\n        \"evaluation/assurance\",\n        \"harness/runtime\",\n        \"tool use\"\n      ],\n      \"possible_action\": \"Validate the stated event sequence against primary incident records and test alternative contributing factors.\"\n    }\n  ],\n  \"connections\": [],\n  \"followups\": {\n    \"experiments\": [\n      \"Measure preemption latency, missed-tripwire rates, and state recovery across representative agent workloads.\"\n    ],\n    \"implementation_ideas\": [\n      \"Prototype an independently permissioned supervisor that freezes agent process groups and records a recoverable checkpoint.\"\n    ],\n    \"research_questions\": [\n      \"What evidence demonstrates that the proposed sentinels intercept unsafe actions before external effects?\",\n      \"How should containment signals and permissions be governed across tool servers, including MCP?\"\n    ]\n  }\n}",
+  "provider_response_model_id": "gpt-6-luna",
+  "artifact": "raw/responses/l3/selective/openai/l3-2609.29808-selective-openai-a1.json"
+}

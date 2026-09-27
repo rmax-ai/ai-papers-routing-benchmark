@@ -1,0 +1,43 @@
+{
+  "call_id": "l3-2609.28586-full_reference-gemini",
+  "attempt": 1,
+  "arm_id": "l3-full_reference-gemini",
+  "provider": "gemini",
+  "model_id_sent": "gemini-3.5-flash-lite",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+  "call_start_utc": "2026-09-26T22:47:27Z",
+  "settings": {
+    "thinkingConfig": {
+      "thinkingLevel": "low"
+    },
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 3000,
+    "prompt_revision": "concise-v4"
+  },
+  "http_status": 200,
+  "latency_ms": 28178,
+  "usage": {
+    "input_tokens": 31074,
+    "output_tokens": 1172,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": null,
+    "mapping": {
+      "input": "usageMetadata.promptTokenCount",
+      "output": "usageMetadata.candidatesTokenCount",
+      "cached_input": "usageMetadata.cachedContentTokenCount"
+    }
+  },
+  "cost": {
+    "amount": 0.0122522,
+    "rates_used_usd_per_million": {
+      "input": 0.3,
+      "cached_input": 0.3,
+      "output": 2.5
+    },
+    "rate_source": "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"paper\": {\n    \"contribution\": \"We formalize closure-bound approval over six operational effect classes, measure approval laundering across controlled mechanisms and fixed-SHA projects, and evaluate pre-authorization recovery using frozen, source-backed predictions.\",\n    \"key_claims\": [\n      {\n        \"claim\": \"Approval laundering is a structural record-coverage failure where a durable record faithfully names the entry invocation but omits effects exercised within its transitive workflow.\",\n        \"evidence\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"Coding-agent approval interfaces bind a human decision to a command or tool call, whereas developer tools execute the transitive workflow that invocation activates.\"\n          },\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"We call the resulting structural record-coverage failure approval laundering: a durable record faithfully names the entry invocation yet omits effects exercised within its workflow.\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"No deterministic or randomized record-only policy can guarantee correctness when identical policy-visible fields require different effect-specific decisions.\",\n        \"evidence\": [\n          {\n            \"page\": 2,\n            \"section\": \"I. Introduction\",\n            \"quote\": \"We formalize closure-bound approval over six operational effect classes and derive an information limit: if executions with identical policy-visible fields require different effect-specific decisions, no deterministic or randomized record-only policy can guarantee both.\"\n          },\n          {\n            \"page\": 6,\n            \"section\": \"III. Closure-Bound Approval and Threat Model\",\n            \"quote\": \"and F cannot agree with Q almost surely on both instances: it is impossible that mu({q1}) = mu({q2}) = 1.\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"Binding frozen, source-backed predictions before authorization cuts residual effect instances from 10 to 3 on 17 target-executed holdout workflows.\",\n        \"evidence\": [\n          {\n            \"page\": 2,\n            \"section\": \"I. Introduction\",\n            \"quote\": \"On 17 target-executed workflows from a prespecified holdout, predictions achieve 0.926 macro recall and 0.941 macro precision. Binding them cuts residual effect instances from 10 to 3.\"\n          },\n          {\n            \"page\": 12,\n            \"section\": \"VI. Pre-Execution Recovery and Effect-Bound Records\",\n            \"quote\": \"Reusing the frozen predictions raises case-macro coverage from .755 to .922 and reduces residual effect instances from 10 to 3.\"\n          }\n        ]\n      }\n    ],\n    \"evidence\": [\n      {\n        \"page\": 2,\n        \"section\": \"I. Introduction\",\n        \"quote\": \"Across 111 fixed approval-object/trace pairs, residual records fall from 40 under explicit fields to 17 with command semantics and 13 when post hoc analysis adds metadata available at decision time.\"\n      },\n      {\n        \"page\": 2,\n        \"section\": \"I. Introduction\",\n        \"quote\": \"Across 11 fixed-SHA project executions, the same retrospective ladder reaches zero metadata residuals; two exact mappings recur across three product frontends.\"\n      },\n      {\n        \"page\": 6,\n        \"section\": \"IV. The Approval-to-Action Security Benchmark\",\n        \"quote\": \"Across 111 canonical records, the experiment summary contains 81 trace-reported effect-label assignments and reconstructs 40/111 strict explicit-field gaps under the latest-success rule.\"\n      }\n    ],\n    \"limitations\": [\n      \"The empirical evaluation is restricted to coding-agent workflows and specific development toolchains.\",\n      \"The set of operational effects is bounded to the six-class vocabulary of process, file, environment, network, container, and MCP.\",\n      \"Adversarial control is assumed to be bounded to expansion sources consumed by the selected toolchain.\",\n      \"Post-execution evidence collection relies on trusted collectors and hash-bound artifacts.\"\n    ]\n  },\n  \"insights\": [\n    {\n      \"insight\": \"Invocation identity does not imply effect completeness because developer tools execute transitive workflows whose operational effects extend beyond the entry command.\",\n      \"why_it_matters\": \"Relying solely on invocation-level approval records leaves downstream transitive side effects unmonitored and unconstrained.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"Coding-agent approval interfaces bind a human decision to a command or tool call, while developer tools execute the transitive workflow that invocation activates.\"\n        }\n      ],\n      \"confidence\": \"high\",\n      \"novelty\": \"first systematic security analysis of this record-to-closure relation\",\n      \"related_rmax_topics\": [\n        \"Ai Papers\"\n      ],\n      \"possible_action\": \"Implement pre-execution effect prediction and binding mechanisms before authorizing agent-driven tool calls.\"\n    }\n  ],\n  \"connections\": [],\n  \"followups\": []\n}",
+  "provider_response_model_version": "gemini-3.5-flash-lite",
+  "artifact": "raw/responses/l3/full_reference/gemini/l3-2609.28586-full_reference-gemini-a1.json"
+}

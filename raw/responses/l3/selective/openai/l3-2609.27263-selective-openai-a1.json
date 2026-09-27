@@ -1,0 +1,49 @@
+{
+  "call_id": "l3-2609.27263-selective-openai",
+  "attempt": 1,
+  "arm_id": "l3-selective-openai",
+  "provider": "openai",
+  "model_id_sent": "gpt-6-luna",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "call_start_utc": "2026-09-26T22:50:41Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_schema strict",
+    "max_completion_tokens": 3600,
+    "prompt_revision": "concise-v4"
+  },
+  "http_status": 200,
+  "latency_ms": 15103,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "completion_tokens_details",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 12131,
+    "output_tokens": 1356,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": 0,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+      "cached_input": "usage.prompt_tokens_details.cached_tokens"
+    }
+  },
+  "cost": {
+    "amount": 0.0018911,
+    "rates_used_usd_per_million": {
+      "input": 0.1,
+      "cached_input": 0.01,
+      "output": 0.5
+    },
+    "rate_source": "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"paper\": {\n    \"contribution\": \"An empirical characterization of gh-aw workflow structure, maintenance, instruction categories, and LLM labeling across repositories.\",\n    \"key_claims\": [\n      {\n        \"claim\": \"The study analyzes 1,248 workflow files across 276 repositories and 20,841 commit-file events.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"We analyze 1,248 files from 276 repositories, 20,841 commit-file events\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"Among labeled workflows, explicit prompt-injection defense is uncommon.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"only 9.4% explicitly address prompt-injection defense.\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"In the 120-day-activity subset, many workflows continue to receive updates in month four.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"78.2% still receive updates in month 4\"\n          }\n        ]\n      }\n    ],\n    \"evidence\": [\n      {\n        \"claim\": \"Workflow source files combine agent instructions with configuration and compile into executable GitHub Actions workflows.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"Markdown files that combine natural-language instructions with configuration and compile into executable GitHub Actions workflows.\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"Instructions are substantial in length and often contain code blocks.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"median of 556.5 words and code blocks in 62.1% of files.\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"LLM classification was compared with resolved human labels.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"F1 score of 0.818 and Cohen’s κ of 0.715 against the resolved human labels.\"\n          }\n        ]\n      }\n    ],\n    \"limitations\": [\n      \"The supplied text does not provide outcome measurements connecting instruction patterns to agent task success, reliability, cost, or safety.\",\n      \"The abstract reports maintenance for a selected 120-day-activity subset, so the result does not establish longer-term behavior for all workflows.\",\n      \"The excerpt does not specify whether the observed prompt-injection-defense prevalence predicts real-world exposure or harm.\",\n      \"The paper notes that search coverage and selection criteria do not establish generalizability beyond the studied sample (p. 14, “do not establish generalizability beyond our selection criteria”).\"\n    ]\n  },\n  \"insights\": [\n    {\n      \"insight\": \"Recurring workflow Markdown functions as an operational specification, not merely a one-off prompt.\",\n      \"why_it_matters\": \"Changes to persistent instructions may affect repeated repository automation, making version review and regression checks relevant.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"making those instructions operational specifications for repeated repository activities.\"\n        },\n      {\n        \"page\": 1,\n        \"section\": \"Abstract\",\n        \"quote\": \"78.2% still receive updates in month 4\"\n      }\n      ],\n      \"confidence\": 0.83,\n      \"novelty\": \"Empirical characterization in this study; whether revision causes runtime changes is unmeasured.\",\n      \"related_rmax_topics\": [\n        \"agent reliability\",\n        \"evaluation/assurance\",\n        \"long-running workflows\"\n      ],\n      \"possible_action\": \"Track instruction changes alongside workflow execution outcomes and add regression tests for recurring tasks.\"\n    },\n    {\n      \"insight\": \"A measured gap exists between common workflow instruction categories and explicit prompt-injection defenses.\",\n      \"why_it_matters\": \"The prevalence result motivates review of defenses in recurring agent workflows but does not demonstrate actual exploitability.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"only 9.4% explicitly address prompt-injection defense.\"\n        },\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"Tasks, outputs, constraints, and process instructions each appear in over 93%\"\n        }\n      ],\n      \"confidence\": 0.86,\n      \"novelty\": \"A corpus prevalence finding; the security effectiveness of added defenses was not tested.\",\n      \"related_rmax_topics\": [\n        \"agent reliability\",\n        \"MCP/governance\",\n        \"tool use\"\n      ],\n      \"possible_action\": \"Include an explicit prompt-injection-defense review item when auditing agent workflow instructions.\"\n    },\n    {\n      \"insight\": \"The reported LLM-labeling agreement supports classification as an analysis aid, not as validated runtime assurance.\",\n      \"why_it_matters\": \"Label agreement measures correspondence with human annotations, not whether workflows execute safely or correctly.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"F1 score of 0.818 and Cohen’s κ of 0.715 against the resolved human labels.\"\n        }\n      ],\n      \"confidence\": 0.8,\n      \"novelty\": \"The distinction follows from the reported evaluation target; no runtime assurance result is supplied.\",\n      \"related_rmax_topics\": [\n        \"evaluation/assurance\",\n        \"harness/runtime\"\n      ],\n      \"possible_action\": \"Keep automated instruction labels advisory and separately evaluate execution outcomes.\"\n    }\n  ],\n  \"connections\": [],\n  \"followups\": {\n    \"experiments\": [\n      \"Test whether instruction revisions correlate with task success, reliability, cost, and safety, as proposed by the paper (p. 16, “how instruction patterns and revisions affect execution outcomes”).\"\n    ],\n    \"implementation_ideas\": [\n      \"Add a workflow review checklist item for explicit prompt-injection defenses.\"\n    ],\n    \"research_questions\": [\n      \"Do explicit prompt-injection instructions measurably change agent behavior under adversarial repository content?\"\n    ]\n  }\n}",
+  "provider_response_model_id": "gpt-6-luna",
+  "artifact": "raw/responses/l3/selective/openai/l3-2609.27263-selective-openai-a1.json"
+}

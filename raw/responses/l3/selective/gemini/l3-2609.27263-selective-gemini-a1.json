@@ -1,0 +1,43 @@
+{
+  "call_id": "l3-2609.27263-selective-gemini",
+  "attempt": 1,
+  "arm_id": "l3-selective-gemini",
+  "provider": "gemini",
+  "model_id_sent": "gemini-3.5-flash-lite",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+  "call_start_utc": "2026-09-26T22:50:14Z",
+  "settings": {
+    "thinkingConfig": {
+      "thinkingLevel": "low"
+    },
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 3000,
+    "prompt_revision": "concise-v4"
+  },
+  "http_status": 200,
+  "latency_ms": 27337,
+  "usage": {
+    "input_tokens": 13600,
+    "output_tokens": 818,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": null,
+    "mapping": {
+      "input": "usageMetadata.promptTokenCount",
+      "output": "usageMetadata.candidatesTokenCount",
+      "cached_input": "usageMetadata.cachedContentTokenCount"
+    }
+  },
+  "cost": {
+    "amount": 0.006125,
+    "rates_used_usd_per_million": {
+      "input": 0.3,
+      "cached_input": 0.3,
+      "output": 2.5
+    },
+    "rate_source": "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"paper\": {\n    \"paper_id\": \"2609.27263\",\n    \"title\": \"Specifying and Maintaining Agentic Workflows: An Empirical Study of GitHub Agentic Workflows\",\n    \"contribution\": \"An empirical study examining the structure, evolution, and instruction content of 1,248 GitHub Agentic Workflows (gh-aw) Markdown files across 276 repositories.\",\n    \"key_claims\": [\n      \"GitHub Agentic Workflows (gh-aw) enable developers to specify repository tasks in Markdown files combining natural-language instructions with configuration, which are compiled into executable GitHub Actions workflows.\",\n      \"Only 9.4% of labeled workflows explicitly address prompt-injection defense.\"\n    ],\n    \"evidence\": [\n      {\n        \"page\": 1,\n        \"section\": \"Abstract / Introduction\",\n        \"quote\": \"GitHub Agentic Workflows (gh-aw) enables this approach through Markdown files that combine natural-language instructions with configuration and compile into executable GitHub Actions workflows.\"\n      },\n      {\n        \"page\": 1,\n        \"section\": \"Abstract / Introduction\",\n        \"quote\": \"and process instructions each appear in over 93% of labeled workflows, yet only 9.4% explicitly address prompt-injection defense.\"\n      }\n    ],\n    \"limitations\": [\n      \"GitHub's search limit could restrict corpus coverage despite size-bucket splitting and random sampling.\",\n      \"FREQ scores are descriptive formula outputs rather than validated measures of comprehension because texts contain code and syntax.\",\n      \"Mentioning a technical concept does not necessarily supply domain context, as shown by qualitative classification ambiguities.\",\n      \"Unchanged file size does not imply unchanged instructions due to command replacements.\"\n    ]\n  },\n  \"insights\": [\n    {\n      \"insight\": \"GitHub Agentic Workflows couple natural-language instructions with YAML frontmatter configuration in Markdown files to automate recurring repository operations.\",\n      \"why_it_matters\": \"It operationalizes agent instructions as persistent specifications for repeated tasks, making their maintenance and security guarantees consequential.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract / Introduction\",\n          \"quote\": \"GitHub Agentic Workflows (gh-aw) enables this approach through Markdown files that combine natural-language instructions with configuration and compile into executable GitHub Actions workflows.\"\n        }\n      ],\n      \"confidence\": \"high\",\n      \"novelty\": \"low\",\n      \"related_rmax_topics\": [\n        \"Ai Papers\"\n      ],\n      \"possible_action\": \"Practitioners should review both frontmatter settings and prose instructions when managing recurring agent tasks.\"\n    },\n    {\n      \"insight\": \"Although tasks, outputs, constraints, and process instructions are ubiquitous in agent workflows, explicit prompt-injection defenses are rarely included.\",\n      \"why_it_matters\": \"The lack of security safeguards in the vast majority of agentic workflows leaves them vulnerable to malicious inputs during automated execution.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract / Introduction\",\n          \"quote\": \"and process instructions each appear in over 93% of labeled workflows, yet only 9.4% explicitly address prompt-injection defense.\"\n        }\n      ],\n      \"confidence\": \"high\",\n      \"novelty\": \"medium\",\n      \"related_rmax_topics\": [\n        \"Ai Papers\"\n      ],\n      \"possible_action\": \"Developers should incorporate explicit prompt-injection defenses and resource budgets into agentic workflow specifications.\"\n    }\n  ],\n  \"connections\": [],\n  \"followups\": []\n}",
+  "provider_response_model_version": "gemini-3.5-flash-lite",
+  "artifact": "raw/responses/l3/selective/gemini/l3-2609.27263-selective-gemini-a1.json"
+}

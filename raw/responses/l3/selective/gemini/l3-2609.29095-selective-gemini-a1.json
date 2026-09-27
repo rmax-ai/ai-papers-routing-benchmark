@@ -1,0 +1,43 @@
+{
+  "call_id": "l3-2609.29095-selective-gemini",
+  "attempt": 1,
+  "arm_id": "l3-selective-gemini",
+  "provider": "gemini",
+  "model_id_sent": "gemini-3.5-flash-lite",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+  "call_start_utc": "2026-09-26T22:39:36Z",
+  "settings": {
+    "thinkingConfig": {
+      "thinkingLevel": "low"
+    },
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 2200,
+    "prompt_revision": "concise-v3"
+  },
+  "http_status": 200,
+  "latency_ms": 27362,
+  "usage": {
+    "input_tokens": 9335,
+    "output_tokens": 978,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": null,
+    "mapping": {
+      "input": "usageMetadata.promptTokenCount",
+      "output": "usageMetadata.candidatesTokenCount",
+      "cached_input": "usageMetadata.cachedContentTokenCount"
+    }
+  },
+  "cost": {
+    "amount": 0.0052455,
+    "rates_used_usd_per_million": {
+      "input": 0.3,
+      "cached_input": 0.3,
+      "output": 2.5
+    },
+    "rate_source": "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"paper\": {\n    \"contribution\": \"Evaluates where exactly-once behavior should be enforced (model, harness, or tool contract) using Limbo, a deterministic sandbox with twelve boundary fault modes across 25,930 episodes.\",\n    \"key_claims\": [\n      {\n        \"claim\": \"Frontier models instructed to act exactly once almost never duplicate a write whose acknowledgment was lost (0.5%), whereas weaker models duplicate in 18%.\",\n        \"evidence\": [\n          {\n            \"page\": 2,\n            \"section\": \"1\",\n            \"quote\": \"Frontier models instructed to act exactly once almost never duplicate a write whose acknowledgement was lost (0.5% of episodes), because they verify before retrying; weaker models duplicate in 18%, and without the explicit instruction the weaker and faster models duplicate markedly more while the strongest are unaffected.\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"Transparent client-side retries cut exactly-once success from 72% to 50% in the native contract, but with keys on every write, exactly-once success reaches 99%.\",\n        \"evidence\": [\n          {\n            \"page\": 2,\n            \"section\": \"1\",\n            \"quote\": \"Transparent client-side retries cut exactly-once success from 72% to 50%. In the native contract even an outcome oracle that sees in-flight requests reaches only 87%, because redelivery on key-less writes is beyond any client-side policy; with keys on every write and a guard that attaches them, the duplicate rate of a shared model is at most 0% even without the guard, and exactly-once success is at least 100% with it.\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"In 90% of episodes that produced a duplicate side effect, agents reported the task as completed.\",\n        \"evidence\": [\n          {\n            \"page\": 2,\n            \"section\": \"1\",\n            \"quote\": \"Agents do not know when they have duplicated. In 90% of episodes that produced a duplicate, the agent reported the task as completed.\"\n          }\n        ]\n      }\n    ],\n    \"limitations\": [\n      {\n        \"page\": 16,\n        \"section\": \"Limitations\",\n        \"quote\": \"The services are simulated, although their semantics follow documented production conventions and every fault fires at the service boundary rather than in the prompt.\"\n      },\n      {\n        \"page\": 16,\n        \"section\": \"Limitations\",\n        \"quote\": \"All models were reached through one gateway, which fixes some settings (for example reasoning effort) at provider defaults, and model identifiers refer to versions available in September 2026.\"\n      },\n      {\n        \"page\": 16,\n        \"section\": \"Limitations\",\n        \"quote\": \"Our tasks are short to medium in length; long-horizon workflows compound the effects we measure but also introduce failure modes we do not study.\"\n      },\n      {\n        \"page\": 16,\n        \"section\": \"Limitations\",\n        \"quote\": \"gpt-4.1 is served from a separate low quota and its E1 coverage is incomplete (87%); it is reported per model but excluded from pooled statistics.\"\n      }\n    ]\n  },\n  \"insights\": [\n    {\n      \"insight\": \"Model capability and prompting determine exactly-once success when read-backs can resolve failures, whereas tool contracts dictate success during unobservable in-flight or redelivery states.\",\n      \"why_it_matters\": \"Clarifies that prompting alone is insufficient for network-level failures without proper tool contract guarantees.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 2,\n          \"section\": \"1\",\n          \"quote\": \"When a read-back can resolve the failure, the model decides... When it cannot, only the contract does.\"\n        }\n      ],\n      \"confidence\": \"high\",\n      \"novelty\": \"medium\",\n      \"related_rmax_topics\": [\n        \"Ai Papers\"\n      ],\n      \"possible_action\": \"Deploy idempotency keys in tool contracts rather than relying solely on model verification for network-level failures.\"\n    }\n  ],\n  \"connections\": [],\n  \"followups\": []\n}",
+  "provider_response_model_version": "gemini-3.5-flash-lite",
+  "artifact": "raw/responses/l3/selective/gemini/l3-2609.29095-selective-gemini-a1.json"
+}

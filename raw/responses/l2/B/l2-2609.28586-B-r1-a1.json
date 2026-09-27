@@ -1,0 +1,92 @@
+{
+  "call_id": "l2-2609.28586-B-r1",
+  "attempt": 1,
+  "arm_id": "l2-B",
+  "provider": "gemini",
+  "model_id_sent": "gemini-3.5-flash-lite",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+  "call_start_utc": "2026-09-26T22:14:39Z",
+  "settings": {
+    "thinkingConfig": {
+      "thinkingLevel": "low"
+    },
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 3000,
+    "strategy": "B",
+    "round": 1,
+    "page_numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ]
+  },
+  "http_status": 200,
+  "latency_ms": 29646,
+  "usage": {
+    "input_tokens": 10273,
+    "output_tokens": 687,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": null,
+    "mapping": {
+      "input": "usageMetadata.promptTokenCount",
+      "output": "usageMetadata.candidatesTokenCount",
+      "cached_input": "usageMetadata.cachedContentTokenCount"
+    }
+  },
+  "cost": {
+    "amount": 0.0047994,
+    "rates_used_usd_per_million": {
+      "input": 0.3,
+      "cached_input": 0.3,
+      "output": 2.5
+    },
+    "rate_source": "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"candidate_claims\": [\n    {\n      \"claim\": \"Coding-agent approval interfaces bind human decisions to entry invocations, but developer tools execute transitive workflows whose realized effects often extend beyond the durable record, leading to approval laundering.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"quote\": \"Coding-agent approval interfaces bind a human decision to a command or tool call, whereas developer tools execute the transitive workflow that invocation activates... We call the resulting structural record-coverage failure approval laundering: a durable record faithfully names the entry invocation yet omits effects exercised within its workflow.\"\n        }\n      ],\n      \"importance\": \"load_bearing\"\n    },\n    {\n      \"claim\": \"When identical policy-visible fields require different effect-specific decisions, no deterministic or randomized record-only policy can guarantee both.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"quote\": \"We prove that when identical policy-visible fields require different effect-specific decisions, no deterministic or randomized record-only policy can guarantee both.\"\n        }\n      ],\n      \"importance\": \"load_bearing\"\n    },\n    {\n      \"claim\": \"Across 111 fixed approval-object/trace pairs, residual records fall from 40 under explicit fields to 17 with command semantics and 13 when post hoc analysis adds metadata available at decision time.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 2,\n          \"quote\": \"Across 111 approval-object/trace pairs held fixed across views, records omitting at least one observed effect fall from 40 under explicit fields to 17 with command semantics and 13 when post hoc analysis adds metadata available at decision time.\"\n        }\n      ],\n      \"importance\": \"load_bearing\"\n    }\n  ],\n  \"key_claims\": [\n    \"Approval laundering is a general record-coverage failure where truthful invocation identity does not imply effect-complete approval.\",\n    \"Generic command semantics and decision-time metadata progressively reduce residual record gaps, but capture-layer and fixture gaps persist without explicit pre-execution effect binding.\",\n    \"Binding frozen, source-backed effect predictions before authorization (effect-bound records) significantly improves prospective coverage and reduces residual effect instances on confirmatory holdouts.\"\n  ],\n  \"limitations\": [\n    \"The empirical evaluation relies on specific coding-agent frontends (Claude Code, GitHub Copilot CLI, Qwen Code) and predefined repository fixtures.\",\n    \"Environment effects were not measured by the confirmatory-B outcome collector, and certain edge cases rely on heuristic command semantics and parser v1.1 rules.\"\n  ],\n  \"load_bearing_pages\": [\n    1,\n    2,\n    5,\n    6,\n    8,\n    11,\n    12\n  ],\n  \"requested_pages\": [],\n  \"stop_reason\": \"The provided 19 pages contain complete details on the paper's formalization, benchmark definitions, empirical findings, and evaluations, which fully satisfy the extraction agenda without requiring further pages.\"\n}",
+  "provider_response_model_version": "gemini-3.5-flash-lite",
+  "artifact": "raw/responses/l2/B/l2-2609.28586-B-r1-a1.json",
+  "paper_id": "2609.28586",
+  "strategy": "B",
+  "round": 1,
+  "input_sha256": "4b2ce2e208f5102b822de9c2014722f4edb12ab3e30b456e2bc2140b7598bf2e",
+  "page_numbers_sent": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "input_text_bytes": 1617,
+  "inline_part_bytes": 1249608
+}

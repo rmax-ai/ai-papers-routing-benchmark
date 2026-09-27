@@ -1,0 +1,64 @@
+{
+  "call_id": "l2-2609.29095-C-r1",
+  "attempt": 1,
+  "arm_id": "l2-C",
+  "provider": "gemini",
+  "model_id_sent": "gemini-3.5-flash-lite",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+  "call_start_utc": "2026-09-26T22:07:59Z",
+  "settings": {
+    "thinkingConfig": {
+      "thinkingLevel": "low"
+    },
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 3000,
+    "strategy": "C",
+    "round": 1,
+    "page_numbers": [
+      1,
+      2,
+      16,
+      22,
+      23
+    ]
+  },
+  "http_status": 200,
+  "latency_ms": 27314,
+  "usage": {
+    "input_tokens": 5999,
+    "output_tokens": 553,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": null,
+    "mapping": {
+      "input": "usageMetadata.promptTokenCount",
+      "output": "usageMetadata.candidatesTokenCount",
+      "cached_input": "usageMetadata.cachedContentTokenCount"
+    }
+  },
+  "cost": {
+    "amount": 0.0031822,
+    "rates_used_usd_per_million": {
+      "input": 0.3,
+      "cached_input": 0.3,
+      "output": 2.5
+    },
+    "rate_source": "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"candidate_claims\": [\n    {\n      \"claim\": \"Frontier models instructed to act exactly once almost never duplicate a write whose acknowledgment was lost (0.5%), because they verify before retrying, whereas weaker models duplicate in 18%.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 2,\n          \"quote\": \"Frontier models instructed to act exactly once almost never duplicate a write whose acknowledgement was lost (0.5% of episodes), because they verify before retrying; weaker models duplicate in 18%, and without the explicit instruction the weaker and faster models duplicate markedly more while the strongest are unaffected.\"\n        }\n      ],\n      \"importance\": \"load_bearing\"\n    },\n    {\n      \"claim\": \"Transparent client-side retries cut exactly-once success from 72% to 50% in the native contract, but with keys on every write, exactly-once success reaches 99%.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 2,\n          \"quote\": \"Transparent client-side retries cut exactly-once success from 72% to 50%. In the native contract even an outcome oracle that sees in-flight requests reaches only 87%, because redelivery on key-less writes is beyond any client-side policy; with keys on every write and a guard that attaches them, the duplicate rate of a shared model is at most 0% even without the guard, and exactly-once success is at least 100% with it.\"\n        }\n      ],\n      \"importance\": \"load_bearing\"\n    }\n  ],\n  \"key_claims\": [\n    \"Frontier models verify before retrying lost acknowledgements while weaker models duplicate more.\",\n    \"Offering idempotency keys on every write lowers duplicate rates and ensures exactly-once success.\",\n    \"Harnesses matter little when client-side middleware or guards attach idempotency keys across harnesses unchanged.\"\n  ],\n  \"limitations\": [\n    \"The services are simulated, although their semantics follow documented production conventions and every fault fires at the service boundary rather than in the prompt.\"\n  ],\n  \"load_bearing_pages\": [1, 2],\n  \"requested_pages\": [],\n  \"stop_reason\": \"The seen pages (1, 2, 16, 22, 23) provide sufficient evidence regarding model behavior, tool contracts, harness effects, and limitations on duplicate side effects in LLM agents.\"\n}",
+  "provider_response_model_version": "gemini-3.5-flash-lite",
+  "artifact": "raw/responses/l2/C/l2-2609.29095-C-r1-a1.json",
+  "paper_id": "2609.29095",
+  "strategy": "C",
+  "round": 1,
+  "input_sha256": "cf35ddb59887a0bee9262d0fcbefd692cd907365ed90a422589b5dd184b08eda",
+  "page_numbers_sent": [
+    1,
+    2,
+    16,
+    22,
+    23
+  ],
+  "input_text_bytes": 1791,
+  "inline_part_bytes": 465378
+}

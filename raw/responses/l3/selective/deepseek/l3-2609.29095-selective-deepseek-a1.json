@@ -1,0 +1,51 @@
+{
+  "call_id": "l3-2609.29095-selective-deepseek",
+  "attempt": 1,
+  "arm_id": "l3-selective-deepseek",
+  "provider": "deepseek",
+  "model_id_sent": "deepseek-flash",
+  "endpoint": "https://api.deepseek.com/chat/completions",
+  "call_start_utc": "2026-09-26T22:39:31Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_object",
+    "max_tokens": 2000,
+    "prompt_revision": "concise-v3"
+  },
+  "http_status": 200,
+  "latency_ms": 4809,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "prompt_cache_hit_tokens",
+      "prompt_cache_miss_tokens",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 8490,
+    "output_tokens": 1240,
+    "cached_input_tokens": 3456,
+    "reasoning_tokens": null,
+    "reasoning_content_present": false,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "cached_input": "usage.prompt_cache_hit_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+    }
+  },
+  "cost": {
+    "amount": 0.001509468,
+    "rates_used_usd_per_million": {
+      "input": 0.15,
+      "cached_input": 0.003,
+      "output": 0.6
+    },
+    "rate_source": "https://api-docs.deepseek.com/quick_start/pricing/; prior-art compare.ts constants reviewed 2026-09-24 UTC",
+    "tier": "offpeak"
+  },
+  "output": "{\n  \"paper\": {\n    \"paper_id\": \"2609.29095\",\n    \"title\": \"Where Does Exactly-Once Live? Model, Harness, and Tool-Contract Effects on Duplicate Side Effects in LLM Agents\",\n    \"contribution\": \"Introduces Limbo, a deterministic sandbox of six services with twelve fault modes graded against a committed-effect ledger, plus a factorial study of where exactly-once behaviour should be enforced (page 1: \\\"We introduce Limbo, a deterministic sandbox of six services with realistic contracts\\\").\",\n    \"key_claims\": [\n      \"When an immediate read-back resolves the ambiguity, the model drives duplication behaviour; when it cannot, the tool contract does (page 1: \\\"the answer depends on the fault\\\").\",\n      \"No verification-only policy can be exactly-once under late commits without a bound on in-flight time (page 2: \\\"We prove that no verification-only policy can be exactly-once under late commits without a known bound on in-flight time\\\").\",\n      \"Offering idempotency keys on every write lowers the duplicate rate substantially, while the harness matters little (page 2: \\\"the duplicate rate falls from 28% to 4% with no other change\\\").\"\n    ],\n    \"evidence\": [\n      {\n        \"page\": 2,\n        \"section\": \"Introduction\",\n        \"quote\": \"Frontier models instructed to act exactly once almost never duplicate a write whose acknowledgement was lost (0.5% of episodes)\"\n      },\n      {\n        \"page\": 2,\n        \"section\": \"Introduction\",\n        \"quote\": \"under redelivery, in 74%. Here the contract explains 81% of the variance\"\n      },\n      {\n        \"page\": 2,\n        \"section\": \"Introduction\",\n        \"quote\": \"In 90% of episodes that produced a duplicate, the agent reported the task as completed\"\n      }\n    ],\n    \"limitations\": [\n      \"Services are simulated rather than real production systems (page 16: \\\"The services are simulated, although their semantics follow documented production conventions\\\").\",\n      \"All models were reached through one gateway with some settings fixed at provider defaults (page 16: \\\"All models were reached through one gateway, which fixes some settings\\\").\",\n      \"Harness evaluation is restricted by design, removing some sources of variation (page 16: \\\"We evaluate three harnesses and restrict them to the sandbox's tools with a shared preamble\\\").\",\n      \"Tasks are short-to-medium; long-horizon workflows are not studied (page 16: \\\"Our tasks are short to medium in length; long-horizon workflows compound the effects we measure\\\").\"\n    ]\n  },\n  \"insights\": [\n    {\n      \"insight\": \"Exactly-once assurance should be located by fault class: read-back-resolvable faults are model-handleable, while in-flight/redelivery faults are only solvable by the tool contract.\",\n      \"why_it_matters\": \"It reframes agent reliability as a substrate-design question, not purely a prompting or model-selection question.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 2,\n          \"section\": \"Introduction\",\n          \"quote\": \"the same verification finds nothing and the retry creates a duplicate in 56% of frontier episodes; under redelivery, in 74%\"\n        }\n      ],\n      \"confidence\": \"high\",\n      \"novelty\": \"Synthesised from this paper's factorial design; not independently verified as novel.\",\n      \"related_rmax_topics\": [\n        \"agent reliability\",\n        \"tool use\",\n        \"MCP/governance\"\n      ],\n      \"possible_action\": \"Classify write faults by resolvability and route responsibility accordingly at design time.\"\n    },\n    {\n      \"insight\": \"Agent-reported success is an unreliable assurance signal: 90% of duplicate-producing episodes were reported as completed.\",\n      \"why_it_matters\": \"Evaluation and assurance cannot rely on agent self-report; ground-truth ledgers or journals are needed.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 2,\n          \"section\": \"Introduction\",\n          \"quote\": \"In 90% of episodes that produced a duplicate, the agent reported the task as completed\"\n        }\n      ],\n      \"confidence\": \"high\",\n      \"novelty\": \"Reported measurement within this paper's graded episodes; independent replication unknown.\",\n      \"related_rmax_topics\": [\n        \"evaluation/assurance\",\n        \"long-running workflows\"\n      ],\n      \"possible_action\": \"Instrument effect ledgers in agent harnesses to grade outcomes independently of self-report.\"\n    },\n    {\n      \"insight\": \"Client-side middleware, including transparent retries, has a ceiling set by the tool contract.\",\n      \"why_it_matters\": \"Retry logic in the harness cannot achieve exactly-once when the contract is key-less or transport redelivers.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 2,\n          \"section\": \"Introduction\",\n          \"quote\": \"Transparent client-side retries cut exactly-once success from 72% to 50%\"\n        },\n        {\n          \"page\": 2,\n          \"section\": \"Introduction\",\n          \"quote\": \"even an outcome oracle that sees in-flight requests reaches only 87%, because redelivery on key-less writes is beyond any client-side policy\"\n        }\n      ],\n      \"confidence\": \"high\",\n      \"novelty\": \"Derived from this paper's oracle and harness comparisons; not independently established.\",\n      \"related_rmax_topics\": [\n        \"harness/runtime\",\n        \"tool use\"\n      ],\n      \"possible_action\": \"Prefer contracts accepting idempotency keys on all write endpoints over adding retry layers.\"\n    }\n  ],\n  \"connections\": [],\n  \"followups\": []\n}",
+  "provider_response_model_id": "deepseek-flash",
+  "artifact": "raw/responses/l3/selective/deepseek/l3-2609.29095-selective-deepseek-a1.json"
+}

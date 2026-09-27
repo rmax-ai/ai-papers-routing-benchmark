@@ -1,0 +1,52 @@
+{
+  "call_id": "l2-2609.28585-D-r1",
+  "attempt": 1,
+  "arm_id": "l2-D",
+  "provider": "gemini",
+  "model_id_sent": "gemini-3.5-flash-lite",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+  "call_start_utc": "2026-09-26T22:13:44Z",
+  "settings": {
+    "thinkingConfig": {
+      "thinkingLevel": "low"
+    },
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 3000,
+    "strategy": "D",
+    "round": 1,
+    "page_numbers": null
+  },
+  "http_status": 200,
+  "latency_ms": 27440,
+  "usage": {
+    "input_tokens": 29069,
+    "output_tokens": 823,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": null,
+    "mapping": {
+      "input": "usageMetadata.promptTokenCount",
+      "output": "usageMetadata.candidatesTokenCount",
+      "cached_input": "usageMetadata.cachedContentTokenCount"
+    }
+  },
+  "cost": {
+    "amount": 0.0107782,
+    "rates_used_usd_per_million": {
+      "input": 0.3,
+      "cached_input": 0.3,
+      "output": 2.5
+    },
+    "rate_source": "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"candidate_claims\": [\n    {\n      \"claim\": \"Persistent billable state creates significant cost amplification in tool-calling LLM agents, with maximum per-session cumulative input reaching 14,293× the first-call input across 243 executions.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"quote\": \"Across 243 executions, provider-reported usage telemetry shows that the maximum per-session cumulative input reaches 14,293× the corresponding session’s complete first-call input.\"\n        }\n      ],\n      \"importance\": \"load_bearing\"\n    },\n    {\n      \"claim\": \"Retaining raw history increases mean effective session cost by 21.2–35.9%, while deterministic compression preserves task success without incurring full cost-bearing mass.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 2,\n          \"quote\": \"Controlled history-policy re-runs isolate raw retention’s contribution: retaining raw history increases mean effective session cost by 21.2–35.9%. Compression succeeds on 10/12 and 11/12 history-dependent tasks, versus 2/12 under deletion for each provider.\"\n        }\n      ],\n      \"importance\": \"load_bearing\"\n    },\n    {\n      \"claim\": \"A host-side kernel combining deterministic history transformation and four invariants (D1-D4) contains every recurring attack in the 123-evaluation replay corpus.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"quote\": \"To govern this boundary while preserving utility, we combine deterministic history transformation with four host-side invariants that bound prompt mass, context growth, recursive opportunity, and cumulative spend before reingestion. The kernel contains every recurring attack in the 123-evaluation replay corpus.\"\n        }\n      ],\n      \"importance\": \"load_bearing\"\n    }\n  ],\n  \"key_claims\": [\n    \"Tool-generated content that survives across turns and incurs repeated processing cost is defined as persistent billable state.\",\n    \"Denial-of-Wallet (DoW) attacks convert attacker-controlled persistence into availability loss or runaway expenditure.\",\n    \"Across 69 priced attack sessions, 51 crossed the $0.10 circuit-breaker setting with exposure reaching $3.40.\",\n    \"A progress-authorized D4 policy achieves 22/24 oracle-verified task successes with no pre-completion interruptions on Mistral Small 4 workflows, compared to 13/24 under a fixed cap.\",\n    \"Only 71 of 3,830 scanned public MCP server and transport repositories expose a code-visible safeguard proxy, with none covering all four safeguard families.\"\n  ],\n  \"limitations\": [\n    \"The study evaluates specific pre-reingestion middleware invariants and compression strategies, which may need tuning for diverse domain-specific agent workflows.\",\n    \"Priced exposure analyses depend on provider-listed nominal rates and telemetry, which can vary across deployment environments.\"\n  ],\n  \"load_bearing_pages\": [\n    1,\n    2,\n    3,\n    7,\n    8,\n    9,\n    11\n  ],\n  \"requested_pages\": {\n    \"pages\": [],\n    \"reason\": \"The provided text covers the full scope of the requested analysis, including attack mechanics, history-policy interventions, and defense evaluations.\"\n  },\n  \"stop_reason\": \"All requested information regarding agent reliability, evaluation/assurance, harness design, tool use, and long-running workflows has been fully extracted from the provided text.\"\n}",
+  "provider_response_model_version": "gemini-3.5-flash-lite",
+  "artifact": "raw/responses/l2/D/l2-2609.28585-D-r1-a1.json",
+  "paper_id": "2609.28585",
+  "strategy": "D",
+  "round": 1,
+  "input_sha256": "77a3f11971690a4085b522e6751c85faa642633bea397c1d8521e2c489572fc3",
+  "page_numbers_sent": [],
+  "input_text_bytes": 98927,
+  "inline_part_bytes": 0
+}

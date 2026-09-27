@@ -1,0 +1,52 @@
+{
+  "call_id": "l2-2609.28586-D-r1",
+  "attempt": 1,
+  "arm_id": "l2-D",
+  "provider": "gemini",
+  "model_id_sent": "gemini-3.5-flash-lite",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+  "call_start_utc": "2026-09-26T22:15:35Z",
+  "settings": {
+    "thinkingConfig": {
+      "thinkingLevel": "low"
+    },
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 3000,
+    "strategy": "D",
+    "round": 1,
+    "page_numbers": null
+  },
+  "http_status": 200,
+  "latency_ms": 26977,
+  "usage": {
+    "input_tokens": 27225,
+    "output_tokens": 418,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": 973,
+    "mapping": {
+      "input": "usageMetadata.promptTokenCount",
+      "output": "usageMetadata.candidatesTokenCount",
+      "cached_input": "usageMetadata.cachedContentTokenCount"
+    }
+  },
+  "cost": {
+    "amount": 0.0092125,
+    "rates_used_usd_per_million": {
+      "input": 0.3,
+      "cached_input": 0.3,
+      "output": 2.5
+    },
+    "rate_source": "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"candidate_claims\": [\n    {\n      \"claim\": \"Approval laundering is a record-coverage failure where a durable record faithfully names an entry invocation yet omits effects exercised within its transitive workflow.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"quote\": \"We call the resulting structural record-coverage failure approval laundering: a durable record faithfully names the entry invocation yet omits effects exercised within its workflow.\"\n        }\n      ],\n      \"importance\": \"load_bearing\"\n    },\n    {\n      \"claim\": \"When executions with identical policy-visible fields require different effect-specific decisions, no deterministic or randomized record-only policy can guarantee both.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"quote\": \"if executions with identical policy-visible fields require different effect-specific decisions, no deterministic or randomized record-only policy can guarantee both.\"\n        }\n      ],\n      \"importance\": \"load_bearing\"\n    }\n  ],\n  \"key_claims\": [\n    \"Approval laundering represents a structural mismatch between invocation identity and effect-complete approval.\",\n    \"Record-only policies cannot correctly resolve policy-visible indistinguishability when transitive workflow effects differ.\",\n    \"Binding frozen, source-backed effect predictions and provenance before authorization reduces residual unrepresented effects.\"\n  ],\n  \"limitations\": [\n    \"The study focuses on coding-agent workflows and a specific six-class operational vocabulary.\",\n    \"Effect-bound predictions depend on inspectable decision-time expansion sources and artifact integrity.\"\n  ],\n  \"load_bearing_pages\": [\n    1,\n    2,\n    3,\n    4,\n    5\n  ],\n  \"requested_pages\": [],\n  \"stop_reason\": \"All extracted PDF text spanning pages 1 through 19 has been provided and analyzed.\"\n}",
+  "provider_response_model_version": "gemini-3.5-flash-lite",
+  "artifact": "raw/responses/l2/D/l2-2609.28586-D-r1-a1.json",
+  "paper_id": "2609.28586",
+  "strategy": "D",
+  "round": 1,
+  "input_sha256": "918cfe93704ff87e340d14db58b632ed55f225fda6d1f41d330874d402d9bbb0",
+  "page_numbers_sent": [],
+  "input_text_bytes": 105646,
+  "inline_part_bytes": 0
+}

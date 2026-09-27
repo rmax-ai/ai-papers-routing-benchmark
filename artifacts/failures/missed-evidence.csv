@@ -1,0 +1,9 @@
+arxiv_id,pages_examined,c_claim_recall_vs_d,d_load_bearing_page_recall,d_claims_missed_count,missed_claim_notes
+2609.29808,1;2;20;21,0.0,0.3333333333333333,1,
+2609.29095,1;2;16;22;23,0.2,0.25,3,late-commit/unknown-in-flight limit on exactly-once guarantees
+2609.28614,1;2;32;33,0.0,0.25,4,33/505 confirmed reward-hack cases; 40.5% cumulative evasion result
+2609.30217,1;2;33;34,0.0,0.2,3,98% best-of-three evasion-attempt rate; 88% success rate
+2609.28585,1;2;21;22,0.3333333333333333,0.2857142857142857,2,
+2609.28586,1;2;18;19,0.5,0.4,1,
+2609.27263,1;2;14;16;17,0.6666666666666666,0.25,1,
+2609.24122,1;2;33;34,0.0,0.5,2,

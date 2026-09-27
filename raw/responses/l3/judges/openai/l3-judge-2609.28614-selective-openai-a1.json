@@ -1,0 +1,49 @@
+{
+  "call_id": "l3-judge-2609.28614-selective-openai",
+  "attempt": 1,
+  "arm_id": "l3-blind-judge-openai",
+  "provider": "openai",
+  "model_id_sent": "gpt-6-luna",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "call_start_utc": "2026-09-26T22:57:42Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_schema strict",
+    "max_completion_tokens": 1300,
+    "blind": true
+  },
+  "http_status": 200,
+  "latency_ms": 8639,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "completion_tokens_details",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 3755,
+    "output_tokens": 274,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": 0,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+      "cached_input": "usage.prompt_tokens_details.cached_tokens"
+    }
+  },
+  "cost": {
+    "amount": 0.0005125,
+    "rates_used_usd_per_million": {
+      "input": 0.1,
+      "cached_input": 0.01,
+      "output": 0.5
+    },
+    "rate_source": "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC",
+    "tier": null
+  },
+  "output": "{\"scores\":[{\"blind_label\":\"A\",\"faithfulness\":4,\"evidence_support\":4,\"insight_depth\":3,\"novelty_identification\":3,\"systems_relevance\":4,\"actionability\":3,\"compression_information_density\":4,\"uncertainty_calibration\":2,\"durable_memory_precision_proxy\":4,\"brief_reason\":\"Accurately captures the three cited rates and turns them into relevant assurance implications. The comparison and review-gap actions are useful, though trajectory inspection is not directly established by the excerpts. Confidence provenance is unobservable, so calibration is scored 2.\"},{\"blind_label\":\"B\",\"faithfulness\":3,\"evidence_support\":3,\"insight_depth\":2,\"novelty_identification\":3,\"systems_relevance\":4,\"actionability\":3,\"compression_information_density\":4,\"uncertainty_calibration\":2,\"durable_memory_precision_proxy\":4,\"brief_reason\":\"Cited results are mostly faithful and agenda-relevant, but the second insight says the 74.6% confirmed-exploit rate bypasses standard artifact review, which conflates that result with the separately reported 6.5% review miss rate. The feedback-loop result is accurately cited, though its causal interpretation should be cautious. Confidence provenance is unobservable, so calibration is scored 2.\"}]}",
+  "provider_response_model_id": "gpt-6-luna",
+  "artifact": "raw/responses/l3/judges/openai/l3-judge-2609.28614-selective-openai-a1.json"
+}

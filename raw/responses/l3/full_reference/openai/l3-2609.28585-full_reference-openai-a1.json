@@ -1,0 +1,49 @@
+{
+  "call_id": "l3-2609.28585-full_reference-openai",
+  "attempt": 1,
+  "arm_id": "l3-full_reference-openai",
+  "provider": "openai",
+  "model_id_sent": "gpt-6-luna",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "call_start_utc": "2026-09-26T22:46:06Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_schema strict",
+    "max_completion_tokens": 3600,
+    "prompt_revision": "concise-v4"
+  },
+  "http_status": 200,
+  "latency_ms": 19898,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "completion_tokens_details",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 29233,
+    "output_tokens": 1815,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": 0,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+      "cached_input": "usage.prompt_tokens_details.cached_tokens"
+    }
+  },
+  "cost": {
+    "amount": 0.0038308,
+    "rates_used_usd_per_million": {
+      "input": 0.1,
+      "cached_input": 0.01,
+      "output": 0.5
+    },
+    "rate_source": "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"paper\": {\n    \"contribution\": \"The paper measures recurring provider-billed input from retained tool returns and evaluates host-side controls before reingestion. [p.2, Introduction: “the host’s pre-reingestion decision the enforcement point”]\",\n    \"key_claims\": [\n      {\n        \"claim\": \"In the measured core executions, maximum cumulative input amplification reached 14,293×. [p.8, §6.1: “maximum of 14,293×”]\",\n        \"evidence_refs\": [\n          {\n            \"page\": 8,\n            \"section\": \"§6.1\",\n            \"quote\": \"maximum of 14,293×\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"Controlled history-policy reruns found higher mean effective cost with raw retention, while compression preserved more necessary-history task success than deletion. [p.8, §6.3: “Full costs 35.9% more than Drop”]\",\n        \"evidence_refs\": [\n          {\n            \"page\": 8,\n            \"section\": \"§6.3\",\n            \"quote\": \"Full costs 35.9% more than Drop\"\n          },\n          {\n            \"page\": 8,\n            \"section\": \"§6.3\",\n            \"quote\": \"Full and Compress achieve at least 10/12 successes\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"In one 24-workflow Mistral transfer, progress-authorized D4 had 22/24 successes versus 13/24 for fixed D4. [p.11, §8.4: “achieves higher oracle-verified task success”]\",\n        \"evidence_refs\": [\n          {\n            \"page\": 11,\n            \"section\": \"§8.4\",\n            \"quote\": \"22/24 workflows (91.7%), compared with 13/24\"\n          }\n        ]\n      }\n    ],\n    \"evidence\": [\n      {\n        \"claim\": \"The frozen replay corpus contained 123 recurring-attack evaluations, all reported contained by the kernel. [p.10, §8.1: “all 123 replay evaluations”]\",\n        \"evidence_refs\": [\n          {\n            \"page\": 10,\n            \"section\": \"§8.1\",\n            \"quote\": \"all 123 replay evaluations\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"The repository scan found safeguard proxies in 71 of 3,830 repositories and none with all four families. [p.22, Figure 14: “0/71 (0%)”]\",\n        \"evidence_refs\": [\n          {\n            \"page\": 22,\n            \"section\": \"Figure 14\",\n            \"quote\": \"at least one in 71/3,830 (1.9%)\"\n          },\n          {\n            \"page\": 22,\n            \"section\": \"Figure 14\",\n            \"quote\": \"All four 0/71 (0%)\"\n          }\n        ]\n      }\n    ],\n    \"limitations\": [\n      \"The provided text does not establish performance across providers for the progress-authorized versus fixed D4 contrast; that comparison used one Mistral model pair. [p.11, §8.4: “one provider–model pair”]\",\n      \"The paper says the release omits executable code, experiment data, and operational attack material, limiting independent reproduction from this source. [p.13, §B: “does not include executable code”]\",\n      \"Core deployment manifests omit temperature, maximum-turn, cache-policy, and pricing-version fields. [p.18, Core deployment provenance: “but not temperature”]\",\n      \"The scan measures code-visible safeguard proxies, not deployed effectiveness or runtime behavior; conclusions about actual safeguards are therefore limited. [p.21, Ecosystem-Scan Method: “code-visible safeguard proxy”]\"\n    ]\n  },\n  \"insights\": [\n    {\n      \"insight\": \"Treat tool-return retention as a separate authorization decision from admitting a tool call. [p.13, Conclusion: “admission permits a tool to run”]\",\n      \"why_it_matters\": \"Retention can make untrusted output recur in later billed inputs, so admission checks alone do not govern that recurring cost. [p.1, Abstract: “providers meter it again”]\",\n      \"evidence_refs\": [\n        {\n          \"page\": 13,\n          \"section\": \"Conclusion\",\n          \"quote\": \"retention can grant its untrusted return recurring economic authority\"\n        }\n      ],\n      \"confidence\": 0.93,\n      \"novelty\": \"The paper frames this as a distinct host-side boundary; novelty is the authors’ characterization, not independently established here. [p.2, Introduction: “first systematic security study”]\",\n      \"related_rmax_topics\": [\n        \"agent reliability\",\n        \"harness/runtime\",\n        \"tool use\",\n        \"MCP/governance\"\n      ],\n      \"possible_action\": \"Add an explicit host policy gate before tool-return state is reintroduced to a billable model call.\"\n    },\n    {\n      \"insight\": \"For continuity-sensitive workflows, deterministic compression is a measured alternative to both raw retention and deletion. [p.8, §6.3: “compression preserves substantially more task utility than deletion”]\",\n      \"why_it_matters\": \"The measured tradeoff suggests evaluating what task facts must persist, rather than treating history retention as all-or-nothing. [p.8, §6.3: “Drop records 2/12”]\",\n      \"evidence_refs\": [\n        {\n          \"page\": 8,\n          \"section\": \"§6.3\",\n          \"quote\": \"Full and Compress achieve at least 10/12 successes\"\n        },\n        {\n          \"page\": 8,\n          \"section\": \"§6.3\",\n          \"quote\": \"Drop records 2/12 planned/ITT successes\"\n        }\n      ],\n      \"confidence\": 0.87,\n      \"novelty\": \"This connects history transformation to measured security-cost attribution; broader task and runtime generality is not established.\",\n      \"related_rmax_topics\": [\n        \"long-running workflows\",\n        \"agent reliability\",\n        \"harness/runtime\"\n      ],\n      \"possible_action\": \"Test host-generated summaries against raw-history and deletion baselines on workflows with verified state dependencies.\"\n    },\n    {\n      \"insight\": \"Long-running workflow safeguards should distinguish fixed limits from progress-authorized resource release. [p.11, §8.4: “releases $0.13 or $0.16 only after”]\",\n      \"why_it_matters\": \"In the reported transfer, the progress-authorized policy had more task successes and fewer pre-completion interruptions, but authorized higher mean cost. [p.20, Table 11: “0.1126”]\",\n      \"evidence_refs\": [\n        {\n          \"page\": 11,\n          \"section\": \"§8.4\",\n          \"quote\": \"22/24 workflows (91.7%), compared with 13/24\"\n        },\n        {\n          \"page\": 20,\n          \"section\": \"Table 11\",\n          \"quote\": \"Mean cost/session (USD) 0.0992 0.1126\"\n        }\n      ],\n      \"confidence\": 0.78,\n      \"novelty\": \"The demonstrated policy contrast is limited to one model/provider pair and should not be generalized without replication.\",\n      \"related_rmax_topics\": [\n        \"long-running workflows\",\n        \"evaluation/assurance\",\n        \"agent reliability\",\n        \"MCP/governance\"\n      ],\n      \"possible_action\": \"Replicate with other providers and task suites, reporting verified completion, interruptions, and spend together.\"\n    }\n  ],\n  \"connections\": [\n    {\n      \"prior_work_or_existing_rmax_insight\": \"The agenda’s prior digest framing emphasizes enforcement below the agent and evidence-aware verification; this paper also locates control in the host before reingestion. [p.2, Introduction: “host’s pre-reingestion decision the enforcement point”]\",\n      \"relationship\": \"supports\"\n    }\n  ],\n  \"followups\": {\n    \"experiments\": [\n      \"Replicate progress-authorized versus fixed spend policies across providers, workflow lengths, and task categories.\"\n    ],\n    \"implementation_ideas\": [\n      \"Instrument runtime history policies and a pre-send gate that records prompt mass, growth, recursion, and cumulative cost.\"\n    ],\n    \"research_questions\": [\n      \"How do compression quality and host-verified progress signals affect success and spend in longer workflows?\"\n    ]\n  }\n}",
+  "provider_response_model_id": "gpt-6-luna",
+  "artifact": "raw/responses/l3/full_reference/openai/l3-2609.28585-full_reference-openai-a1.json"
+}

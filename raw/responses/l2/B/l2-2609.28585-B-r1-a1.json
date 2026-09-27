@@ -1,0 +1,98 @@
+{
+  "call_id": "l2-2609.28585-B-r1",
+  "attempt": 1,
+  "arm_id": "l2-B",
+  "provider": "gemini",
+  "model_id_sent": "gemini-3.5-flash-lite",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+  "call_start_utc": "2026-09-26T22:12:52Z",
+  "settings": {
+    "thinkingConfig": {
+      "thinkingLevel": "low"
+    },
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 3000,
+    "strategy": "B",
+    "round": 1,
+    "page_numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ]
+  },
+  "http_status": 200,
+  "latency_ms": 27902,
+  "usage": {
+    "input_tokens": 11841,
+    "output_tokens": 382,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": null,
+    "mapping": {
+      "input": "usageMetadata.promptTokenCount",
+      "output": "usageMetadata.candidatesTokenCount",
+      "cached_input": "usageMetadata.cachedContentTokenCount"
+    }
+  },
+  "cost": {
+    "amount": 0.0045073,
+    "rates_used_usd_per_million": {
+      "input": 0.3,
+      "cached_input": 0.3,
+      "output": 2.5
+    },
+    "rate_source": "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"candidate_claims\": [\n    {\n      \"claim\": \"Retaining raw history in multi-step tool-calling agents creates a continuity-exposure coupling that increases mean effective session cost by 21.2–35.9%.\",\n  \"evidence_refs\": [\n        {\n          \"page\": 2,\n          \"quote\": \"Full raises mean effective session cost by 21.2–35.9%, while compression preserves 10/12 and 11/12 successes on tasks requiring prior history that deletion reduces to 2/12.\"\n        }\n      ],\n      \"importance\": \"load_bearing\"\n    }\n  ],\n  \"key_claims\": [\n    \"Retained attacker-controlled tool returns lead to Denial-of-Wallet (DoW) attacks via recursive rebilling, with per-session input Cost Amplification Factors reaching up to 14,293×.\",\n    \"A host-side enforcement kernel implementing four invariants (D1-D4) before reingestion can contain all recurring multi-turn DoW attacks while preserving task utility.\"\n  ],\n  \"limitations\": [\n    \"Observed run termination is highly variable across executions, indicating it cannot reliably serve as a standalone host circuit breaker.\",\n    \"Ecosystem scans reveal that code-visible safeguard proxies are extremely rare in public MCP repositories (only 1.9% containing at least one proxy).\"\n  ],\n  \"load_bearing_pages\": [\n    2,\n    8,\n    9\n  ],\n  \"requested_pages\": [],\n  \"stop_reason\": \"The provided pages contain the core methodology, attack evaluation, defense framework, and results necessary to address the agenda items.\"\n}",
+  "provider_response_model_version": "gemini-3.5-flash-lite",
+  "artifact": "raw/responses/l2/B/l2-2609.28585-B-r1-a1.json",
+  "paper_id": "2609.28585",
+  "strategy": "B",
+  "round": 1,
+  "input_sha256": "a3d75e2103b9da8dc0846250ce2d9da820c701d2eb7d13d69b7ee7b14ceffa00",
+  "page_numbers_sent": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22
+  ],
+  "input_text_bytes": 1632,
+  "inline_part_bytes": 971757
+}

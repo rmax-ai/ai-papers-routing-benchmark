@@ -1,0 +1,52 @@
+{
+  "call_id": "l2-2609.24122-D-r1",
+  "attempt": 1,
+  "arm_id": "l2-D",
+  "provider": "gemini",
+  "model_id_sent": "gemini-3.5-flash-lite",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+  "call_start_utc": "2026-09-26T22:19:16Z",
+  "settings": {
+    "thinkingConfig": {
+      "thinkingLevel": "low"
+    },
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 3000,
+    "strategy": "D",
+    "round": 1,
+    "page_numbers": null
+  },
+  "http_status": 200,
+  "latency_ms": 26955,
+  "usage": {
+    "input_tokens": 40922,
+    "output_tokens": 651,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": null,
+    "mapping": {
+      "input": "usageMetadata.promptTokenCount",
+      "output": "usageMetadata.candidatesTokenCount",
+      "cached_input": "usageMetadata.cachedContentTokenCount"
+    }
+  },
+  "cost": {
+    "amount": 0.0139041,
+    "rates_used_usd_per_million": {
+      "input": 0.3,
+      "cached_input": 0.3,
+      "output": 2.5
+    },
+    "rate_source": "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"candidate_claims\": [\n    {\n      \"claim\": \"Re:CAP recovers 9-29% of gold labels that flat BM25 top-500 cannot reach, rising to 48% on TREC-COVID.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"quote\": \"On four public benchmarks, Re:CAP recovers 9– 29% of gold labels that flat BM25 top-500 cannot reach, rising to 48% on TREC-COVID.\"\n        }\n      ],\n      \"importance\": \"load_bearing\"\n    },\n    {\n      \"claim\": \"On MuSiQue Re:CAP beats flat hybrid top-500 by +12.9 pp on recall at less than half the document budget.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"quote\": \"On MuSiQue Re:CAP beats flat hybrid top-500 by +12.9 pp on recall at less than half the document budget.\"\n        }\n      ],\n      \"importance\": \"load_bearing\"\n    },\n    {\n      \"claim\": \"End-to-end recall is reproducible to within ±1% across three independent runs.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"quote\": \"End-to-end recall is reproducible to within ±1% across three independent runs, making Re:CAP a stable instrument for periodic retrieval audits.\"\n        }\n      ],\n      \"importance\": \"supporting\"\n    }\n  ],\n  \"key_claims\": [\n    \"Re:CAP is a reference-free audit loop applied to a deployed RAG pipeline's initial answer and retrieved context that identifies topics, generates probing questions, retrieves candidate documents, and applies an LLM-as-judge.\",\n    \"On the ensemble-missed stratum, 78.9% of recovered documents add information the baseline answer lacks (Fleiss kappa = 0.79, n = 123).\"\n  ],\n  \"limitations\": [\n    \"Re:CAP requires multiple LLM calls per query, making it materially more expensive than single-pass metrics like RAGAS.\",\n    \"Re:CAP is in principle bounded by the LLM judge's accuracy.\",\n    \"Re:CAP discovers gaps only for topics that exist in the corpus (measures retrieval gaps, not corpus gaps).\",\n    \"All experiments are on English-language datasets with English-language LLMs.\"\n  ],\n  \"load_bearing_pages\": [\n    1,\n    2,\n    5,\n    6\n  ],\n  \"requested_pages\": [],\n  \"stop_reason\": \"All necessary evidence for the required agentic-AI topics (retrieval coverage audit, evaluation, harness design, tool use) has been retrieved and processed from the provided text.\"\n}",
+  "provider_response_model_version": "gemini-3.5-flash-lite",
+  "artifact": "raw/responses/l2/D/l2-2609.24122-D-r1-a1.json",
+  "paper_id": "2609.24122",
+  "strategy": "D",
+  "round": 1,
+  "input_sha256": "f702db8d890f6dfb0e2e7afd3eb1f1b6ed2bfaba99765ec885036981849cedea",
+  "page_numbers_sent": [],
+  "input_text_bytes": 133133,
+  "inline_part_bytes": 0
+}

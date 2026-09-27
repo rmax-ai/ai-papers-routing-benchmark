@@ -1,0 +1,43 @@
+{
+  "call_id": "l3-2609.27263-full_reference-gemini",
+  "attempt": 1,
+  "arm_id": "l3-full_reference-gemini",
+  "provider": "gemini",
+  "model_id_sent": "gemini-3.5-flash-lite",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+  "call_start_utc": "2026-09-26T22:49:19Z",
+  "settings": {
+    "thinkingConfig": {
+      "thinkingLevel": "low"
+    },
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 3000,
+    "prompt_revision": "concise-v4"
+  },
+  "http_status": 200,
+  "latency_ms": 29633,
+  "usage": {
+    "input_tokens": 29194,
+    "output_tokens": 1467,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": null,
+    "mapping": {
+      "input": "usageMetadata.promptTokenCount",
+      "output": "usageMetadata.candidatesTokenCount",
+      "cached_input": "usageMetadata.cachedContentTokenCount"
+    }
+  },
+  "cost": {
+    "amount": 0.0124257,
+    "rates_used_usd_per_million": {
+      "input": 0.3,
+      "cached_input": 0.3,
+      "output": 2.5
+    },
+    "rate_source": "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"paper\": {\n    \"contribution\": \"This paper presents an empirical study of GitHub Agentic Workflows (gh-aw), analyzing 1,248 Markdown files to characterize their size, maintenance over time, instruction content taxonomy, and LLM classification performance.\",\n    \"key_claims\": [\n      {\n        \"claim\": \"GitHub Agentic Workflows Markdown files contain substantial instructions with a median of 556.5 words and code blocks in 62.1% of files.\",\n        \"evidence\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"Our results show that workflow instructions extend beyond short prompts, with a median of 556.5 words and code blocks in 62.1% of files.\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"Maintenance activity is frequent, with 78.2% of files having at least 120 days of observed activity still receiving updates in month 4.\",\n        \"evidence\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"Among files with at least 120 days of observed activity, 78.2% still receive updates in month 4, while size-normalized churn decreases after the first month.\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"Tasks, outputs, constraints, and process instructions appear in over 93% of labeled workflows, but only 9.4% explicitly address prompt-injection defense.\",\n        \"evidence\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"Tasks, outputs, constraints, and process instructions each appear in over 93% of labeled workflows, yet only 9.4% explicitly address prompt-injection defense.\"\n          }\n        ]\n      }\n    ],\n    \"evidence\": [\n      {\n        \"page\": 1,\n        \"section\": \"Abstract\",\n        \"quote\": \"We analyze 1,248 files from 276 repositories, 20,841 commit-file events, and 288 resolved instruction-label sets from a sample of 294 files.\"\n      },\n      {\n        \"page\": 6,\n        \"section\": \"IV. RESULTS\",\n        \"quote\": \"Figure 6 shows that median total Markdown size per project rises from 395 lines in month 1 to 429, 430, and 467 lines in months 2, 3, and 4, respectively.\"\n      },\n      {\n        \"page\": 12,\n        \"section\": \"IV. RESULTS\",\n        \"quote\": \"Gemini has the highest F1 at every shot setting, followed by GLM and GPT-OSS (Table IV). One-shot and three-shot Gemini both round to 0.818\"\n      }\n    ],\n    \"limitations\": [\n      \"The study restricts project selection to repositories with at least 10 GitHub stars, which may exclude smaller or less prominent projects.\",\n      \"Analysis of file maintenance relies on observed commit histories over a limited four-month evaluation period for files meeting the 120-day threshold.\",\n      \"Automated instruction classification relies on LLM prompting, which can occasionally misinterpret technical concept mentions as background domain context.\",\n      \"The findings describe current developer practices and specification structures but do not establish direct causality between specific instruction patterns and workflow execution success.\"\n    ]\n  },\n  \"insights\": [\n    {\n      \"insight\": \"GitHub Agentic Workflows combine configuration and natural-language instructions in substantial Markdown files that require ongoing maintenance over time.\",\n      \"why_it_matters\": \"Developers often reuse workflows across repositories, meaning changes to upstream specifications or instructions propagate and affect automated repository tasks.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"Among files with at least 120 days of observed activity, 78.2% still receive updates in month 4, while size-normalized churn decreases after the first month.\"\n        }\n      ],\n      \"confidence\": \"high\",\n      \"novelty\": \"low\",\n      \"related_rmax_topics\": [\n        \"agent reliability\",\n        \"long-running workflows\"\n      ],\n      possible_action\": \"Treat shared or copied workflow Markdown files as external dependencies by tracking upstream modifications and reviewing configuration changes before recompiling.\"\n    },\n    {\n      \"insight\": \"Instruction taxonomies reveal that while tasks, outputs, and constraints are heavily specified in agentic workflows, explicit security considerations like prompt-injection defense remain rare.\",\n      \"why_it_matters\": \"Workflows that process untrusted repository content without explicit safety or injection defenses risk unintended manipulation by external inputs.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"Tasks, outputs, constraints, and process instructions each appear in over 93% of labeled workflows, yet only 9.4% explicitly address prompt-injection defense.\"\n        }\n      ],\n      \"confidence\": \"high\",\n      \"novelty\": \"medium\",\n      \"related_rmax_topics\": [\n        \"MCP/governance\",\n        \"tool use\"\n      ],\n      possible_action\": \"Incorporate explicit prompt-injection defenses, resource budgets, and evidence-credibility checks into agentic workflow instructions where applicable.\"\n    },\n    {\n      \"insight\": \"Large language models can automatically classify instruction types within agentic workflows with substantial agreement against human-resolved labels.\",\n      \"why_it_matters\": \"Automated labeling enables scalable analysis of instruction content across growing repositories of agentic workflows.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"LLM classification achieves an F1 score of 0.818 and Cohen’s κ of 0.715 against the resolved human labels.\"\n        }\n      ],\n      \"confidence\": \"high\",\n      \"novelty\": \"medium\",\n      \"related_rmax_topics\": [\n        \"evaluation/assurance\",\n        \"agent reliability\"\n      ],\n      possible_action\": \"Employ LLM-based classifiers to audit and categorize instruction types in large codebases of agentic workflows.\"\n    }\n  ],\n  \"connections\": [],\n  \"followups\": []\n}",
+  "provider_response_model_version": "gemini-3.5-flash-lite",
+  "artifact": "raw/responses/l3/full_reference/gemini/l3-2609.27263-full_reference-gemini-a1.json"
+}

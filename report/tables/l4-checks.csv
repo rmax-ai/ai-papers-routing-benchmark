@@ -1,0 +1,6 @@
+question,host_threshold,mean_probability,positive_decisions,proxy_comparison
+Supported by supplied evidence,0.75,0.8821276595744681,43/47,"Against candidate-specific exact quote containment: TP 24, FP 19, TN 2, FN 2; Brier 0.347, agreement 0.553. This is a string-match proxy, not semantic entailment."
+Agenda relevant,0.6,0.96,47/47,"Against high-value stratum label: TP 41, FP 6, TN 0, FN 0; Brier 0.114, agreement 0.872. Six proxy-negative candidate outputs all passed."
+Duplicates supplied existing insight,0.75,0.17170212765957446,3/47,No gold duplicate labels; no Brier or agreement estimate.
+Has actionable implication,0.6,0.8972340425531915,47/47,"Against blind judge score ≥3: TP 31, FP 5, TN 0, FN 0 among 36 labeled; Brier 0.120 and agreement 0.861. Eleven candidates lacked a usable blind actionability score."
+Escalate for deeper review,0.65,0.4757446808510638,5/47,No gold escalation labels; no Brier or agreement estimate.

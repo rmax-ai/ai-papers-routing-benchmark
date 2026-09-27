@@ -1,0 +1,18 @@
+{
+  "method": "Two abstract-only adjudications by reading the sampled arXiv abstracts. The set includes all seven papers where the four L1 relevance decisions differed, plus one high-value proxy and one unanimous low control. It is disagreement-enriched, not a random audit sample.",
+  "labels": {
+    "relevant_to_agenda": "Materially studies agent reliability, agent evaluation/assurance, harness/runtime, MCP/governance, tool use, or long-running agent workflows. General LLM, RAG, or AI work without a material agentic connection is false.",
+    "empirical_evidence": "Abstract reports experiments, measurements, benchmark results, or systematic observations; theoretical framing with empirical predictions/evidence also counts true."
+  },
+  "papers": [
+    {"arxiv_id":"2609.30009","relevant_to_agenda":false,"empirical_evidence":true,"reason":"The abstract evaluates domain-adapted compliance QA and RAG on question-answering benchmarks, with no agent runtime, tool use, or agent reliability study."},
+    {"arxiv_id":"2609.24122","relevant_to_agenda":false,"empirical_evidence":true,"reason":"The abstract measures a retrieval-coverage audit loop for production RAG, including human annotations, but does not study agent behavior or runtime controls."},
+    {"arxiv_id":"2609.14245","relevant_to_agenda":false,"empirical_evidence":true,"reason":"The abstract measures citation attribution under RAG context compression; it is relevant to evidence handling but does not materially study agentic systems."},
+    {"arxiv_id":"2609.03213","relevant_to_agenda":false,"empirical_evidence":true,"reason":"The abstract compares rule and example-based in-context learning across five tasks, a general LLM prompting study rather than agent reliability or routing."},
+    {"arxiv_id":"2609.15578","relevant_to_agenda":false,"empirical_evidence":true,"reason":"The abstract evaluates retrieval confidence and abstention across retrievers and datasets, without an agent runtime or tool-use setting."},
+    {"arxiv_id":"2609.22056","relevant_to_agenda":false,"empirical_evidence":true,"reason":"The abstract evaluates multi-hop retrieval confidence/abstention on QA benchmarks; it is adjacent to evidence sufficiency but not an agentic-AI study."},
+    {"arxiv_id":"2606.15960","relevant_to_agenda":false,"empirical_evidence":true,"reason":"The abstract studies AI labor task bundling and reports empirical support for economic predictions; it does not concern agentic AI systems."},
+    {"arxiv_id":"2609.29095","relevant_to_agenda":true,"empirical_evidence":true,"reason":"The abstract evaluates tool-using agents, model/harness/tool-contract effects, fault injection, and duplicate side effects across 25,930 episodes."},
+    {"arxiv_id":"2603.21521","relevant_to_agenda":false,"empirical_evidence":true,"reason":"The abstract reports hardware sensing and object-recognition measurements; it has no agentic-AI agenda connection."}
+  ]
+}

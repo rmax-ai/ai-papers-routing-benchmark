@@ -1,0 +1,51 @@
+{
+  "call_id": "l3-2609.24122-selective-deepseek",
+  "attempt": 1,
+  "arm_id": "l3-selective-deepseek",
+  "provider": "deepseek",
+  "model_id_sent": "deepseek-flash",
+  "endpoint": "https://api.deepseek.com/chat/completions",
+  "call_start_utc": "2026-09-26T22:51:52Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_object",
+    "max_tokens": 4500,
+    "prompt_revision": "concise-v4"
+  },
+  "http_status": 200,
+  "latency_ms": 6447,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "prompt_cache_hit_tokens",
+      "prompt_cache_miss_tokens",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 6363,
+    "output_tokens": 1148,
+    "cached_input_tokens": 3456,
+    "reasoning_tokens": null,
+    "reasoning_content_present": false,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "cached_input": "usage.prompt_cache_hit_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+    }
+  },
+  "cost": {
+    "amount": 0.001135218,
+    "rates_used_usd_per_million": {
+      "input": 0.15,
+      "cached_input": 0.003,
+      "output": 0.6
+    },
+    "rate_source": "https://api-docs.deepseek.com/quick_start/pricing/; prior-art compare.ts constants reviewed 2026-09-24 UTC",
+    "tier": "offpeak"
+  },
+  "output": "{\n  \"paper\": {\n    \"contribution\": \"Re:CAP is a reference-free iterative probing audit for deployed RAG pipelines that recovers gold documents unreachable by flat top-k retrieval.\",\n    \"key_claims\": [\n      \"Re:CAP recovers 9-29% of gold labels flat BM25 top-500 cannot reach, rising to 48% on TREC-COVID (page 1).\",\n      \"Re:CAP beats flat hybrid top-500 by +12.9 pp recall on MuSiQue at less than half the document budget (page 1).\",\n      \"End-to-end recall is reproducible to within ±1% across three independent runs (page 1).\"\n    ],\n    \"evidence\": [\n      {\n        \"page\": 1,\n        \"section\": \"Abstract\",\n        \"quote\": \"On four public benchmarks, Re:CAP recovers 9-29% of gold labels that flat BM25 top-500 cannot reach\"\n      },\n      {\n        \"page\": 1,\n        \"section\": \"Abstract\",\n        \"quote\": \"On MuSiQue Re:CAP beats flat hybrid top-500 by +12.9 pp on recall at less than half the document budget\"\n      },\n      {\n        \"page\": 1,\n        \"section\": \"Abstract\",\n        \"quote\": \"End-to-end recall is reproducible to within ±1% across three independent runs\"\n      }\n    ],\n    \"limitations\": [\n      \"No evidence from the supplied text describes how Re:CAP performs on adversarial or poisoned corpora.\",\n      \"Human validation covers only two strata and 303 total annotated documents, limiting generality.\",\n      \"Cost is 250-500 LLM calls per query, making it unsuitable for per-query inline monitoring.\",\n      \"The abstract reports no per-benchmark breakdown for the four public benchmarks beyond aggregate ranges.\"\n    ]\n  },\n  \"insights\": [\n    {\n      \"insight\": \"Retrieval coverage failures are invisible to answer-side RAG evaluation because a faithful answer can still omit unreached gold documents.\",\n      \"why_it_matters\": \"Production RAG monitors relying on faithfulness or answer relevance may miss systematic retrieval blind spots.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"retrieval quality is generally understudied and often deprioritised in favour of generation-oriented metrics\"\n        },\n        {\n          \"page\": 1,\n          \"section\": \"Introduction\",\n          \"quote\": \"an answer that is fluent and faithful to its retrieved context can still be substantively incomplete\"\n        }\n      ],\n      \"confidence\": \"high\",\n      \"novelty\": \"proposal\",\n      \"related_rmax_topics\": [\n        \"evaluation/assurance\",\n        \"agent reliability\"\n      ],\n      \"possible_action\": \"Add periodic retrieval-coverage audits to RAG evaluation pipelines instead of relying only on answer-side metrics.\"\n    },\n    {\n      \"insight\": \"Iterative gap-probing with an entity ledger recovers relevant documents that flat top-k retrieval cannot reach at any affordable depth.\",\n      \"why_it_matters\": \"It suggests depth increases alone cannot close retrieval coverage gaps in large non-stationary corpora.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"our method Re:CAP (REtrieval Coverage Audit by iterative Probing) is a reference-free audit loop\"\n        },\n        {\n          \"page\": 2,\n          \"section\": \"Figure 1\",\n          \"quote\": \"Gold outside stays unretrieved at any affordable depth\"\n        }\n      ],\n      \"confidence\": \"medium\",\n      \"novelty\": \"proposal\",\n      \"related_rmax_topics\": [\n        \"harness/runtime\",\n        \"tool use\"\n      ],\n      \"possible_action\": \"Pilot Re:CAP-style gap probing before promoting retriever, index, or embedder changes.\"\n    },\n    {\n      \"insight\": \"Re:CAP is a periodic sampling auditor, not an inline per-query monitor, because each audited query requires hundreds of LLM calls.\",\n      \"why_it_matters\": \"Runtime deployments must schedule coverage audits as batch cycles rather than live middleware.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 2,\n          \"section\": \"Introduction\",\n          \"quote\": \"At 250-500 LLM calls per audited query, Re:CAP is a periodic sampling auditor rather than a per-query monitor\"\n        }\n      ],\n      \"confidence\": \"high\",\n      \"novelty\": \"proposal\",\n      \"related_rmax_topics\": [\n        \"long-running workflows\",\n        \"harness/runtime\"\n      ],\n      \"possible_action\": \"Run Re:CAP over representative query samples on an audit cycle rather than on every live request.\"\n    }\n  ],\n  \"connections\": [\n    \"The paper's reference-free audit loop resembles verification-before-promotion patterns in long-running agent workflows.\",\n    \"Its LLM-as-judge filtering connects to evaluation/assurance topics around automated evidence validation.\"\n  ],\n  \"followups\": [\n    \"Test whether Re:CAP's recovery rates generalize to non-English or domain-specific corpora.\",\n    \"Measure whether gap-probing signals predict downstream answer incompleteness on open-ended tasks.\",\n    \"Compare Re:CAP against periodic random sampling audits under equal LLM-call budgets.\"\n  ]\n}",
+  "provider_response_model_id": "deepseek-flash",
+  "artifact": "raw/responses/l3/selective/deepseek/l3-2609.24122-selective-deepseek-a1.json"
+}

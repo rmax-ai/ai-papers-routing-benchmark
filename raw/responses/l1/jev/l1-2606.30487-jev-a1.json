@@ -1,0 +1,84 @@
+{
+  "call_id": "l1-2606.30487-jev",
+  "attempt": 1,
+  "arm_id": "l1-jev",
+  "provider": "jev",
+  "model_id_sent": "typesafe-ai/jev",
+  "endpoint": "https://ai-gateway.vercel.sh/v4/ai/evaluation-model",
+  "call_start_utc": "2026-09-25T15:24:13Z",
+  "settings": {
+    "protocol": "evaluation v4",
+    "typed_questions": {
+      "relevant": {
+        "type": "boolean",
+        "instructions": "Is this paper relevant to the stated agentic-AI research agenda? Answer true only when the paper materially studies at least one agenda area, not merely because it mentions AI or LLMs."
+      },
+      "empirical_evidence": {
+        "type": "boolean",
+        "instructions": "Does the paper report empirical evidence (experiments, measurements, case studies, or systematic observations) rather than only a proposal, position, or opinion?"
+      },
+      "topic": {
+        "type": "choice",
+        "instructions": "Choose the single best-covered agenda topic, or other/none if no listed agenda topic is materially covered.",
+        "criteria": {
+          "agent_reliability": "Agent reliability, robustness, failure, recovery, or trustworthiness.",
+          "evals_assurance": "Evaluation, measurement, validation, assurance, or monitoring of agents.",
+          "harness_runtime": "Agent harnesses, runtime, orchestration, execution, memory, or lifecycle infrastructure.",
+          "mcp_governance": "MCP, authorization, governance, safety controls, or policy enforcement.",
+          "tool_use": "Agent tool use, tool calling, or external side effects.",
+          "long_running_workflows": "Long-running, multi-step, persistent, or asynchronous agent workflows.",
+          "other": "Agentic-AI relevance outside the listed categories.",
+          "none": "No material relevance to the agenda."
+        }
+      },
+      "worth_escalating": {
+        "type": "boolean",
+        "instructions": "Should this paper be escalated to expensive full insight synthesis for this agenda, considering relevance, evidence, novelty, and likely value?"
+      },
+      "implementation_relevance": {
+        "type": "score",
+        "instructions": "Score likely implementation relevance to an agentic-AI systems team from 0 (none) to 4 (direct, concrete implementation implications).",
+        "criteria": [
+          "0 — no plausible implementation relevance",
+          "1 — distant background or broad framing",
+          "2 — useful context or a transferable method",
+          "3 — concrete design or evaluation implications",
+          "4 — directly implementable system, control, or workflow guidance"
+        ]
+      }
+    },
+    "providerOptions": {}
+  },
+  "http_status": 200,
+  "latency_ms": 372,
+  "usage": {
+    "input_tokens": 1039,
+    "output_tokens": 168,
+    "cached_input_tokens": null,
+    "reasoning_tokens": null,
+    "mapping": {
+      "input": "usage.inputTokens",
+      "output": "usage.outputTokens"
+    },
+    "raw_usage_fields": [
+      "inputTokens",
+      "outputTokens"
+    ]
+  },
+  "cost": {
+    "amount": 4.3638e-05,
+    "rates_used_usd_per_million": {
+      "input": 0.042,
+      "cached_input": 0.042,
+      "output": 0.0
+    },
+    "rate_source": "prior-art compare.ts reviewed fallback $0.042/1M input, $0 output; live table not queried",
+    "tier": null
+  },
+  "output": "{\"relevant\": {\"type\": \"boolean\", \"probability\": 0.34}, \"empirical_evidence\": {\"type\": \"boolean\", \"probability\": 0.91}, \"topic\": {\"type\": \"choice\", \"choice\": \"none\", \"probabilities\": {\"agent_reliability\": 0, \"tool_use\": 0, \"harness_runtime\": 0, \"none\": 0.94, \"other\": 0.06, \"long_running_workflows\": 0, \"evals_assurance\": 0, \"mcp_governance\": 0}}, \"worth_escalating\": {\"type\": \"boolean\", \"probability\": 0.59}, \"implementation_relevance\": {\"type\": \"score\", \"score\": 1.92, \"probabilities\": {\"0\": 0.01, \"1\": 0.22, \"2\": 0.61, \"3\": 0.15, \"4\": 0.01}}}",
+  "artifact": "raw/responses/l1/jev/l1-2606.30487-jev-a1.json",
+  "paper_id": "2606.30487",
+  "stratum": "low_relevance_control",
+  "input_sha256": "e42c9a12f3701579b0423f747a302c7c893d37d8c6a9ed37b6225eaf4facc967",
+  "input_source": "title+authors+categories+arXiv abstract"
+}

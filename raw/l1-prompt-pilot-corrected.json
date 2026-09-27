@@ -1,0 +1,124 @@
+{
+  "status": "prompt-compliance-pilot",
+  "paper_id": "2609.27263",
+  "input_sha256": "411054a9d2a6ca108a06ff74aea40982ea55f7d752c5ed17a5402d1596348bc5",
+  "results": {
+    "deepseek": {
+      "paper_id": "2609.27263",
+      "stratum": "high_value_proxy",
+      "arm": "deepseek",
+      "call_artifacts": [
+        "raw/responses/l1/deepseek/l1-2609.27263-deepseek-a1-r2.json"
+      ],
+      "latency_ms": 1264,
+      "http_status": 200,
+      "output": {
+        "relevant": true,
+        "relevant_probability": 0.9,
+        "empirical_evidence": true,
+        "empirical_probability": 0.95,
+        "topic": "harness_runtime",
+        "worth_escalating": true,
+        "escalation_probability": 0.8,
+        "implementation_relevance": 3
+      },
+      "parse_error": null,
+      "validation_errors": [],
+      "usage": {
+        "raw_fields": [
+          "completion_tokens",
+          "prompt_cache_hit_tokens",
+          "prompt_cache_miss_tokens",
+          "prompt_tokens",
+          "prompt_tokens_details",
+          "total_tokens"
+        ],
+        "input_tokens": 965,
+        "output_tokens": 82,
+        "cached_input_tokens": 128,
+        "reasoning_tokens": null,
+        "reasoning_content_present": false,
+        "mapping": {
+          "input": "usage.prompt_tokens",
+          "output": "usage.completion_tokens",
+          "cached_input": "usage.prompt_cache_hit_tokens",
+          "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+        }
+      }
+    },
+    "gemini": {
+      "paper_id": "2609.27263",
+      "stratum": "high_value_proxy",
+      "arm": "gemini",
+      "call_artifacts": [
+        "raw/responses/l1/gemini/l1-2609.27263-gemini-a1-r2.json"
+      ],
+      "latency_ms": 23643,
+      "http_status": 200,
+      "output": {
+        "relevant": true,
+        "relevant_probability": 0.95,
+        "empirical_evidence": true,
+        "empirical_probability": 0.99,
+        "topic": "long_running_workflows",
+        "worth_escalating": true,
+        "escalation_probability": 0.8,
+        "implementation_relevance": 3.0
+      },
+      "parse_error": null,
+      "validation_errors": [],
+      "usage": {
+        "input_tokens": 964,
+        "output_tokens": 92,
+        "cached_input_tokens": 0,
+        "reasoning_tokens": null,
+        "mapping": {
+          "input": "usageMetadata.promptTokenCount",
+          "output": "usageMetadata.candidatesTokenCount",
+          "cached_input": "usageMetadata.cachedContentTokenCount"
+        }
+      }
+    },
+    "openai": {
+      "paper_id": "2609.27263",
+      "stratum": "high_value_proxy",
+      "arm": "openai",
+      "call_artifacts": [
+        "raw/responses/l1/openai/l1-2609.27263-openai-a1-r2.json"
+      ],
+      "latency_ms": 8068,
+      "http_status": 200,
+      "output": {
+        "relevant": true,
+        "relevant_probability": 0.99,
+        "empirical_evidence": true,
+        "empirical_probability": 0.99,
+        "topic": "long_running_workflows",
+        "worth_escalating": true,
+        "escalation_probability": 0.94,
+        "implementation_relevance": 3.5
+      },
+      "parse_error": null,
+      "validation_errors": [],
+      "usage": {
+        "raw_fields": [
+          "completion_tokens",
+          "completion_tokens_details",
+          "prompt_tokens",
+          "prompt_tokens_details",
+          "total_tokens"
+        ],
+        "input_tokens": 1050,
+        "output_tokens": 68,
+        "cached_input_tokens": 0,
+        "reasoning_tokens": 0,
+        "mapping": {
+          "input": "usage.prompt_tokens",
+          "output": "usage.completion_tokens",
+          "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+          "cached_input": "usage.prompt_tokens_details.cached_tokens"
+        }
+      }
+    }
+  }
+}

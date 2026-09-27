@@ -1,0 +1,13 @@
+{
+  "used_as_benchmark_measurement": false,
+  "excluded": [
+    {
+      "paper_id": "2609.29808",
+      "cell": "full_reference/openai",
+      "call_artifacts": [
+        "raw/responses/l3/judges/openai/l3-judge-2609.29808-full_reference-openai-a1.json"
+      ],
+      "reason": "Excluded consistency pilot: judge prompt omitted the global warning that neutral confidence values may be host-imputed; scored after corrected blind prompt."
+    }
+  ]
+}

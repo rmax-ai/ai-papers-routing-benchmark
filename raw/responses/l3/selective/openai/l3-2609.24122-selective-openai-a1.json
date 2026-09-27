@@ -1,0 +1,49 @@
+{
+  "call_id": "l3-2609.24122-selective-openai",
+  "attempt": 1,
+  "arm_id": "l3-selective-openai",
+  "provider": "openai",
+  "model_id_sent": "gpt-6-luna",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "call_start_utc": "2026-09-26T22:52:26Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_schema strict",
+    "max_completion_tokens": 3600,
+    "prompt_revision": "concise-v4"
+  },
+  "http_status": 200,
+  "latency_ms": 17981,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "completion_tokens_details",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 6428,
+    "output_tokens": 1255,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": 0,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+      "cached_input": "usage.prompt_tokens_details.cached_tokens"
+    }
+  },
+  "cost": {
+    "amount": 0.0012703,
+    "rates_used_usd_per_million": {
+      "input": 0.1,
+      "cached_input": 0.01,
+      "output": 0.5
+    },
+    "rate_source": "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"paper\": {\n    \"contribution\": \"Re:CAP proposes a reference-free, iterative audit that probes a deployed RAG retriever for missing information and uses an LLM judge to filter candidate documents.\",\n    \"key_claims\": [\n      {\n        \"claim\": \"The proposed audit uses covered topics to generate gap probes, retrieve candidates, and iteratively identify retrieval gaps without per-query gold labels.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 2,\n            \"section\": \"Introduction\",\n            \"quote\": \"maintains a topic registry T of the information facets already covered\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"The paper reports recovery beyond flat retrieval baselines on public benchmarks, including a MuSiQue recall gain.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"On MuSiQue Re:CAP beats flat hybrid top-500 by +12.9 pp\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"The paper reports human validation of recovered documents and repeatability across three runs.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"End-to-end recall is reproducible to within ±1% across three independent runs\"\n          }\n        ]\n      }\n    ],\n    \"evidence\": [\n      {\n        \"claim\": \"The method is intended for periodic sampled audits rather than inline monitoring.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 2,\n            \"section\": \"Introduction\",\n            \"quote\": \"a periodic sampling auditor rather than a per-query monitor\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"The abstract reports that human annotators judged many recovered structurally distinct documents informative.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"78.9% of those structurally distinct documents add new information\"\n          }\n        ]\n      }\n    ],\n    \"limitations\": [\n      \"Only pages 1, 2, 33, and 34 were supplied; detailed benchmark protocols and results are unavailable here.\",\n      \"The supplied text does not establish generalizability beyond the reported benchmarks and two production deployments.\",\n      \"The audit is costly at 250–500 LLM calls per query and is described as periodic rather than per-query.\",\n      \"The supplied pages do not provide enough detail to assess LLM-judge error, topic-probe failure, or production sampling representativeness.\"\n    ]\n  },\n  \"insights\": [\n    {\n      \"insight\": \"Treat retrieval coverage as a separately audited reliability dimension: deeper ranking alone may not surface evidence outside the original query’s reachable set.\",\n      \"why_it_matters\": \"Answer-side quality signals can miss omissions, so a fluent answer does not by itself assure retrieval completeness.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 2,\n          \"section\": \"Figure 1\",\n          \"quote\": \"Gold ranked below any affordable top-k by the original query stays unretrieved\"\n        },\n        {\n          \"page\": 1,\n          \"section\": \"Introduction\",\n          \"quote\": \"these metrics do not register the omission\"\n        }\n      ],\n      \"confidence\": 0.91,\n      \"novelty\": \"Agenda-relevant framing from the paper; not a claim of novelty.\",\n      \"related_rmax_topics\": [\n        \"agent reliability\",\n        \"evaluation and assurance\"\n      ],\n      \"possible_action\": \"Pilot periodic gap-probing audits alongside existing answer and retrieval metrics.\"\n    },\n    {\n      \"insight\": \"Re:CAP’s reported audit role is periodic and sampled, not a runtime safeguard for each agent action or query.\",\n      \"why_it_matters\": \"It may inform evaluation and release assurance, but the supplied evidence does not support treating it as an inline runtime control.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 2,\n          \"section\": \"Introduction\",\n          \"quote\": \"not inline on live traffic\"\n        }\n      ],\n      \"confidence\": 0.95,\n      \"novelty\": \"Operational boundary explicitly described in the paper.\",\n      \"related_rmax_topics\": [\n        \"harness/runtime\",\n        \"evaluation and assurance\",\n        \"long-running workflows\"\n      ],\n      \"possible_action\": \"Use audit results as a release-check input, while keeping runtime enforcement separate.\"\n    },\n    {\n      \"insight\": \"The abstract’s human judgments and run-to-run result support investigation of audit validity and stability, but do not alone establish reliability across settings.\",\n      \"why_it_matters\": \"Assurance decisions should distinguish reported measurements from broader guarantees.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"Fleiss κ = 0.79, n = 123\"\n        },\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"within ±1% across three independent runs\"\n        }\n      ],\n      \"confidence\": 0.74,\n      \"novelty\": \"Cautious interpretation of the reported validation, not a novelty claim.\",\n      \"related_rmax_topics\": [\n        \"evaluation and assurance\",\n        \"agent reliability\"\n      ],\n      \"possible_action\": \"Replicate with local corpora and sampling before using the reported rates as acceptance thresholds.\"\n    }\n  ],\n  \"connections\": [],\n  \"followups\": {\n    \"experiments\": [\n      \"Evaluate audit findings against blinded human judgments on a representative local corpus.\"\n    ],\n    \"implementation_ideas\": [\n      \"Run the audit on a periodic sample before promoting index, embedder, or ranker changes.\"\n    ],\n    \"research_questions\": [\n      \"How sensitive are gap counts and recovered-document judgments to probe generation and LLM-judge errors?\"\n    ]\n  }\n}",
+  "provider_response_model_id": "gpt-6-luna",
+  "artifact": "raw/responses/l3/selective/openai/l3-2609.24122-selective-openai-a1.json"
+}

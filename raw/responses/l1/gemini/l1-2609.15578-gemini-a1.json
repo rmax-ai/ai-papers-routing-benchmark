@@ -1,0 +1,46 @@
+{
+  "call_id": "l1-2609.15578-gemini",
+  "attempt": 1,
+  "arm_id": "l1-gemini",
+  "provider": "gemini",
+  "model_id_sent": "gemini-3.5-flash-lite",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+  "call_start_utc": "2026-09-25T15:22:34Z",
+  "settings": {
+    "thinkingConfig": {
+      "thinkingLevel": "low"
+    },
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 1200
+  },
+  "http_status": 200,
+  "latency_ms": 23912,
+  "usage": {
+    "input_tokens": 854,
+    "output_tokens": 86,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": null,
+    "mapping": {
+      "input": "usageMetadata.promptTokenCount",
+      "output": "usageMetadata.candidatesTokenCount",
+      "cached_input": "usageMetadata.cachedContentTokenCount"
+    }
+  },
+  "cost": {
+    "amount": 0.0004712,
+    "rates_used_usd_per_million": {
+      "input": 0.3,
+      "cached_input": 0.3,
+      "output": 2.5
+    },
+    "rate_source": "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"relevant\": false,\n  \"relevant_probability\": 0.1,\n  \"empirical_evidence\": true,\n  \"empirical_probability\": 0.95,\n  \"topic\": \"none\",\n  \"worth_escalating\": false,\n  \"escalation_probability\": 0.05,\n  \"implementation_relevance\": 0\n}",
+  "provider_response_model_version": "gemini-3.5-flash-lite",
+  "artifact": "raw/responses/l1/gemini/l1-2609.15578-gemini-a1.json",
+  "paper_id": "2609.15578",
+  "stratum": "medium_adjacent",
+  "input_sha256": "d7f887816f0f9ca5b3fa2e00d6396ce81a7d50fcb280c02efae8cab8926348ba",
+  "input_source": "title+authors+categories+arXiv abstract"
+}

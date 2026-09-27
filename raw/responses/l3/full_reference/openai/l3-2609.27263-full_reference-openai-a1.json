@@ -1,0 +1,49 @@
+{
+  "call_id": "l3-2609.27263-full_reference-openai",
+  "attempt": 1,
+  "arm_id": "l3-full_reference-openai",
+  "provider": "openai",
+  "model_id_sent": "gpt-6-luna",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "call_start_utc": "2026-09-26T22:49:49Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_schema strict",
+    "max_completion_tokens": 3600,
+    "prompt_revision": "concise-v4"
+  },
+  "http_status": 200,
+  "latency_ms": 18976,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "completion_tokens_details",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 26483,
+    "output_tokens": 1548,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": 0,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+      "cached_input": "usage.prompt_tokens_details.cached_tokens"
+    }
+  },
+  "cost": {
+    "amount": 0.0034223,
+    "rates_used_usd_per_million": {
+      "input": 0.1,
+      "cached_input": 0.01,
+      "output": 0.5
+    },
+    "rate_source": "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"paper\": {\n    \"contribution\": \"Empirical study of gh-aw workflow structure, evolution, instruction categories, and LLM instruction-label classification.\",\n    \"key_claims\": [\n      {\n        \"claim\": \"Across 1,248 files, instruction bodies are substantial; their median length is 556.5 words.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 5,\n            \"section\": \"Table II\",\n            \"quote\": \"Body words ... Median 556.5\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"In the 288 resolved-label sample, prompt-injection defense appears in 9.4% of files.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 8,\n            \"section\": \"Table III\",\n            \"quote\": \"Prompt Injection Defense (9.4%)\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"One-shot Gemini achieved observed F1 0.818 against resolved human labels; the paper does not establish statistical superiority.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 13,\n            \"section\": \"Table IV\",\n            \"quote\": \"1 ... 86.81% 0.715 ... 0.818\"\n          },\n          {\n            \"page\": 13,\n            \"section\": \"RQ4 results\",\n            \"quote\": \"not evidence of statistical superiority across repeated runs.\"\n          }\n        ]\n      }\n    ],\n    \"evidence\": [\n      {\n        \"claim\": \"Long-observed files often remained active into month four, while normalized churn fell after month one.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"78.2% still receive updates in month 4\"\n          },\n          {\n            \"page\": 6,\n            \"section\": \"RQ2 results\",\n            \"quote\": \"median project-level churn drops from 31.2 to 5.6\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"Tasks, outputs, constraints, and process instructions each occur in over 93% of labeled workflows.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 7,\n            \"section\": \"Finding #5\",\n            \"quote\": \"each appearing in at least 93.4% of labeled files\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"The authors propose reviewing copied or referenced sources and considering safeguards; effects were not tested.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 13,\n            \"section\": \"Discussion, For Developers\",\n            \"quote\": \"treat that source file like an external workflow dependency\"\n          },\n          {\n            \"page\": 13,\n            \"section\": \"Discussion, For Developers\",\n            \"quote\": \"does not establish their effects on cost, security, or repeated work.\"\n          }\n        ]\n      }\n    ],\n    \"limitations\": [\n      \"The corpus is gh-aw-specific and selection criteria do not establish generalizability beyond the collected repositories (p. 14, External Validity: “do not establish generalizability beyond our selection criteria”).\",\n      \"RQ2 selects files with at least 120 days of observed changes, so findings do not describe how often all workflows remain static (p. 15, External Validity: “selects already-maintained files”).\",\n      \"The study characterizes instructions but does not establish their impact on execution outcomes (p. 15, Related Work: “not whether the instructions improve execution outcomes”).\",\n      \"LLM rankings are observed tested results, not evidence of superiority across repeated runs (p. 14, Conclusion Validity: “not statistical superiority across repeated runs”).\"\n    ]\n  },\n  \"insights\": [\n    {\n      \"insight\": \"Treat recurring workflow Markdown as a maintained operational specification, not merely a prompt: body instructions and execution configuration jointly define behavior.\",\n      \"why_it_matters\": \"Changes can affect subsequent runs, and instructions are substantial enough to merit review alongside runtime settings.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Introduction\",\n          \"quote\": \"couple agent instructions with execution triggers\"\n        },\n        {\n          \"page\": 13,\n          \"section\": \"Discussion, For Developers\",\n          \"quote\": \"track upstream changes, pin or review the commit\"\n        }\n      ],\n      \"confidence\": 0.91,\n      \"novelty\": \"The study provides empirical characterization, not proof that this review practice improves reliability.\",\n      \"related_rmax_topics\": [\n        \"agent reliability\",\n        \"harness/runtime\",\n        \"long-running workflows\"\n      ],\n      \"possible_action\": \"Review source and compiled workflow changes together, including permissions, tools, outputs, and authority.\"\n    },\n    {\n      \"insight\": \"Instruction coverage is uneven: common task/process requirements coexist with sparse explicit prompt-injection defenses and resource budgets.\",\n      \"why_it_matters\": \"Workflow review can check for input-boundary and budget requirements, but prevalence alone cannot establish runtime risk or protection.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 8,\n          \"section\": \"Table III\",\n          \"quote\": \"Resource Budget (38.2%)\"\n        },\n        {\n          \"page\": 8,\n          \"section\": \"Table III\",\n          \"quote\": \"Prompt Injection Defense (9.4%)\"\n        }\n      ],\n      \"confidence\": 0.88,\n      \"novelty\": \"Measured prevalence in this sample; proposed checks are not experimentally validated.\",\n      \"related_rmax_topics\": [\n        \"evaluation/assurance\",\n        \"MCP/governance\",\n        \"tool use\"\n      ],\n      \"possible_action\": \"Add context-sensitive review checks for budgets and untrusted-input handling; evaluate their effect before treating them as assurance.\"\n    },\n    {\n      \"insight\": \"Automated instruction labeling may assist triage, but observed agreement and systematic category disagreements argue for human review.\",\n      \"why_it_matters\": \"A classifier can scale taxonomy application without serving as a reliable substitute for adjudication.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 13,\n          \"section\": \"Table IV\",\n          \"quote\": \"86.81% 0.715 ... 0.818\"\n        },\n        {\n          \"page\": 13,\n          \"section\": \"RQ4 results\",\n          \"quote\": \"Domain Context ... 83 false positives and seven false negatives\"\n        }\n      ],\n      \"confidence\": 0.86,\n      \"novelty\": \"Measured classification against resolved labels; operational assurance use is an extrapolation.\",\n      \"related_rmax_topics\": [\n        \"evaluation/assurance\",\n        \"agent reliability\"\n      ],\n      \"possible_action\": \"Use model labels as review suggestions and audit high-disagreement categories against explicit text.\"\n    }\n  ],\n  \"connections\": [],\n  \"followups\": {\n    \"experiments\": [\n      \"Test whether source-change review catches behaviorally relevant changes in copied or referenced workflows.\"\n    ],\n    \"implementation_ideas\": [\n      \"Provide a workflow review checklist spanning Markdown instructions and frontmatter controls.\"\n    ],\n    \"research_questions\": [\n      \"Do prompt-injection defenses or resource budgets improve task success, safety, or cost in recurring runs?\"\n    ]\n  }\n}",
+  "provider_response_model_id": "gpt-6-luna",
+  "artifact": "raw/responses/l3/full_reference/openai/l3-2609.27263-full_reference-openai-a1.json"
+}

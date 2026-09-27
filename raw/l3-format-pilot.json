@@ -1,0 +1,18 @@
+{
+  "used_as_benchmark_measurement": false,
+  "exclusion_reason": "Initial JSON-mode call received a schema name but the exact artifact structure was not in the prompt; DeepSeek returned valid JSON in an incompatible shape. Prompt fixed to include the canonical shape before scored runs.",
+  "attempt_artifact": "raw/responses/l3/full_reference/deepseek/l3-2609.29808-full_reference-deepseek-a1.json",
+  "http_status": 200,
+  "output_top_level_keys": [
+    "type",
+    "insights",
+    "key_claims",
+    "notes"
+  ],
+  "validation_errors": [
+    "paper must be an object",
+    "insights[0] missing required field",
+    "connections/followups shape mismatch"
+  ],
+  "call_id": "l3-2609.29808-full_reference-deepseek"
+}

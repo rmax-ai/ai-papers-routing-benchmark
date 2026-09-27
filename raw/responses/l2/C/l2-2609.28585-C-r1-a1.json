@@ -1,0 +1,62 @@
+{
+  "call_id": "l2-2609.28585-C-r1",
+  "attempt": 1,
+  "arm_id": "l2-C",
+  "provider": "gemini",
+  "model_id_sent": "gemini-3.5-flash-lite",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+  "call_start_utc": "2026-09-26T22:13:20Z",
+  "settings": {
+    "thinkingConfig": {
+      "thinkingLevel": "low"
+    },
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 3000,
+    "strategy": "C",
+    "round": 1,
+    "page_numbers": [
+      1,
+      2,
+      21,
+      22
+    ]
+  },
+  "http_status": 200,
+  "latency_ms": 24547,
+  "usage": {
+    "input_tokens": 4904,
+    "output_tokens": 399,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": null,
+    "mapping": {
+      "input": "usageMetadata.promptTokenCount",
+      "output": "usageMetadata.candidatesTokenCount",
+      "cached_input": "usageMetadata.cachedContentTokenCount"
+    }
+  },
+  "cost": {
+    "amount": 0.0024687,
+    "rates_used_usd_per_million": {
+      "input": 0.3,
+      "cached_input": 0.3,
+      "output": 2.5
+    },
+    "rate_source": "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"candidate_claims\": [\n    {\n      \"claim\": \"Persistent billable state allows malicious or compromised tool endpoints to cause Denial-of-Wallet attacks by returning inflated content that is reprocessed and billed repeatedly across turns.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"quote\": \"We call tool-generated content persistent billable state when it survives across turns and incurs repeated processing cost.\"\n        }\n      ],\n      \"importance\": \"load_bearing\"\n    },\n    {\n      \"claim\": \"DOW-BENCH evaluation across six model families shows high cost amplification factors, with maximum per-session cumulative input reaches up to 14,293x.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 2,\n          \"quote\": \"Across 243 executions spanning six model families, the maximum per-session input-token Cost Amplification Factor (CAF) reaches 14,293x\"\n        }\n      ],\n      \"importance\": \"load_bearing\"\n    }\n  ],\n  \"key_claims\": [\n    \"Persistent billable state creates denial-of-wallet vulnerabilities in tool-calling LLM agents.\",\n    \"Host-side invariants can govern prompt mass, context growth, and cumulative spend before reingestion to mitigate attacks.\"\n  ],\n  \"limitations\": [\n    \"Only 1.9% of scanned public repositories contain code-visible safeguard proxies.\"\n  ],\n  \"load_bearing_pages\": [\n    1,\n    2\n  ],\n  \"requested_pages\": [],\n  \"stop_reason\": \"Sufficient evidence has been collected from the provided pages to extract key claims, limitations, and candidate claims regarding persistent billable state and DoW attacks.\"\n}",
+  "provider_response_model_version": "gemini-3.5-flash-lite",
+  "artifact": "raw/responses/l2/C/l2-2609.28585-C-r1-a1.json",
+  "paper_id": "2609.28585",
+  "strategy": "C",
+  "round": 1,
+  "input_sha256": "17c10eb62373586f65e2e168904c2701048ae66f29be7e112338b834c034ea7b",
+  "page_numbers_sent": [
+    1,
+    2,
+    21,
+    22
+  ],
+  "input_text_bytes": 1847,
+  "inline_part_bytes": 522522
+}

@@ -1,0 +1,51 @@
+{
+  "call_id": "l3-2609.28586-full_reference-deepseek",
+  "attempt": 1,
+  "arm_id": "l3-full_reference-deepseek",
+  "provider": "deepseek",
+  "model_id_sent": "deepseek-flash",
+  "endpoint": "https://api.deepseek.com/chat/completions",
+  "call_start_utc": "2026-09-26T22:47:19Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_object",
+    "max_tokens": 4500,
+    "prompt_revision": "concise-v4"
+  },
+  "http_status": 200,
+  "latency_ms": 7410,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "prompt_cache_hit_tokens",
+      "prompt_cache_miss_tokens",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 28760,
+    "output_tokens": 1266,
+    "cached_input_tokens": 128,
+    "reasoning_tokens": null,
+    "reasoning_content_present": false,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "cached_input": "usage.prompt_cache_hit_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+    }
+  },
+  "cost": {
+    "amount": 0.005054784,
+    "rates_used_usd_per_million": {
+      "input": 0.15,
+      "cached_input": 0.003,
+      "output": 0.6
+    },
+    "rate_source": "https://api-docs.deepseek.com/quick_start/pricing/; prior-art compare.ts constants reviewed 2026-09-24 UTC",
+    "tier": "offpeak"
+  },
+  "output": "{\"paper\":{\"contribution\":\"Formalizes and measures approval laundering, a record-coverage failure where durable approval records name the entry invocation but omit transitive workflow effects.\",\"key_claims\":[\"Across 111 fixed approval-object/trace pairs, residual records fall from 40 under explicit fields to 17 with command semantics and 13 with metadata.\",\"Across 11 fixed-SHA executions, the representation ladder reaches zero metadata residuals, with two exact mappings recurring across three product frontends.\",\"On 17 prespecified holdout workflows, frozen metadata predictions achieve 0.926 macro recall and 0.941 macro precision, cutting residual effects from 10 to 3.\"],\"evidence\":[\"Explicit approval fields omit observed effect classes in every benchmark mechanism class: 40 of 111 canonical records have a nonempty Eff6 residual.\",\"Residual records specifically fall 40 to 17 to 13 across the same 111 records, with all 13 remaining residuals in the harness/parser fixture stratum.\",\"Vite P to P,F and MCP M to M,N each recur under two frontends across four qualifying runs.\"],\"limitations\":[\"The paper reports a defensive proof-of-concept, has no public artifact URL, and states it is paper-only with sanitized, frozen evidence.\",\"The threat model assumes a trusted measurement TCB plus append-only ledgers, and a strong witness requires Permit, Bind, and decision completeness that not all 111 pairs satisfy.\",\"The six-class vocabulary is coarse; destination, intent, severity, credentials, and product-contract status remain separate policy dimensions.\",\"Prospective evaluation covers 17 target-executed workflows and reports confirmatory metrics with fixed-cohort stability intervals, not population confidence intervals.\"]},\"insights\":[{\"insight\":\"Approval laundering is best understood as a record-to-closure coverage failure, not an invocation-identity failure, because a record can truthfully bind the entry command while omitting effects its workflow activates.\",\"why_it_matters\":\"If identity can be correct while coverage is incomplete, approval interfaces need a different security criterion and measurement target than exact invocation binding.\",\"evidence_refs\":[{\"page\":1,\"section\":\"Abstract\",\"quote\":\"faithfully names the entry invocation yet omits effects exercised within its workflow\"},{\"page\":13,\"section\":\"IX. CONCLUSION\",\"quote\":\"a durable record faithfully identifies an entry invocation yet omits effects activated by its selected implementation\"}],\"confidence\":\"high\",\"novelty\":\"The paper presents this as the first systematic security analysis of the record-to-closure relation and formalizes closure-bound approval over six effect classes, though details of prior work are only briefly summarized.\",\"related_rmax_topics\":[],\"possible_action\":\"Create an evidence-schema and coverage-metric for prior harness/agent approval tests so record-to-closure coverage is scored separately from invocation identity.\"},{\"insight\":\"Adding decision-time information improves coverage monotonically across the reported views, but the remaining residual shift from explicit fields to command semantics to metadata differs by workflow mechanism.\",\"why_it_matters\":\"Operators need to know which mechanisms remain residual under a given information layer before choosing a disclosure or remediation policy.\",\"evidence_refs\":[{\"page\":8,\"section\":\"IV-C. RQ1: Approval-Record Coverage\",\"quote\":\"residual records fall from 40 under explicit fields to 17 after generic command semantics and to 13 after raw metadata\"},{\"page\":10,\"section\":\"VI. PRE-EXECUTION RECOVERY AND EFFECT-BOUND RECORDS\",\"quote\":\"explicit fields leave 10 residual records, command semantics leave 2, and post hoc metadata leaves none\"}],\"confidence\":\"high\",\"novelty\":\"The paper reports a same-corpus representation ladder and a fixed-SHA recurrence ladder; it does not claim these mechanisms are novel or causally generalizable.\",\"related_rmax_topics\":[],\"possible_action\":\"Maintain a per-mechanism coverage table in future evaluations, recording residual counts after explicit, command-aware, and metadata-aware views.\"},{\"insight\":\"A prospective effect-bound record can commit frozen predicted effects and provenance before authorization, then append post-execution evidence without changing the decision-time basis.\",\"why_it_matters\":\"This suggests an approval-path design where policy sees workflow predictions before execution while audit evidence is appended afterward.\",\"evidence_refs\":[{\"page\":1,\"section\":\"Abstract\",\"quote\":\"effect-bound records commit frozen, source-backed predictions and provenance before authorization\"},{\"page\":11,\"section\":\"VI-D. Effect-Bound Approval Record\",\"quote\":\"sealing adds the final permission outcome d\"}],\"confidence\":\"medium\",\"novelty\":\"The paper proposes a pre-authorization effect-bound record, but the reviewed text does not establish adoption beyond a proof-of-concept Claude Code integration.\",\"related_rmax_topics\":[],\"possible_action\":\"Prototype a disposable record schema that stores frozen predictions, source hashes, parser/rules, and permission outcome in one pre-decision transaction.\"}],\"connections\":[{\"from\":\"approval laundering\",\"to\":\"closure-bound approval\",\"basis\":\"The record can truthfully bind the entry invocation yet omit an observed effect, violating the coverage relation.\",\"citations\":[{\"page\":5,\"section\":\"III-C. Closure-Bound Approval and Witnessed Violation\",\"quote\":\"An approval is closure-bound\"}]},{\"from\":\"explicit-field gap\",\"to\":\"command semantics\",\"basis\":\"Vite shows command semantics recover a file effect omitted by explicit fields, but may overpredict network.\",\"citations\":[{\"page\":3,\"section\":\"II-A. Explicit-Field Gap: Vite\",\"quote\":\"conservative package-install semantics recover it\"}],\"confidence\":\"high\"}],\"followups\":[\"Run the same coverage ladder on an MCP harness that records configuration hashes and transport metadata explicitly.\",\"Replicate the fixed-SHA residual ladder with at least one additional harness layer that maps all six effect classes consistently.\",\"Test whether the effect-bound record schema can be carried through a noninteractive approval path without auto-allowing.\",\"At a fixed information view, report both invocation identity and record-to-closure coverage side by side for three existing agent frontends.\"]}",
+  "provider_response_model_id": "deepseek-flash",
+  "artifact": "raw/responses/l3/full_reference/deepseek/l3-2609.28586-full_reference-deepseek-a1.json"
+}

@@ -1,0 +1,49 @@
+{
+  "call_id": "l3-2609.29808-full_reference-openai-medium-openai",
+  "attempt": 1,
+  "arm_id": "l3-full_reference-openai-medium-openai",
+  "provider": "openai",
+  "model_id_sent": "gpt-6-luna",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "call_start_utc": "2026-09-26T22:52:44Z",
+  "settings": {
+    "reasoning_effort": "medium",
+    "structured_output": "json_schema strict",
+    "max_completion_tokens": 3600,
+    "prompt_revision": "concise-v4"
+  },
+  "http_status": 200,
+  "latency_ms": 19487,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "completion_tokens_details",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 19356,
+    "output_tokens": 2088,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": 608,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+      "cached_input": "usage.prompt_tokens_details.cached_tokens"
+    }
+  },
+  "cost": {
+    "amount": 0.0029796,
+    "rates_used_usd_per_million": {
+      "input": 0.1,
+      "cached_input": 0.01,
+      "output": 0.5
+    },
+    "rate_source": "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"paper\": {\n    \"contribution\": \"The paper describes an out-of-band agent containment architecture and reports a benchmark/testbed evaluation of preemption and tripwire performance.\",\n    \"key_claims\": [\n      {\n        \"claim\": \"The proposed design uses kernel/runtime supervision to interrupt execution at capability or execution-surface boundaries.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 7,\n            \"section\": \"§5, Epistemic Andon Imperative\",\n            \"quote\": \"an out-of-band Synchronous Reactive (SR) Supervisor intercepts the socket syscall at the kernel/seccomp layer\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"The paper reports benchmark measurements of 0.40 µs median tripwire evaluation and 0.0048 ms median SIGSTOP freeze in its testbed.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 15,\n            \"section\": \"§7.3, Empirical Systems Telemetry Summary\",\n            \"quote\": \"Median: 0.4010 µs\"\n          },\n          {\n            \"page\": 15,\n            \"section\": \"§7.3, Empirical Systems Telemetry Summary\",\n            \"quote\": \"Median: 0.0048 ms (4.83 µs)\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"The paper reports that kernel probes intercepted all 500 test payloads, while its lexical tripwire bypass rate was 82%.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 16,\n            \"section\": \"§7.4, Experiment 1\",\n            \"quote\": \"eBPF LSM Probe Detection Accuracy: 100.0% (500 / 500 payloads)\"\n          }\n        ]\n      }\n    ],\n    \"evidence\": [\n      {\n        \"claim\": \"The testbed compared a kernel-level probe against application-layer lexical matching on 500 adversarial payloads.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 16,\n            \"section\": \"§7.4, Experiment 1\",\n            \"quote\": \"Evaluates 500 diverse obfuscation payloads\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"The reported latency statistics use 15 process launches and hierarchical bootstrap confidence intervals.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 16,\n            \"section\": \"§7.4, Experiment 3\",\n            \"quote\": \"E=15 independent OS process launches\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"The authors explicitly condition their security claims on host-kernel integrity and absence of prior host-root access.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 9,\n            \"section\": \"Threat Model Boundary\",\n            \"quote\": \"hold under the assumption that the attacker has NOT obtained host-level administrative (root) privileges\"\n          }\n        ]\n      }\n    ],\n    \"limitations\": [\n      \"The supplied paper text does not independently corroborate the described production incident or its forensic telemetry.\",\n      \"Reported benchmark and attack results are from the paper's own testbed; independent replication is not provided in the supplied text.\",\n      \"The security claims assume an uncompromised kernel and do not cover an attacker who already has host-root access.\",\n      \"The supplied excerpt describes implementation details but does not provide a complete independently inspectable implementation.\"\n    ]\n  },\n  \"insights\": [\n    {\n      \"insight\": \"For agent reliability, the paper's central design implication is to enforce hard execution boundaries outside the agent's own reasoning loop.\",\n      \"why_it_matters\": \"An external supervisor can provide a distinct interruption mechanism rather than depending solely on the agent to recognize and obey a boundary.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 7,\n          \"section\": \"§5, Epistemic Andon Imperative\",\n          \"quote\": \"intercepts the socket syscall at the kernel/seccomp layer\"\n        }\n      ],\n      \"confidence\": 0.66,\n      \"novelty\": \"The paper presents this as its architectural approach; novelty relative to prior work is not established here.\",\n      \"related_rmax_topics\": [\n        \"agent reliability\",\n        \"harness/runtime\",\n        \"tool use\"\n      ],\n      \"possible_action\": \"Prototype a separate supervisor that rejects unauthorized network, filesystem, and process operations in an agent harness.\"\n    },\n    {\n      \"insight\": \"The reported results motivate separating fast containment measurements from claims of end-to-end security assurance.\",\n      \"why_it_matters\": \"Low measured latency and high test-set detection do not, by themselves, establish protection across deployments or threat models.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 16,\n          \"section\": \"§7.4, Experiment 1\",\n          \"quote\": \"100.0% (500 / 500 payloads)\"\n        },\n        {\n          \"page\": 9,\n          \"section\": \"Threat Model Boundary\",\n          \"quote\": \"assumes that the attacker has NOT obtained host-level administrative (root) privileges\"\n        }\n      ],\n      \"confidence\": 0.78,\n      \"novelty\": \"This is a scope distinction drawn from the paper's reported test results and stated threat boundary, not a novelty claim.\",\n      \"related_rmax_topics\": [\n        \"evaluation/assurance\",\n        \"harness/runtime\",\n        \"MCP/governance\"\n      ],\n      \"possible_action\": \"Evaluate containment separately across adversarial payloads, platform configurations, and explicit threat-model boundaries.\"\n    },\n    {\n      \"insight\": \"The paper suggests treating interruptible checkpoints and durable state handling as part of containment, not merely workflow convenience.\",\n      \"why_it_matters\": \"Long-running agents need a way to pause and recover without relying on cooperative execution after a violation.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 12,\n          \"section\": \"Formal Epoch-Based Recovery\",\n          \"quote\": \"Durable snapshots are committed strictly at quiescent epoch boundaries.\"\n        }\n      ],\n      \"confidence\": 0.63,\n      \"novelty\": \"The paper applies checkpointing to its proposed containment workflow; novelty is not independently assessed.\",\n      \"related_rmax_topics\": [\n        \"long-running workflows\",\n        \"harness/runtime\",\n        \"agent reliability\"\n      ],\n      \"possible_action\": \"Test interruption and recovery at defined transaction boundaries, including stale-worker and partial-write cases.\"\n    }\n  ],\n  \"connections\": [],\n  \"followups\": {\n    \"experiments\": [\n      \"Independently reproduce the reported latency and payload-detection tests across kernels and agent runtimes.\"\n    ],\n    \"implementation_ideas\": [\n      \"Add an out-of-band policy enforcement point to a tool harness and test deny, freeze, and checkpoint behavior.\"\n    ],\n    \"research_questions\": [\n      \"How do containment guarantees change under supervisor failure, kernel compromise, or more complex long-running workflows?\"\n    ]\n  }\n}",
+  "provider_response_model_id": "gpt-6-luna",
+  "artifact": "raw/responses/l3/full_reference-openai-medium/openai/l3-2609.29808-full_reference-openai-medium-openai-a1.json"
+}

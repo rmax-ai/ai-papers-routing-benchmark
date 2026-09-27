@@ -1,0 +1,51 @@
+{
+  "call_id": "l3-2609.29095-full_reference-deepseek",
+  "attempt": 1,
+  "arm_id": "l3-full_reference-deepseek",
+  "provider": "deepseek",
+  "model_id_sent": "deepseek-flash",
+  "endpoint": "https://api.deepseek.com/chat/completions",
+  "call_start_utc": "2026-09-26T22:38:35Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_object",
+    "max_tokens": 2000,
+    "prompt_revision": "concise-v3"
+  },
+  "http_status": 200,
+  "latency_ms": 8311,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "prompt_cache_hit_tokens",
+      "prompt_cache_miss_tokens",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 27109,
+    "output_tokens": 1588,
+    "cached_input_tokens": 128,
+    "reasoning_tokens": null,
+    "reasoning_content_present": false,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "cached_input": "usage.prompt_cache_hit_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+    }
+  },
+  "cost": {
+    "amount": 0.005000334,
+    "rates_used_usd_per_million": {
+      "input": 0.15,
+      "cached_input": 0.003,
+      "output": 0.6
+    },
+    "rate_source": "https://api-docs.deepseek.com/quick_start/pricing/; prior-art compare.ts constants reviewed 2026-09-24 UTC",
+    "tier": "offpeak"
+  },
+  "output": "{\n  \"paper\": {\n    \"contribution\": {\n      \"page\": 1,\n      \"section\": \"Abstract\",\n      \"quote\": \"We introduce Limbo, a deterministic sandbox of six services\"\n    },\n    \"key_claims\": [\n      {\n        \"page\": 4,\n        \"section\": \"3 Recovery under uncertain side effects\",\n        \"quote\": \"If π completes the task in Wabsent with probability one within time T, then for every δ > T + λ, π produces a duplicate\"\n      },\n      {\n        \"page\": 4,\n        \"section\": \"3 Recovery under uncertain side effects\",\n        \"quote\": \"the policy “re-issue with the same key until acknowledged” is exactly-once in all five outcome states\"\n      },\n      {\n        \"page\": 10,\n        \"section\": \"6.2 Where exactly-once lives depends on the fault\",\n        \"quote\": \"the contract accounts for 81% and the model for 8%\"\n      }\n    ],\n    \"evidence\": [\n      {\n        \"page\": 8,\n        \"section\": \"6.1 What frontier models get right, and where they fail\",\n        \"quote\": \"under timeout_post their duplicate rate is 0.5%\"\n      },\n      {\n        \"page\": 8,\n        \"section\": \"6.1 What frontier models get right, and where they fail\",\n        \"quote\": \"duplicate in 56% of late-commit and 74% of redelivery episodes\"\n      },\n      {\n        \"page\": 11,\n        \"section\": \"6.3 Waiting is not a substitute for keys\",\n        \"quote\": \"the late-commit duplicate rate falls from 61% to 9%\"\n      }\n    ],\n    \"limitations\": [\n      {\n        \"page\": 16,\n        \"section\": \"7 Discussion\",\n        \"quote\": \"The services are simulated\"\n      },\n      {\n        \"page\": 16,\n        \"section\": \"7 Discussion\",\n        \"quote\": \"model identifiers refer to versions available in September 2026\"\n      },\n      {\n        \"page\": 16,\n        \"section\": \"7 Discussion\",\n        \"quote\": \"the guard is a deliberately simple baseline, not an optimal policy\"\n      },\n      {\n        \"page\": 16,\n        \"section\": \"7 Discussion\",\n        \"quote\": \"Our tasks are short to medium in length\"\n      }\n    ]\n  },\n  \"insights\": [\n    {\n      \"insight\": \"Exactly-once enforcement is fault-dependent: read-back-resolvable faults are model-governed while unresolvable faults are contract-governed.\",\n      \"why_it_matters\": \"It indicates where to place reliability mechanisms across agent stacks rather than uniformly.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 10,\n          \"section\": \"6.2\",\n          \"quote\": \"On resolvable faults the model accounts for 53% of the explained variance and the contract for 30%\"\n        },\n        {\n          \"page\": 10,\n          \"section\": \"6.2\",\n          \"quote\": \"the contract accounts for 81% and the model for 8%\"\n        }\n      ],\n      \"confidence\": \"medium\",\n      \"novelty\": \"proposal-adjacent; paper frames the split as its central finding\",\n      \"related_rmax_topics\": [\n        \"agent reliability\",\n        \"evaluation/assurance\",\n        \"tool use\",\n        \"MCP/governance\"\n      ],\n      \"possible_action\": \"Adopt per-fault policy: rely on verification for resolvable faults and on idempotency contracts for late-commit/redelivery.\"\n    },\n    {\n      \"insight\": \"Providing idempotency keys on every write, and having harnesses attach and pin them across retries, sharply reduces duplicates across models and harnesses.\",\n      \"why_it_matters\": \"It offers a concrete contract-level intervention that transfers across harnesses without changing the model.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 11,\n          \"section\": \"6.2\",\n          \"quote\": \"the late-commit duplicate rate falls from 61% to 9%\"\n        },\n        {\n          \"page\": 14,\n          \"section\": \"6.5\",\n          \"quote\": \"the duplicate rate is 0% (minimal), 0% (Copilot CLI), 0% (Hermes) and 0% (Codex CLI)\"\n        }\n      ],\n      \"confidence\": \"medium\",\n      \"novelty\": \"not asserted; the paper states keys are a decades-old remedy\",\n      \"related_rmax_topics\": [\n        \"tool use\",\n        \"MCP/governance\",\n        \"harness/runtime\"\n      ],\n      \"possible_action\": \"Add a standard idempotency-key argument and a read-back operation to each non-idempotent tool.\"\n    },\n    {\n      \"insight\": \"Agents often cannot detect their own duplicates and report success, which hides reliability failures from users and evaluators.\",\n      \"why_it_matters\": \"Silent duplicated side effects can escape human review and are missed by final-state-only grading.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 12,\n          \"section\": \"6.4\",\n          \"quote\": \"the agent finished with status completed in 90%\"\n        },\n        {\n          \"page\": 5,\n          \"section\": \"4 The Limbo benchmark\",\n          \"quote\": \"a duplicate side effect is any excess execution, whether or not the agent later compensated\"\n        }\n      ],\n      \"confidence\": \"medium\",\n      \"novelty\": \"not asserted; supported as a measured observation\",\n      \"related_rmax_topics\": [\n        \"agent reliability\",\n        \"evaluation/assurance\",\n        \"long-running workflows\"\n      ],\n      \"possible_action\": \"Grade against an effect ledger and surface outcome uncertainty in final agent reports.\"\n    }\n  ],\n  \"connections\": [\n    {\n      \"page\": 3,\n      \"section\": \"2 Related work\",\n      \"quote\": \"These works measure task completion under observable failures\",\n      \"note\": \"Positions this work against prior tool-failure benchmarks that do not track hidden committed effects.\"\n    },\n    {\n      \"page\": 15,\n      \"section\": \"7 Discussion\",\n      \"quote\": \"Protocols such as MCP already let a server declare a tool idempotent, but only as an advisory hint\",\n      \"note\": \"Links the findings to MCP governance and contract design.\"\n    }\n  ],\n  \"followups\": [\n    {\n      \"page\": 16,\n      \"section\": \"7 Discussion\",\n      \"quote\": \"long-horizon workflows compound the effects we measure but also introduce failure modes we do not study\",\n      \"note\": \"Extend Limbo-style effect-ledger grading to multi-step long-horizon workflows.\"\n    },\n    {\n      \"page\": 16,\n      \"section\": \"7 Discussion\",\n      \"quote\": \"learned or cost-aware verification could reduce its latency cost\",\n      \"note\": \"Evaluate learned or budget-aware verification policies under the same fault matrix.\"\n    },\n    {\n      \"page\": 12,\n      \"section\": \"6.3\",\n      \"quote\": \"A harness that pins one key per intent\",\n      \"note\": \"Implement and test a harness-level key-pinning guard for models that regenerate keys on retries.\"\n    }\n  ]\n}",
+  "provider_response_model_id": "deepseek-flash",
+  "artifact": "raw/responses/l3/full_reference/deepseek/l3-2609.29095-full_reference-deepseek-a1-r2.json"
+}

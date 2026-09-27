@@ -1,0 +1,49 @@
+{
+  "call_id": "l3-2609.29095-selective-openai",
+  "attempt": 1,
+  "arm_id": "l3-selective-openai",
+  "provider": "openai",
+  "model_id_sent": "gpt-6-luna",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "call_start_utc": "2026-09-26T22:40:04Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_schema strict",
+    "max_completion_tokens": 2400,
+    "prompt_revision": "concise-v3"
+  },
+  "http_status": 200,
+  "latency_ms": 18553,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "completion_tokens_details",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 8456,
+    "output_tokens": 1589,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": 0,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+      "cached_input": "usage.prompt_tokens_details.cached_tokens"
+    }
+  },
+  "cost": {
+    "amount": 0.0016401,
+    "rates_used_usd_per_million": {
+      "input": 0.1,
+      "cached_input": 0.01,
+      "output": 0.5
+    },
+    "rate_source": "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"paper\": {\n    \"contribution\": \"LIMBO evaluates duplicate side effects across models, harnesses, contracts, and recovery policies in 25,930 simulated episodes; results indicate the effective remedy varies with whether an outcome can be read back.\",\n    \"key_claims\": [\n      {\n        \"claim\": \"For lost acknowledgements that immediate read-back can resolve, frontier models instructed to act exactly once duplicate in 0.5% of episodes, while weaker models duplicate in 18%.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 2,\n            \"section\": \"Introduction\",\n            \"quote\": \"Frontier models instructed to act exactly once almost never duplicate a write whose acknowledgement was lost (0.5% of episodes)\"\n          },\n          {\n            \"page\": 2,\n            \"section\": \"Introduction\",\n            \"quote\": \"weaker models duplicate in 18%\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"Under late commits without a known in-flight bound, verification alone cannot guarantee exactly-once execution; offering keys on every write reduced duplicate rate from 28% to 4%.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 2,\n            \"section\": \"Introduction\",\n            \"quote\": \"no verification-only policy can be exactly-once under late commits without a known bound on in-flight time\"\n          },\n          {\n            \"page\": 2,\n            \"section\": \"Introduction\",\n            \"quote\": \"the duplicate rate falls from 28% to 4% with no other change\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"In the evaluated setup, three production harnesses and a minimal scaffold behaved almost identically, while 90% of duplicate-producing episodes were reported as completed.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 2,\n            \"section\": \"Introduction\",\n            \"quote\": \"Three production harnesses and a minimal scaffold running the same model behave almost identically.\"\n          },\n          {\n            \"page\": 2,\n            \"section\": \"Introduction\",\n            \"quote\": \"In 90% of episodes that produced a duplicate, the agent reported the task as completed.\"\n          }\n        ]\n      }\n    ],\n    \"evidence\": [\n      {\n        \"claim\": \"The study grades recovery decisions against a ledger and varies model, harness, tool contract, and recovery policy.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 2,\n            \"section\": \"Introduction\",\n            \"quote\": \"every recovery decision is graded against a ground-truth ledger of committed side effects\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"The sandbox includes late commits, redelivery, partial batches, optional keys, and constrained read paths.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 2,\n            \"section\": \"Introduction\",\n            \"quote\": \"late commits, where a timed-out request is still in flight\"\n          }\n        ]\n      }\n    ],\n    \"limitations\": [\n      \"Services are simulated, and the heavy-tailed delay distribution is a modelling choice; specific success rates depend on its shape (p. 16, Limitations).\",\n      \"Harnesses are restricted to sandbox tools with a shared preamble, so other harness behaviors may differ (p. 16, Limitations).\",\n      \"Tasks are short to medium length; long-horizon workflows may compound measured effects and introduce unstudied failure modes (p. 16, Limitations).\",\n      \"Several analyses are exploratory and the guard is a simple baseline, not an optimal policy (p. 16, Limitations).\"\n    ]\n  },\n  \"insights\": [\n    {\n      \"insight\": \"Exactly-once reliability is conditional on the failure being observable: model verification helps with readable lost acknowledgements, but cannot resolve an in-flight write lacking a known completion bound.\",\n      \"why_it_matters\": \"Reliability design should distinguish recoverable ambiguity from uncertainty that needs a tool-level contract guarantee.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 2,\n          \"section\": \"Introduction\",\n          \"quote\": \"When a read-back can resolve the failure, the model decides.\"\n        },\n        {\n          \"page\": 2,\n          \"section\": \"Introduction\",\n          \"quote\": \"no verification-only policy can be exactly-once under late commits without a known bound on in-flight time\"\n        }\n      ],\n      \"confidence\": 0.94,\n      \"novelty\": \"Measured results and a stated proof within the paper; no novelty comparison inferred.\",\n      \"related_rmax_topics\": [\n        \"agent reliability\",\n        \"tool use\",\n        \"MCP/governance\"\n      ],\n      \"possible_action\": \"Classify write tools by read-back availability and in-flight semantics, then require idempotency keys where verification cannot settle outcomes.\"\n    },\n    {\n      \"insight\": \"The paper reports a large contract-level effect for idempotency keys, while harness differences were small in its restricted evaluation.\",\n      \"why_it_matters\": \"Prioritize safe write contracts and key propagation over assuming retries or harness choice alone will prevent duplicate effects.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 2,\n          \"section\": \"Introduction\",\n          \"quote\": \"the duplicate rate falls from 28% to 4% with no other change\"\n        },\n        {\n          \"page\": 2,\n          \"section\": \"Introduction\",\n          \"quote\": \"Three production harnesses and a minimal scaffold running the same model behave almost identically.\"\n        }\n      ],\n      \"confidence\": 0.88,\n      \"novelty\": \"A measured comparison in this benchmark; broad transfer beyond the evaluated setup is not established.\",\n      \"related_rmax_topics\": [\n        \"harness/runtime\",\n        \"MCP/governance\",\n        \"tool use\"\n      ],\n      \"possible_action\": \"Add stable idempotency-key support to write APIs and test that runtime middleware preserves the same key across retries.\"\n    },\n    {\n      \"insight\": \"Task-success reporting is an inadequate assurance signal for side-effect correctness in this benchmark.\",\n      \"why_it_matters\": \"Evaluation should independently inspect committed effects rather than treating the agent's completion claim as proof.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 2,\n          \"section\": \"Introduction\",\n          \"quote\": \"In 90% of episodes that produced a duplicate, the agent reported the task as completed.\"\n        },\n        {\n          \"page\": 2,\n          \"section\": \"Introduction\",\n          \"quote\": \"every recovery decision is graded against a ground-truth ledger of committed side effects\"\n        }\n      ],\n      \"confidence\": 0.91,\n      \"novelty\": \"Benchmark result, not evidence that the same rate holds in deployed workflows.\",\n      \"related_rmax_topics\": [\n        \"evaluation/assurance\",\n        \"agent reliability\",\n        \"long-running workflows\"\n      ],\n      \"possible_action\": \"Include an external side-effect ledger or equivalent oracle in agent reliability evaluations.\"\n    }\n  ],\n  \"connections\": [],\n  \"followups\": {\n    \"experiments\": [\n      \"Test idempotency-key propagation and duplicate effects in longer workflows with additional failure modes.\"\n    ],\n    \"implementation_ideas\": [\n      \"Instrument write attempts with stable operation keys and record committed effects independently of agent-reported status.\"\n    ],\n    \"research_questions\": [\n      \"How do duplicate-effect rates change in long-horizon workflows and harnesses with different retry or summarization behavior?\"\n    ]\n  }\n}",
+  "provider_response_model_id": "gpt-6-luna",
+  "artifact": "raw/responses/l3/selective/openai/l3-2609.29095-selective-openai-a1.json"
+}

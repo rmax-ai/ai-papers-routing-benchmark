@@ -1,0 +1,51 @@
+{
+  "call_id": "l3-2609.24122-full_reference-deepseek",
+  "attempt": 1,
+  "arm_id": "l3-full_reference-deepseek",
+  "provider": "deepseek",
+  "model_id_sent": "deepseek-flash",
+  "endpoint": "https://api.deepseek.com/chat/completions",
+  "call_start_utc": "2026-09-26T22:50:56Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_object",
+    "max_tokens": 4500,
+    "prompt_revision": "concise-v4"
+  },
+  "http_status": 200,
+  "latency_ms": 7803,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "prompt_cache_hit_tokens",
+      "prompt_cache_miss_tokens",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 40716,
+    "output_tokens": 1838,
+    "cached_input_tokens": 128,
+    "reasoning_tokens": null,
+    "reasoning_content_present": false,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "cached_input": "usage.prompt_cache_hit_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+    }
+  },
+  "cost": {
+    "amount": 0.007191384,
+    "rates_used_usd_per_million": {
+      "input": 0.15,
+      "cached_input": 0.003,
+      "output": 0.6
+    },
+    "rate_source": "https://api-docs.deepseek.com/quick_start/pricing/; prior-art compare.ts constants reviewed 2026-09-24 UTC",
+    "tier": "offpeak"
+  },
+  "output": "{\n  \"paper\": {\n    \"contribution\": {\n      \"text\": \"The paper proposes Re:CAP, a reference-free iterative audit loop that probes a deployed RAG pipeline for retrieval gaps instead of enumerating all relevant documents.\",\n      \"citation\": {\n        \"page\": 1,\n        \"section\": \"Abstract\",\n        \"quote\": \"auditing retrieval coverage by probing for evidence of missing documents\"\n      }\n    },\n    \"key_claims\": [\n      {\n        \"claim\": \"Re:CAP recovers some gold labels that flat BM25 top-500 cannot reach.\",\n        \"citation\": {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"recovers 9-29% of gold labels that flat BM25 top-500 cannot reach\"\n        }\n      },\n      {\n        \"claim\": \"On MuSiQue, Re:CAP beats flat hybrid top-500 by +12.9 pp recall at less than half the document budget.\",\n        \"citation\": {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"beats flat hybrid top-500 by +12.9 pp on recall at less than half the document budget\"\n        }\n      },\n      {\n        \"claim\": \"End-to-end recall is reported reproducible to within about ±1% across three independent runs.\",\n        \"citation\": {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"reproducible to within ±1% across three independent runs\"\n        }\n      }\n    ],\n    \"evidence\": [\n      {\n        \"evidence\": \"Human annotators judged 78.9% of ensemble-unreachable TREC-COVID documents as adding new information.\",\n        \"citation\": {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"78.9% of those structurally distinct documents add new information\"\n        }\n      },\n      {\n        \"evidence\": \"A controlled gold-deletion check showed high re-discovery of removed gold passages on MuSiQue.\",\n        \"citation\": {\n          \"page\": 6,\n          \"section\": \"4.4\",\n          \"quote\": \"re-discovers 98.9%/98.4%/100% of the removed gold IDs\"\n        }\n      },\n      {\n        \"evidence\": \"The judge dominates Re:CAP cost, accounting for about 97% of LLM calls.\",\n        \"citation\": {\n          \"page\": 6,\n          \"section\": \"4.5\",\n          \"quote\": \"The judge dominates per-query cost (∼97% across all datasets\"\n        }\n      }\n    ],\n    \"limitations\": [\n      {\n        \"limitation\": \"Re:CAP requires multiple LLM calls per query and may be too expensive for tight monitoring budgets.\",\n        \"citation\": {\n          \"page\": 8,\n          \"section\": \"Limitations\",\n          \"quote\": \"may not suit tight monitoring budgets\"\n        }\n      },\n      {\n        \"limitation\": \"Re:CAP discovers gaps only for topics that exist in the corpus, not corpus-level gaps.\",\n        \"citation\": {\n          \"page\": 8,\n          \"section\": \"Limitations\",\n          \"quote\": \"Re:CAP measures retrieval gaps, not corpus gaps\"\n        }\n      },\n      {\n        \"limitation\": \"All experiments are English-only and have not been validated multilingually.\",\n        \"citation\": {\n          \"page\": 8,\n          \"section\": \"Limitations\",\n          \"quote\": \"unvalidated multilingually\"\n        }\n      },\n      {\n        \"limitation\": \"Instance-level coverage holes can be masked because the type-not-instance rule collapses instances into one topic.\",\n        \"citation\": {\n          \"page\": 8,\n          \"section\": \"Limitations\",\n          \"quote\": \"Instance-level coverage holes can be masked\"\n        }\n      }\n    ]\n  },\n  \"insights\": [\n    {\n      \"insight\": \"Re:CAP turns retrieval assessment into a gap-probing audit rather than exhaustive relevance enumeration.\",\n      \"why_it_matters\": \"This reframes what teams can monitor when production corpora are too large and dynamic for complete labels.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"probing for evidence of missing documents\"\n        }\n      ],\n      \"confidence\": \"high\",\n      \"novelty\": \"Proposes a reference-free iterative probing loop for deployed RAG pipelines.\",\n      \"related_rmax_topics\": [\n        \"evaluation/assurance\",\n        \"agent reliability\"\n      ],\n      \"possible_action\": \"Pilot Re:CAP as a periodic audit rather than inline monitoring.\"\n    },\n    {\n      \"insight\": \"The audit’s value is supported by recovery of gold that flat retrieval cannot reach, including human-validated ensemble-missed documents.\",\n      \"why_it_matters\": \"It suggests coverage gaps can persist even after combining multiple strong retrievers.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"21.2% of gold docs on TREC-COVID that Re:CAP recovers\"\n        },\n        {\n          \"page\": 7,\n          \"section\": \"5\",\n          \"quote\": \"78.9% [71.5–86.2, 10,000-resample bootstrap] of ensemble-missed gap documents are judged new_info\"\n        }\n      ],\n      \"confidence\": \"medium\",\n      \"novelty\": \"The human validation targets documents unreachable by a three-retriever ensemble.\",\n      \"related_rmax_topics\": [\n        \"evaluation/assurance\",\n        \"harness/runtime\"\n      ],\n      \"possible_action\": \"Use ensemble-unreachable gold as a focused audit metric for retriever changes.\"\n    },\n    {\n      \"insight\": \"Recovered gap documents can contain information the baseline answer lacks, but the judge and cost profile constrain unattended use.\",\n      \"why_it_matters\": \"Operational value depends on judge reliability and affordable LLM calls, not just recall.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"73.9% on live production traffic\"\n        },\n        {\n          \"page\": 6,\n          \"section\": \"4.5\",\n          \"quote\": \"The judge dominates per-query cost (∼97% across all datasets\"\n        }\n      ],\n      \"confidence\": \"medium\",\n      \"novelty\": \"Separates measured human validation from cost and judge-dependence limitations.\",\n      \"related_rmax_topics\": [\n        \"tool use\",\n        \"evaluation/assurance\"\n      ],\n      \"possible_action\": \"Sample audit queries and use cheaper judge configurations only where recall loss is acceptable.\"\n    }\n  ],\n  \"connections\": [\n    {\n      \"from\": \"Re:CAP\",\n      \"to\": \"RAG evaluation frameworks\",\n      \"relation\": \"complementary audit layer\",\n      \"citation\": {\n        \"page\": 1,\n        \"section\": \"Introduction\",\n        \"quote\": \"cannot detect what the retriever failed to surface\"\n      },\n      \"confidence\": \"medium\"\n    }\n  ],\n  \"followups\": [\n    {\n      \"question\": \"How stable are gap-rate and gap-count signals under production corpus drift?\",\n      \"support\": {\n        \"page\": 6,\n        \"section\": \"4.3\",\n        \"quote\": \"gap rate saturates on these workloads and acts as a coverage floor\"\n      },\n      \"confidence\": \"medium\"\n    },\n    {\n      \"question\": \"Can entity-ledger anchoring failures from hallucinated answer entities be reduced without losing bridge-entity recall?\",\n      \"support\": {\n        \"page\": 6,\n        \"section\": \"4.5\",\n        \"quote\": \"entity-ledger anchoring on a hallucinated name from A0\"\n      },\n      \"confidence\": \"medium\"\n    },\n    {\n      \"question\": \"What thresholding recipe works best for Re:CAP signals in production deployments?\",\n      \"support\": {\n        \"page\": 6,\n        \"section\": \"4.3\",\n        \"quote\": \"Neither signal is a drop-in alarm on its own\"\n      },\n      \"confidence\": \"low\"\n    },\n    {\n      \"question\": \"Do Re:CAP-discovered gaps transfer as evaluation labels across different retrievers?\",\n      \"support\": {\n        \"page\": 9,\n        \"section\": \"P\",\n        \"quote\": \"Gap inventory as synthetic qrels for retriever benchmarking\"\n      },\n      \"confidence\": \"low\"\n    }\n  ]\n}",
+  "provider_response_model_id": "deepseek-flash",
+  "artifact": "raw/responses/l3/full_reference/deepseek/l3-2609.24122-full_reference-deepseek-a1.json"
+}

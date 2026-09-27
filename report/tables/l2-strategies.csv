@@ -1,0 +1,5 @@
+strategy,input_mechanism,pages_processed,bytes_processed_sent,tokens_in,tokens_out,logical_calls,attempts,latency_sum_s,cost,mean_claim_recall_0.20,mean_d_load_bearing_page_recall
+A,Gemini Flash-Lite,0,14092,6672,4766,8,8,207.524,0.0139166,0.5541666666666667,n/a
+B,Gemini Flash-Lite,203,17914526,109510,5933,8,8,230.997,0.0476855,0.63125,1.0
+C,Gemini Flash-Lite,34,4019205,41314,2974,8,8,209.386,0.0198292,0.2125,0.3086309523809524
+D,Gemini Flash-Lite,203,793742,220405,5200,8,8,213.073,0.0791215,1.0,1.0

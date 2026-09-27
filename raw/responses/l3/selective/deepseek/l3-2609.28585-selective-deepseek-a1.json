@@ -1,0 +1,51 @@
+{
+  "call_id": "l3-2609.28585-selective-deepseek",
+  "attempt": 1,
+  "arm_id": "l3-selective-deepseek",
+  "provider": "deepseek",
+  "model_id_sent": "deepseek-flash",
+  "endpoint": "https://api.deepseek.com/chat/completions",
+  "call_start_utc": "2026-09-26T22:46:26Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_object",
+    "max_tokens": 4500,
+    "prompt_revision": "concise-v4"
+  },
+  "http_status": 200,
+  "latency_ms": 6165,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "prompt_cache_hit_tokens",
+      "prompt_cache_miss_tokens",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 8031,
+    "output_tokens": 1692,
+    "cached_input_tokens": 3456,
+    "reasoning_tokens": null,
+    "reasoning_content_present": false,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "cached_input": "usage.prompt_cache_hit_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+    }
+  },
+  "cost": {
+    "amount": 0.001711818,
+    "rates_used_usd_per_million": {
+      "input": 0.15,
+      "cached_input": 0.003,
+      "output": 0.6
+    },
+    "rate_source": "https://api-docs.deepseek.com/quick_start/pricing/; prior-art compare.ts constants reviewed 2026-09-24 UTC",
+    "tier": "offpeak"
+  },
+  "output": "{\n  \"paper\": {\n    \"contribution\": \"The paper establishes persistent billable state as a first-class security object and proposes pre-reingestion host-side governance for tool-calling LLM agents.\",\n    \"key_claims\": [\n      {\n        \"claim\": \"An admitted malicious or compromised tool can convert untrusted data into recurring victim-billed processing without victim credentials or local runtime privilege.\",\n        \"citation\": {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"An admitted malicious or compromised tool can thereby convert untrusted data into recurring victim-billed processing without victim credentials or local runtime privilege.\"\n        }\n      },\n      {\n        \"claim\": \"Across 243 executions spanning six model families, the maximum per-session input-token Cost Amplification Factor reaches 14,293x.\",\n        \"citation\": {\n          \"page\": 2,\n          \"section\": \"RQ1\",\n          \"quote\": \"Across 243 executions spanning six model families, the maximum per-session input-token Cost Amplification Factor (CAF) reaches 14,293x\"\n        }\n      },\n      {\n        \"claim\": \"Retaining raw history increases mean effective session cost by 21.2-35.9%, while compression preserves 10/12 and 11/12 history-dependent task successes versus 2/12 under deletion.\",\n        \"citation\": {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"retaining raw history increases mean effective session cost by 21.2-35.9%. Compression succeeds on 10/12 and 11/12 history-dependent tasks, versus 2/12 under deletion\"\n        }\n      }\n    ],\n    \"evidence\": [\n      {\n        \"item\": \"Provider-reported usage telemetry shows maximum per-session cumulative input reaches 14,293x the corresponding session's complete first-call input.\",\n        \"citation\": {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"the maximum per-session cumulative input reaches 14,293x the corresponding session's complete first-call input\"\n        }\n      },\n      {\n        \"item\": \"The kernel contains every recurring attack in the 123-evaluation replay corpus.\",\n        \"citation\": {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"The kernel contains every recurring attack in the 123-evaluation replay corpus.\"\n        }\n      },\n      {\n        \"item\": \"Across 24 Mistral Small 4 workflows, progress-authorized policy achieves 22/24 oracle-verified task successes with no pre-completion interruptions, versus 13/24 under a fixed cap.\",\n        \"citation\": {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"progress-authorized policy achieves 22/24 oracle-verified task successes with no pre-completion interruptions, versus 13/24 under a fixed cap\"\n        }\n      }\n    ],\n    \"limitations\": [\n      {\n        \"limitation\": \"The artifact is limited to the supplied abstract, two page excerpts, and visual reader claims; full paper text and all tables are unavailable.\",\n        \"citation\": {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"We present the first systematic security study of this post-admission lifecycle.\"\n        }\n      },\n      {\n        \"limitation\": \"No independent replication or causal analysis is provided in the supplied material.\",\n        \"citation\": {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"These results establish persistent billable state as a first-class security object\"\n        }\n      },\n      {\n        \"limitation\": \"The deployment scan only identifies code-visible safeguard proxies and does not establish runtime effectiveness.\",\n        \"citation\": {\n          \"page\": 22,\n          \"section\": \"Figure 14\",\n          \"quote\": \"No detected proxy 98.1% (3,759)\"\n        }\n      },\n      {\n        \"limitation\": \"Only 71 of 3,830 scanned MCP server and transport repositories expose any code-visible safeguard proxy, and none cover all four safeguard families.\",\n        \"citation\": {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"Only 71 of 3,830 scanned MCP server and transport repositories expose any code-visible safeguard proxy, and none cover all four safeguard families.\"\n        }\n      }\n    ]\n  },\n  \"insights\": [\n    {\n      \"insight\": \"Persistent billable state creates a post-admission economic attack surface where a single tool return can induce recurring victim-billed processing.\",\n      \"why_it_matters\": \"This shifts agent security from admission control to post-return economic governance.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"We call such retained content persistent billable state\"\n        },\n        {\n          \"page\": 1,\n          \"section\": \"Introduction\",\n          \"quote\": \"one admitted return acquires recurring spending authority on every later call\"\n        }\n      ],\n      \"confidence\": \"medium\",\n      \"novelty\": \"proposed\",\n      \"related_rmax_topics\": [\n        \"agent reliability\",\n        \"evaluation/assurance\",\n        \"harness/runtime\",\n        \"MCP/governance\",\n        \"tool use\",\n        \"long-running workflows\"\n      ],\n      \"possible_action\": \"Add pre-reingestion budget and recursion checks to agent runtimes.\"\n    },\n    {\n      \"insight\": \"DOW-BENCH measures extreme cost amplification, with maximum per-session cumulative input reaching 14,293x across 243 executions and six model families.\",\n      \"why_it_matters\": \"This provides measured evidence that retained tool returns can dominate spend in multi-step agent workflows.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"the maximum per-session cumulative input reaches 14,293x\"\n        },\n        {\n          \"page\": 2,\n          \"section\": \"RQ1\",\n          \"quote\": \"the maximum per-session input-token Cost Amplification Factor (CAF) reaches 14,293x\"\n        }\n      ],\n      \"confidence\": \"medium\",\n      \"novelty\": \"measured\",\n      \"related_rmax_topics\": [\n        \"evaluation/assurance\",\n        \"harness/runtime\",\n        \"long-running workflows\"\n      ],\n      \"possible_action\": \"Include cost-amplification telemetry in evaluation harnesses.\"\n    },\n    {\n      \"insight\": \"Host-side governance can preserve useful continuation while bounding recurring spend, as shown by 22/24 successes under progress-authorized policy versus 13/24 under a fixed cap.\",\n      \"why_it_matters\": \"This suggests utility and economic containment need not be mutually exclusive in long-running workflows.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 2,\n          \"section\": \"RQ3\",\n          \"quote\": \"progress-authorized D4 achieves 22/24 oracle-verified task successes with no pre-completion interruptions, versus 13/24 under a fixed $0.10 cap\"\n        },\n        {\n          \"page\": 2,\n          \"section\": \"RQ2\",\n          \"quote\": \"deterministic compression preserves task state without carrying its full cost-bearing mass\"\n        }\n      ],\n      \"confidence\": \"medium\",\n      \"novelty\": \"proposed\",\n      \"related_rmax_topics\": [\n        \"agent reliability\",\n        \"harness/runtime\",\n        \"long-running workflows\",\n        \"evaluation/assurance\"\n      ],\n      \"possible_action\": \"Prototype progress-authorized spend policies in agent runtime middleware.\"\n    }\n  ],\n  \"connections\": [],\n  \"followups\": [\n    \"Replicate DOW-BENCH across additional model families and agent frameworks.\",\n    \"Evaluate whether code-visible MCP safeguard proxies reduce measured recurring cost at runtime.\"\n  ]\n}",
+  "provider_response_model_id": "deepseek-flash",
+  "artifact": "raw/responses/l3/selective/deepseek/l3-2609.28585-selective-deepseek-a1.json"
+}

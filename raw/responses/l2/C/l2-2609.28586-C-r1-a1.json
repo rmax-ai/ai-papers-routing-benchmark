@@ -1,0 +1,62 @@
+{
+  "call_id": "l2-2609.28586-C-r1",
+  "attempt": 1,
+  "arm_id": "l2-C",
+  "provider": "gemini",
+  "model_id_sent": "gemini-3.5-flash-lite",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+  "call_start_utc": "2026-09-26T22:15:08Z",
+  "settings": {
+    "thinkingConfig": {
+      "thinkingLevel": "low"
+    },
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 3000,
+    "strategy": "C",
+    "round": 1,
+    "page_numbers": [
+      1,
+      2,
+      18,
+      19
+    ]
+  },
+  "http_status": 200,
+  "latency_ms": 26644,
+  "usage": {
+    "input_tokens": 4896,
+    "output_tokens": 264,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": null,
+    "mapping": {
+      "input": "usageMetadata.promptTokenCount",
+      "output": "usageMetadata.candidatesTokenCount",
+      "cached_input": "usageMetadata.cachedContentTokenCount"
+    }
+  },
+  "cost": {
+    "amount": 0.0021288,
+    "rates_used_usd_per_million": {
+      "input": 0.3,
+      "cached_input": 0.3,
+      "output": 2.5
+    },
+    "rate_source": "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"candidate_claims\": [\n    {\n      \"claim\": \"Approval laundering occurs when an agent's approved entry invocation omits transitive effects that are later executed in the workflow.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"quote\": \"We call the resulting structural record-coverage failure approval laundering: a durable record faithfully names the entry invocation yet omits effects exercised within its workflow.\"\n        }\n      ],\n      \"importance\": \"load_bearing\"\n    }\n  ],\n  \"key_claims\": [\n    \"Approval interfaces often bind to an entry invocation while the actual workflow executes unapproved transitive effects.\",\n    \"Binding predicted effects and provenance before authorization improves macro recall and precision.\"\n  ],\n  \"limitations\": [\n    \"Missed effects frequently concentrate in file and environment classes.\"\n  ],\n  \"load_bearing_pages\": [\n    1,\n    2\n  ],\n  \"requested_pages\": [],\n  \"stop_reason\": \"The seen pages (1, 2, 18, 19) provide sufficient evidence regarding the paper's core concepts, definitions, and evaluation metrics for approval laundering.\"\n}",
+  "provider_response_model_version": "gemini-3.5-flash-lite",
+  "artifact": "raw/responses/l2/C/l2-2609.28586-C-r1-a1.json",
+  "paper_id": "2609.28586",
+  "strategy": "C",
+  "round": 1,
+  "input_sha256": "0f16d51f52915b4f6da7ab81b77f5057e3073db09f7194ed2e89d4df3aa45b5f",
+  "page_numbers_sent": [
+    1,
+    2,
+    18,
+    19
+  ],
+  "input_text_bytes": 1832,
+  "inline_part_bytes": 458967
+}

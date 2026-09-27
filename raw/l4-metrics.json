@@ -1,0 +1,4303 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "sampled_candidate_insights": 47,
+  "per_question": {
+    "supported_by_supplied_evidence": {
+      "threshold": 0.75,
+      "label_source": "quote_containment_cited_page_rate",
+      "n_answers": 47,
+      "mean_probability": 0.8821276595744681,
+      "brier": 0.3473063829787234,
+      "agreement_vs_label": 0.5531914893617021,
+      "judge_label_source": "judge_evidence_support",
+      "n_judge_labeled": 40,
+      "brier_vs_blind_judge": 0.1931775,
+      "agreement_vs_blind_judge": 0.775,
+      "tp": 24,
+      "fp": 19,
+      "tn": 2,
+      "fn": 2,
+      "n_labeled": 47
+    },
+    "agenda_relevant": {
+      "threshold": 0.6,
+      "label_source": "high_value_proxy_label",
+      "n_answers": 47,
+      "mean_probability": 0.96,
+      "brier": 0.11382553191489361,
+      "agreement_vs_label": 0.8723404255319149,
+      "judge_label_source": "judge_systems_relevance",
+      "n_judge_labeled": 36,
+      "brier_vs_blind_judge": 0.07153611111111112,
+      "agreement_vs_blind_judge": 0.9166666666666666,
+      "tp": 41,
+      "fp": 6,
+      "tn": 0,
+      "fn": 0,
+      "n_labeled": 47
+    },
+    "duplicates_supplied_existing_insight": {
+      "threshold": 0.75,
+      "label_source": null,
+      "n_answers": 47,
+      "mean_probability": 0.17170212765957446,
+      "brier": null,
+      "agreement_vs_label": null,
+      "judge_label_source": null,
+      "n_judge_labeled": 0,
+      "brier_vs_blind_judge": null,
+      "agreement_vs_blind_judge": null,
+      "tp": 0,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0,
+      "n_labeled": 0
+    },
+    "has_actionable_implication": {
+      "threshold": 0.6,
+      "label_source": "judge_actionable",
+      "n_answers": 47,
+      "mean_probability": 0.8972340425531915,
+      "brier": 0.11964166666666667,
+      "agreement_vs_label": 0.8611111111111112,
+      "judge_label_source": "judge_actionability",
+      "n_judge_labeled": 36,
+      "brier_vs_blind_judge": 0.11964166666666667,
+      "agreement_vs_blind_judge": 0.8611111111111112,
+      "tp": 31,
+      "fp": 5,
+      "tn": 0,
+      "fn": 0,
+      "n_labeled": 36
+    },
+    "escalate_for_deeper_review": {
+      "threshold": 0.65,
+      "label_source": null,
+      "n_answers": 47,
+      "mean_probability": 0.4757446808510638,
+      "brier": null,
+      "agreement_vs_label": null,
+      "judge_label_source": null,
+      "n_judge_labeled": 0,
+      "brier_vs_blind_judge": null,
+      "agreement_vs_blind_judge": null,
+      "tp": 0,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0,
+      "n_labeled": 0
+    }
+  },
+  "per_candidate": [
+    {
+      "paper_id": "2609.29808",
+      "path": "full_reference",
+      "generator": "gemini",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.87
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.95
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.08
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.88
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.87
+        }
+      },
+      "support_quote_containment_rate": 0.0,
+      "candidate_evidence_ref_count": 1,
+      "candidate_exact_quote_support_label": false,
+      "judge_actionable": true,
+      "judge_faithfulness": 3,
+      "judge_evidence_support": 3,
+      "judge_systems_relevance": 3,
+      "judge_actionability": 3,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.29808-full_reference-gemini-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.29808",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.87,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.29808",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.95,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.29808",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.08,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.29808",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.88,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.29808",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.87,
+          "host_decision": true,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.29808",
+      "path": "full_reference",
+      "generator": "deepseek",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.91
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.95
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.1
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.92
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.63
+        }
+      },
+      "support_quote_containment_rate": 1.0,
+      "candidate_evidence_ref_count": 2,
+      "candidate_exact_quote_support_label": true,
+      "judge_actionable": true,
+      "judge_faithfulness": 3.5,
+      "judge_evidence_support": 3.5,
+      "judge_systems_relevance": 4,
+      "judge_actionability": 4,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.29808-full_reference-deepseek-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.29808",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.91,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.29808",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.95,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.29808",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.1,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.29808",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.92,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.29808",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.63,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.29808",
+      "path": "full_reference",
+      "generator": "openai",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.89
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.96
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.07
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.91
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.62
+        }
+      },
+      "support_quote_containment_rate": 1.0,
+      "candidate_evidence_ref_count": 2,
+      "candidate_exact_quote_support_label": true,
+      "judge_actionable": true,
+      "judge_faithfulness": 4,
+      "judge_evidence_support": 4,
+      "judge_systems_relevance": 4,
+      "judge_actionability": 4,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.29808-full_reference-openai-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.29808",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.89,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.29808",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.96,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.29808",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.07,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.29808",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.91,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.29808",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.62,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.29808",
+      "path": "selective",
+      "generator": "deepseek",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.97
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.07
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.73
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.9
+        },
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.77
+        }
+      },
+      "support_quote_containment_rate": 0.5,
+      "candidate_evidence_ref_count": 2,
+      "candidate_exact_quote_support_label": false,
+      "judge_actionable": true,
+      "judge_faithfulness": 3,
+      "judge_evidence_support": 3,
+      "judge_systems_relevance": 4,
+      "judge_actionability": 4,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.29808-selective-deepseek-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.29808",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.77,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.29808",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.97,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.29808",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.07,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.29808",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.9,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.29808",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.73,
+          "host_decision": true,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.29808",
+      "path": "selective",
+      "generator": "gemini",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.73
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.97
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.09
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.89
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.75
+        }
+      },
+      "support_quote_containment_rate": 0.0,
+      "candidate_evidence_ref_count": 1,
+      "candidate_exact_quote_support_label": false,
+      "judge_actionable": true,
+      "judge_faithfulness": 3,
+      "judge_evidence_support": 2,
+      "judge_systems_relevance": 4,
+      "judge_actionability": 3,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.29808-selective-gemini-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.29808",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.73,
+          "host_decision": false,
+          "proxy_label": false,
+          "agreement": true,
+          "blind_judge_label": false,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.29808",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.97,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.29808",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.09,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.29808",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.89,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.29808",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.75,
+          "host_decision": true,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.29808",
+      "path": "selective",
+      "generator": "openai",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.64
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.96
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.06
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.89
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.73
+        }
+      },
+      "support_quote_containment_rate": 1.0,
+      "candidate_evidence_ref_count": 2,
+      "candidate_exact_quote_support_label": true,
+      "judge_actionable": null,
+      "judge_faithfulness": null,
+      "judge_evidence_support": null,
+      "judge_systems_relevance": null,
+      "judge_actionability": null,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.29808-selective-openai-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.29808",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.64,
+          "host_decision": false,
+          "proxy_label": true,
+          "agreement": false
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.29808",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.96,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.29808",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.06,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.29808",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.89,
+          "host_decision": true,
+          "proxy_label": null
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.29808",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.73,
+          "host_decision": true,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.29095",
+      "path": "full_reference",
+      "generator": "deepseek",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.92
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.97
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.11
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.91
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.47
+        }
+      },
+      "support_quote_containment_rate": 1.0,
+      "candidate_evidence_ref_count": 2,
+      "candidate_exact_quote_support_label": true,
+      "judge_actionable": true,
+      "judge_faithfulness": 3,
+      "judge_evidence_support": 3,
+      "judge_systems_relevance": 4,
+      "judge_actionability": 4,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.29095-full_reference-deepseek-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.29095",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.92,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.29095",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.97,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.29095",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.11,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.29095",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.91,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.29095",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.47,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.29095",
+      "path": "full_reference",
+      "generator": "gemini",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.86
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.97
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.08
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.93
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.52
+        }
+      },
+      "support_quote_containment_rate": 0.0,
+      "candidate_evidence_ref_count": 1,
+      "candidate_exact_quote_support_label": false,
+      "judge_actionable": true,
+      "judge_faithfulness": 2,
+      "judge_evidence_support": 2,
+      "judge_systems_relevance": 3,
+      "judge_actionability": 3,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.29095-full_reference-gemini-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.29095",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.86,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": false,
+          "agreement_vs_blind_judge": false
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.29095",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.97,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.29095",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.08,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.29095",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.93,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.29095",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.52,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.29095",
+      "path": "full_reference",
+      "generator": "openai",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.94
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.97
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.1
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.89
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.37
+        }
+      },
+      "support_quote_containment_rate": 1.0,
+      "candidate_evidence_ref_count": 2,
+      "candidate_exact_quote_support_label": true,
+      "judge_actionable": true,
+      "judge_faithfulness": 4,
+      "judge_evidence_support": 4,
+      "judge_systems_relevance": 4,
+      "judge_actionability": 4,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.29095-full_reference-openai-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.29095",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.94,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.29095",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.97,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.29095",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.1,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.29095",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.89,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.29095",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.37,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.29095",
+      "path": "selective",
+      "generator": "deepseek",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.84
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.97
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.11
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.92
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.57
+        }
+      },
+      "support_quote_containment_rate": 1.0,
+      "candidate_evidence_ref_count": 1,
+      "candidate_exact_quote_support_label": true,
+      "judge_actionable": true,
+      "judge_faithfulness": 4,
+      "judge_evidence_support": 3.5,
+      "judge_systems_relevance": 4,
+      "judge_actionability": 4,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.29095-selective-deepseek-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.29095",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.84,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.29095",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.97,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.29095",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.11,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.29095",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.92,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.29095",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.57,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.29095",
+      "path": "selective",
+      "generator": "gemini",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.89
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.97
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.12
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.92
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.45
+        }
+      },
+      "support_quote_containment_rate": 0.0,
+      "candidate_evidence_ref_count": 1,
+      "candidate_exact_quote_support_label": false,
+      "judge_actionable": true,
+      "judge_faithfulness": 3,
+      "judge_evidence_support": 3,
+      "judge_systems_relevance": 3,
+      "judge_actionability": 3,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.29095-selective-gemini-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.29095",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.89,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.29095",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.97,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.29095",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.12,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.29095",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.92,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.29095",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.45,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.29095",
+      "path": "selective",
+      "generator": "openai",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.95
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.98
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.09
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.94
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.29
+        }
+      },
+      "support_quote_containment_rate": 1.0,
+      "candidate_evidence_ref_count": 2,
+      "candidate_exact_quote_support_label": true,
+      "judge_actionable": null,
+      "judge_faithfulness": 4,
+      "judge_evidence_support": 4,
+      "judge_systems_relevance": null,
+      "judge_actionability": null,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.29095-selective-openai-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.29095",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.95,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.29095",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.98,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.29095",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.09,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.29095",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.94,
+          "host_decision": true,
+          "proxy_label": null
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.29095",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.29,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28614",
+      "path": "full_reference",
+      "generator": "deepseek",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.94
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.96
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.15
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.89
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.53
+        }
+      },
+      "support_quote_containment_rate": 1.0,
+      "candidate_evidence_ref_count": 2,
+      "candidate_exact_quote_support_label": true,
+      "judge_actionable": true,
+      "judge_faithfulness": 4,
+      "judge_evidence_support": 4,
+      "judge_systems_relevance": 4,
+      "judge_actionability": 4,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.28614-full_reference-deepseek-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.28614",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.94,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.28614",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.96,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.28614",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.15,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.28614",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.89,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.28614",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.53,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28614",
+      "path": "full_reference",
+      "generator": "gemini",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.95
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.97
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.09
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.87
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.41
+        }
+      },
+      "support_quote_containment_rate": 1.0,
+      "candidate_evidence_ref_count": 1,
+      "candidate_exact_quote_support_label": true,
+      "judge_actionable": true,
+      "judge_faithfulness": 3,
+      "judge_evidence_support": 3,
+      "judge_systems_relevance": 3,
+      "judge_actionability": 3,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.28614-full_reference-gemini-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.28614",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.95,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.28614",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.97,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.28614",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.09,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.28614",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.87,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.28614",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.41,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28614",
+      "path": "full_reference",
+      "generator": "openai",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.92
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.97
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.06
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.9
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.4
+        }
+      },
+      "support_quote_containment_rate": 1.0,
+      "candidate_evidence_ref_count": 2,
+      "candidate_exact_quote_support_label": true,
+      "judge_actionable": null,
+      "judge_faithfulness": null,
+      "judge_evidence_support": null,
+      "judge_systems_relevance": null,
+      "judge_actionability": null,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.28614-full_reference-openai-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.28614",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.92,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.28614",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.97,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.28614",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.06,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.28614",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.9,
+          "host_decision": true,
+          "proxy_label": null
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.28614",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.4,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28614",
+      "path": "selective",
+      "generator": "deepseek",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.92
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.96
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.08
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.88
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.37
+        }
+      },
+      "support_quote_containment_rate": 1.0,
+      "candidate_evidence_ref_count": 1,
+      "candidate_exact_quote_support_label": true,
+      "judge_actionable": true,
+      "judge_faithfulness": 3.5,
+      "judge_evidence_support": 3,
+      "judge_systems_relevance": 4,
+      "judge_actionability": 3,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.28614-selective-deepseek-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.28614",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.92,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.28614",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.96,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.28614",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.08,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.28614",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.88,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.28614",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.37,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28614",
+      "path": "selective",
+      "generator": "gemini",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.95
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.97
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.09
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.87
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.45
+        }
+      },
+      "support_quote_containment_rate": 1.0,
+      "candidate_evidence_ref_count": 1,
+      "candidate_exact_quote_support_label": true,
+      "judge_actionable": true,
+      "judge_faithfulness": 3,
+      "judge_evidence_support": 3,
+      "judge_systems_relevance": 4,
+      "judge_actionability": 3,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.28614-selective-gemini-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.28614",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.95,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.28614",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.97,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.28614",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.09,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.28614",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.87,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.28614",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.45,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28614",
+      "path": "selective",
+      "generator": "openai",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.92
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.98
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.08
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.92
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.32
+        }
+      },
+      "support_quote_containment_rate": 1.0,
+      "candidate_evidence_ref_count": 2,
+      "candidate_exact_quote_support_label": true,
+      "judge_actionable": null,
+      "judge_faithfulness": 4,
+      "judge_evidence_support": 4,
+      "judge_systems_relevance": null,
+      "judge_actionability": null,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.28614-selective-openai-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.28614",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.92,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.28614",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.98,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.28614",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.08,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.28614",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.92,
+          "host_decision": true,
+          "proxy_label": null
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.28614",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.32,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.30217",
+      "path": "full_reference",
+      "generator": "deepseek",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.92
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.97
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.1
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.91
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.48
+        }
+      },
+      "support_quote_containment_rate": 0.5,
+      "candidate_evidence_ref_count": 2,
+      "candidate_exact_quote_support_label": false,
+      "judge_actionable": true,
+      "judge_faithfulness": 3,
+      "judge_evidence_support": 2,
+      "judge_systems_relevance": 4,
+      "judge_actionability": 4,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.30217-full_reference-deepseek-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.30217",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.92,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": false,
+          "agreement_vs_blind_judge": false
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.30217",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.97,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.30217",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.1,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.30217",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.91,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.30217",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.48,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.30217",
+      "path": "full_reference",
+      "generator": "gemini",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.94
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.97
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.11
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.85
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.39
+        }
+      },
+      "support_quote_containment_rate": 0.0,
+      "candidate_evidence_ref_count": 1,
+      "candidate_exact_quote_support_label": false,
+      "judge_actionable": true,
+      "judge_faithfulness": 3,
+      "judge_evidence_support": 3,
+      "judge_systems_relevance": 3,
+      "judge_actionability": 3,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.30217-full_reference-gemini-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.30217",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.94,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.30217",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.97,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.30217",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.11,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.30217",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.85,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.30217",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.39,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.30217",
+      "path": "full_reference",
+      "generator": "openai",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.88
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.97
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.11
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.92
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.43
+        }
+      },
+      "support_quote_containment_rate": 1.0,
+      "candidate_evidence_ref_count": 2,
+      "candidate_exact_quote_support_label": true,
+      "judge_actionable": null,
+      "judge_faithfulness": 4,
+      "judge_evidence_support": 4,
+      "judge_systems_relevance": null,
+      "judge_actionability": null,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.30217-full_reference-openai-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.30217",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.88,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.30217",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.97,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.30217",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.11,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.30217",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.92,
+          "host_decision": true,
+          "proxy_label": null
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.30217",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.43,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.30217",
+      "path": "selective",
+      "generator": "deepseek",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.95
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.97
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.1
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.87
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.44
+        }
+      },
+      "support_quote_containment_rate": 0.0,
+      "candidate_evidence_ref_count": 1,
+      "candidate_exact_quote_support_label": false,
+      "judge_actionable": true,
+      "judge_faithfulness": 4,
+      "judge_evidence_support": 3,
+      "judge_systems_relevance": 4,
+      "judge_actionability": 4,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.30217-selective-deepseek-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.30217",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.95,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.30217",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.97,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.30217",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.1,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.30217",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.87,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.30217",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.44,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.30217",
+      "path": "selective",
+      "generator": "gemini",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.91
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.96
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.17
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.83
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.48
+        }
+      },
+      "support_quote_containment_rate": 0.0,
+      "candidate_evidence_ref_count": 1,
+      "candidate_exact_quote_support_label": false,
+      "judge_actionable": true,
+      "judge_faithfulness": 3,
+      "judge_evidence_support": 2,
+      "judge_systems_relevance": 3,
+      "judge_actionability": 3,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.30217-selective-gemini-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.30217",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.91,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": false,
+          "agreement_vs_blind_judge": false
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.30217",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.96,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.30217",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.17,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.30217",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.83,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.30217",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.48,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.30217",
+      "path": "selective",
+      "generator": "openai",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.92
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.97
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.08
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.89
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.41
+        }
+      },
+      "support_quote_containment_rate": 1.0,
+      "candidate_evidence_ref_count": 2,
+      "candidate_exact_quote_support_label": true,
+      "judge_actionable": null,
+      "judge_faithfulness": null,
+      "judge_evidence_support": null,
+      "judge_systems_relevance": null,
+      "judge_actionability": null,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.30217-selective-openai-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.30217",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.92,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.30217",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.97,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.30217",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.08,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.30217",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.89,
+          "host_decision": true,
+          "proxy_label": null
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.30217",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.41,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28585",
+      "path": "full_reference",
+      "generator": "deepseek",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.91
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.97
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.11
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.91
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.55
+        }
+      },
+      "support_quote_containment_rate": 0.5,
+      "candidate_evidence_ref_count": 2,
+      "candidate_exact_quote_support_label": false,
+      "judge_actionable": true,
+      "judge_faithfulness": 3,
+      "judge_evidence_support": 3,
+      "judge_systems_relevance": 3.5,
+      "judge_actionability": 3.5,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.28585-full_reference-deepseek-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.28585",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.91,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.28585",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.97,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.28585",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.11,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.28585",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.91,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.28585",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.55,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28585",
+      "path": "full_reference",
+      "generator": "gemini",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.91
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.97
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.13
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.9
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.41
+        }
+      },
+      "support_quote_containment_rate": 0.0,
+      "candidate_evidence_ref_count": 1,
+      "candidate_exact_quote_support_label": false,
+      "judge_actionable": true,
+      "judge_faithfulness": 3,
+      "judge_evidence_support": 3,
+      "judge_systems_relevance": 3,
+      "judge_actionability": 3,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.28585-full_reference-gemini-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.28585",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.91,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.28585",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.97,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.28585",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.13,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.28585",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.9,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.28585",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.41,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28585",
+      "path": "full_reference",
+      "generator": "openai",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.46
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.95
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.09
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.88
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.68
+        }
+      },
+      "support_quote_containment_rate": 0.0,
+      "candidate_evidence_ref_count": 1,
+      "candidate_exact_quote_support_label": false,
+      "judge_actionable": true,
+      "judge_faithfulness": 4,
+      "judge_evidence_support": 4,
+      "judge_systems_relevance": 4,
+      "judge_actionability": 4,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.28585-full_reference-openai-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.28585",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.46,
+          "host_decision": false,
+          "proxy_label": false,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": false
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.28585",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.95,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.28585",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.09,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.28585",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.88,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.28585",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.68,
+          "host_decision": true,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28585",
+      "path": "selective",
+      "generator": "deepseek",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.94
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.97
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.17
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.89
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.39
+        }
+      },
+      "support_quote_containment_rate": 1.0,
+      "candidate_evidence_ref_count": 2,
+      "candidate_exact_quote_support_label": true,
+      "judge_actionable": true,
+      "judge_faithfulness": 3.5,
+      "judge_evidence_support": 2.5,
+      "judge_systems_relevance": 3.5,
+      "judge_actionability": 3,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.28585-selective-deepseek-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.28585",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.94,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": false,
+          "agreement_vs_blind_judge": false
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.28585",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.97,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.28585",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.17,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.28585",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.89,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.28585",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.39,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28585",
+      "path": "selective",
+      "generator": "gemini",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.92
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.97
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.1
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.88
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.43
+        }
+      },
+      "support_quote_containment_rate": 0.5,
+      "candidate_evidence_ref_count": 2,
+      "candidate_exact_quote_support_label": false,
+      "judge_actionable": false,
+      "judge_faithfulness": 3,
+      "judge_evidence_support": 3,
+      "judge_systems_relevance": 3,
+      "judge_actionability": 2,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.28585-selective-gemini-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.28585",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.92,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.28585",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.97,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.28585",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.1,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.28585",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.88,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": false,
+          "agreement_vs_blind_judge": false
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.28585",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.43,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28585",
+      "path": "selective",
+      "generator": "openai",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.88
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.96
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.1
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.93
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.42
+        }
+      },
+      "support_quote_containment_rate": 0.5,
+      "candidate_evidence_ref_count": 2,
+      "candidate_exact_quote_support_label": false,
+      "judge_actionable": true,
+      "judge_faithfulness": 4,
+      "judge_evidence_support": 4,
+      "judge_systems_relevance": 4,
+      "judge_actionability": 4,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.28585-selective-openai-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.28585",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.88,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.28585",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.96,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.28585",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.1,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.28585",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.93,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.28585",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.42,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28586",
+      "path": "full_reference",
+      "generator": "deepseek",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.94
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.97
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.1
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.9
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.4
+        }
+      },
+      "support_quote_containment_rate": 1.0,
+      "candidate_evidence_ref_count": 2,
+      "candidate_exact_quote_support_label": true,
+      "judge_actionable": true,
+      "judge_faithfulness": 4,
+      "judge_evidence_support": 4,
+      "judge_systems_relevance": 4,
+      "judge_actionability": 4,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.28586-full_reference-deepseek-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.28586",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.94,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.28586",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.97,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.28586",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.1,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.28586",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.9,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.28586",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.4,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28586",
+      "path": "full_reference",
+      "generator": "gemini",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.94
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.97
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.14
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.89
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.44
+        }
+      },
+      "support_quote_containment_rate": 0.0,
+      "candidate_evidence_ref_count": 1,
+      "candidate_exact_quote_support_label": false,
+      "judge_actionable": false,
+      "judge_faithfulness": 3,
+      "judge_evidence_support": 2,
+      "judge_systems_relevance": 3,
+      "judge_actionability": 2,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.28586-full_reference-gemini-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.28586",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.94,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": false,
+          "agreement_vs_blind_judge": false
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.28586",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.97,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.28586",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.14,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.28586",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.89,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": false,
+          "agreement_vs_blind_judge": false
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.28586",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.44,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28586",
+      "path": "full_reference",
+      "generator": "openai",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.67
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.97
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.09
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.9
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.49
+        }
+      },
+      "support_quote_containment_rate": 1.0,
+      "candidate_evidence_ref_count": 2,
+      "candidate_exact_quote_support_label": true,
+      "judge_actionable": null,
+      "judge_faithfulness": null,
+      "judge_evidence_support": null,
+      "judge_systems_relevance": null,
+      "judge_actionability": null,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.28586-full_reference-openai-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.28586",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.67,
+          "host_decision": false,
+          "proxy_label": true,
+          "agreement": false
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.28586",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.97,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.28586",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.09,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.28586",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.9,
+          "host_decision": true,
+          "proxy_label": null
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.28586",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.49,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28586",
+      "path": "selective",
+      "generator": "deepseek",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.85
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.97
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.07
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.86
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.6
+        }
+      },
+      "support_quote_containment_rate": 0.0,
+      "candidate_evidence_ref_count": 1,
+      "candidate_exact_quote_support_label": false,
+      "judge_actionable": true,
+      "judge_faithfulness": 3,
+      "judge_evidence_support": 2,
+      "judge_systems_relevance": 4,
+      "judge_actionability": 3,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.28586-selective-deepseek-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.28586",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.85,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": false,
+          "agreement_vs_blind_judge": false
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.28586",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.97,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.28586",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.07,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.28586",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.86,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.28586",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.6,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28586",
+      "path": "selective",
+      "generator": "gemini",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.91
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.97
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.12
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.88
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.39
+        }
+      },
+      "support_quote_containment_rate": 0.0,
+      "candidate_evidence_ref_count": 1,
+      "candidate_exact_quote_support_label": false,
+      "judge_actionable": true,
+      "judge_faithfulness": 3,
+      "judge_evidence_support": 3,
+      "judge_systems_relevance": 4,
+      "judge_actionability": 3,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.28586-selective-gemini-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.28586",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.91,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.28586",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.97,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.28586",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.12,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.28586",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.88,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.28586",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.39,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28586",
+      "path": "selective",
+      "generator": "openai",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.95
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.98
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.13
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.88
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.31
+        }
+      },
+      "support_quote_containment_rate": 1.0,
+      "candidate_evidence_ref_count": 1,
+      "candidate_exact_quote_support_label": true,
+      "judge_actionable": null,
+      "judge_faithfulness": null,
+      "judge_evidence_support": null,
+      "judge_systems_relevance": null,
+      "judge_actionability": null,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.28586-selective-openai-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.28586",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.95,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.28586",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.98,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.28586",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.13,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.28586",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.88,
+          "host_decision": true,
+          "proxy_label": null
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.28586",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.31,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.27263",
+      "path": "full_reference",
+      "generator": "deepseek",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.92
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.94
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.09
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.89
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.42
+        }
+      },
+      "support_quote_containment_rate": 1.0,
+      "candidate_evidence_ref_count": 2,
+      "candidate_exact_quote_support_label": true,
+      "judge_actionable": true,
+      "judge_faithfulness": 4,
+      "judge_evidence_support": 3,
+      "judge_systems_relevance": 4,
+      "judge_actionability": 3,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.27263-full_reference-deepseek-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.27263",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.92,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.27263",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.94,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.27263",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.09,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.27263",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.89,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.27263",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.42,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.27263",
+      "path": "full_reference",
+      "generator": "openai",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.91
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.97
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.11
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.92
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.4
+        }
+      },
+      "support_quote_containment_rate": 1.0,
+      "candidate_evidence_ref_count": 2,
+      "candidate_exact_quote_support_label": true,
+      "judge_actionable": null,
+      "judge_faithfulness": null,
+      "judge_evidence_support": null,
+      "judge_systems_relevance": null,
+      "judge_actionability": null,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.27263-full_reference-openai-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.27263",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.91,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.27263",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.97,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.27263",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.11,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.27263",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.92,
+          "host_decision": true,
+          "proxy_label": null
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.27263",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.4,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.27263",
+      "path": "selective",
+      "generator": "deepseek",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.86
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.91
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.09
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.86
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.62
+        }
+      },
+      "support_quote_containment_rate": 0.5,
+      "candidate_evidence_ref_count": 2,
+      "candidate_exact_quote_support_label": false,
+      "judge_actionable": true,
+      "judge_faithfulness": 4,
+      "judge_evidence_support": 3.5,
+      "judge_systems_relevance": 4,
+      "judge_actionability": 4,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.27263-selective-deepseek-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.27263",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.86,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.27263",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.91,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.27263",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.09,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.27263",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.86,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.27263",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.62,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.27263",
+      "path": "selective",
+      "generator": "gemini",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.83
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.9
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.12
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.77
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.41
+        }
+      },
+      "support_quote_containment_rate": 0.0,
+      "candidate_evidence_ref_count": 1,
+      "candidate_exact_quote_support_label": false,
+      "judge_actionable": false,
+      "judge_faithfulness": 3,
+      "judge_evidence_support": 3,
+      "judge_systems_relevance": 2,
+      "judge_actionability": 2,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.27263-selective-gemini-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.27263",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.83,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.27263",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.9,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": false,
+          "agreement_vs_blind_judge": false
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.27263",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.12,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.27263",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.77,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": false,
+          "agreement_vs_blind_judge": false
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.27263",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.41,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.27263",
+      "path": "selective",
+      "generator": "openai",
+      "stratum": "high_value_proxy",
+      "high_value_proxy_label": true,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.87
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.94
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.09
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.9
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.41
+        }
+      },
+      "support_quote_containment_rate": 1.0,
+      "candidate_evidence_ref_count": 2,
+      "candidate_exact_quote_support_label": true,
+      "judge_actionable": null,
+      "judge_faithfulness": 4,
+      "judge_evidence_support": 4,
+      "judge_systems_relevance": null,
+      "judge_actionability": null,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.27263-selective-openai-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.27263",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.87,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.27263",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.94,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.27263",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.09,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.27263",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.9,
+          "host_decision": true,
+          "proxy_label": null
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.27263",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.41,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.24122",
+      "path": "full_reference",
+      "generator": "deepseek",
+      "stratum": "medium_adjacent",
+      "high_value_proxy_label": false,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.9
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.94
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.8
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.94
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.38
+        }
+      },
+      "support_quote_containment_rate": 1.0,
+      "candidate_evidence_ref_count": 1,
+      "candidate_exact_quote_support_label": true,
+      "judge_actionable": true,
+      "judge_faithfulness": 3,
+      "judge_evidence_support": 2,
+      "judge_systems_relevance": 4,
+      "judge_actionability": 3,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.24122-full_reference-deepseek-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.24122",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.9,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": false,
+          "agreement_vs_blind_judge": false
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.24122",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.94,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.24122",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.8,
+          "host_decision": true,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.24122",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.94,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.24122",
+          "path": "full_reference",
+          "generator": "deepseek",
+          "probability": 0.38,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.24122",
+      "path": "full_reference",
+      "generator": "gemini",
+      "stratum": "medium_adjacent",
+      "high_value_proxy_label": false,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.9
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.92
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.82
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.94
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.42
+        }
+      },
+      "support_quote_containment_rate": 0.0,
+      "candidate_evidence_ref_count": 1,
+      "candidate_exact_quote_support_label": false,
+      "judge_actionable": false,
+      "judge_faithfulness": 3,
+      "judge_evidence_support": 3,
+      "judge_systems_relevance": 2,
+      "judge_actionability": 2,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.24122-full_reference-gemini-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.24122",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.9,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.24122",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.92,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": false,
+          "agreement_vs_blind_judge": false
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.24122",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.82,
+          "host_decision": true,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.24122",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.94,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": false,
+          "agreement_vs_blind_judge": false
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.24122",
+          "path": "full_reference",
+          "generator": "gemini",
+          "probability": 0.42,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.24122",
+      "path": "full_reference",
+      "generator": "openai",
+      "stratum": "medium_adjacent",
+      "high_value_proxy_label": false,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.88
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.94
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.43
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.92
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.47
+        }
+      },
+      "support_quote_containment_rate": 1.0,
+      "candidate_evidence_ref_count": 1,
+      "candidate_exact_quote_support_label": true,
+      "judge_actionable": null,
+      "judge_faithfulness": null,
+      "judge_evidence_support": null,
+      "judge_systems_relevance": null,
+      "judge_actionability": null,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.24122-full_reference-openai-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.24122",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.88,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.24122",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.94,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.24122",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.43,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.24122",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.92,
+          "host_decision": true,
+          "proxy_label": null
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.24122",
+          "path": "full_reference",
+          "generator": "openai",
+          "probability": 0.47,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.24122",
+      "path": "selective",
+      "generator": "deepseek",
+      "stratum": "medium_adjacent",
+      "high_value_proxy_label": false,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.93
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.94
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.49
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.94
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.47
+        }
+      },
+      "support_quote_containment_rate": 0.5,
+      "candidate_evidence_ref_count": 2,
+      "candidate_exact_quote_support_label": false,
+      "judge_actionable": true,
+      "judge_faithfulness": 3,
+      "judge_evidence_support": 1.5,
+      "judge_systems_relevance": 3,
+      "judge_actionability": 3,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.24122-selective-deepseek-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.24122",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.93,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": false,
+          "agreement_vs_blind_judge": false
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.24122",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.94,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.24122",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.49,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.24122",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.94,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.24122",
+          "path": "selective",
+          "generator": "deepseek",
+          "probability": 0.47,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.24122",
+      "path": "selective",
+      "generator": "gemini",
+      "stratum": "medium_adjacent",
+      "high_value_proxy_label": false,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.92
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.93
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.89
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.95
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.37
+        }
+      },
+      "support_quote_containment_rate": 1.0,
+      "candidate_evidence_ref_count": 1,
+      "candidate_exact_quote_support_label": true,
+      "judge_actionable": false,
+      "judge_faithfulness": 4,
+      "judge_evidence_support": 4,
+      "judge_systems_relevance": 2,
+      "judge_actionability": 2,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.24122-selective-gemini-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.24122",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.92,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.24122",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.93,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": false,
+          "agreement_vs_blind_judge": false
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.24122",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.89,
+          "host_decision": true,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.24122",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.95,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": false,
+          "agreement_vs_blind_judge": false
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.24122",
+          "path": "selective",
+          "generator": "gemini",
+          "probability": 0.37,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    },
+    {
+      "paper_id": "2609.24122",
+      "path": "selective",
+      "generator": "openai",
+      "stratum": "medium_adjacent",
+      "high_value_proxy_label": false,
+      "answers": {
+        "supported_by_supplied_evidence": {
+          "type": "boolean",
+          "probability": 0.93
+        },
+        "agenda_relevant": {
+          "type": "boolean",
+          "probability": 0.96
+        },
+        "duplicates_supplied_existing_insight": {
+          "type": "boolean",
+          "probability": 0.49
+        },
+        "has_actionable_implication": {
+          "type": "boolean",
+          "probability": 0.94
+        },
+        "escalate_for_deeper_review": {
+          "type": "boolean",
+          "probability": 0.37
+        }
+      },
+      "support_quote_containment_rate": 1.0,
+      "candidate_evidence_ref_count": 2,
+      "candidate_exact_quote_support_label": true,
+      "judge_actionable": true,
+      "judge_faithfulness": 4,
+      "judge_evidence_support": 4,
+      "judge_systems_relevance": 4,
+      "judge_actionability": 4,
+      "call_artifacts": [
+        "raw/responses/l4/jev/l4-2609.24122-selective-openai-insight0-a1.json"
+      ],
+      "question_rows": {
+        "supported_by_supplied_evidence": {
+          "paper_id": "2609.24122",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.93,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "agenda_relevant": {
+          "paper_id": "2609.24122",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.96,
+          "host_decision": true,
+          "proxy_label": false,
+          "agreement": false,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "duplicates_supplied_existing_insight": {
+          "paper_id": "2609.24122",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.49,
+          "host_decision": false,
+          "proxy_label": null
+        },
+        "has_actionable_implication": {
+          "paper_id": "2609.24122",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.94,
+          "host_decision": true,
+          "proxy_label": true,
+          "agreement": true,
+          "blind_judge_label": true,
+          "agreement_vs_blind_judge": true
+        },
+        "escalate_for_deeper_review": {
+          "paper_id": "2609.24122",
+          "path": "selective",
+          "generator": "openai",
+          "probability": 0.37,
+          "host_decision": false,
+          "proxy_label": null
+        }
+      }
+    }
+  ],
+  "label_limits": "Evidence support uses exact quoted-text containment as a noisy support proxy, not semantic entailment. Agenda relevance uses purposive high-value stratum labels, not gold relevance. Actionability uses blind LLM judge score >=3/4. Duplicate and escalation have no gold labels; no Brier score is reported for them."
+}

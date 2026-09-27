@@ -1,0 +1,62 @@
+{
+  "call_id": "l2-2609.24122-C-r1",
+  "attempt": 1,
+  "arm_id": "l2-C",
+  "provider": "gemini",
+  "model_id_sent": "gemini-3.5-flash-lite",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+  "call_start_utc": "2026-09-26T22:18:50Z",
+  "settings": {
+    "thinkingConfig": {
+      "thinkingLevel": "low"
+    },
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 3000,
+    "strategy": "C",
+    "round": 1,
+    "page_numbers": [
+      1,
+      2,
+      33,
+      34
+    ]
+  },
+  "http_status": 200,
+  "latency_ms": 26591,
+  "usage": {
+    "input_tokens": 4835,
+    "output_tokens": 248,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": null,
+    "mapping": {
+      "input": "usageMetadata.promptTokenCount",
+      "output": "usageMetadata.candidatesTokenCount",
+      "cached_input": "usageMetadata.cachedContentTokenCount"
+    }
+  },
+  "cost": {
+    "amount": 0.0020705,
+    "rates_used_usd_per_million": {
+      "input": 0.3,
+      "cached_input": 0.3,
+      "output": 2.5
+    },
+    "rate_source": "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"candidate_claims\": [\n    {\n      \"claim\": \"Re:CAP is a reference-free audit loop for deployed RAG pipelines that probes for missing documents rather than enumerating every relevant one.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"quote\": \"our method Re:CAP (REtrieval Coverage Audit by iterative Probing) is a reference-free audit loop applied to a deployed RAG pipeline\"\n        }\n      ],\n      \"importance\": \"load_bearing\"\n    }\n  ],\n  \"key_claims\": [\n    \"Re:CAP audits retrieval coverage in production RAG pipelines using an iterative probing loop.\"\n  ],\n  \"limitations\": [\n    \"Requires multiple LLM calls per audited query.\"\n  ],\n  \"load_bearing_pages\": [\n    1,\n    2\n  ],\n  \"requested_pages\": [],\n  \"stop_reason\": \"The seen pages (1, 2, 33, 34) sufficiently cover the core system design, claims, and appendices for evaluation.\"\n}",
+  "provider_response_model_version": "gemini-3.5-flash-lite",
+  "artifact": "raw/responses/l2/C/l2-2609.24122-C-r1-a1.json",
+  "paper_id": "2609.24122",
+  "strategy": "C",
+  "round": 1,
+  "input_sha256": "f607c475812f24c607c930ee678e950a1a0392c0a9ccf3a98e6cec34cf456e8c",
+  "page_numbers_sent": [
+    1,
+    2,
+    33,
+    34
+  ],
+  "input_text_bytes": 1772,
+  "inline_part_bytes": 408045
+}

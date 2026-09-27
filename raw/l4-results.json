@@ -1,0 +1,2609 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "completed": 47,
+  "target": 47,
+  "results": {
+    "2609.29808": {
+      "full_reference/gemini/insight-0": {
+        "paper_id": "2609.29808",
+        "input_path": "full_reference",
+        "generator": "gemini",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.29808-full_reference-gemini-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 814,
+        "input_sha256": "47896fcc619b8449fe17383d937328853bfce001dda0170f22abfad3088e9c99",
+        "usage": {
+          "input_tokens": 2400,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.87
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.95
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.08
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.88
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.87
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "full_reference/deepseek/insight-0": {
+        "paper_id": "2609.29808",
+        "input_path": "full_reference",
+        "generator": "deepseek",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.29808-full_reference-deepseek-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 372,
+        "input_sha256": "91ae5f0b9a4e30b951ae747d4acc6926a2103f2e8605ca6ab720b319e3bda8c4",
+        "usage": {
+          "input_tokens": 2463,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.91
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.95
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.1
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.92
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.63
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "full_reference/openai/insight-0": {
+        "paper_id": "2609.29808",
+        "input_path": "full_reference",
+        "generator": "openai",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.29808-full_reference-openai-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 635,
+        "input_sha256": "e16b395e687a4551401c3ad3de2528279b653e2eac1e984dc9d3cfa2519334d9",
+        "usage": {
+          "input_tokens": 2419,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.89
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.96
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.07
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.91
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.62
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "selective/deepseek/insight-0": {
+        "paper_id": "2609.29808",
+        "input_path": "selective",
+        "generator": "deepseek",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.29808-selective-deepseek-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 619,
+        "input_sha256": "41fd9a0fb629706bf61be143d3f63eb3afa8a4955c8f18763e340b4baca75c0f",
+        "usage": {
+          "input_tokens": 2504,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.97
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.07
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.73
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.9
+          },
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.77
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "selective/gemini/insight-0": {
+        "paper_id": "2609.29808",
+        "input_path": "selective",
+        "generator": "gemini",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.29808-selective-gemini-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 346,
+        "input_sha256": "c8541dc82abf7ffa218ff06af670474257e315f26b14892f4e661daee7739161",
+        "usage": {
+          "input_tokens": 2214,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.73
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.97
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.09
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.89
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.75
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "selective/openai/insight-0": {
+        "paper_id": "2609.29808",
+        "input_path": "selective",
+        "generator": "openai",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.29808-selective-openai-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 368,
+        "input_sha256": "7dcca116ed5d98fc5ad27b7f53576c94aec99e97747a4be23e6781e36f386a78",
+        "usage": {
+          "input_tokens": 2440,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.64
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.96
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.06
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.89
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.73
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      }
+    },
+    "2609.29095": {
+      "full_reference/deepseek/insight-0": {
+        "paper_id": "2609.29095",
+        "input_path": "full_reference",
+        "generator": "deepseek",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.29095-full_reference-deepseek-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 340,
+        "input_sha256": "6668ae91be660f4c09eada0390cbf95d1365da297f12b4c263bf36447458144a",
+        "usage": {
+          "input_tokens": 2501,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.92
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.97
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.11
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.91
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.47
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "full_reference/gemini/insight-0": {
+        "paper_id": "2609.29095",
+        "input_path": "full_reference",
+        "generator": "gemini",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.29095-full_reference-gemini-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 380,
+        "input_sha256": "25b47c7f91576bf69866570104cdd998bc3206639de72a289557e688ee45abbf",
+        "usage": {
+          "input_tokens": 2227,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.86
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.97
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.08
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.93
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.52
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "full_reference/openai/insight-0": {
+        "paper_id": "2609.29095",
+        "input_path": "full_reference",
+        "generator": "openai",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.29095-full_reference-openai-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 308,
+        "input_sha256": "46995b4d0277671a8f0499f25af69a581bc0f1521cba31ff00525c6eb5a9e2af",
+        "usage": {
+          "input_tokens": 2441,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.94
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.97
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.1
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.89
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.37
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "selective/deepseek/insight-0": {
+        "paper_id": "2609.29095",
+        "input_path": "selective",
+        "generator": "deepseek",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.29095-selective-deepseek-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 307,
+        "input_sha256": "8261905d28b84c4b90bc7b9c0790496cd049c3079e25b4b99a21aee13aad84b8",
+        "usage": {
+          "input_tokens": 2164,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.84
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.97
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.11
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.92
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.57
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "selective/gemini/insight-0": {
+        "paper_id": "2609.29095",
+        "input_path": "selective",
+        "generator": "gemini",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.29095-selective-gemini-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 350,
+        "input_sha256": "6313a36ded9130f8f1f2658e68e57638c5c0898d4a78dd669f965a76487515ca",
+        "usage": {
+          "input_tokens": 2132,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.89
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.97
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.12
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.92
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.45
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "selective/openai/insight-0": {
+        "paper_id": "2609.29095",
+        "input_path": "selective",
+        "generator": "openai",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.29095-selective-openai-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 347,
+        "input_sha256": "a1a10fc7123982499a8ff410a29b8adc73922738688eb14c9d55a37a32acf249",
+        "usage": {
+          "input_tokens": 2411,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.95
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.98
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.09
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.94
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.29
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      }
+    },
+    "2609.28614": {
+      "full_reference/deepseek/insight-0": {
+        "paper_id": "2609.28614",
+        "input_path": "full_reference",
+        "generator": "deepseek",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.28614-full_reference-deepseek-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 349,
+        "input_sha256": "13640122d08e420b9862d4e6950e8d439fef4ad32c5b800443518af76eddc6c9",
+        "usage": {
+          "input_tokens": 2463,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.94
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.96
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.15
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.89
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.53
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "full_reference/gemini/insight-0": {
+        "paper_id": "2609.28614",
+        "input_path": "full_reference",
+        "generator": "gemini",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.28614-full_reference-gemini-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 349,
+        "input_sha256": "9a8bcb660a39358e269ee25312d72e2d8b9adaad0ae899e154ab69b283e84afc",
+        "usage": {
+          "input_tokens": 2188,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.95
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.97
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.09
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.87
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.41
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "full_reference/openai/insight-0": {
+        "paper_id": "2609.28614",
+        "input_path": "full_reference",
+        "generator": "openai",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.28614-full_reference-openai-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 344,
+        "input_sha256": "fba63408c1daa3cdc043a548900fcafa43672f2f3b351750120e623670b6c40b",
+        "usage": {
+          "input_tokens": 2405,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.92
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.97
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.06
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.9
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.4
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "selective/deepseek/insight-0": {
+        "paper_id": "2609.28614",
+        "input_path": "selective",
+        "generator": "deepseek",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.28614-selective-deepseek-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 363,
+        "input_sha256": "54a4fef7258fcc7919d6c09e8aa867de4ad506afc64ec0f18667d25d49e179d4",
+        "usage": {
+          "input_tokens": 2188,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.92
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.96
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.08
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.88
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.37
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "selective/gemini/insight-0": {
+        "paper_id": "2609.28614",
+        "input_path": "selective",
+        "generator": "gemini",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.28614-selective-gemini-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 602,
+        "input_sha256": "e9922d6f3bc4df07e54a0a46b9e3589ee8ad4dcd35e6f8d7a92660b236177fb1",
+        "usage": {
+          "input_tokens": 2202,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.95
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.97
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.09
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.87
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.45
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "selective/openai/insight-0": {
+        "paper_id": "2609.28614",
+        "input_path": "selective",
+        "generator": "openai",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.28614-selective-openai-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 403,
+        "input_sha256": "6b5ac0c937dfb25a226ecaf9162c83e51bc0903ae5a1ec622b8601a9c1a711a4",
+        "usage": {
+          "input_tokens": 2400,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.92
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.98
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.08
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.92
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.32
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      }
+    },
+    "2609.30217": {
+      "full_reference/deepseek/insight-0": {
+        "paper_id": "2609.30217",
+        "input_path": "full_reference",
+        "generator": "deepseek",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.30217-full_reference-deepseek-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 549,
+        "input_sha256": "54ee6cff709a671510577fae5282bc9a08b5ce41f44b2302c7895d7a3abdf27c",
+        "usage": {
+          "input_tokens": 2516,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.92
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.97
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.1
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.91
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.48
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "full_reference/gemini/insight-0": {
+        "paper_id": "2609.30217",
+        "input_path": "full_reference",
+        "generator": "gemini",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.30217-full_reference-gemini-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 319,
+        "input_sha256": "73c08f8ff3583d67c2adabef369f075709cafba343f5c38e23f5bc1cd1484cf7",
+        "usage": {
+          "input_tokens": 2199,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.94
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.97
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.11
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.85
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.39
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "full_reference/openai/insight-0": {
+        "paper_id": "2609.30217",
+        "input_path": "full_reference",
+        "generator": "openai",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.30217-full_reference-openai-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 329,
+        "input_sha256": "11d6c4112306a225ec2c179b8a67ef4c0f822f5cca8306780db851aef84fc0a9",
+        "usage": {
+          "input_tokens": 2272,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.88
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.97
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.11
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.92
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.43
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "selective/deepseek/insight-0": {
+        "paper_id": "2609.30217",
+        "input_path": "selective",
+        "generator": "deepseek",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.30217-selective-deepseek-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 634,
+        "input_sha256": "822fc04b138d0da52e903d789595c59e90095cca604de312e6bc6e6b5203be24",
+        "usage": {
+          "input_tokens": 2200,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.95
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.97
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.1
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.87
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.44
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "selective/gemini/insight-0": {
+        "paper_id": "2609.30217",
+        "input_path": "selective",
+        "generator": "gemini",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.30217-selective-gemini-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 308,
+        "input_sha256": "7a7b3042e5134c5882a03b4ee4bda876eaeb7e99eb757be7ac2eca1ec2133b08",
+        "usage": {
+          "input_tokens": 2196,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.91
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.96
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.17
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.83
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.48
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "selective/openai/insight-0": {
+        "paper_id": "2609.30217",
+        "input_path": "selective",
+        "generator": "openai",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.30217-selective-openai-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 671,
+        "input_sha256": "e988aed17c5dba5c2b49ea8238224b3b2597020bbfe46035ffcc1b24336e74d1",
+        "usage": {
+          "input_tokens": 2367,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.92
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.97
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.08
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.89
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.41
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      }
+    },
+    "2609.28585": {
+      "full_reference/deepseek/insight-0": {
+        "paper_id": "2609.28585",
+        "input_path": "full_reference",
+        "generator": "deepseek",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.28585-full_reference-deepseek-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 337,
+        "input_sha256": "c78097f084011b3eaf06a8e46df83d4175c818016a497786e3179367a56a137f",
+        "usage": {
+          "input_tokens": 2541,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.91
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.97
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.11
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.91
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.55
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "full_reference/gemini/insight-0": {
+        "paper_id": "2609.28585",
+        "input_path": "full_reference",
+        "generator": "gemini",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.28585-full_reference-gemini-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 310,
+        "input_sha256": "f7dc7812afb4955ed7dcdb650da94cb8a5c3d7eccc3b20ce8a69b0549519ea8c",
+        "usage": {
+          "input_tokens": 2201,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.91
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.97
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.13
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.9
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.41
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "full_reference/openai/insight-0": {
+        "paper_id": "2609.28585",
+        "input_path": "full_reference",
+        "generator": "openai",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.28585-full_reference-openai-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 323,
+        "input_sha256": "4c89270996b5116a2d3cb30a89a7861fb523a4533361ef202f0b2ba94d75ff72",
+        "usage": {
+          "input_tokens": 2209,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.46
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.95
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.09
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.88
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.68
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "selective/deepseek/insight-0": {
+        "paper_id": "2609.28585",
+        "input_path": "selective",
+        "generator": "deepseek",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.28585-selective-deepseek-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 332,
+        "input_sha256": "4fbf1dfde6c0d6727550464a72fc77456e316c87c689764f44727d856301c141",
+        "usage": {
+          "input_tokens": 2352,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.94
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.97
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.17
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.89
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.39
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "selective/gemini/insight-0": {
+        "paper_id": "2609.28585",
+        "input_path": "selective",
+        "generator": "gemini",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.28585-selective-gemini-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 312,
+        "input_sha256": "35b63239daec4715af4dfad67ec524e190708783d0371ff98b3b10a58a7c14a8",
+        "usage": {
+          "input_tokens": 2469,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.92
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.97
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.1
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.88
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.43
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "selective/openai/insight-0": {
+        "paper_id": "2609.28585",
+        "input_path": "selective",
+        "generator": "openai",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.28585-selective-openai-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 286,
+        "input_sha256": "b059be37e75475a65feafba150f668fdcb84dadbe6515a5110bb6e93624517a8",
+        "usage": {
+          "input_tokens": 2437,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.88
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.96
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.1
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.93
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.42
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      }
+    },
+    "2609.28586": {
+      "full_reference/deepseek/insight-0": {
+        "paper_id": "2609.28586",
+        "input_path": "full_reference",
+        "generator": "deepseek",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.28586-full_reference-deepseek-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 295,
+        "input_sha256": "3baac49562c2babf532f32e28e03b550fb7aa61809b847dc2901e64be0d7c5e0",
+        "usage": {
+          "input_tokens": 2354,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.94
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.97
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.1
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.9
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.4
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "full_reference/gemini/insight-0": {
+        "paper_id": "2609.28586",
+        "input_path": "full_reference",
+        "generator": "gemini",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.28586-full_reference-gemini-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 322,
+        "input_sha256": "b93abea396bdf501f47821dc3a62a4932e263fde92c1b17848a842c13b850ef2",
+        "usage": {
+          "input_tokens": 2170,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.94
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.97
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.14
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.89
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.44
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "full_reference/openai/insight-0": {
+        "paper_id": "2609.28586",
+        "input_path": "full_reference",
+        "generator": "openai",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.28586-full_reference-openai-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 369,
+        "input_sha256": "b4c652802aa809de5cddaad1007e0028841c8a57ad3a5dcb64f5f6552daf3695",
+        "usage": {
+          "input_tokens": 2424,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.67
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.97
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.09
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.9
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.49
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "selective/deepseek/insight-0": {
+        "paper_id": "2609.28586",
+        "input_path": "selective",
+        "generator": "deepseek",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.28586-selective-deepseek-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 328,
+        "input_sha256": "00bd19c2682d67d87ed2633e471985b1789237d218f7ad25d9f5812fb327a5a6",
+        "usage": {
+          "input_tokens": 2175,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.85
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.97
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.07
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.86
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.6
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "selective/gemini/insight-0": {
+        "paper_id": "2609.28586",
+        "input_path": "selective",
+        "generator": "gemini",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.28586-selective-gemini-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 290,
+        "input_sha256": "7af5edcc2a585c3acd38147d85b67be5fec5716355724b5ac5fba7704bb27dfe",
+        "usage": {
+          "input_tokens": 2142,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.91
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.97
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.12
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.88
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.39
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "selective/openai/insight-0": {
+        "paper_id": "2609.28586",
+        "input_path": "selective",
+        "generator": "openai",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.28586-selective-openai-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 316,
+        "input_sha256": "70a2b166099407494f0ae1259b38ed8a4117b87acbacae450e5401d47f9d8a1f",
+        "usage": {
+          "input_tokens": 2101,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.95
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.98
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.13
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.88
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.31
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      }
+    },
+    "2609.27263": {
+      "full_reference/deepseek/insight-0": {
+        "paper_id": "2609.27263",
+        "input_path": "full_reference",
+        "generator": "deepseek",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.27263-full_reference-deepseek-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 363,
+        "input_sha256": "0fe52b21b62e6019a629f9bd00b956b9cfd7760ded48db445c1bda5da7afb4f4",
+        "usage": {
+          "input_tokens": 2439,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.92
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.94
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.09
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.89
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.42
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "full_reference/openai/insight-0": {
+        "paper_id": "2609.27263",
+        "input_path": "full_reference",
+        "generator": "openai",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.27263-full_reference-openai-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 308,
+        "input_sha256": "bad3371d195e9bf1b2ff5ad0b6dfe5a5fd8bb99a99156812873f0f3c06ed1909",
+        "usage": {
+          "input_tokens": 2300,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.91
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.97
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.11
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.92
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.4
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "selective/deepseek/insight-0": {
+        "paper_id": "2609.27263",
+        "input_path": "selective",
+        "generator": "deepseek",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.27263-selective-deepseek-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 292,
+        "input_sha256": "e3deba12a7557caf01e08a25d95634e73987721cb7a22a81eab044fb8ccc37c1",
+        "usage": {
+          "input_tokens": 2593,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.86
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.91
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.09
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.86
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.62
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "selective/gemini/insight-0": {
+        "paper_id": "2609.27263",
+        "input_path": "selective",
+        "generator": "gemini",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.27263-selective-gemini-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 326,
+        "input_sha256": "3624b0fb701bdb76ccd1aa0ff319c6059b55ee45e7d7adff2fb906571862c9bc",
+        "usage": {
+          "input_tokens": 2141,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.83
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.9
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.12
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.77
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.41
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "selective/openai/insight-0": {
+        "paper_id": "2609.27263",
+        "input_path": "selective",
+        "generator": "openai",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.27263-selective-openai-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 311,
+        "input_sha256": "792b59abb6507931478fa88995bd5b1943c8ec1a47b8676f2890502dece95313",
+        "usage": {
+          "input_tokens": 2363,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.87
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.94
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.09
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.9
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.41
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      }
+    },
+    "2609.24122": {
+      "full_reference/deepseek/insight-0": {
+        "paper_id": "2609.24122",
+        "input_path": "full_reference",
+        "generator": "deepseek",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.24122-full_reference-deepseek-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 308,
+        "input_sha256": "606e034b98b80a1414d16fadece99eea9672e811c0db6eea58cc0f089658e3c4",
+        "usage": {
+          "input_tokens": 1804,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.9
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.94
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.8
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.94
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.38
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "full_reference/gemini/insight-0": {
+        "paper_id": "2609.24122",
+        "input_path": "full_reference",
+        "generator": "gemini",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.24122-full_reference-gemini-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 294,
+        "input_sha256": "f7c884af4751ee37bf9a619b77845c889f493b5c121631e172bc5b3445c1158f",
+        "usage": {
+          "input_tokens": 1928,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.9
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.92
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.82
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.94
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.42
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "full_reference/openai/insight-0": {
+        "paper_id": "2609.24122",
+        "input_path": "full_reference",
+        "generator": "openai",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.24122-full_reference-openai-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 299,
+        "input_sha256": "17e0add87f170c595ec5c8a1822011361ab8e5c97fce0e9fb869d58461eb79f1",
+        "usage": {
+          "input_tokens": 1894,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.88
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.94
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.43
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.92
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.47
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "selective/deepseek/insight-0": {
+        "paper_id": "2609.24122",
+        "input_path": "selective",
+        "generator": "deepseek",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.24122-selective-deepseek-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 277,
+        "input_sha256": "180651c1195a7e0a9ccda7b35bed7c26baf0d8c6d0d93fc8fa60662f30b24479",
+        "usage": {
+          "input_tokens": 2200,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.93
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.94
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.49
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.94
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.47
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "selective/gemini/insight-0": {
+        "paper_id": "2609.24122",
+        "input_path": "selective",
+        "generator": "gemini",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.24122-selective-gemini-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 473,
+        "input_sha256": "edd893f7abb04111f3234aef53f12c12c7f69b87b639e106925e80416968b3eb",
+        "usage": {
+          "input_tokens": 1861,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.92
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.93
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.89
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.95
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.37
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      },
+      "selective/openai/insight-0": {
+        "paper_id": "2609.24122",
+        "input_path": "selective",
+        "generator": "openai",
+        "insight_index": 0,
+        "call_artifacts": [
+          "raw/responses/l4/jev/l4-2609.24122-selective-openai-insight0-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 364,
+        "input_sha256": "94f27a5ffd61a99380867fe58145448d56412a47f5f6969c2c554955328f315c",
+        "usage": {
+          "input_tokens": 2101,
+          "output_tokens": 114,
+          "cached_input_tokens": null,
+          "reasoning_tokens": null,
+          "mapping": {
+            "input": "usage.inputTokens",
+            "output": "usage.outputTokens"
+          },
+          "raw_usage_fields": [
+            "inputTokens",
+            "outputTokens"
+          ]
+        },
+        "answers": {
+          "supported_by_supplied_evidence": {
+            "type": "boolean",
+            "probability": 0.93
+          },
+          "agenda_relevant": {
+            "type": "boolean",
+            "probability": 0.96
+          },
+          "duplicates_supplied_existing_insight": {
+            "type": "boolean",
+            "probability": 0.49
+          },
+          "has_actionable_implication": {
+            "type": "boolean",
+            "probability": 0.94
+          },
+          "escalate_for_deeper_review": {
+            "type": "boolean",
+            "probability": 0.37
+          }
+        },
+        "thresholds": {
+          "supported": 0.75,
+          "relevant": 0.6,
+          "duplicate": 0.75,
+          "actionable": 0.6,
+          "escalate": 0.65
+        }
+      }
+    }
+  }
+}

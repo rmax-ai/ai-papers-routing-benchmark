@@ -1,0 +1,52 @@
+{
+  "call_id": "l1-2609.27263-openai",
+  "attempt": 1,
+  "arm_id": "l1-openai",
+  "provider": "openai",
+  "model_id_sent": "gpt-6-luna",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "call_start_utc": "2026-09-25T15:12:56Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_schema strict",
+    "max_completion_tokens": 1200
+  },
+  "http_status": 200,
+  "latency_ms": 8320,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "completion_tokens_details",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 1050,
+    "output_tokens": 68,
+    "cached_input_tokens": 1047,
+    "reasoning_tokens": 0,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+      "cached_input": "usage.prompt_tokens_details.cached_tokens"
+    }
+  },
+  "cost": {
+    "amount": 4.477e-05,
+    "rates_used_usd_per_million": {
+      "input": 0.1,
+      "cached_input": 0.01,
+      "output": 0.5
+    },
+    "rate_source": "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC",
+    "tier": null
+  },
+  "output": "{\"relevant\":true,\"relevant_probability\":0.98,\"empirical_evidence\":true,\"empirical_probability\":0.99,\"topic\":\"long_running_workflows\",\"worth_escalating\":true,\"escalation_probability\":0.95,\"implementation_relevance\":3.5}",
+  "provider_response_model_id": "gpt-6-luna",
+  "artifact": "raw/responses/l1/openai/l1-2609.27263-openai-a1-r3.json",
+  "paper_id": "2609.27263",
+  "stratum": "high_value_proxy",
+  "input_sha256": "411054a9d2a6ca108a06ff74aea40982ea55f7d752c5ed17a5402d1596348bc5",
+  "input_source": "title+authors+categories+arXiv abstract"
+}

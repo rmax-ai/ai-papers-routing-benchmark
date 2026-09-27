@@ -1,0 +1,455 @@
+{
+  "schema_version": 1,
+  "status": "prompt-pilot-excluded",
+  "papers_completed": 2,
+  "provider_outages": [],
+  "results": [
+    {
+      "paper_id": "2609.27263",
+      "stratum": "high_value_proxy",
+      "proxy_relevant_label": true,
+      "input_sha256": "ff0bb8468b507d2f53d5627a5d880f1c01d0e6509c0ab0ec30fe2af1c912bd2f",
+      "input": {
+        "paper_id": "2609.27263",
+        "title": "Specifying and Maintaining Agentic Workflows: An Empirical Study of GitHub Agentic Workflows",
+        "authors": [
+          "Jasem Khelifi",
+          "Issam Oukhay",
+          "Ali Ouni",
+          "Mohammed Sayagh",
+          "Mohamed Aymen Saied"
+        ],
+        "categories": [
+          "cs.SE"
+        ],
+        "abstract": "Agentic workflows shift software development from prompting AI agents for individual tasks to defining recurring work that agents execute automatically. GitHub Agentic Workflows (gh-aw) enables this approach through Markdown files that combine natural-language instructions with configuration and compile into executable GitHub Actions workflows. Unlike conventional workflows that primarily prescribe scripted operations, these files delegate tasks requiring interpretation to AI agents. They also couple agent instructions with execution triggers, making those instructions operational specifications for repeated repository activities. However, how developers structure and maintain these specifications, and which execution requirements and safeguards they express, remains insufficiently understood. In this paper, we examine the structure, evolution, and instruction content of gh-aw Markdown files to inform how practitioners define and maintain agent-run work. We analyze 1,248 files from 276 repositories, 20,841 commit-file events, and 288 resolved instruction-label sets from a sample of 294 files. Our results show that workflow instructions extend beyond short prompts, with a median of 556.5 words and code blocks in 62.1% of files. Among files with at least 120 days of observed activity, 78.2% still receive updates in month 4, while size-normalized churn decreases after the first month. Tasks, outputs, constraints, and process instructions each appear in over 93% of labeled workflows, yet only 9.4% explicitly address prompt-injection defense. LLM classification achieves an F1 score of 0.818 and Cohen's Kappa of 0.715 against the resolved human labels. These findings suggest that developers should account for the evolution of workflows copied or referenced across repositories and consider adding prompt-injection defenses, resource budgets, and evidencecredibility checks where applicable."
+      },
+      "judgments": {
+        "jev": {
+          "paper_id": "2609.27263",
+          "stratum": "high_value_proxy",
+          "arm": "jev",
+          "call_artifacts": [
+            "raw/responses/l1/jev/l1-2609.27263-jev-a1.json"
+          ],
+          "latency_ms": 613,
+          "http_status": 200,
+          "answers": {
+            "relevant": {
+              "type": "boolean",
+              "probability": 0.93
+            },
+            "empirical_evidence": {
+              "type": "boolean",
+              "probability": 0.99
+            },
+            "topic": {
+              "type": "choice",
+              "choice": "long_running_workflows",
+              "probabilities": {
+                "agent_reliability": 0.25,
+                "tool_use": 0,
+                "harness_runtime": 0.25,
+                "none": 0.01,
+                "other": 0.05,
+                "long_running_workflows": 0.33,
+                "evals_assurance": 0.01,
+                "mcp_governance": 0.1
+              }
+            },
+            "worth_escalating": {
+              "type": "boolean",
+              "probability": 0.58
+            },
+            "implementation_relevance": {
+              "type": "score",
+              "score": 3.1,
+              "probabilities": {
+                "0": 0,
+                "1": 0,
+                "2": 0.02,
+                "3": 0.86,
+                "4": 0.12
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1204,
+            "output_tokens": 172,
+            "cached_input_tokens": null,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usage.inputTokens",
+              "output": "usage.outputTokens"
+            },
+            "raw_usage_fields": [
+              "inputTokens",
+              "outputTokens"
+            ]
+          }
+        },
+        "deepseek": {
+          "paper_id": "2609.27263",
+          "stratum": "high_value_proxy",
+          "arm": "deepseek",
+          "call_artifacts": [
+            "raw/responses/l1/deepseek/l1-2609.27263-deepseek-a1.json"
+          ],
+          "latency_ms": 950,
+          "http_status": 200,
+          "output": {
+            "1": {
+              "boolean": true,
+              "probability": 0.96
+            },
+            "2": {
+              "boolean": true,
+              "probability": 0.98
+            },
+            "3": "long_running_workflows",
+            "4": {
+              "boolean": true,
+              "probability": 0.88
+            },
+            "5": 4
+          },
+          "parse_error": null,
+          "validation_errors": [
+            "relevant is not boolean",
+            "empirical_evidence is not boolean",
+            "worth_escalating is not boolean",
+            "relevant_probability outside 0..1",
+            "empirical_probability outside 0..1",
+            "escalation_probability outside 0..1",
+            "topic outside fixed choice set",
+            "implementation_relevance outside 0..4"
+          ],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "prompt_cache_hit_tokens",
+              "prompt_cache_miss_tokens",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 745,
+            "output_tokens": 87,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "reasoning_content_present": false,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "cached_input": "usage.prompt_cache_hit_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+            }
+          }
+        },
+        "gemini": {
+          "paper_id": "2609.27263",
+          "stratum": "high_value_proxy",
+          "arm": "gemini",
+          "call_artifacts": [
+            "raw/responses/l1/gemini/l1-2609.27263-gemini-a1.json"
+          ],
+          "latency_ms": 23427,
+          "http_status": 200,
+          "output": {
+            "material_relevance": true,
+            "material_relevance_probability": 1.0,
+            "empirical_evidence": true,
+            "empirical_evidence_probability": 1.0,
+            "best_covered_topic": "long_running_workflows",
+            "escalate_to_full_insight": true,
+            "escalate_to_full_insight_probability": 0.9,
+            "implementation_relevance_score": 3.0
+          },
+          "parse_error": null,
+          "validation_errors": [
+            "relevant is not boolean",
+            "worth_escalating is not boolean",
+            "relevant_probability outside 0..1",
+            "empirical_probability outside 0..1",
+            "escalation_probability outside 0..1",
+            "topic outside fixed choice set",
+            "implementation_relevance outside 0..4"
+          ],
+          "usage": {
+            "input_tokens": 752,
+            "output_tokens": 114,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usageMetadata.promptTokenCount",
+              "output": "usageMetadata.candidatesTokenCount",
+              "cached_input": "usageMetadata.cachedContentTokenCount"
+            }
+          }
+        },
+        "openai": {
+          "paper_id": "2609.27263",
+          "stratum": "high_value_proxy",
+          "arm": "openai",
+          "call_artifacts": [
+            "raw/responses/l1/openai/l1-2609.27263-openai-a1.json"
+          ],
+          "latency_ms": 9035,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.99,
+            "empirical_evidence": true,
+            "empirical_probability": 1.0,
+            "topic": "long_running_workflows",
+            "worth_escalating": true,
+            "escalation_probability": 0.94,
+            "implementation_relevance": 3.0
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "completion_tokens_details",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 840,
+            "output_tokens": 68,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": 0,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+              "cached_input": "usage.prompt_tokens_details.cached_tokens"
+            }
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28585",
+      "stratum": "high_value_proxy",
+      "proxy_relevant_label": true,
+      "input_sha256": "6f21cd4fcba8e2fc2d13591cfcdff53f6574e9a222ff40aaec960a1fa8a2f995",
+      "input": {
+        "paper_id": "2609.28585",
+        "title": "Persistent Billable State: Denial-of-Wallet Attacks and Defenses in Tool-Calling LLM Agents",
+        "authors": [
+          "Jinqian Zhang",
+          "Haojun Xia",
+          "Shujiang Wu",
+          "Jingkun Yue",
+          "Xia Zhang",
+          "Zhangpei Cheng",
+          "Bibo Tu"
+        ],
+        "categories": [
+          "cs.CR",
+          "cs.AI"
+        ],
+        "abstract": "Multi-step tool-calling LLM agents rely on host runtimes to preserve state across turns. When a runtime carries an external tool return into later model inputs, providers meter it again. An admitted malicious or compromised tool can thereby convert untrusted data into recurring victim-billed processing without victim credentials or local runtime privilege. We call retained content persistent billable state and formalize the host's decision over whether and how it enters later billable context as the persistent billable-state boundary. We present the first systematic security study of this post-admission lifecycle. We derive six denial-of-wallet attack vectors and build DOW-BENCH, an end-to-end harness evaluated across six model families. Across 243 executions, usage telemetry shows that the maximum per-session cumulative input reaches 14,293x the session's first-call input. Controlled history-policy reruns isolate raw retention's contribution: retaining raw history increases mean effective session cost by 21.2-35.9%. Compression succeeds on 10/12 and 11/12 history-dependent tasks, versus 2/12 under deletion for each provider. To govern this boundary, we combine deterministic history transformation with four host-side invariants that bound prompt mass, context growth, recursive opportunity, and cumulative spend before reingestion. The kernel contains every recurring attack in the 123-evaluation replay corpus. Across 24 Mistral Small 4 workflows, a progress-authorized policy achieves 22/24 oracle-verified task successes with no pre-completion interruptions, versus 13/24 under a fixed cap. Only 71 of 3,830 scanned MCP server and transport repositories expose any code-visible safeguard proxy, and none cover all four safeguard families. These results establish persistent billable state as a first-class security object and pre-reingestion as its host-owned control point."
+      },
+      "judgments": {
+        "jev": {
+          "paper_id": "2609.28585",
+          "stratum": "high_value_proxy",
+          "arm": "jev",
+          "call_artifacts": [
+            "raw/responses/l1/jev/l1-2609.28585-jev-a1.json"
+          ],
+          "latency_ms": 318,
+          "http_status": 200,
+          "answers": {
+            "relevant": {
+              "type": "boolean",
+              "probability": 0.92
+            },
+            "empirical_evidence": {
+              "type": "boolean",
+              "probability": 0.98
+            },
+            "topic": {
+              "type": "choice",
+              "choice": "harness_runtime",
+              "probabilities": {
+                "agent_reliability": 0,
+                "none": 0,
+                "tool_use": 0.27,
+                "evals_assurance": 0.01,
+                "harness_runtime": 0.41,
+                "mcp_governance": 0.24,
+                "long_running_workflows": 0.07,
+                "other": 0
+              }
+            },
+            "worth_escalating": {
+              "type": "boolean",
+              "probability": 0.76
+            },
+            "implementation_relevance": {
+              "type": "score",
+              "score": 3.92,
+              "probabilities": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0.08,
+                "4": 0.92
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1230,
+            "output_tokens": 171,
+            "cached_input_tokens": null,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usage.inputTokens",
+              "output": "usage.outputTokens"
+            },
+            "raw_usage_fields": [
+              "inputTokens",
+              "outputTokens"
+            ]
+          }
+        },
+        "deepseek": {
+          "paper_id": "2609.28585",
+          "stratum": "high_value_proxy",
+          "arm": "deepseek",
+          "call_artifacts": [
+            "raw/responses/l1/deepseek/l1-2609.28585-deepseek-a1.json"
+          ],
+          "latency_ms": 1075,
+          "http_status": 200,
+          "output": {
+            "relevance": true,
+            "relevance_probability": 0.96,
+            "empirical": true,
+            "empirical_probability": 0.95,
+            "best_topic": "mcp_governance",
+            "worth_escalating": true,
+            "worth_escalating_probability": 0.9,
+            "implementation_relevance": 4
+          },
+          "parse_error": null,
+          "validation_errors": [
+            "relevant is not boolean",
+            "empirical_evidence is not boolean",
+            "relevant_probability outside 0..1",
+            "escalation_probability outside 0..1",
+            "topic outside fixed choice set"
+          ],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "prompt_cache_hit_tokens",
+              "prompt_cache_miss_tokens",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 778,
+            "output_tokens": 66,
+            "cached_input_tokens": 128,
+            "reasoning_tokens": null,
+            "reasoning_content_present": false,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "cached_input": "usage.prompt_cache_hit_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+            }
+          }
+        },
+        "gemini": {
+          "paper_id": "2609.28585",
+          "stratum": "high_value_proxy",
+          "arm": "gemini",
+          "call_artifacts": [
+            "raw/responses/l1/gemini/l1-2609.28585-gemini-a1.json"
+          ],
+          "latency_ms": 24070,
+          "http_status": 200,
+          "output": {
+            "relevance": true,
+            "relevance_probability": 0.99,
+            "empirical_evidence": true,
+            "empirical_evidence_probability": 0.99,
+            "best_topic": "harness_runtime",
+            "escalate": true,
+            "escalate_probability": 0.9,
+            "implementation_relevance_score": 3.5
+          },
+          "parse_error": null,
+          "validation_errors": [
+            "relevant is not boolean",
+            "worth_escalating is not boolean",
+            "relevant_probability outside 0..1",
+            "empirical_probability outside 0..1",
+            "escalation_probability outside 0..1",
+            "topic outside fixed choice set",
+            "implementation_relevance outside 0..4"
+          ],
+          "usage": {
+            "input_tokens": 795,
+            "output_tokens": 97,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usageMetadata.promptTokenCount",
+              "output": "usageMetadata.candidatesTokenCount",
+              "cached_input": "usageMetadata.cachedContentTokenCount"
+            }
+          }
+        },
+        "openai": {
+          "paper_id": "2609.28585",
+          "stratum": "high_value_proxy",
+          "arm": "openai",
+          "call_artifacts": [
+            "raw/responses/l1/openai/l1-2609.28585-openai-a1.json"
+          ],
+          "latency_ms": 8143,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.99,
+            "empirical_evidence": true,
+            "empirical_probability": 1.0,
+            "topic": "harness_runtime",
+            "worth_escalating": true,
+            "escalation_probability": 0.98,
+            "implementation_relevance": 4
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "completion_tokens_details",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 870,
+            "output_tokens": 65,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": 0,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+              "cached_input": "usage.prompt_tokens_details.cached_tokens"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "exclusion_reason": "The first prompt draft specified task semantics but did not enumerate exact JSON key names for non-OpenAI arms; DeepSeek and Gemini returned semantically recognizable but nonconforming key sets. These calls are retained as a harness-format pilot and excluded from L1 metrics."
+}

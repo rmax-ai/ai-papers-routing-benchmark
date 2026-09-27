@@ -1,0 +1,100 @@
+{
+  "call_id": "l2-2609.29095-B-r1-resume1",
+  "attempt": 1,
+  "arm_id": "l2-B",
+  "provider": "gemini",
+  "model_id_sent": "gemini-3.5-flash-lite",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+  "call_start_utc": "2026-09-26T22:07:29Z",
+  "settings": {
+    "thinkingConfig": {
+      "thinkingLevel": "low"
+    },
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 3000,
+    "strategy": "B",
+    "round": 1,
+    "page_numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ]
+  },
+  "http_status": 200,
+  "latency_ms": 29221,
+  "usage": {
+    "input_tokens": 12338,
+    "output_tokens": 847,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": null,
+    "mapping": {
+      "input": "usageMetadata.promptTokenCount",
+      "output": "usageMetadata.candidatesTokenCount",
+      "cached_input": "usageMetadata.cachedContentTokenCount"
+    }
+  },
+  "cost": {
+    "amount": 0.0058189,
+    "rates_used_usd_per_million": {
+      "input": 0.3,
+      "cached_input": 0.3,
+      "output": 2.5
+    },
+    "rate_source": "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"candidate_claims\": [\n    {\n      \"claim\": \"When a read-back can resolve the failure (e.g., lost acknowledgement), frontier models instructed to act exactly once almost never duplicate writes (0.5% duplicate rate), whereas weaker models duplicate in 18% of episodes.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"quote\": \"When an immediate read-back can reveal what happened, the model decides: frontier models instructed to act exactly once almost never duplicate a write whose acknowledgement was lost (0.5%), weaker models often do\"\n        }\n      ],\n      \"importance\": \"load_bearing\"\n    },\n    {\n      \"claim\": \"When a read-back cannot resolve the failure (e.g., late commits or redelivery), frontier models duplicate in 56% and 74% of episodes respectively, and the tool contract explains 81% of the variance.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"quote\": \"When it cannot—the request is still in flight, or the transport delivered it twice—the same frontier models duplicate in 56% and 74% of episodes, and the contract explains 81%.\"\n        }\n      ],\n      \"importance\": \"load_bearing\"\n    },\n    {\n      \"claim\": \"Offering idempotency keys on every write reduces the duplicate rate from 28% to 4% without other changes, as agents attach them in 98% of episodes.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 2,\n          \"quote\": \"Offering keys is enough: under a counterfactual contract in which every write accepts one, agents attach them in 98% of episodes and the duplicate rate falls from 28% to 4% with no other change\"\n        }\n      ],\n      \"importance\": \"load_bearing\"\n    },\n    {\n      \"claim\": \"Production harnesses matter little; client-side middleware has a ceiling, with three production harnesses and a minimal scaffold running the same model behaving almost identically.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 2,\n          \"quote\": \"Harnesses matter little; client-side middleware has a ceiling. Three production harnesses and a minimal scaffold running the same model behave almost identically.\"\n        }\n      ],\n      \"importance\": \"supporting\"\n    }\n  ],\n  \"key_claims\": [\n    \"Exactly-once behavior depends on the fault type: model reasoning resolves failures when read-back is possible, but tool contracts (like idempotency keys) are required when requests are still in flight or redelivered.\",\n    \"Transparent client-side retries are harmful and increase duplicate side effects by turning lost acknowledgements into duplicates before the model sees them.\",\n    \"Agents do not know when they have duplicated effects, reporting tasks as completed in 90% of duplicate-producing episodes.\"\n  ],\n  \"limitations\": [\n    \"The services are simulated, although their semantics follow documented production conventions.\",\n    \"All models were reached through one gateway which fixes some settings like reasoning effort at provider defaults.\",\n    \"The heavy-tailed in-flight delay distribution is a modeling choice whose specific success rates depend on its shape.\"\n  ],\n  \"load_bearing_pages\": [\n    1,\n    2,\n    4,\n    10,\n    11\n  ],\n  \"requested_pages\": [],\n  \"stop_reason\": \"The provided text across pages 1 to 23 contains sufficient detail on the benchmark Limbo, experimental setups (E1-E6), quantitative results, Shapley decompositions, and limitations to fully address all required aspects of agent reliability, evaluation, harness design, tool use, and long-running workflows.\"\n}",
+  "provider_response_model_version": "gemini-3.5-flash-lite",
+  "artifact": "raw/responses/l2/B/l2-2609.29095-B-r1-resume1-a1.json",
+  "paper_id": "2609.29095",
+  "strategy": "B",
+  "round": 1,
+  "input_sha256": "c45cbf46a5832e8b2b7123fa9907b652347490f9e6ca1dc20e1c0e82f22daca4",
+  "page_numbers_sent": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "input_text_bytes": 1572,
+  "inline_part_bytes": 718110
+}

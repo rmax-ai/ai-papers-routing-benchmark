@@ -1,0 +1,32 @@
+{
+  "protocol": "AI Gateway evaluation v4",
+  "questions": {
+    "supported_by_supplied_evidence": {
+      "type": "boolean",
+      "instructions": "Is the central factual claim supported by the supplied source excerpts?"
+    },
+    "agenda_relevant": {
+      "type": "boolean",
+      "instructions": "Is this insight materially relevant to agent reliability, evaluation/assurance, harness/runtime, MCP/governance, tool use, or long-running workflows?"
+    },
+    "duplicates_supplied_existing_insight": {
+      "type": "boolean",
+      "instructions": "Is the insight semantically duplicative of an existing insight explicitly supplied in the state?"
+    },
+    "has_actionable_implication": {
+      "type": "boolean",
+      "instructions": "Does it contain an actionable architecture, implementation, or research implication?"
+    },
+    "escalate_for_deeper_review": {
+      "type": "boolean",
+      "instructions": "Should this candidate be escalated for deeper human/model review before durable storage?"
+    }
+  },
+  "thresholds_are_host_owned": {
+    "supported": 0.75,
+    "relevant": 0.6,
+    "duplicate": 0.75,
+    "actionable": 0.6,
+    "escalate": 0.65
+  }
+}

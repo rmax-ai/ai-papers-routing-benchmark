@@ -1,0 +1,102 @@
+{
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models",
+  "status": "success",
+  "matching_models": [
+    {
+      "name": "models/gemini-2.5-flash-lite",
+      "version": "001",
+      "displayName": "Gemini 2.5 Flash-Lite",
+      "description": "Stable version of Gemini 2.5 Flash-Lite, released in July of 2025",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    },
+    {
+      "name": "models/gemini-3.1-flash-lite-image",
+      "version": "3.0",
+      "displayName": "Nano Banana 2 Lite",
+      "description": "Gemini 3.1 Flash Lite Image.",
+      "inputTokenLimit": 65536,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ]
+    },
+    {
+      "name": "models/gemini-3.1-flash-lite",
+      "version": "3.1-flash-lite-05-2026",
+      "displayName": "Gemini 3.1 Flash Lite",
+      "description": "Gemini 3.1 Flash Lite",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    },
+    {
+      "name": "models/gemini-3.5-flash-lite",
+      "version": "3.5-flash-lite-07-2026",
+      "displayName": "Gemini 3.5 Flash Lite",
+      "description": "Gemini 3.5 Flash Lite",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    },
+    {
+      "name": "models/gemini-3.8-flash-lite-tts",
+      "version": "3.8-flash-lite-tts",
+      "displayName": "Gemini 3.8 Flash Lite TTS",
+      "description": "Gemini 3.8 Flash Lite TTS",
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 16384,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ]
+    },
+    {
+      "name": "models/gemini-flash-lite-latest",
+      "version": "Gemini Flash-Lite Latest",
+      "displayName": "Gemini Flash-Lite Latest",
+      "description": "Latest release of Gemini Flash-Lite",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    },
+    {
+      "name": "models/gemini-3.1-flash-lite-preview",
+      "version": "3.1-flash-lite-preview-03-2026",
+      "displayName": "Gemini 3.1 Flash Lite Preview",
+      "description": "Gemini 3.1 Flash Lite Preview",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  ]
+}

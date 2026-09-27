@@ -1,0 +1,49 @@
+{
+  "call_id": "l3-2609.24122-full_reference-openai",
+  "attempt": 1,
+  "arm_id": "l3-full_reference-openai",
+  "provider": "openai",
+  "model_id_sent": "gpt-6-luna",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "call_start_utc": "2026-09-26T22:51:33Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_schema strict",
+    "max_completion_tokens": 3600,
+    "prompt_revision": "concise-v4"
+  },
+  "http_status": 200,
+  "latency_ms": 18849,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "completion_tokens_details",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 40236,
+    "output_tokens": 1684,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": 0,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+      "cached_input": "usage.prompt_tokens_details.cached_tokens"
+    }
+  },
+  "cost": {
+    "amount": 0.0048656,
+    "rates_used_usd_per_million": {
+      "input": 0.1,
+      "cached_input": 0.01,
+      "output": 0.5
+    },
+    "rate_source": "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"paper\": {\n    \"contribution\": \"Re:CAP proposes an out-of-band, iterative topic-probing audit for surfacing retrieval gaps in deployed RAG without per-query gold labels (pp. 2–3).\",\n    \"key_claims\": [\n      {\n        \"claim\": \"On bounded-evidence benchmarks, Re:CAP improves recall over flat retrieval at matched document budgets, with the reported MuSiQue gain over hybrid top-500 at +12.9 percentage points.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 5,\n            \"section\": \"4.1 Re:CAP vs. flat retrieval\",\n            \"quote\": \"on MuSiQue, +12.9 pp vs. flat MiniLM hybrid top-500\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"On TREC-COVID, 21.2% of Re:CAP-recovered gold remains absent from the combined top-500 outputs of BM25, dense, and hybrid retrieval.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 5,\n            \"section\": \"4.1 Re:CAP vs. flat retrieval\",\n            \"quote\": \"21.2% remains absent from the ensemble of flat BM25, dense, and hybrid top-500\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"Across three MuSiQue runs, Re:CAP recall has 0.47% coefficient of variation; this is benchmark stability evidence, not production variance evidence.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 7,\n            \"section\": \"Table 5\",\n            \"quote\": \"Re:CAP recall 0.8972 0.0043 0.47%\"\n          }\n        ]\n      }\n    ],\n    \"evidence\": [\n      {\n        \"claim\": \"The proposed audit extracts covered topics, probes for missing facets, retrieves candidates, and judges novelty.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 2,\n            \"section\": \"Introduction\",\n            \"quote\": \"generates entity-anchored gap-probing questions targeting aspects relevant to Q but absent from T\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"Human annotators rated 78.9% of sampled ensemble-unreachable benchmark documents as adding information beyond the baseline answer.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 7,\n            \"section\": \"5 Human evaluation\",\n            \"quote\": \"78.9% [71.5–86.2%] of ensemble-missed gap documents are judged new_info\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"Human annotators rated 73.9% of sampled judge-identified production gap documents as adding information; these audits lack production gold labels.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 16,\n            \"section\": \"F Human Evaluation on the Production Cohorts\",\n            \"quote\": \"73.9% overall\"\n          }\n        ]\n      }\n    ],\n    \"limitations\": [\n      \"The audit cannot discover topics absent from the corpus, so it measures retrieval gaps rather than corpus gaps (p. 8).\",\n      \"The authors report that 95.3% of missing-gold losses on bounded-evidence benchmarks never reach the candidate pool, implicating upstream probing coverage (p. 23).\",\n      \"Production results have no calibrated recall or variance estimates because production gold labels are unavailable and each cohort was run once (p. 16).\",\n      \"The default audit costs $0.59–$2.05 per query and uses 250–500 LLM calls, limiting suitability for tight monitoring budgets (pp. 8–9).\"\n    ]\n  },\n  \"insights\": [\n    {\n      \"insight\": \"Treat retrieval coverage as an independently auditable failure surface: answer-side faithfulness can coexist with omitted corpus evidence.\",\n      \"why_it_matters\": \"Agent reliability evaluations that inspect only generated answers can miss retrieval omissions; this paper proposes an out-of-band audit, not an inline agent monitor.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"1 Introduction\",\n          \"quote\": \"an answer that is fluent and faithful to its retrieved context can still be substantively incomplete\"\n        }\n      ],\n      \"confidence\": 0.9,\n      \"novelty\": \"Relevant reframing for evaluation and assurance; the paper positions this as complementary to existing RAG metrics, not as a claim of novelty relative to agent evaluations.\",\n      \"related_rmax_topics\": [\n        \"evaluation/assurance\",\n        \"agent reliability\"\n      ],\n      \"possible_action\": \"Add sampled retrieval-coverage audits alongside answer-quality metrics when assessing knowledge-agent changes.\"\n    },\n    {\n      \"insight\": \"A high gap-discovery signal is not a calibrated reliability score: benchmarks support recall and run stability, while production evidence is human-judged and single-snapshot.\",\n      \"why_it_matters\": \"Governance dashboards should distinguish measured benchmark performance from uncalibrated production indicators and avoid treating gap rate as proof of completeness.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 16,\n          \"section\": \"Scope of these case studies\",\n          \"quote\": \"They do not provide calibrated recall numbers (no production gold labels) or variance estimates (single run per cohort).\"\n        }\n      ],\n      \"confidence\": 0.96,\n      \"novelty\": \"Evidence-bound assurance implication; no claim that this monitoring pattern is novel.\",\n      \"related_rmax_topics\": [\n        \"evaluation/assurance\",\n        \"MCP/governance\"\n      ],\n      \"possible_action\": \"Label production gap-rate metrics as uncalibrated, and periodically validate judge outputs with human or held-out-qrel checks.\"\n    },\n    {\n      \"insight\": \"The harness must account for probe-generation and judge failure separately: the reported bounded-evidence losses are mostly failures to surface candidates, not failures to judge them.\",\n      \"why_it_matters\": \"Improving judge accuracy alone may leave the dominant retrieval-audit failure mode unchanged; the paper’s measured attribution is specific to its benchmark setup.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 23,\n          \"section\": \"O Failure-Mode Analysis\",\n          \"quote\": \"dominant failure modes are early convergence (41/43), gap-Q off-topic from bridge-entity erasure (19/43)\"\n        },\n        {\n          \"page\": 23,\n          \"section\": \"Table 23\",\n          \"quote\": \"AND only 43 64 4.7% 95.3%\"\n        }\n      ],\n      \"confidence\": 0.86,\n      \"novelty\": \"A measured diagnostic for this audit harness; it does not establish the same failure distribution for other agents or tools.\",\n      \"related_rmax_topics\": [\n        \"harness/runtime\",\n        \"tool use\",\n        \"long-running workflows\"\n      ],\n      \"possible_action\": \"Instrument candidate-generation yield and early-convergence reasons separately from judge rejection in evaluation runs.\"\n    }\n  ],\n  \"connections\": [\n    {\n      \"prior_work_or_existing_rmax_insight\": \"RAGAS and ARES answer/context-side evaluation described by the paper\",\n      \"relationship\": \"extends\"\n    },\n    {\n      \"prior_work_or_existing_rmax_insight\": \"Nugget-based and coverage-oriented evaluation discussed in the paper\",\n      \"relationship\": \"reframes\"\n    }\n  ],\n  \"followups\": {\n    \"experiments\": [\n      \"Test whether Re:CAP gap metrics detect retrieval changes on production query samples using repeated audits and held-out human review.\"\n    ],\n    \"implementation_ideas\": [\n      \"Log per-iteration candidate yield, convergence reason, judge verdicts, and cost to expose distinct audit failure modes.\"\n    ],\n    \"research_questions\": [\n      \"How do ACL enforcement, prompt injection, and entity-ledger bias affect audit completeness in deployed systems?\"\n    ]\n  }\n}",
+  "provider_response_model_id": "gpt-6-luna",
+  "artifact": "raw/responses/l3/full_reference/openai/l3-2609.24122-full_reference-openai-a1.json"
+}

@@ -1,0 +1,711 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "accounting_method": "Sum every persisted HTTP attempt's provider usage against its saved cost.rate_source and rates_used_usd_per_million. Error attempts with no model response have zero usage/cost. Latency sums provider round trips only and excludes retry backoff.",
+  "total_attempts": 300,
+  "responses_200": 290,
+  "errors": 10,
+  "input_tokens": 1965663,
+  "output_tokens": 138183,
+  "cached_input_tokens": 88727,
+  "reasoning_tokens": 5257,
+  "estimated_total_cost_usd": 0.538550438,
+  "latency_ms_sum_excluding_backoff": 3733259,
+  "latency_ms_median_per_attempt": 8173.5,
+  "latency_ms_p90_per_attempt": 27337,
+  "deepseek_peak_offpeak_cost_usd": {
+    "offpeak": 0.06790284
+  },
+  "rate_sources": [
+    "https://api-docs.deepseek.com/quick_start/pricing/; prior-art compare.ts constants reviewed 2026-09-24 UTC",
+    "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC",
+    "prior-art compare.ts reviewed fallback $0.042/1M input, $0 output; live table not queried",
+    "prior-art video-summarization summarize_video.py PRICING_PER_MILLION",
+    "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC"
+  ],
+  "by_stage": {
+    "L1": {
+      "attempts": 110,
+      "unique_call_ids": 96,
+      "responses_200": 109,
+      "errors": 1,
+      "input_tokens": 106085,
+      "output_tokens": 10579,
+      "cached_input_tokens": 11031,
+      "reasoning_tokens": 0,
+      "cost_usd": 0.021296802,
+      "latency_ms_sum_excluding_backoff": 901602,
+      "latency_ms_median_per_attempt": 1680.0,
+      "latency_ms_p90_per_attempt": 23872,
+      "deepseek_tier_cost_usd": {
+        "offpeak": 0.003329352
+      },
+      "rate_sources": [
+        "https://api-docs.deepseek.com/quick_start/pricing/; prior-art compare.ts constants reviewed 2026-09-24 UTC",
+        "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC",
+        "prior-art compare.ts reviewed fallback $0.042/1M input, $0 output; live table not queried",
+        "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC"
+      ]
+    },
+    "L2": {
+      "attempts": 36,
+      "unique_call_ids": 34,
+      "responses_200": 33,
+      "errors": 3,
+      "input_tokens": 378737,
+      "output_tokens": 19436,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 1738,
+      "cost_usd": 0.1622111,
+      "latency_ms_sum_excluding_backoff": 1021489,
+      "latency_ms_median_per_attempt": 26859.5,
+      "latency_ms_p90_per_attempt": 30812,
+      "deepseek_tier_cost_usd": {},
+      "rate_sources": [
+        "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC"
+      ]
+    },
+    "L3": {
+      "attempts": 97,
+      "unique_call_ids": 88,
+      "responses_200": 95,
+      "errors": 2,
+      "input_tokens": 1372808,
+      "output_tokens": 102755,
+      "cached_input_tokens": 77696,
+      "reasoning_tokens": 3519,
+      "cost_usd": 0.350305438,
+      "latency_ms_sum_excluding_backoff": 1684709,
+      "latency_ms_median_per_attempt": 18668,
+      "latency_ms_p90_per_attempt": 28586,
+      "deepseek_tier_cost_usd": {
+        "offpeak": 0.064564038
+      },
+      "rate_sources": [
+        "https://api-docs.deepseek.com/quick_start/pricing/; prior-art compare.ts constants reviewed 2026-09-24 UTC",
+        "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC",
+        "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC"
+      ]
+    },
+    "L4": {
+      "attempts": 47,
+      "unique_call_ids": 47,
+      "responses_200": 47,
+      "errors": 0,
+      "input_tokens": 107111,
+      "output_tokens": 5358,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0,
+      "cost_usd": 0.004498662,
+      "latency_ms_sum_excluding_backoff": 17841,
+      "latency_ms_median_per_attempt": 337,
+      "latency_ms_p90_per_attempt": 619,
+      "deepseek_tier_cost_usd": {},
+      "rate_sources": [
+        "prior-art compare.ts reviewed fallback $0.042/1M input, $0 output; live table not queried"
+      ]
+    },
+    "capability/probe": {
+      "attempts": 10,
+      "unique_call_ids": 10,
+      "responses_200": 6,
+      "errors": 4,
+      "input_tokens": 922,
+      "output_tokens": 55,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0,
+      "cost_usd": 0.000238436,
+      "latency_ms_sum_excluding_backoff": 107618,
+      "latency_ms_median_per_attempt": 4735.0,
+      "latency_ms_p90_per_attempt": 25438,
+      "deepseek_tier_cost_usd": {
+        "offpeak": 9.45e-06
+      },
+      "rate_sources": [
+        "https://api-docs.deepseek.com/quick_start/pricing/; prior-art compare.ts constants reviewed 2026-09-24 UTC",
+        "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC",
+        "prior-art compare.ts reviewed fallback $0.042/1M input, $0 output; live table not queried",
+        "prior-art video-summarization summarize_video.py PRICING_PER_MILLION",
+        "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC"
+      ]
+    }
+  },
+  "by_stage_arm_provider": {
+    "L1/l1-deepseek/deepseek": {
+      "attempts": 28,
+      "unique_call_ids": 24,
+      "responses_200": 28,
+      "errors": 0,
+      "input_tokens": 24940,
+      "output_tokens": 1760,
+      "cached_input_tokens": 9984,
+      "reasoning_tokens": 0,
+      "cost_usd": 0.003329352,
+      "latency_ms_sum_excluding_backoff": 34836,
+      "latency_ms_median_per_attempt": 1163.0,
+      "latency_ms_p90_per_attempt": 1617,
+      "deepseek_tier_cost_usd": {
+        "offpeak": 0.003329352
+      },
+      "rate_sources": [
+        "https://api-docs.deepseek.com/quick_start/pricing/; prior-art compare.ts constants reviewed 2026-09-24 UTC"
+      ]
+    },
+    "L1/l1-gemini/gemini": {
+      "attempts": 27,
+      "unique_call_ids": 24,
+      "responses_200": 27,
+      "errors": 0,
+      "input_tokens": 23931,
+      "output_tokens": 2420,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0,
+      "cost_usd": 0.0132293,
+      "latency_ms_sum_excluding_backoff": 642562,
+      "latency_ms_median_per_attempt": 23795,
+      "latency_ms_p90_per_attempt": 25153,
+      "deepseek_tier_cost_usd": {},
+      "rate_sources": [
+        "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC"
+      ]
+    },
+    "L1/l1-jev/jev": {
+      "attempts": 28,
+      "unique_call_ids": 24,
+      "responses_200": 27,
+      "errors": 1,
+      "input_tokens": 30690,
+      "output_tokens": 4617,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0,
+      "cost_usd": 0.00128898,
+      "latency_ms_sum_excluding_backoff": 10585,
+      "latency_ms_median_per_attempt": 343.5,
+      "latency_ms_p90_per_attempt": 602,
+      "deepseek_tier_cost_usd": {},
+      "rate_sources": [
+        "prior-art compare.ts reviewed fallback $0.042/1M input, $0 output; live table not queried"
+      ]
+    },
+    "L1/l1-openai/openai": {
+      "attempts": 27,
+      "unique_call_ids": 24,
+      "responses_200": 27,
+      "errors": 0,
+      "input_tokens": 26524,
+      "output_tokens": 1782,
+      "cached_input_tokens": 1047,
+      "reasoning_tokens": 0,
+      "cost_usd": 0.00344917,
+      "latency_ms_sum_excluding_backoff": 213619,
+      "latency_ms_median_per_attempt": 7861,
+      "latency_ms_p90_per_attempt": 8320,
+      "deepseek_tier_cost_usd": {},
+      "rate_sources": [
+        "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC"
+      ]
+    },
+    "L2/l2-A/gemini": {
+      "attempts": 8,
+      "unique_call_ids": 8,
+      "responses_200": 8,
+      "errors": 0,
+      "input_tokens": 6672,
+      "output_tokens": 4766,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0,
+      "cost_usd": 0.0139166,
+      "latency_ms_sum_excluding_backoff": 207524,
+      "latency_ms_median_per_attempt": 26169.5,
+      "latency_ms_p90_per_attempt": 26606,
+      "deepseek_tier_cost_usd": {},
+      "rate_sources": [
+        "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC"
+      ]
+    },
+    "L2/l2-A-pilot/gemini": {
+      "attempts": 1,
+      "unique_call_ids": 1,
+      "responses_200": 1,
+      "errors": 0,
+      "input_tokens": 836,
+      "output_tokens": 563,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0,
+      "cost_usd": 0.0016583,
+      "latency_ms_sum_excluding_backoff": 25729,
+      "latency_ms_median_per_attempt": 25729,
+      "latency_ms_p90_per_attempt": 25729,
+      "deepseek_tier_cost_usd": {},
+      "rate_sources": [
+        "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC"
+      ]
+    },
+    "L2/l2-B/gemini": {
+      "attempts": 11,
+      "unique_call_ids": 9,
+      "responses_200": 8,
+      "errors": 3,
+      "input_tokens": 109510,
+      "output_tokens": 5933,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0,
+      "cost_usd": 0.0476855,
+      "latency_ms_sum_excluding_backoff": 365777,
+      "latency_ms_median_per_attempt": 29221,
+      "latency_ms_p90_per_attempt": 40607,
+      "deepseek_tier_cost_usd": {},
+      "rate_sources": [
+        "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC"
+      ]
+    },
+    "L2/l2-C/gemini": {
+      "attempts": 8,
+      "unique_call_ids": 8,
+      "responses_200": 8,
+      "errors": 0,
+      "input_tokens": 41314,
+      "output_tokens": 2974,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0,
+      "cost_usd": 0.0198292,
+      "latency_ms_sum_excluding_backoff": 209386,
+      "latency_ms_median_per_attempt": 26617.5,
+      "latency_ms_p90_per_attempt": 27314,
+      "deepseek_tier_cost_usd": {},
+      "rate_sources": [
+        "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC"
+      ]
+    },
+    "L2/l2-D/gemini": {
+      "attempts": 8,
+      "unique_call_ids": 8,
+      "responses_200": 8,
+      "errors": 0,
+      "input_tokens": 220405,
+      "output_tokens": 5200,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 1738,
+      "cost_usd": 0.0791215,
+      "latency_ms_sum_excluding_backoff": 213073,
+      "latency_ms_median_per_attempt": 26966.0,
+      "latency_ms_p90_per_attempt": 29321,
+      "deepseek_tier_cost_usd": {},
+      "rate_sources": [
+        "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC"
+      ]
+    },
+    "L3/l3-blind-judge-gemini/gemini": {
+      "attempts": 20,
+      "unique_call_ids": 20,
+      "responses_200": 20,
+      "errors": 0,
+      "input_tokens": 160433,
+      "output_tokens": 4375,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 353,
+      "cost_usd": 0.0590674,
+      "latency_ms_sum_excluding_backoff": 506129,
+      "latency_ms_median_per_attempt": 25672.5,
+      "latency_ms_p90_per_attempt": 26120,
+      "deepseek_tier_cost_usd": {},
+      "rate_sources": [
+        "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC"
+      ]
+    },
+    "L3/l3-blind-judge-openai/openai": {
+      "attempts": 17,
+      "unique_call_ids": 16,
+      "responses_200": 17,
+      "errors": 0,
+      "input_tokens": 85545,
+      "output_tokens": 4691,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0,
+      "cost_usd": 0.0109,
+      "latency_ms_sum_excluding_backoff": 143235,
+      "latency_ms_median_per_attempt": 8539,
+      "latency_ms_p90_per_attempt": 8948,
+      "deepseek_tier_cost_usd": {},
+      "rate_sources": [
+        "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC"
+      ]
+    },
+    "L3/l3-full_reference-deepseek/deepseek": {
+      "attempts": 12,
+      "unique_call_ids": 8,
+      "responses_200": 11,
+      "errors": 1,
+      "input_tokens": 300659,
+      "output_tokens": 20224,
+      "cached_input_tokens": 50304,
+      "reasoning_tokens": 0,
+      "cost_usd": 0.049838562,
+      "latency_ms_sum_excluding_backoff": 91471,
+      "latency_ms_median_per_attempt": 7841.0,
+      "latency_ms_p90_per_attempt": 8890,
+      "deepseek_tier_cost_usd": {
+        "offpeak": 0.049838562
+      },
+      "rate_sources": [
+        "https://api-docs.deepseek.com/quick_start/pricing/; prior-art compare.ts constants reviewed 2026-09-24 UTC"
+      ]
+    },
+    "L3/l3-full_reference-gemini/gemini": {
+      "attempts": 8,
+      "unique_call_ids": 8,
+      "responses_200": 8,
+      "errors": 0,
+      "input_tokens": 251138,
+      "output_tokens": 11468,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0,
+      "cost_usd": 0.1040114,
+      "latency_ms_sum_excluding_backoff": 230687,
+      "latency_ms_median_per_attempt": 29114.0,
+      "latency_ms_p90_per_attempt": 29633,
+      "deepseek_tier_cost_usd": {},
+      "rate_sources": [
+        "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC"
+      ]
+    },
+    "L3/l3-full_reference-openai/openai": {
+      "attempts": 9,
+      "unique_call_ids": 8,
+      "responses_200": 9,
+      "errors": 0,
+      "input_tokens": 248085,
+      "output_tokens": 16748,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0,
+      "cost_usd": 0.0331825,
+      "latency_ms_sum_excluding_backoff": 179360,
+      "latency_ms_median_per_attempt": 18976,
+      "latency_ms_p90_per_attempt": 28764,
+      "deepseek_tier_cost_usd": {},
+      "rate_sources": [
+        "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC"
+      ]
+    },
+    "L3/l3-full_reference-openai-medium-openai/openai": {
+      "attempts": 4,
+      "unique_call_ids": 4,
+      "responses_200": 4,
+      "errors": 0,
+      "input_tokens": 116147,
+      "output_tokens": 9603,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 3166,
+      "cost_usd": 0.0164162,
+      "latency_ms_sum_excluding_backoff": 84741,
+      "latency_ms_median_per_attempt": 20744.5,
+      "latency_ms_p90_per_attempt": 23765,
+      "deepseek_tier_cost_usd": {},
+      "rate_sources": [
+        "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC"
+      ]
+    },
+    "L3/l3-selective-deepseek/deepseek": {
+      "attempts": 10,
+      "unique_call_ids": 8,
+      "responses_200": 9,
+      "errors": 1,
+      "input_tokens": 69598,
+      "output_tokens": 13854,
+      "cached_input_tokens": 27392,
+      "reasoning_tokens": 0,
+      "cost_usd": 0.014725476,
+      "latency_ms_sum_excluding_backoff": 60608,
+      "latency_ms_median_per_attempt": 6020.5,
+      "latency_ms_p90_per_attempt": 12889,
+      "deepseek_tier_cost_usd": {
+        "offpeak": 0.014725476
+      },
+      "rate_sources": [
+        "https://api-docs.deepseek.com/quick_start/pricing/; prior-art compare.ts constants reviewed 2026-09-24 UTC"
+      ]
+    },
+    "L3/l3-selective-gemini/gemini": {
+      "attempts": 9,
+      "unique_call_ids": 8,
+      "responses_200": 9,
+      "errors": 0,
+      "input_tokens": 78338,
+      "output_tokens": 10740,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0,
+      "cost_usd": 0.0503514,
+      "latency_ms_sum_excluding_backoff": 251111,
+      "latency_ms_median_per_attempt": 27899,
+      "latency_ms_p90_per_attempt": 29230,
+      "deepseek_tier_cost_usd": {},
+      "rate_sources": [
+        "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC"
+      ]
+    },
+    "L3/l3-selective-openai/openai": {
+      "attempts": 8,
+      "unique_call_ids": 8,
+      "responses_200": 8,
+      "errors": 0,
+      "input_tokens": 62865,
+      "output_tokens": 11052,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0,
+      "cost_usd": 0.0118125,
+      "latency_ms_sum_excluding_backoff": 137367,
+      "latency_ms_median_per_attempt": 18167.5,
+      "latency_ms_p90_per_attempt": 18737,
+      "deepseek_tier_cost_usd": {},
+      "rate_sources": [
+        "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC"
+      ]
+    },
+    "L4/l4-full_reference-jev/jev": {
+      "attempts": 23,
+      "unique_call_ids": 23,
+      "responses_200": 23,
+      "errors": 0,
+      "input_tokens": 52758,
+      "output_tokens": 2622,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0,
+      "cost_usd": 0.002215836,
+      "latency_ms_sum_excluding_backoff": 8616,
+      "latency_ms_median_per_attempt": 337,
+      "latency_ms_p90_per_attempt": 549,
+      "deepseek_tier_cost_usd": {},
+      "rate_sources": [
+        "prior-art compare.ts reviewed fallback $0.042/1M input, $0 output; live table not queried"
+      ]
+    },
+    "L4/l4-selective-jev/jev": {
+      "attempts": 24,
+      "unique_call_ids": 24,
+      "responses_200": 24,
+      "errors": 0,
+      "input_tokens": 54353,
+      "output_tokens": 2736,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0,
+      "cost_usd": 0.002282826,
+      "latency_ms_sum_excluding_backoff": 9225,
+      "latency_ms_median_per_attempt": 339.0,
+      "latency_ms_p90_per_attempt": 619,
+      "deepseek_tier_cost_usd": {},
+      "rate_sources": [
+        "prior-art compare.ts reviewed fallback $0.042/1M input, $0 output; live table not queried"
+      ]
+    },
+    "capability/probe/capability-deepseek/deepseek": {
+      "attempts": 1,
+      "unique_call_ids": 1,
+      "responses_200": 1,
+      "errors": 0,
+      "input_tokens": 39,
+      "output_tokens": 6,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0,
+      "cost_usd": 9.45e-06,
+      "latency_ms_sum_excluding_backoff": 829,
+      "latency_ms_median_per_attempt": 829,
+      "latency_ms_p90_per_attempt": 829,
+      "deepseek_tier_cost_usd": {
+        "offpeak": 9.45e-06
+      },
+      "rate_sources": [
+        "https://api-docs.deepseek.com/quick_start/pricing/; prior-art compare.ts constants reviewed 2026-09-24 UTC"
+      ]
+    },
+    "capability/probe/capability-gemini/gemini": {
+      "attempts": 2,
+      "unique_call_ids": 2,
+      "responses_200": 1,
+      "errors": 1,
+      "input_tokens": 10,
+      "output_tokens": 10,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0,
+      "cost_usd": 2.8e-05,
+      "latency_ms_sum_excluding_backoff": 48978,
+      "latency_ms_median_per_attempt": 24489.0,
+      "latency_ms_p90_per_attempt": 24998,
+      "deepseek_tier_cost_usd": {},
+      "rate_sources": [
+        "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC"
+      ]
+    },
+    "capability/probe/capability-gemini-initial-selector-error/gemini": {
+      "attempts": 3,
+      "unique_call_ids": 3,
+      "responses_200": 0,
+      "errors": 3,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0,
+      "cost_usd": 0.0,
+      "latency_ms_sum_excluding_backoff": 0,
+      "latency_ms_median_per_attempt": 0,
+      "latency_ms_p90_per_attempt": 0,
+      "deepseek_tier_cost_usd": {},
+      "rate_sources": [
+        "prior-art video-summarization summarize_video.py PRICING_PER_MILLION"
+      ]
+    },
+    "capability/probe/capability-gemini-pdf/gemini": {
+      "attempts": 1,
+      "unique_call_ids": 1,
+      "responses_200": 1,
+      "errors": 0,
+      "input_tokens": 548,
+      "output_tokens": 6,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0,
+      "cost_usd": 0.0001794,
+      "latency_ms_sum_excluding_backoff": 25438,
+      "latency_ms_median_per_attempt": 25438,
+      "latency_ms_p90_per_attempt": 25438,
+      "deepseek_tier_cost_usd": {},
+      "rate_sources": [
+        "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC"
+      ]
+    },
+    "capability/probe/capability-jev/jev": {
+      "attempts": 1,
+      "unique_call_ids": 1,
+      "responses_200": 1,
+      "errors": 0,
+      "input_tokens": 283,
+      "output_tokens": 22,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0,
+      "cost_usd": 1.1886e-05,
+      "latency_ms_sum_excluding_backoff": 932,
+      "latency_ms_median_per_attempt": 932,
+      "latency_ms_p90_per_attempt": 932,
+      "deepseek_tier_cost_usd": {},
+      "rate_sources": [
+        "prior-art compare.ts reviewed fallback $0.042/1M input, $0 output; live table not queried"
+      ]
+    },
+    "capability/probe/capability-model-resolution/gemini": {
+      "attempts": 1,
+      "unique_call_ids": 1,
+      "responses_200": 1,
+      "errors": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0,
+      "cost_usd": 0.0,
+      "latency_ms_sum_excluding_backoff": 22903,
+      "latency_ms_median_per_attempt": 22903,
+      "latency_ms_p90_per_attempt": 22903,
+      "deepseek_tier_cost_usd": {},
+      "rate_sources": [
+        "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC"
+      ]
+    },
+    "capability/probe/capability-openai/openai": {
+      "attempts": 1,
+      "unique_call_ids": 1,
+      "responses_200": 1,
+      "errors": 0,
+      "input_tokens": 42,
+      "output_tokens": 11,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0,
+      "cost_usd": 9.7e-06,
+      "latency_ms_sum_excluding_backoff": 8538,
+      "latency_ms_median_per_attempt": 8538,
+      "latency_ms_p90_per_attempt": 8538,
+      "deepseek_tier_cost_usd": {},
+      "rate_sources": [
+        "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC"
+      ]
+    }
+  },
+  "failed_attempt_artifacts": [
+    {
+      "artifact": "raw/responses/probes/probe-gemini-misresolved-thinkingLevel-a1.json",
+      "arm_id": "capability-gemini-initial-selector-error",
+      "provider": "gemini",
+      "http_status": 400,
+      "cost_usd": 0.0,
+      "error": null
+    },
+    {
+      "artifact": "raw/responses/probes/probe-gemini-misresolved-pdf-a1.json",
+      "arm_id": "capability-gemini-initial-selector-error",
+      "provider": "gemini",
+      "http_status": null,
+      "cost_usd": 0.0,
+      "error": null
+    },
+    {
+      "artifact": "raw/responses/probes/probe-gemini-misresolved-thinkingBudget-a1.json",
+      "arm_id": "capability-gemini-initial-selector-error",
+      "provider": "gemini",
+      "http_status": null,
+      "cost_usd": 0.0,
+      "error": null
+    },
+    {
+      "artifact": "raw/responses/probes/probe-gemini-thinkingBudget-a1.json",
+      "arm_id": "capability-gemini",
+      "provider": "gemini",
+      "http_status": 400,
+      "cost_usd": 0.0,
+      "error": "{\"code\": 400, \"message\": \"Request contains an invalid argument.\", \"status\": \"INVALID_ARGUMENT\"}"
+    },
+    {
+      "artifact": "raw/responses/l3/full_reference/deepseek/l3-2609.29095-full_reference-deepseek-a1.json",
+      "arm_id": "l3-full_reference-deepseek",
+      "provider": "deepseek",
+      "http_status": 400,
+      "cost_usd": 0.0,
+      "error": "{\"message\": \"Prompt must contain the word 'json' in some form to use 'response_format' of type 'json_object'. (request_id: [redacted])\", \"type\": \"invalid_request_error\", \"param\": null, \"code\": \"invalid_request_error\"}"
+    },
+    {
+      "artifact": "raw/responses/l3/selective/deepseek/l3-2609.29808-selective-deepseek-a1-r2.json",
+      "arm_id": "l3-selective-deepseek",
+      "provider": "deepseek",
+      "http_status": 400,
+      "cost_usd": 0.0,
+      "error": "{\"message\": \"Prompt must contain the word 'json' in some form to use 'response_format' of type 'json_object'. (request_id: [redacted])\", \"type\": \"invalid_request_error\", \"param\": null, \"code\": \"invalid_request_error\"}"
+    },
+    {
+      "artifact": "raw/responses/l1/jev/l1-2609.29808-jev-a1.json",
+      "arm_id": "l1-jev",
+      "provider": "jev",
+      "http_status": 503,
+      "cost_usd": 0.0,
+      "error": "{\"message\": \"Service temporarily unavailable. Please try again shortly.\", \"type\": \"service_unavailable_error\", \"param\": {\"error\": \"Service temporarily unavailable. Please try again shortly.\", \"type\": \"service_unavailable_error\", \"statusCode\": 503}}"
+    },
+    {
+      "artifact": "raw/responses/l2/B/l2-2609.29095-B-r1-a1.json",
+      "arm_id": "l2-B",
+      "provider": "gemini",
+      "http_status": null,
+      "cost_usd": 0.0,
+      "error": "SSLError: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-3.5-flash-lite:generateContent (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1029)')))"
+    },
+    {
+      "artifact": "raw/responses/l2/B/l2-2609.29095-B-r1-a2.json",
+      "arm_id": "l2-B",
+      "provider": "gemini",
+      "http_status": null,
+      "cost_usd": 0.0,
+      "error": "SSLError: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-3.5-flash-lite:generateContent (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1029)')))"
+    },
+    {
+      "artifact": "raw/responses/l2/B/l2-2609.29095-B-r1-a3.json",
+      "arm_id": "l2-B",
+      "provider": "gemini",
+      "http_status": null,
+      "cost_usd": 0.0,
+      "error": "SSLError: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-3.5-flash-lite:generateContent (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1029)')))"
+    }
+  ]
+}

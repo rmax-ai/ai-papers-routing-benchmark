@@ -1,0 +1,52 @@
+{
+  "call_id": "l2-2609.27263-D-r1",
+  "attempt": 1,
+  "arm_id": "l2-D",
+  "provider": "gemini",
+  "model_id_sent": "gemini-3.5-flash-lite",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+  "call_start_utc": "2026-09-26T22:17:25Z",
+  "settings": {
+    "thinkingConfig": {
+      "thinkingLevel": "low"
+    },
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 3000,
+    "strategy": "D",
+    "round": 1,
+    "page_numbers": null
+  },
+  "http_status": 200,
+  "latency_ms": 29321,
+  "usage": {
+    "input_tokens": 25310,
+    "output_tokens": 656,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": 765,
+    "mapping": {
+      "input": "usageMetadata.promptTokenCount",
+      "output": "usageMetadata.candidatesTokenCount",
+      "cached_input": "usageMetadata.cachedContentTokenCount"
+    }
+  },
+  "cost": {
+    "amount": 0.009233,
+    "rates_used_usd_per_million": {
+      "input": 0.3,
+      "cached_input": 0.3,
+      "output": 2.5
+    },
+    "rate_source": "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"candidate_claims\": [\n    {\n      \"claim\": \"GitHub Agentic Workflows (gh-aw) Markdown files contain substantial instructions, with a median of 556.5 words per file, and combine natural-language task specifications with YAML frontmatter execution configuration.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"quote\": \"Our results show that workflow instructions extend beyond short prompts, with a median of 556.5 words and code blocks in 62.1% of files.\"\n        }\n      ],\n      \"importance\": \"load_bearing\"\n    },\n    {\n      \"claim\": \"Among files with at least 120 days of observed activity, 78.2% still receive updates in month 4, and maintenance changes frequently affect frontmatter configuration.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"quote\": \"Among files with at least 120 days of observed activity, 78.2% still receive updates in month 4, while size-normalized churn decreases after the first month.\"\n        }\n      ],\n      \"importance\": \"load_bearing\"\n    },\n    {\n      \"claim\": \"Tasks, outputs, constraints, and process instructions are highly prevalent in labeled workflows (each appearing in over 93% of labeled files), whereas prompt-injection defense is explicitly addressed in only 9.4% of files.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"quote\": \"Tasks, outputs, constraints, and process instructions each appear in over 93% of labeled workflows, yet only 9.4% explicitly address prompt-injection defense.\"\n        }\n      ],\n      \"importance\": \"supporting\"\n    }\n  ],\n  \"key_claims\": [\n    \"GitHub Agentic Workflows combine executable YAML frontmatter configuration with natural-language Markdown instructions to automate recurring repository tasks.\",\n    \"Developers actively maintain gh-aw workflows over time, with maintenance touching both execution configuration and instruction bodies.\",\n    \"A qualitative instruction taxonomy reveals ten categories of agentic instructions, showing that safety and communication safeguards are less frequently explicit than task and output specifications.\"\n  ],\n  \"limitations\": [\n    \"The maintenance analysis selects 348 files with at least 120 days of observed activity, thus describing patterns of already-maintained files rather than all static workflows.\",\n    \"Flesch Reading Ease metrics are computed over full Markdown bodies containing code blocks, syntax, and template expressions, rather than pure natural-language prose.\"\n  ],\n  \"load_bearing_pages\": [\n    1,\n    2,\n    5,\n    6,\n    7,\n    8,\n    12,\n    13\n  ],\n  \"requested_pages\": [],\n  \"stop_reason\": \"The full document text has been provided and analyzed comprehensively across all research questions.\"\n}",
+  "provider_response_model_version": "gemini-3.5-flash-lite",
+  "artifact": "raw/responses/l2/D/l2-2609.27263-D-r1-a1.json",
+  "paper_id": "2609.27263",
+  "strategy": "D",
+  "round": 1,
+  "input_sha256": "c4745893ff6445f3949a78ac8dafb9edb8a3affb3b5f96e17c17d685395f8a06",
+  "page_numbers_sent": [],
+  "input_text_bytes": 97310,
+  "inline_part_bytes": 0
+}

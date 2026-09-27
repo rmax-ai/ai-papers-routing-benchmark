@@ -1,0 +1,52 @@
+{
+  "call_id": "l2-2609.28585-A-r1",
+  "attempt": 1,
+  "arm_id": "l2-A",
+  "provider": "gemini",
+  "model_id_sent": "gemini-3.5-flash-lite",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+  "call_start_utc": "2026-09-26T22:12:27Z",
+  "settings": {
+    "thinkingConfig": {
+      "thinkingLevel": "low"
+    },
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 3000,
+    "strategy": "A",
+    "round": 1,
+    "page_numbers": null
+  },
+  "http_status": 200,
+  "latency_ms": 24763,
+  "usage": {
+    "input_tokens": 895,
+    "output_tokens": 623,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": null,
+    "mapping": {
+      "input": "usageMetadata.promptTokenCount",
+      "output": "usageMetadata.candidatesTokenCount",
+      "cached_input": "usageMetadata.cachedContentTokenCount"
+    }
+  },
+  "cost": {
+    "amount": 0.001826,
+    "rates_used_usd_per_million": {
+      "input": 0.3,
+      "cached_input": 0.3,
+      "output": 2.5
+    },
+    "rate_source": "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"candidate_claims\": [\n    {\n      \"claim\": \"Multi-step tool-calling LLM agents are vulnerable to denial-of-wallet attacks through persistent billable state where retained external tool returns inflate recurring token costs.\",\n      \"evidence_refs\": [\n        {\n          \"page\": null,\n          \"quote\": \"Multi-step tool-calling LLM agents rely on host runtimes to preserve state across turns. When a runtime carries an external tool return into later model inputs, providers meter it again. An admitted malicious or compromised tool can thereby convert untrusted data into recurring victim-billed processing without victim credentials or local runtime privilege.\"\n        }\n      ],\n      \"importance\": \"load_bearing\"\n    },\n    {\n      \"claim\": \"DOW-BENCH evaluations show that maximum per-session cumulative input reaches 14,293x the first-call input, and retaining raw history increases mean effective session cost by 21.2-35.9%.\",\n      \"evidence_refs\": [\n        {\n          \"page\": null,\n          \"quote\": \"Across 243 executions, usage telemetry shows that the maximum per-session cumulative input reaches 14,293x the session's first-call input. Controlled history-policy reruns isolate raw retention's contribution: retaining raw history increases mean effective session cost by 21.2-35.9%.\"\n        }\n      ],\n      \"importance\": \"supporting\"\n    },\n    {\n      \"claim\": \"A kernel combining deterministic history transformation with four host-side invariants successfully governs the persistent billable-state boundary and contains every recurring attack in the evaluation replay corpus.\",\n      \"evidence_refs\": [\n        {\n          \"page\": null,\n          \"quote\": \"To govern this boundary, we combine deterministic history transformation with four host-side invariants that bound prompt mass, context growth, recursive opportunity, and cumulative spend before reingestion. The kernel contains every recurring attack in the 123-evaluation replay corpus.\"\n        }\n      ],\n      \"importance\": \"load_bearing\"\n    }\n  ],\n  \"key_claims\": [\n    \"Retained external tool returns create persistent billable state leading to denial-of-wallet attacks in tool-calling LLM agents.\",\n    \"Host-side invariants and deterministic history transformation can effectively govern the persistent billable-state boundary and prevent cost inflation.\"\n  ],\n  \"limitations\": [\n    \"Only 71 of 3,830 scanned MCP server and transport repositories expose code-visible safeguard proxies, and none cover all four safeguard families.\"\n  ],\n  \"load_bearing_pages\": [],\n  \"requested_pages\": [],\n  \"stop_reason\": \"The abstract provides sufficient comprehensive summary metrics and conclusions for the initial strategy A analysis.\"\n}",
+  "provider_response_model_version": "gemini-3.5-flash-lite",
+  "artifact": "raw/responses/l2/A/l2-2609.28585-A-r1-a1.json",
+  "paper_id": "2609.28585",
+  "strategy": "A",
+  "round": 1,
+  "input_sha256": "47c9e089d3f87d1778cc17a3858f55e4c5b1dd66c04660e2d2fc2f9f70dc9562",
+  "page_numbers_sent": [],
+  "input_text_bytes": 3769,
+  "inline_part_bytes": 0
+}

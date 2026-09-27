@@ -1,0 +1,51 @@
+{
+  "call_id": "l3-2609.27263-full_reference-deepseek",
+  "attempt": 1,
+  "arm_id": "l3-full_reference-deepseek",
+  "provider": "deepseek",
+  "model_id_sent": "deepseek-flash",
+  "endpoint": "https://api.deepseek.com/chat/completions",
+  "call_start_utc": "2026-09-26T22:49:11Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_object",
+    "max_tokens": 4500,
+    "prompt_revision": "concise-v4"
+  },
+  "http_status": 200,
+  "latency_ms": 7837,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "prompt_cache_hit_tokens",
+      "prompt_cache_miss_tokens",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 26863,
+    "output_tokens": 1869,
+    "cached_input_tokens": 128,
+    "reasoning_tokens": null,
+    "reasoning_content_present": false,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "cached_input": "usage.prompt_cache_hit_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+    }
+  },
+  "cost": {
+    "amount": 0.005132034,
+    "rates_used_usd_per_million": {
+      "input": 0.15,
+      "cached_input": 0.003,
+      "output": 0.6
+    },
+    "rate_source": "https://api-docs.deepseek.com/quick_start/pricing/; prior-art compare.ts constants reviewed 2026-09-24 UTC",
+    "tier": "offpeak"
+  },
+  "output": "{\n  \"paper\": {\n    \"contribution\": \"An empirical study characterizing structure, maintenance, and instruction content of 1,248 gh-aw Markdown workflow files, plus a ten-category instruction taxonomy and an LLM labeling experiment.\",\n    \"key_claims\": [\n      {\n        \"claim\": \"gh-aw Markdown files contain substantial structured specifications, with a median body of 556.5 words and code blocks in 62.1% of files.\",\n        \"page\": 1,\n        \"section\": \"Abstract\",\n        \"quote\": \"median of 556.5 words and code blocks in 62.1% of files\"\n      },\n      {\n        \"claim\": \"Among files with at least 120 days of observed activity, 78.2% still receive updates in month 4, while size-normalized churn decreases after the first month.\",\n        \"page\": 1,\n        \"section\": \"Abstract\",\n        \"quote\": \"78.2% still receive updates in month 4\"\n      },\n      {\n        \"claim\": \"Tasks, outputs, constraints, and process instructions each appear in over 93% of labeled workflows, yet only 9.4% explicitly address prompt-injection defense.\",\n        \"page\": 1,\n        \"section\": \"Abstract\",\n        \"quote\": \"only 9.4% explicitly address prompt-injection defense\"\n      }\n    ],\n    \"evidence\": [\n      {\n        \"item\": \"Measured corpus size and structure: 1,248 files from 276 repositories, 20,841 file-level changes, and commit-history span 2025-07-31 to 2026-08-04.\",\n        \"page\": 4,\n        \"section\": \"Table I\",\n        \"quote\": \"Total Markdown files 1,248\"\n      },\n      {\n        \"item\": \"Measured instruction prevalence: TASK 97.6%, OUTPUT 95.8%, CONSTRAINT 93.8%, PROCESS 93.4%, SAFETY 25.0%.\",\n        \"page\": 8,\n        \"section\": \"TABLE III\",\n        \"quote\": \"TASK (97.6%)\"\n      },\n      {\n        \"item\": \"Measured LLM labeling performance: one-shot Gemini reaches highest observed F1 0.818 with Cohen's kappa 0.715.\",\n        \"page\": 13,\n        \"section\": \"TABLE IV\",\n        \"quote\": \"0.818\"\n      }\n    ],\n    \"limitations\": [\n      {\n        \"limitation\": \"The study defines instruction categories by thematic analysis and does not establish that any instruction pattern improves execution outcomes.\",\n        \"page\": 14,\n        \"section\": \"Discussion\",\n        \"quote\": \"does not establish their effects on cost, security, or repeated work\"\n      },\n      {\n        \"limitation\": \"RQ2 is restricted to 43 projects with at least 120 days of observed activity, selecting already-maintained files and limiting generalizability.\",\n        \"page\": 15,\n        \"section\": \"External Validity\",\n        \"quote\": \"selects already-maintained files\"\n      },\n      {\n        \"limitation\": \"The Flesch Reading Ease scores include code, Markdown syntax, and template expressions, so they are descriptive and not validated comprehension measures.\",\n        \"page\": 5,\n        \"section\": \"RQ1\",\n        \"quote\": \"do not establish that developers have little need to read or review these files\"\n      },\n      {\n        \"limitation\": \"The paper does not measure whether prompt-injection defenses, resource budgets, or evidence-credibility checks are actually effective when present.\",\n        \"page\": 14,\n        \"section\": \"Discussion\",\n        \"quote\": \"does not establish their effects\"\n      }\n    ]\n  },\n  \"insights\": [\n    {\n      \"insight\": \"Agentic workflow Markdown acts as a maintained operational specification rather than a short prompt, with median body 556.5 words and 78.2% of long-observed files still updated in month 4.\",\n      \"why_it_matters\": \"Review and change-management processes should treat these files as evolving source artifacts whose revisions can alter recurring agent behavior.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"median of 556.5 words\"\n        },\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"78.2% still receive updates in month 4\"\n        }\n      ],\n      \"confidence\": \"high\",\n      \"novelty\": \"The paper reports gh-aw-specific maintenance and structure measurements, but the evidence is descriptive and does not establish causal effects.\",\n      \"related_rmax_topics\": [\n        \"long-running workflows\",\n        \"harness/runtime\"\n      ],\n      \"possible_action\": \"Add review and recompilation checks for copied or referenced workflow Markdown sources during dependency updates.\"\n    },\n    {\n      \"insight\": \"Instruction taxonomies show broad specification coverage but sparse safety encoding: tasks, outputs, constraints, and process each exceed 93%, while prompt-injection defense is explicit in only 9.4% of labeled workflows.\",\n      \"why_it_matters\": \"Governance and assurance work may need to inspect whether missing explicit safety instructions correspond to absent or configured runtime protections.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 8,\n          \"section\": \"TABLE III\",\n          \"quote\": \"Prompt Injection Defense (9.4%)\"\n        },\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"consider adding prompt-injection defenses, resource budgets, and evidencecredibility checks\"\n        }\n      ],\n      \"confidence\": \"medium\",\n      \"novelty\": \"The taxonomy and prevalence counts are presented as empirical descriptive findings, not as proof that omitted instructions cause unsafe behavior.\",\n      \"related_rmax_topics\": [\n        \"MCP/governance\",\n        \"agent reliability\",\n        \"tool use\"\n      ],\n      \"possible_action\": \"Use the taxonomy as a review checklist to flag workflows that read untrusted issues, comments, or external content without explicit prompt-injection guidance.\"\n    },\n    {\n      \"insight\": \"LLM classification can approximate the human instruction taxonomy at scale with one-shot Gemini reaching F1 0.818 and Cohen's kappa 0.715, but with observed disagreements on Domain Context and Rule Conformance.\",\n      \"why_it_matters\": \"Automated instruction labeling may support large-scale review, but the paper reports residual misclassification that requires human validation.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"LLM classification achieves an F1 score of 0.818 and Cohen's Kappa of 0.715\"\n        },\n        {\n          \"page\": 13,\n          \"section\": \"TABLE IV\",\n          \"quote\": \"0.818\"\n        }\n      ],\n      \"confidence\": \"medium\",\n      \"novelty\": \"The result is an observed benchmark against resolved labels, and the paper notes differences are descriptive, not evidence of statistical superiority across repeated runs.\",\n      \"related_rmax_topics\": [\n        \"evaluation/assurance\",\n        \"agent reliability\"\n      ],\n      \"possible_action\": \"Treat automated taxonomy labels as triage signals and manually review high-disagreement categories such as Domain Context.\"\n    }\n  ],\n  \"connections\": [\n    {\n      \"connection\": \"The paper's emphasis on workflow instruction maintenance connects to RMAX agenda items for long-running workflows and harness/runtime, because recurring schedules make instruction quality consequential across runs.\",\n      \"page\": 1,\n      \"section\": \"Introduction\",\n      \"quote\": \"recurring execution makes the quality and maintenance of these instructions consequential\"\n    },\n    {\n      \"connection\": \"The reported low explicit prompt-injection defense rate connects to RMAX governance and tool-use concerns for MCP/external-content workflows.\",\n      \"page\": 8,\n      \"section\": \"TABLE III\",\n      \"quote\": \"Prompt Injection Defense (9.4%)\"\n    }\n  ],\n  \"followups\": [\n    {\n      \"followup\": \"Measure whether adding explicit prompt-injection defenses, resource budgets, or evidence-credibility checks changes task success, safety, cost, or runtime for gh-aw workflows.\",\n      \"page\": 14,\n      \"section\": \"Discussion\",\n      \"quote\": \"does not establish their effects on cost, security, or repeated work\"\n    },\n    {\n      \"followup\": \"Evaluate instruction-pattern ablations to test which Markdown guidance actually improves agent task completion, correctness, tool calls, runtime, and token usage.\",\n      \"page\": 14,\n      \"section\": \"Discussion\",\n      \"quote\": \"remove or add resources, worked examples\"\n    }\n  ]\n}",
+  "provider_response_model_id": "deepseek-flash",
+  "artifact": "raw/responses/l3/full_reference/deepseek/l3-2609.27263-full_reference-deepseek-a1.json"
+}

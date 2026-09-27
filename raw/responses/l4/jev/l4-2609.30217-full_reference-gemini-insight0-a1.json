@@ -1,0 +1,67 @@
+{
+  "call_id": "l4-2609.30217-full_reference-gemini-insight0",
+  "attempt": 1,
+  "arm_id": "l4-full_reference-jev",
+  "provider": "jev",
+  "model_id_sent": "typesafe-ai/jev",
+  "endpoint": "https://ai-gateway.vercel.sh/v4/ai/evaluation-model",
+  "call_start_utc": "2026-09-26T23:09:34Z",
+  "settings": {
+    "protocol": "AI Gateway evaluation v4",
+    "typed_questions": {
+      "supported_by_supplied_evidence": {
+        "type": "boolean",
+        "instructions": "Is the central factual claim supported by the supplied source excerpts?"
+      },
+      "agenda_relevant": {
+        "type": "boolean",
+        "instructions": "Is this insight materially relevant to agent reliability, evaluation/assurance, harness/runtime, MCP/governance, tool use, or long-running workflows?"
+      },
+      "duplicates_supplied_existing_insight": {
+        "type": "boolean",
+        "instructions": "Is the insight semantically duplicative of an existing insight explicitly supplied in the state?"
+      },
+      "has_actionable_implication": {
+        "type": "boolean",
+        "instructions": "Does it contain an actionable architecture, implementation, or research implication?"
+      },
+      "escalate_for_deeper_review": {
+        "type": "boolean",
+        "instructions": "Should this candidate be escalated for deeper human/model review before durable storage?"
+      }
+    },
+    "providerOptions": {}
+  },
+  "http_status": 200,
+  "latency_ms": 319,
+  "usage": {
+    "input_tokens": 2199,
+    "output_tokens": 114,
+    "cached_input_tokens": null,
+    "reasoning_tokens": null,
+    "mapping": {
+      "input": "usage.inputTokens",
+      "output": "usage.outputTokens"
+    },
+    "raw_usage_fields": [
+      "inputTokens",
+      "outputTokens"
+    ]
+  },
+  "cost": {
+    "amount": 9.2358e-05,
+    "rates_used_usd_per_million": {
+      "input": 0.042,
+      "cached_input": 0.042,
+      "output": 0.0
+    },
+    "rate_source": "prior-art compare.ts reviewed fallback $0.042/1M input, $0 output; live table not queried",
+    "tier": null
+  },
+  "output": "{\"supported_by_supplied_evidence\": {\"type\": \"boolean\", \"probability\": 0.94}, \"agenda_relevant\": {\"type\": \"boolean\", \"probability\": 0.97}, \"duplicates_supplied_existing_insight\": {\"type\": \"boolean\", \"probability\": 0.11}, \"has_actionable_implication\": {\"type\": \"boolean\", \"probability\": 0.85}, \"escalate_for_deeper_review\": {\"type\": \"boolean\", \"probability\": 0.39}}",
+  "artifact": "raw/responses/l4/jev/l4-2609.30217-full_reference-gemini-insight0-a1.json",
+  "paper_id": "2609.30217",
+  "input_sha256": "73c08f8ff3583d67c2adabef369f075709cafba343f5c38e23f5bc1cd1484cf7",
+  "input_bytes": 5795,
+  "input_chars": 5753
+}

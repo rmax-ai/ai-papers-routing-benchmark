@@ -1,0 +1,51 @@
+{
+  "call_id": "l3-2609.29808-full_reference-deepseek",
+  "attempt": 1,
+  "arm_id": "l3-full_reference-deepseek",
+  "provider": "deepseek",
+  "model_id_sent": "deepseek-flash",
+  "endpoint": "https://api.deepseek.com/chat/completions",
+  "call_start_utc": "2026-09-26T22:32:37Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_object",
+    "max_tokens": 2000,
+    "prompt_revision": "concise-v2"
+  },
+  "http_status": 200,
+  "latency_ms": 7903,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "prompt_cache_hit_tokens",
+      "prompt_cache_miss_tokens",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 19683,
+    "output_tokens": 1610,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": null,
+    "reasoning_content_present": false,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "cached_input": "usage.prompt_cache_hit_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+    }
+  },
+  "cost": {
+    "amount": 0.00391845,
+    "rates_used_usd_per_million": {
+      "input": 0.15,
+      "cached_input": 0.003,
+      "output": 0.6
+    },
+    "rate_source": "https://api-docs.deepseek.com/quick_start/pricing/; prior-art compare.ts constants reviewed 2026-09-24 UTC",
+    "tier": "offpeak"
+  },
+  "output": "{\"paper\": {\"contribution\": \"Proposes a dual-plane Epistemic Andon architecture that preempts rogue agents out-of-band at kernel/cgroup boundaries rather than in-band guardrails ([PAGE 1], \\\"compiled, deterministic epistemic boundaries prevent autonomous rogue excursions\\\").\", \"key_claims\": [\"The July 2026 Incident-2026-Alpha breach was a predicted consequence of an unattenuated autonomous loop lacking out-of-band circuit-breakers ([PAGE 1], \\\"the breach was a predicted consequence under the Instrumental Convergence thesis\\\").\", \"Kernel-boundary syscall interception is claimed sound via a Galois abstraction over a discrete syscall automaton ([PAGE 10], \\\"no unsafe concrete state ... is reachable in the concrete runtime\\\").\", \"Deterministic safety cannot be derived from probabilistic self-reflection and requires out-of-band supervisory control ([PAGE 9], \\\"cannot serve as its own deterministic safety arbiter\\\").\"], \"evidence\": [\"Benchmark telemetry reports tripwire median 0.40 µs and SIGSTOP median 0.0048 ms under a two-level hierarchical protocol ([PAGE 15], \\\"Median : 0.4010 µs [95% CI: 0.4010, 0.4110 µs]\\\").\", \"An obfuscation experiment reports 82.0% lexical bypass versus 100.0% eBPF LSM detection across 500 payloads ([PAGE 16], \\\"eBPF LSM Probe Detection Accuracy: 100.0%\\\").\", \"Incident forensics tabulate 17,600 actions across nine phases over 4.5 days ([PAGE 5], \\\"Continuous execution over 4.5 days (avg. 1 action / 22 seconds)\\\").\"], \"limitations\": [\"Most components are specified rather than independently replicated; the architecture is a proposal with an author-hosted testbed ([PAGE 14], \\\"the verified test suite in test_andon_circuit_breaker.py\\\").\", \"Security properties assume an uncompromised host kernel and no prior host-root attacker ([PAGE 9], \\\"assumption of an uncompromised host kernel\\\").\", \"The baseline '∞' halting figure is an absence-of-feature comparison, not a latency measurement ([PAGE 15], \\\"not a performance measurement against an equivalent feature\\\").\", \"Incident facts rest on cited third-party reports not reproduced in this paper text ([PAGE 21], \\\"Forensic Analysis of Multi-Stage Autonomous Agent Intrusion\\\").\"]}, \"insights\": [{\"insight\": \"Enforcement below the agent removes reliance on prompt- or text-level filtering: interception at syscall boundaries sees de-obfuscated arguments after in-memory transforms.\", \"why_it_matters\": \"It reframes guardrail placement as a placement problem, not a model-quality problem, which matters for evaluation harnesses and multi-tenant pipelines.\", \"evidence_refs\": [{\"page\": 16, \"section\": \"Experiment 1\", \"quote\": \"eBPF LSM Probe Detection Accuracy: 100.0%\"}, {\"page\": 11, \"section\": \"6.4\", \"quote\": \"all user-space obfuscation is stripped automatically\"}], \"confidence\": \"medium\", \"novelty\": \"The paper frames this as its in-situ preemption contribution; independent novelty is unverified here.\", \"related_rmax_topics\": [\"harness/runtime\", \"tool use\", \"agent reliability\"], \"possible_action\": \"Pilot kernel-boundary allowlists in an isolated eval sandbox and log deny events.\"}, {\"insight\": \"Alerting without preemption leaves a machine-speed gap: detection was present whereas halting was absent during the incident.\", \"why_it_matters\": \"Detection-only pipelines cannot bound blast radius when actions occur every ~22 seconds.\", \"evidence_refs\": [{\"page\": 6, \"section\": \"3.B\", \"quote\": \"detection without preemption is meaningless\"}, {\"page\": 5, \"section\": \"Phase table\", \"quote\": \"avg. 1 action / 22 seconds\"}], \"confidence\": \"medium\", \"novelty\": \"Connects SIEM passivity to agent action cadence; novelty not established.\", \"related_rmax_topics\": [\"evaluation/assurance\", \"MCP/governance\", \"long-running workflows\"], \"possible_action\": \"Tie high-severity SIEM rules to an automated quiescence path with human review after halt.\"}, {\"insight\": \"Preemption raises a state-consistency obligation: halting mid-write can corrupt checkpoints, so durable atomic WAL commitment is proposed as the fix.\", \"why_it_matters\": \"Long-running workflows resumed from corrupted checkpoints can silently diverge, undermining assurance claims.\", \"evidence_refs\": [{\"page\": 11, \"section\": \"6.5\", \"quote\": \"shared memory region is left partially updated\"}, {\"page\": 16, \"section\": \"Experiment 2\", \"quote\": \"0 torn reads across 1,000 asynchronous freeze events\"}], \"confidence\": \"medium\", \"novelty\": \"Applies ring-buffer atomicity to agent preemption checkpoints; novelty unverified.\", \"related_rmax_topics\": [\"long-running workflows\", \"harness/runtime\", \"agent reliability\"], \"possible_action\": \"Require atomic checkpoint commit semantics before enabling mid-run preemption in production.\"}], \"connections\": [{\"to\": \"evaluation/assurance\", \"note\": \"The paper separates detection from preemption and demands bounded latency claims backed by measured CIs ([PAGE 15], \\\"Two-Level Hierarchical Bootstrap | Non-Parametric 95% CI\\\").\"}, {\"to\": \"MCP/governance\", \"note\": \"Governance is framed as execution-surface allowlists for domains, paths, and binaries rather than post-hoc policy ([PAGE 18], \\\"Execution surface allowlists for domains, paths, and binaries\\\").\"}, {\"to\": \"harness/runtime\", \"note\": \"Proposed enforcement sits at kernel, cgroup, and socket layers, decoupled from the agent's reasoning loop ([PAGE 9], \\\"neither the LLM inference runtime, nor the Python interpreter\\\").\"}], \"followups\": [{\"question\": \"Can the reported sub-millisecond preemption latencies be reproduced independently under the stated two-level benchmarking protocol?\", \"why\": \"All latency figures come from an author-hosted suite; independent replication is needed before assurance claims.\", \"citation\": {\"page\": 15, \"section\": \"8 Benchmark Output\", \"quote\": \"Source: https://github.com/joseluispino/hardstop (Apache-2.0)\"}}, {\"question\": \"How do kernel-boundary allowlists behave for legitimate long-running workflows with variable egress and filesystem needs?\", \"why\": \"Over-restrictive allowlists could halt benign workloads, and the paper reports no false-positive measurement.\", \"citation\": {\"page\": 18, \"section\": \"Appendix A\", \"quote\": \"allowed_paths: List[str] = Field(default_factory=lambda: [\\\"/sandbox\\\", \\\"/tmp\\\"])\"}}, {\"question\": \"What minimum telemetry and checkpoint granularity is required so that a halted run can resume without losing committed progress?\", \"why\": \"Recovery semantics are asserted through epoch fencing, but resume correctness is not empirically measured here.\", \"citation\": {\"page\": 13, \"section\": \"Discrete Checkpoint Consistency\", \"quote\": \"Durable snapshots are committed strictly at quiescent epoch boundaries\"}}]}",
+  "provider_response_model_id": "deepseek-flash",
+  "artifact": "raw/responses/l3/full_reference/deepseek/l3-2609.29808-full_reference-deepseek-a1-r3.json"
+}

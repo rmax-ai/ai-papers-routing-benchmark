@@ -1,0 +1,3310 @@
+{
+  "source": "raw/l1-results.json",
+  "proxy_label": "high_value_proxy=1; medium_adjacent and low_relevance_control=0",
+  "sample_n": 24,
+  "positive_n": 12,
+  "models": {
+    "jev": {
+      "responses_with_relevance_probability": 24,
+      "auroc": 0.9930555555555556,
+      "auprc_average_precision": 0.9935897435897434,
+      "brier_relevance_vs_proxy": 0.15647083333333334,
+      "calibration_bins_relevance_vs_proxy": [
+        {
+          "range": "[0.0,0.2)",
+          "n": 0,
+          "mean_probability": null,
+          "observed_positive_rate": null
+        },
+        {
+          "range": "[0.2,0.4)",
+          "n": 2,
+          "mean_probability": 0.29000000000000004,
+          "observed_positive_rate": 0.0
+        },
+        {
+          "range": "[0.4,0.6)",
+          "n": 5,
+          "mean_probability": 0.48,
+          "observed_positive_rate": 0.0
+        },
+        {
+          "range": "[0.6,0.8)",
+          "n": 7,
+          "mean_probability": 0.6799999999999999,
+          "observed_positive_rate": 0.14285714285714285
+        },
+        {
+          "range": "[0.8,1.0]",
+          "n": 11,
+          "mean_probability": 0.93,
+          "observed_positive_rate": 1.0
+        }
+      ],
+      "threshold_sweep_relevance_vs_proxy": [
+        {
+          "threshold": 0.3,
+          "tp": 12,
+          "fp": 11,
+          "tn": 1,
+          "fn": 0,
+          "precision": 0.5217391304347826,
+          "recall": 1.0,
+          "false_negative_rate": 0.0
+        },
+        {
+          "threshold": 0.4,
+          "tp": 12,
+          "fp": 10,
+          "tn": 2,
+          "fn": 0,
+          "precision": 0.5454545454545454,
+          "recall": 1.0,
+          "false_negative_rate": 0.0
+        },
+        {
+          "threshold": 0.5,
+          "tp": 12,
+          "fp": 6,
+          "tn": 6,
+          "fn": 0,
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "false_negative_rate": 0.0
+        },
+        {
+          "threshold": 0.6,
+          "tp": 12,
+          "fp": 6,
+          "tn": 6,
+          "fn": 0,
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "false_negative_rate": 0.0
+        },
+        {
+          "threshold": 0.7,
+          "tp": 12,
+          "fp": 2,
+          "tn": 10,
+          "fn": 0,
+          "precision": 0.8571428571428571,
+          "recall": 1.0,
+          "false_negative_rate": 0.0
+        }
+      ],
+      "logical_calls": 24,
+      "network_attempts": 25,
+      "http_200_attempts": 24,
+      "input_tokens": 27091,
+      "output_tokens": 4102,
+      "cost_usd": 0.001137822,
+      "latency_ms_per_logical_call": {
+        "median": 343.5,
+        "p90": 503,
+        "note": "sum of HTTP attempt response latencies; inter-attempt backoff is excluded"
+      },
+      "boolean_probability_consistency": {
+        "relevant": {
+          "checked": 24,
+          "mismatch_with_host_0_5_threshold": 0
+        },
+        "empirical_evidence": {
+          "checked": 24,
+          "mismatch_with_host_0_5_threshold": 0
+        },
+        "worth_escalating": {
+          "checked": 24,
+          "mismatch_with_host_0_5_threshold": 0
+        }
+      },
+      "abstract_audit": {
+        "n": 9,
+        "relevance_at_host_threshold_0_5": {
+          "threshold": 0.5,
+          "tp": 1,
+          "fp": 4,
+          "tn": 4,
+          "fn": 0,
+          "precision": 0.2,
+          "recall": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "relevance_brier": 0.2632888888888889,
+        "relevance_calibration_bins": [
+          {
+            "range": "[0.0,0.2)",
+            "n": 0,
+            "mean_probability": null,
+            "observed_positive_rate": null
+          },
+          {
+            "range": "[0.2,0.4)",
+            "n": 0,
+            "mean_probability": null,
+            "observed_positive_rate": null
+          },
+          {
+            "range": "[0.4,0.6)",
+            "n": 5,
+            "mean_probability": 0.48,
+            "observed_positive_rate": 0.0
+          },
+          {
+            "range": "[0.6,0.8)",
+            "n": 4,
+            "mean_probability": 0.6225,
+            "observed_positive_rate": 0.0
+          },
+          {
+            "range": "[0.8,1.0]",
+            "n": 1,
+            "mean_probability": 0.93,
+            "observed_positive_rate": 1.0
+          }
+        ],
+        "empirical_evidence_n": 9,
+        "empirical_evidence_brier": 0.0019999999999999996,
+        "empirical_evidence_calibration_bins": [
+          {
+            "range": "[0.0,0.2)",
+            "n": 0,
+            "mean_probability": null,
+            "observed_positive_rate": null
+          },
+          {
+            "range": "[0.2,0.4)",
+            "n": 0,
+            "mean_probability": null,
+            "observed_positive_rate": null
+          },
+          {
+            "range": "[0.4,0.6)",
+            "n": 0,
+            "mean_probability": null,
+            "observed_positive_rate": null
+          },
+          {
+            "range": "[0.6,0.8)",
+            "n": 0,
+            "mean_probability": null,
+            "observed_positive_rate": null
+          },
+          {
+            "range": "[0.8,1.0]",
+            "n": 9,
+            "mean_probability": 0.9644444444444444,
+            "observed_positive_rate": 1.0
+          }
+        ],
+        "paper_ids": [
+          "2609.29095",
+          "2609.30009",
+          "2609.24122",
+          "2609.14245",
+          "2609.03213",
+          "2609.15578",
+          "2609.22056",
+          "2603.21521",
+          "2606.15960"
+        ],
+        "selection_bias_note": "disagreement-enriched abstract audit; not a population estimate"
+      }
+    },
+    "deepseek": {
+      "responses_with_relevance_probability": 24,
+      "auroc": 0.9861111111111112,
+      "auprc_average_precision": 0.9811507936507936,
+      "brier_relevance_vs_proxy": 0.2215,
+      "calibration_bins_relevance_vs_proxy": [
+        {
+          "range": "[0.0,0.2)",
+          "n": 3,
+          "mean_probability": 0.08333333333333333,
+          "observed_positive_rate": 0.0
+        },
+        {
+          "range": "[0.2,0.4)",
+          "n": 0,
+          "mean_probability": null,
+          "observed_positive_rate": null
+        },
+        {
+          "range": "[0.4,0.6)",
+          "n": 2,
+          "mean_probability": 0.575,
+          "observed_positive_rate": 0.0
+        },
+        {
+          "range": "[0.6,0.8)",
+          "n": 4,
+          "mean_probability": 0.6875,
+          "observed_positive_rate": 0.0
+        },
+        {
+          "range": "[0.8,1.0]",
+          "n": 16,
+          "mean_probability": 0.930625,
+          "observed_positive_rate": 0.75
+        }
+      ],
+      "threshold_sweep_relevance_vs_proxy": [
+        {
+          "threshold": 0.3,
+          "tp": 12,
+          "fp": 9,
+          "tn": 3,
+          "fn": 0,
+          "precision": 0.5714285714285714,
+          "recall": 1.0,
+          "false_negative_rate": 0.0
+        },
+        {
+          "threshold": 0.4,
+          "tp": 12,
+          "fp": 9,
+          "tn": 3,
+          "fn": 0,
+          "precision": 0.5714285714285714,
+          "recall": 1.0,
+          "false_negative_rate": 0.0
+        },
+        {
+          "threshold": 0.5,
+          "tp": 12,
+          "fp": 9,
+          "tn": 3,
+          "fn": 0,
+          "precision": 0.5714285714285714,
+          "recall": 1.0,
+          "false_negative_rate": 0.0
+        },
+        {
+          "threshold": 0.6,
+          "tp": 12,
+          "fp": 8,
+          "tn": 4,
+          "fn": 0,
+          "precision": 0.6,
+          "recall": 1.0,
+          "false_negative_rate": 0.0
+        },
+        {
+          "threshold": 0.7,
+          "tp": 12,
+          "fp": 7,
+          "tn": 5,
+          "fn": 0,
+          "precision": 0.631578947368421,
+          "recall": 1.0,
+          "false_negative_rate": 0.0
+        }
+      ],
+      "logical_calls": 24,
+      "network_attempts": 24,
+      "http_200_attempts": 24,
+      "input_tokens": 21731,
+      "output_tokens": 1441,
+      "cost_usd": 0.00271305,
+      "latency_ms_per_logical_call": {
+        "median": 1190.5,
+        "p90": 1617,
+        "note": "sum of HTTP attempt response latencies; inter-attempt backoff is excluded"
+      },
+      "boolean_probability_consistency": {
+        "relevant": {
+          "checked": 24,
+          "mismatch_with_host_0_5_threshold": 0
+        },
+        "empirical_evidence": {
+          "checked": 24,
+          "mismatch_with_host_0_5_threshold": 0
+        },
+        "worth_escalating": {
+          "checked": 24,
+          "mismatch_with_host_0_5_threshold": 0
+        }
+      },
+      "abstract_audit": {
+        "n": 9,
+        "relevance_at_host_threshold_0_5": {
+          "threshold": 0.5,
+          "tp": 1,
+          "fp": 7,
+          "tn": 1,
+          "fn": 0,
+          "precision": 0.125,
+          "recall": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "relevance_brier": 0.4100888888888889,
+        "relevance_calibration_bins": [
+          {
+            "range": "[0.0,0.2)",
+            "n": 1,
+            "mean_probability": 0.05,
+            "observed_positive_rate": 0.0
+          },
+          {
+            "range": "[0.2,0.4)",
+            "n": 0,
+            "mean_probability": null,
+            "observed_positive_rate": null
+          },
+          {
+            "range": "[0.4,0.6)",
+            "n": 2,
+            "mean_probability": 0.575,
+            "observed_positive_rate": 0.0
+          },
+          {
+            "range": "[0.6,0.8)",
+            "n": 4,
+            "mean_probability": 0.6875,
+            "observed_positive_rate": 0.0
+          },
+          {
+            "range": "[0.8,1.0]",
+            "n": 3,
+            "mean_probability": 0.8966666666666666,
+            "observed_positive_rate": 0.3333333333333333
+          }
+        ],
+        "empirical_evidence_n": 9,
+        "empirical_evidence_brier": 0.01287777777777778,
+        "empirical_evidence_calibration_bins": [
+          {
+            "range": "[0.0,0.2)",
+            "n": 0,
+            "mean_probability": null,
+            "observed_positive_rate": null
+          },
+          {
+            "range": "[0.2,0.4)",
+            "n": 0,
+            "mean_probability": null,
+            "observed_positive_rate": null
+          },
+          {
+            "range": "[0.4,0.6)",
+            "n": 0,
+            "mean_probability": null,
+            "observed_positive_rate": null
+          },
+          {
+            "range": "[0.6,0.8)",
+            "n": 1,
+            "mean_probability": 0.75,
+            "observed_positive_rate": 1.0
+          },
+          {
+            "range": "[0.8,1.0]",
+            "n": 8,
+            "mean_probability": 0.9275,
+            "observed_positive_rate": 1.0
+          }
+        ],
+        "paper_ids": [
+          "2609.29095",
+          "2609.30009",
+          "2609.24122",
+          "2609.14245",
+          "2609.03213",
+          "2609.15578",
+          "2609.22056",
+          "2603.21521",
+          "2606.15960"
+        ],
+        "selection_bias_note": "disagreement-enriched abstract audit; not a population estimate"
+      }
+    },
+    "gemini": {
+      "responses_with_relevance_probability": 24,
+      "auroc": 0.96875,
+      "auprc_average_precision": 0.9423076923076923,
+      "brier_relevance_vs_proxy": 0.07492083333333334,
+      "calibration_bins_relevance_vs_proxy": [
+        {
+          "range": "[0.0,0.2)",
+          "n": 10,
+          "mean_probability": 0.065,
+          "observed_positive_rate": 0.0
+        },
+        {
+          "range": "[0.2,0.4)",
+          "n": 0,
+          "mean_probability": null,
+          "observed_positive_rate": null
+        },
+        {
+          "range": "[0.4,0.6)",
+          "n": 0,
+          "mean_probability": null,
+          "observed_positive_rate": null
+        },
+        {
+          "range": "[0.6,0.8)",
+          "n": 0,
+          "mean_probability": null,
+          "observed_positive_rate": null
+        },
+        {
+          "range": "[0.8,1.0]",
+          "n": 14,
+          "mean_probability": 0.9542857142857143,
+          "observed_positive_rate": 0.8571428571428571
+        }
+      ],
+      "threshold_sweep_relevance_vs_proxy": [
+        {
+          "threshold": 0.3,
+          "tp": 12,
+          "fp": 2,
+          "tn": 10,
+          "fn": 0,
+          "precision": 0.8571428571428571,
+          "recall": 1.0,
+          "false_negative_rate": 0.0
+        },
+        {
+          "threshold": 0.4,
+          "tp": 12,
+          "fp": 2,
+          "tn": 10,
+          "fn": 0,
+          "precision": 0.8571428571428571,
+          "recall": 1.0,
+          "false_negative_rate": 0.0
+        },
+        {
+          "threshold": 0.5,
+          "tp": 12,
+          "fp": 2,
+          "tn": 10,
+          "fn": 0,
+          "precision": 0.8571428571428571,
+          "recall": 1.0,
+          "false_negative_rate": 0.0
+        },
+        {
+          "threshold": 0.6,
+          "tp": 12,
+          "fp": 2,
+          "tn": 10,
+          "fn": 0,
+          "precision": 0.8571428571428571,
+          "recall": 1.0,
+          "false_negative_rate": 0.0
+        },
+        {
+          "threshold": 0.7,
+          "tp": 12,
+          "fp": 2,
+          "tn": 10,
+          "fn": 0,
+          "precision": 0.8571428571428571,
+          "recall": 1.0,
+          "false_negative_rate": 0.0
+        }
+      ],
+      "logical_calls": 24,
+      "network_attempts": 24,
+      "http_200_attempts": 24,
+      "input_tokens": 21420,
+      "output_tokens": 2117,
+      "cost_usd": 0.0117185,
+      "latency_ms_per_logical_call": {
+        "median": 23815.0,
+        "p90": 25153,
+        "note": "sum of HTTP attempt response latencies; inter-attempt backoff is excluded"
+      },
+      "boolean_probability_consistency": {
+        "relevant": {
+          "checked": 24,
+          "mismatch_with_host_0_5_threshold": 0
+        },
+        "empirical_evidence": {
+          "checked": 24,
+          "mismatch_with_host_0_5_threshold": 0
+        },
+        "worth_escalating": {
+          "checked": 24,
+          "mismatch_with_host_0_5_threshold": 0
+        }
+      },
+      "abstract_audit": {
+        "n": 9,
+        "relevance_at_host_threshold_0_5": {
+          "threshold": 0.5,
+          "tp": 1,
+          "fp": 0,
+          "tn": 8,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "relevance_brier": 0.006955555555555558,
+        "relevance_calibration_bins": [
+          {
+            "range": "[0.0,0.2)",
+            "n": 8,
+            "mean_probability": 0.08125,
+            "observed_positive_rate": 0.0
+          },
+          {
+            "range": "[0.2,0.4)",
+            "n": 0,
+            "mean_probability": null,
+            "observed_positive_rate": null
+          },
+          {
+            "range": "[0.4,0.6)",
+            "n": 0,
+            "mean_probability": null,
+            "observed_positive_rate": null
+          },
+          {
+            "range": "[0.6,0.8)",
+            "n": 0,
+            "mean_probability": null,
+            "observed_positive_rate": null
+          },
+          {
+            "range": "[0.8,1.0]",
+            "n": 1,
+            "mean_probability": 0.99,
+            "observed_positive_rate": 1.0
+          }
+        ],
+        "empirical_evidence_n": 9,
+        "empirical_evidence_brier": 0.007233333333333331,
+        "empirical_evidence_calibration_bins": [
+          {
+            "range": "[0.0,0.2)",
+            "n": 0,
+            "mean_probability": null,
+            "observed_positive_rate": null
+          },
+          {
+            "range": "[0.2,0.4)",
+            "n": 0,
+            "mean_probability": null,
+            "observed_positive_rate": null
+          },
+          {
+            "range": "[0.4,0.6)",
+            "n": 0,
+            "mean_probability": null,
+            "observed_positive_rate": null
+          },
+          {
+            "range": "[0.6,0.8)",
+            "n": 0,
+            "mean_probability": null,
+            "observed_positive_rate": null
+          },
+          {
+            "range": "[0.8,1.0]",
+            "n": 9,
+            "mean_probability": 0.921111111111111,
+            "observed_positive_rate": 1.0
+          }
+        ],
+        "paper_ids": [
+          "2609.29095",
+          "2609.30009",
+          "2609.24122",
+          "2609.14245",
+          "2609.03213",
+          "2609.15578",
+          "2609.22056",
+          "2603.21521",
+          "2606.15960"
+        ],
+        "selection_bias_note": "disagreement-enriched abstract audit; not a population estimate"
+      }
+    },
+    "openai": {
+      "responses_with_relevance_probability": 24,
+      "auroc": 0.8888888888888888,
+      "auprc_average_precision": 0.8237807943690297,
+      "brier_relevance_vs_proxy": 0.29244166666666666,
+      "calibration_bins_relevance_vs_proxy": [
+        {
+          "range": "[0.0,0.2)",
+          "n": 4,
+          "mean_probability": 0.0275,
+          "observed_positive_rate": 0.0
+        },
+        {
+          "range": "[0.2,0.4)",
+          "n": 0,
+          "mean_probability": null,
+          "observed_positive_rate": null
+        },
+        {
+          "range": "[0.4,0.6)",
+          "n": 0,
+          "mean_probability": null,
+          "observed_positive_rate": null
+        },
+        {
+          "range": "[0.6,0.8)",
+          "n": 1,
+          "mean_probability": 0.79,
+          "observed_positive_rate": 0.0
+        },
+        {
+          "range": "[0.8,1.0]",
+          "n": 19,
+          "mean_probability": 0.9747368421052631,
+          "observed_positive_rate": 0.631578947368421
+        }
+      ],
+      "threshold_sweep_relevance_vs_proxy": [
+        {
+          "threshold": 0.3,
+          "tp": 12,
+          "fp": 8,
+          "tn": 4,
+          "fn": 0,
+          "precision": 0.6,
+          "recall": 1.0,
+          "false_negative_rate": 0.0
+        },
+        {
+          "threshold": 0.4,
+          "tp": 12,
+          "fp": 8,
+          "tn": 4,
+          "fn": 0,
+          "precision": 0.6,
+          "recall": 1.0,
+          "false_negative_rate": 0.0
+        },
+        {
+          "threshold": 0.5,
+          "tp": 12,
+          "fp": 8,
+          "tn": 4,
+          "fn": 0,
+          "precision": 0.6,
+          "recall": 1.0,
+          "false_negative_rate": 0.0
+        },
+        {
+          "threshold": 0.6,
+          "tp": 12,
+          "fp": 8,
+          "tn": 4,
+          "fn": 0,
+          "precision": 0.6,
+          "recall": 1.0,
+          "false_negative_rate": 0.0
+        },
+        {
+          "threshold": 0.7,
+          "tp": 12,
+          "fp": 8,
+          "tn": 4,
+          "fn": 0,
+          "precision": 0.6,
+          "recall": 1.0,
+          "false_negative_rate": 0.0
+        }
+      ],
+      "logical_calls": 24,
+      "network_attempts": 24,
+      "http_200_attempts": 24,
+      "input_tokens": 23764,
+      "output_tokens": 1581,
+      "cost_usd": 0.00307267,
+      "latency_ms_per_logical_call": {
+        "median": 7838.5,
+        "p90": 8275,
+        "note": "sum of HTTP attempt response latencies; inter-attempt backoff is excluded"
+      },
+      "boolean_probability_consistency": {
+        "relevant": {
+          "checked": 24,
+          "mismatch_with_host_0_5_threshold": 3
+        },
+        "empirical_evidence": {
+          "checked": 24,
+          "mismatch_with_host_0_5_threshold": 0
+        },
+        "worth_escalating": {
+          "checked": 24,
+          "mismatch_with_host_0_5_threshold": 1
+        }
+      },
+      "abstract_audit": {
+        "n": 9,
+        "relevance_at_host_threshold_0_5": {
+          "threshold": 0.5,
+          "tp": 1,
+          "fp": 6,
+          "tn": 2,
+          "fn": 0,
+          "precision": 0.14285714285714285,
+          "recall": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "relevance_brier": 0.5617,
+        "relevance_calibration_bins": [
+          {
+            "range": "[0.0,0.2)",
+            "n": 2,
+            "mean_probability": 0.045,
+            "observed_positive_rate": 0.0
+          },
+          {
+            "range": "[0.2,0.4)",
+            "n": 0,
+            "mean_probability": null,
+            "observed_positive_rate": null
+          },
+          {
+            "range": "[0.4,0.6)",
+            "n": 0,
+            "mean_probability": null,
+            "observed_positive_rate": null
+          },
+          {
+            "range": "[0.6,0.8)",
+            "n": 1,
+            "mean_probability": 0.79,
+            "observed_positive_rate": 0.0
+          },
+          {
+            "range": "[0.8,1.0]",
+            "n": 6,
+            "mean_probability": 0.9483333333333333,
+            "observed_positive_rate": 0.16666666666666666
+          }
+        ],
+        "empirical_evidence_n": 9,
+        "empirical_evidence_brier": 0.00010000000000000018,
+        "empirical_evidence_calibration_bins": [
+          {
+            "range": "[0.0,0.2)",
+            "n": 0,
+            "mean_probability": null,
+            "observed_positive_rate": null
+          },
+          {
+            "range": "[0.2,0.4)",
+            "n": 0,
+            "mean_probability": null,
+            "observed_positive_rate": null
+          },
+          {
+            "range": "[0.4,0.6)",
+            "n": 0,
+            "mean_probability": null,
+            "observed_positive_rate": null
+          },
+          {
+            "range": "[0.6,0.8)",
+            "n": 0,
+            "mean_probability": null,
+            "observed_positive_rate": null
+          },
+          {
+            "range": "[0.8,1.0]",
+            "n": 9,
+            "mean_probability": 0.99,
+            "observed_positive_rate": 1.0
+          }
+        ],
+        "paper_ids": [
+          "2609.29095",
+          "2609.30009",
+          "2609.24122",
+          "2609.14245",
+          "2609.03213",
+          "2609.15578",
+          "2609.22056",
+          "2603.21521",
+          "2606.15960"
+        ],
+        "selection_bias_note": "disagreement-enriched abstract audit; not a population estimate"
+      }
+    }
+  },
+  "pairwise_agreement": {
+    "relevant": {
+      "jev__deepseek": {
+        "agree": 21,
+        "n": 24,
+        "fraction": 0.875,
+        "criterion": "exact"
+      },
+      "jev__gemini": {
+        "agree": 20,
+        "n": 24,
+        "fraction": 0.8333333333333334,
+        "criterion": "exact"
+      },
+      "jev__openai": {
+        "agree": 22,
+        "n": 24,
+        "fraction": 0.9166666666666666,
+        "criterion": "exact"
+      },
+      "deepseek__gemini": {
+        "agree": 17,
+        "n": 24,
+        "fraction": 0.7083333333333334,
+        "criterion": "exact"
+      },
+      "deepseek__openai": {
+        "agree": 23,
+        "n": 24,
+        "fraction": 0.9583333333333334,
+        "criterion": "exact"
+      },
+      "gemini__openai": {
+        "agree": 18,
+        "n": 24,
+        "fraction": 0.75,
+        "criterion": "exact"
+      }
+    },
+    "empirical_evidence": {
+      "jev__deepseek": {
+        "agree": 24,
+        "n": 24,
+        "fraction": 1.0,
+        "criterion": "exact"
+      },
+      "jev__gemini": {
+        "agree": 24,
+        "n": 24,
+        "fraction": 1.0,
+        "criterion": "exact"
+      },
+      "jev__openai": {
+        "agree": 24,
+        "n": 24,
+        "fraction": 1.0,
+        "criterion": "exact"
+      },
+      "deepseek__gemini": {
+        "agree": 24,
+        "n": 24,
+        "fraction": 1.0,
+        "criterion": "exact"
+      },
+      "deepseek__openai": {
+        "agree": 24,
+        "n": 24,
+        "fraction": 1.0,
+        "criterion": "exact"
+      },
+      "gemini__openai": {
+        "agree": 24,
+        "n": 24,
+        "fraction": 1.0,
+        "criterion": "exact"
+      }
+    },
+    "topic": {
+      "jev__deepseek": {
+        "agree": 17,
+        "n": 24,
+        "fraction": 0.7083333333333334,
+        "criterion": "exact"
+      },
+      "jev__gemini": {
+        "agree": 11,
+        "n": 24,
+        "fraction": 0.4583333333333333,
+        "criterion": "exact"
+      },
+      "jev__openai": {
+        "agree": 13,
+        "n": 24,
+        "fraction": 0.5416666666666666,
+        "criterion": "exact"
+      },
+      "deepseek__gemini": {
+        "agree": 10,
+        "n": 24,
+        "fraction": 0.4166666666666667,
+        "criterion": "exact"
+      },
+      "deepseek__openai": {
+        "agree": 13,
+        "n": 24,
+        "fraction": 0.5416666666666666,
+        "criterion": "exact"
+      },
+      "gemini__openai": {
+        "agree": 17,
+        "n": 24,
+        "fraction": 0.7083333333333334,
+        "criterion": "exact"
+      }
+    },
+    "worth_escalating": {
+      "jev__deepseek": {
+        "agree": 19,
+        "n": 24,
+        "fraction": 0.7916666666666666,
+        "criterion": "exact"
+      },
+      "jev__gemini": {
+        "agree": 13,
+        "n": 24,
+        "fraction": 0.5416666666666666,
+        "criterion": "exact"
+      },
+      "jev__openai": {
+        "agree": 16,
+        "n": 24,
+        "fraction": 0.6666666666666666,
+        "criterion": "exact"
+      },
+      "deepseek__gemini": {
+        "agree": 18,
+        "n": 24,
+        "fraction": 0.75,
+        "criterion": "exact"
+      },
+      "deepseek__openai": {
+        "agree": 21,
+        "n": 24,
+        "fraction": 0.875,
+        "criterion": "exact"
+      },
+      "gemini__openai": {
+        "agree": 21,
+        "n": 24,
+        "fraction": 0.875,
+        "criterion": "exact"
+      }
+    },
+    "implementation_relevance": {
+      "jev__deepseek": {
+        "agree": 11,
+        "n": 24,
+        "fraction": 0.4583333333333333,
+        "criterion": "absolute score difference <= 0.5"
+      },
+      "jev__gemini": {
+        "agree": 10,
+        "n": 24,
+        "fraction": 0.4166666666666667,
+        "criterion": "absolute score difference <= 0.5"
+      },
+      "jev__openai": {
+        "agree": 11,
+        "n": 24,
+        "fraction": 0.4583333333333333,
+        "criterion": "absolute score difference <= 0.5"
+      },
+      "deepseek__gemini": {
+        "agree": 12,
+        "n": 24,
+        "fraction": 0.5,
+        "criterion": "absolute score difference <= 0.5"
+      },
+      "deepseek__openai": {
+        "agree": 16,
+        "n": 24,
+        "fraction": 0.6666666666666666,
+        "criterion": "absolute score difference <= 0.5"
+      },
+      "gemini__openai": {
+        "agree": 21,
+        "n": 24,
+        "fraction": 0.875,
+        "criterion": "absolute score difference <= 0.5"
+      }
+    }
+  },
+  "per_paper": [
+    {
+      "paper_id": "2609.27263",
+      "stratum": "high_value_proxy",
+      "proxy_label": true,
+      "judgments": {
+        "jev": {
+          "relevant": {
+            "value": true,
+            "probability": 0.93
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.98
+          },
+          "topic": {
+            "value": "long_running_workflows",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.59
+          },
+          "implementation_relevance": {
+            "value": 3.08,
+            "probability": null
+          }
+        },
+        "deepseek": {
+          "relevant": {
+            "value": true,
+            "probability": 0.92
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.95
+          },
+          "topic": {
+            "value": "long_running_workflows",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.85
+          },
+          "implementation_relevance": {
+            "value": 3,
+            "probability": null
+          }
+        },
+        "gemini": {
+          "relevant": {
+            "value": true,
+            "probability": 0.95
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "long_running_workflows",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.8
+          },
+          "implementation_relevance": {
+            "value": 3.0,
+            "probability": null
+          }
+        },
+        "openai": {
+          "relevant": {
+            "value": true,
+            "probability": 0.98
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "long_running_workflows",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.95
+          },
+          "implementation_relevance": {
+            "value": 3.5,
+            "probability": null
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28585",
+      "stratum": "high_value_proxy",
+      "proxy_label": true,
+      "judgments": {
+        "jev": {
+          "relevant": {
+            "value": true,
+            "probability": 0.93
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.98
+          },
+          "topic": {
+            "value": "harness_runtime",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.77
+          },
+          "implementation_relevance": {
+            "value": 3.92,
+            "probability": null
+          }
+        },
+        "deepseek": {
+          "relevant": {
+            "value": true,
+            "probability": 0.97
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.95
+          },
+          "topic": {
+            "value": "mcp_governance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.9
+          },
+          "implementation_relevance": {
+            "value": 4,
+            "probability": null
+          }
+        },
+        "gemini": {
+          "relevant": {
+            "value": true,
+            "probability": 0.98
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "harness_runtime",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.95
+          },
+          "implementation_relevance": {
+            "value": 4.0,
+            "probability": null
+          }
+        },
+        "openai": {
+          "relevant": {
+            "value": true,
+            "probability": 0.99
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "harness_runtime",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.98
+          },
+          "implementation_relevance": {
+            "value": 3.8,
+            "probability": null
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28586",
+      "stratum": "high_value_proxy",
+      "proxy_label": true,
+      "judgments": {
+        "jev": {
+          "relevant": {
+            "value": true,
+            "probability": 0.92
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.98
+          },
+          "topic": {
+            "value": "mcp_governance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.74
+          },
+          "implementation_relevance": {
+            "value": 3.76,
+            "probability": null
+          }
+        },
+        "deepseek": {
+          "relevant": {
+            "value": true,
+            "probability": 0.94
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.95
+          },
+          "topic": {
+            "value": "mcp_governance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.9
+          },
+          "implementation_relevance": {
+            "value": 3.7,
+            "probability": null
+          }
+        },
+        "gemini": {
+          "relevant": {
+            "value": true,
+            "probability": 0.95
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.95
+          },
+          "topic": {
+            "value": "mcp_governance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.9
+          },
+          "implementation_relevance": {
+            "value": 3.0,
+            "probability": null
+          }
+        },
+        "openai": {
+          "relevant": {
+            "value": true,
+            "probability": 0.99
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "mcp_governance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.98
+          },
+          "implementation_relevance": {
+            "value": 3.5,
+            "probability": null
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28614",
+      "stratum": "high_value_proxy",
+      "proxy_label": true,
+      "judgments": {
+        "jev": {
+          "relevant": {
+            "value": true,
+            "probability": 0.94
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.98
+          },
+          "topic": {
+            "value": "evals_assurance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.68
+          },
+          "implementation_relevance": {
+            "value": 3.17,
+            "probability": null
+          }
+        },
+        "deepseek": {
+          "relevant": {
+            "value": true,
+            "probability": 0.97
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.96
+          },
+          "topic": {
+            "value": "evals_assurance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.94
+          },
+          "implementation_relevance": {
+            "value": 4,
+            "probability": null
+          }
+        },
+        "gemini": {
+          "relevant": {
+            "value": true,
+            "probability": 0.95
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "agent_reliability",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.85
+          },
+          "implementation_relevance": {
+            "value": 3.0,
+            "probability": null
+          }
+        },
+        "openai": {
+          "relevant": {
+            "value": true,
+            "probability": 0.99
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "agent_reliability",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.97
+          },
+          "implementation_relevance": {
+            "value": 3,
+            "probability": null
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28693",
+      "stratum": "high_value_proxy",
+      "proxy_label": true,
+      "judgments": {
+        "jev": {
+          "relevant": {
+            "value": true,
+            "probability": 0.93
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.96
+          },
+          "topic": {
+            "value": "mcp_governance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.6
+          },
+          "implementation_relevance": {
+            "value": 3.83,
+            "probability": null
+          }
+        },
+        "deepseek": {
+          "relevant": {
+            "value": true,
+            "probability": 0.95
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.9
+          },
+          "topic": {
+            "value": "mcp_governance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.85
+          },
+          "implementation_relevance": {
+            "value": 3.5,
+            "probability": null
+          }
+        },
+        "gemini": {
+          "relevant": {
+            "value": true,
+            "probability": 0.95
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "mcp_governance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.9
+          },
+          "implementation_relevance": {
+            "value": 3.5,
+            "probability": null
+          }
+        },
+        "openai": {
+          "relevant": {
+            "value": true,
+            "probability": 0.99
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "mcp_governance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.96
+          },
+          "implementation_relevance": {
+            "value": 3.5,
+            "probability": null
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28915",
+      "stratum": "high_value_proxy",
+      "proxy_label": true,
+      "judgments": {
+        "jev": {
+          "relevant": {
+            "value": true,
+            "probability": 0.92
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.98
+          },
+          "topic": {
+            "value": "evals_assurance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.72
+          },
+          "implementation_relevance": {
+            "value": 2.93,
+            "probability": null
+          }
+        },
+        "deepseek": {
+          "relevant": {
+            "value": true,
+            "probability": 0.97
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.95
+          },
+          "topic": {
+            "value": "evals_assurance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.9
+          },
+          "implementation_relevance": {
+            "value": 4,
+            "probability": null
+          }
+        },
+        "gemini": {
+          "relevant": {
+            "value": true,
+            "probability": 0.95
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "agent_reliability",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.9
+          },
+          "implementation_relevance": {
+            "value": 3.5,
+            "probability": null
+          }
+        },
+        "openai": {
+          "relevant": {
+            "value": true,
+            "probability": 0.99
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "evals_assurance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.96
+          },
+          "implementation_relevance": {
+            "value": 3.5,
+            "probability": null
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.29095",
+      "stratum": "high_value_proxy",
+      "proxy_label": true,
+      "judgments": {
+        "jev": {
+          "relevant": {
+            "value": true,
+            "probability": 0.93
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "tool_use",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.71
+          },
+          "implementation_relevance": {
+            "value": 3.58,
+            "probability": null
+          }
+        },
+        "deepseek": {
+          "relevant": {
+            "value": true,
+            "probability": 0.97
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.95
+          },
+          "topic": {
+            "value": "agent_reliability",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.9
+          },
+          "implementation_relevance": {
+            "value": 3.8,
+            "probability": null
+          }
+        },
+        "gemini": {
+          "relevant": {
+            "value": true,
+            "probability": 0.99
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "harness_runtime",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.9
+          },
+          "implementation_relevance": {
+            "value": 4.0,
+            "probability": null
+          }
+        },
+        "openai": {
+          "relevant": {
+            "value": true,
+            "probability": 0.99
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "tool_use",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.98
+          },
+          "implementation_relevance": {
+            "value": 4,
+            "probability": null
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.30217",
+      "stratum": "high_value_proxy",
+      "proxy_label": true,
+      "judgments": {
+        "jev": {
+          "relevant": {
+            "value": true,
+            "probability": 0.94
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.98
+          },
+          "topic": {
+            "value": "mcp_governance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.72
+          },
+          "implementation_relevance": {
+            "value": 2.98,
+            "probability": null
+          }
+        },
+        "deepseek": {
+          "relevant": {
+            "value": true,
+            "probability": 0.95
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.95
+          },
+          "topic": {
+            "value": "agent_reliability",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.9
+          },
+          "implementation_relevance": {
+            "value": 4,
+            "probability": null
+          }
+        },
+        "gemini": {
+          "relevant": {
+            "value": true,
+            "probability": 0.95
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.98
+          },
+          "topic": {
+            "value": "agent_reliability",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.9
+          },
+          "implementation_relevance": {
+            "value": 3.0,
+            "probability": null
+          }
+        },
+        "openai": {
+          "relevant": {
+            "value": true,
+            "probability": 0.99
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "agent_reliability",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.96
+          },
+          "implementation_relevance": {
+            "value": 3,
+            "probability": null
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.30266",
+      "stratum": "high_value_proxy",
+      "proxy_label": true,
+      "judgments": {
+        "jev": {
+          "relevant": {
+            "value": true,
+            "probability": 0.92
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.96
+          },
+          "topic": {
+            "value": "evals_assurance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.71
+          },
+          "implementation_relevance": {
+            "value": 3.86,
+            "probability": null
+          }
+        },
+        "deepseek": {
+          "relevant": {
+            "value": true,
+            "probability": 0.9
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.85
+          },
+          "topic": {
+            "value": "agent_reliability",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.85
+          },
+          "implementation_relevance": {
+            "value": 4,
+            "probability": null
+          }
+        },
+        "gemini": {
+          "relevant": {
+            "value": true,
+            "probability": 0.95
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.9
+          },
+          "topic": {
+            "value": "harness_runtime",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.9
+          },
+          "implementation_relevance": {
+            "value": 3.5,
+            "probability": null
+          }
+        },
+        "openai": {
+          "relevant": {
+            "value": true,
+            "probability": 0.99
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "harness_runtime",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.97
+          },
+          "implementation_relevance": {
+            "value": 3.5,
+            "probability": null
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.29808",
+      "stratum": "high_value_proxy",
+      "proxy_label": true,
+      "judgments": {
+        "jev": {
+          "relevant": {
+            "value": true,
+            "probability": 0.78
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.68
+          },
+          "topic": {
+            "value": "harness_runtime",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": false,
+            "probability": 0.38
+          },
+          "implementation_relevance": {
+            "value": 2.75,
+            "probability": null
+          }
+        },
+        "deepseek": {
+          "relevant": {
+            "value": true,
+            "probability": 0.93
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.7
+          },
+          "topic": {
+            "value": "harness_runtime",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.88
+          },
+          "implementation_relevance": {
+            "value": 4,
+            "probability": null
+          }
+        },
+        "gemini": {
+          "relevant": {
+            "value": true,
+            "probability": 0.95
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.9
+          },
+          "topic": {
+            "value": "agent_reliability",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.9
+          },
+          "implementation_relevance": {
+            "value": 3.5,
+            "probability": null
+          }
+        },
+        "openai": {
+          "relevant": {
+            "value": true,
+            "probability": 0.96
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.8
+          },
+          "topic": {
+            "value": "harness_runtime",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.9
+          },
+          "implementation_relevance": {
+            "value": 3.5,
+            "probability": null
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.23498",
+      "stratum": "high_value_proxy",
+      "proxy_label": true,
+      "judgments": {
+        "jev": {
+          "relevant": {
+            "value": true,
+            "probability": 0.92
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.98
+          },
+          "topic": {
+            "value": "mcp_governance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.66
+          },
+          "implementation_relevance": {
+            "value": 3.89,
+            "probability": null
+          }
+        },
+        "deepseek": {
+          "relevant": {
+            "value": true,
+            "probability": 0.95
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.95
+          },
+          "topic": {
+            "value": "mcp_governance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.85
+          },
+          "implementation_relevance": {
+            "value": 3.5,
+            "probability": null
+          }
+        },
+        "gemini": {
+          "relevant": {
+            "value": true,
+            "probability": 0.99
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "mcp_governance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.9
+          },
+          "implementation_relevance": {
+            "value": 4,
+            "probability": null
+          }
+        },
+        "openai": {
+          "relevant": {
+            "value": true,
+            "probability": 0.99
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "mcp_governance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.97
+          },
+          "implementation_relevance": {
+            "value": 3.8,
+            "probability": null
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.24130",
+      "stratum": "high_value_proxy",
+      "proxy_label": true,
+      "judgments": {
+        "jev": {
+          "relevant": {
+            "value": true,
+            "probability": 0.95
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.98
+          },
+          "topic": {
+            "value": "harness_runtime",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.69
+          },
+          "implementation_relevance": {
+            "value": 3.93,
+            "probability": null
+          }
+        },
+        "deepseek": {
+          "relevant": {
+            "value": true,
+            "probability": 0.98
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.97
+          },
+          "topic": {
+            "value": "harness_runtime",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.95
+          },
+          "implementation_relevance": {
+            "value": 4,
+            "probability": null
+          }
+        },
+        "gemini": {
+          "relevant": {
+            "value": true,
+            "probability": 0.95
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "harness_runtime",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.9
+          },
+          "implementation_relevance": {
+            "value": 3.5,
+            "probability": null
+          }
+        },
+        "openai": {
+          "relevant": {
+            "value": true,
+            "probability": 0.99
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "harness_runtime",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.98
+          },
+          "implementation_relevance": {
+            "value": 3.8,
+            "probability": null
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.23742",
+      "stratum": "medium_adjacent",
+      "proxy_label": false,
+      "judgments": {
+        "jev": {
+          "relevant": {
+            "value": true,
+            "probability": 0.7
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.98
+          },
+          "topic": {
+            "value": "evals_assurance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.6
+          },
+          "implementation_relevance": {
+            "value": 3.0,
+            "probability": null
+          }
+        },
+        "deepseek": {
+          "relevant": {
+            "value": true,
+            "probability": 0.85
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.95
+          },
+          "topic": {
+            "value": "tool_use",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.8
+          },
+          "implementation_relevance": {
+            "value": 3.5,
+            "probability": null
+          }
+        },
+        "gemini": {
+          "relevant": {
+            "value": true,
+            "probability": 0.9
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.95
+          },
+          "topic": {
+            "value": "tool_use",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.8
+          },
+          "implementation_relevance": {
+            "value": 3.0,
+            "probability": null
+          }
+        },
+        "openai": {
+          "relevant": {
+            "value": true,
+            "probability": 0.99
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "tool_use",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.9
+          },
+          "implementation_relevance": {
+            "value": 3,
+            "probability": null
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.30009",
+      "stratum": "medium_adjacent",
+      "proxy_label": false,
+      "judgments": {
+        "jev": {
+          "relevant": {
+            "value": false,
+            "probability": 0.48
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.98
+          },
+          "topic": {
+            "value": "evals_assurance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.53
+          },
+          "implementation_relevance": {
+            "value": 3.06,
+            "probability": null
+          }
+        },
+        "deepseek": {
+          "relevant": {
+            "value": true,
+            "probability": 0.7
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.9
+          },
+          "topic": {
+            "value": "evals_assurance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.6
+          },
+          "implementation_relevance": {
+            "value": 2,
+            "probability": null
+          }
+        },
+        "gemini": {
+          "relevant": {
+            "value": false,
+            "probability": 0.1
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.9
+          },
+          "topic": {
+            "value": "none",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": false,
+            "probability": 0.05
+          },
+          "implementation_relevance": {
+            "value": 0,
+            "probability": null
+          }
+        },
+        "openai": {
+          "relevant": {
+            "value": false,
+            "probability": 0.96
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "none",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": false,
+            "probability": 0.97
+          },
+          "implementation_relevance": {
+            "value": 0.1,
+            "probability": null
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.24122",
+      "stratum": "medium_adjacent",
+      "proxy_label": false,
+      "judgments": {
+        "jev": {
+          "relevant": {
+            "value": true,
+            "probability": 0.6
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.98
+          },
+          "topic": {
+            "value": "evals_assurance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.68
+          },
+          "implementation_relevance": {
+            "value": 3.58,
+            "probability": null
+          }
+        },
+        "deepseek": {
+          "relevant": {
+            "value": true,
+            "probability": 0.55
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.95
+          },
+          "topic": {
+            "value": "evals_assurance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.6
+          },
+          "implementation_relevance": {
+            "value": 2,
+            "probability": null
+          }
+        },
+        "gemini": {
+          "relevant": {
+            "value": false,
+            "probability": 0.1
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.95
+          },
+          "topic": {
+            "value": "none",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": false,
+            "probability": 0.1
+          },
+          "implementation_relevance": {
+            "value": 0,
+            "probability": null
+          }
+        },
+        "openai": {
+          "relevant": {
+            "value": false,
+            "probability": 0.97
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "none",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": false,
+            "probability": 0.02
+          },
+          "implementation_relevance": {
+            "value": 0,
+            "probability": null
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.19710",
+      "stratum": "medium_adjacent",
+      "proxy_label": false,
+      "judgments": {
+        "jev": {
+          "relevant": {
+            "value": true,
+            "probability": 0.79
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.98
+          },
+          "topic": {
+            "value": "agent_reliability",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.53
+          },
+          "implementation_relevance": {
+            "value": 3.89,
+            "probability": null
+          }
+        },
+        "deepseek": {
+          "relevant": {
+            "value": true,
+            "probability": 0.92
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.96
+          },
+          "topic": {
+            "value": "other",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.85
+          },
+          "implementation_relevance": {
+            "value": 4,
+            "probability": null
+          }
+        },
+        "gemini": {
+          "relevant": {
+            "value": true,
+            "probability": 0.95
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "agent_reliability",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.8
+          },
+          "implementation_relevance": {
+            "value": 3.0,
+            "probability": null
+          }
+        },
+        "openai": {
+          "relevant": {
+            "value": true,
+            "probability": 0.99
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "harness_runtime",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.9
+          },
+          "implementation_relevance": {
+            "value": 3,
+            "probability": null
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.14245",
+      "stratum": "medium_adjacent",
+      "proxy_label": false,
+      "judgments": {
+        "jev": {
+          "relevant": {
+            "value": false,
+            "probability": 0.45
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.97
+          },
+          "topic": {
+            "value": "evals_assurance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.54
+          },
+          "implementation_relevance": {
+            "value": 2.85,
+            "probability": null
+          }
+        },
+        "deepseek": {
+          "relevant": {
+            "value": true,
+            "probability": 0.75
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.95
+          },
+          "topic": {
+            "value": "evals_assurance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.7
+          },
+          "implementation_relevance": {
+            "value": 2,
+            "probability": null
+          }
+        },
+        "gemini": {
+          "relevant": {
+            "value": false,
+            "probability": 0.1
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.9
+          },
+          "topic": {
+            "value": "none",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": false,
+            "probability": 0.05
+          },
+          "implementation_relevance": {
+            "value": 0,
+            "probability": null
+          }
+        },
+        "openai": {
+          "relevant": {
+            "value": false,
+            "probability": 0.08
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "none",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": false,
+            "probability": 0.04
+          },
+          "implementation_relevance": {
+            "value": 0.1,
+            "probability": null
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.03213",
+      "stratum": "medium_adjacent",
+      "proxy_label": false,
+      "judgments": {
+        "jev": {
+          "relevant": {
+            "value": false,
+            "probability": 0.41
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.97
+          },
+          "topic": {
+            "value": "none",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.56
+          },
+          "implementation_relevance": {
+            "value": 2.9,
+            "probability": null
+          }
+        },
+        "deepseek": {
+          "relevant": {
+            "value": true,
+            "probability": 0.6
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.85
+          },
+          "topic": {
+            "value": "other",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": false,
+            "probability": 0.3
+          },
+          "implementation_relevance": {
+            "value": 2,
+            "probability": null
+          }
+        },
+        "gemini": {
+          "relevant": {
+            "value": false,
+            "probability": 0.1
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.9
+          },
+          "topic": {
+            "value": "none",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": false,
+            "probability": 0.05
+          },
+          "implementation_relevance": {
+            "value": 0,
+            "probability": null
+          }
+        },
+        "openai": {
+          "relevant": {
+            "value": true,
+            "probability": 0.79
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "tool_use",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": false,
+            "probability": 0.25
+          },
+          "implementation_relevance": {
+            "value": 1.5,
+            "probability": null
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.15578",
+      "stratum": "medium_adjacent",
+      "proxy_label": false,
+      "judgments": {
+        "jev": {
+          "relevant": {
+            "value": true,
+            "probability": 0.61
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.98
+          },
+          "topic": {
+            "value": "evals_assurance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.67
+          },
+          "implementation_relevance": {
+            "value": 3.67,
+            "probability": null
+          }
+        },
+        "deepseek": {
+          "relevant": {
+            "value": true,
+            "probability": 0.9
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.95
+          },
+          "topic": {
+            "value": "evals_assurance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.8
+          },
+          "implementation_relevance": {
+            "value": 3,
+            "probability": null
+          }
+        },
+        "gemini": {
+          "relevant": {
+            "value": false,
+            "probability": 0.1
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.95
+          },
+          "topic": {
+            "value": "none",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": false,
+            "probability": 0.05
+          },
+          "implementation_relevance": {
+            "value": 0,
+            "probability": null
+          }
+        },
+        "openai": {
+          "relevant": {
+            "value": true,
+            "probability": 0.94
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "evals_assurance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.84
+          },
+          "implementation_relevance": {
+            "value": 3,
+            "probability": null
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.22056",
+      "stratum": "medium_adjacent",
+      "proxy_label": false,
+      "judgments": {
+        "jev": {
+          "relevant": {
+            "value": true,
+            "probability": 0.62
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.98
+          },
+          "topic": {
+            "value": "agent_reliability",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.69
+          },
+          "implementation_relevance": {
+            "value": 3.69,
+            "probability": null
+          }
+        },
+        "deepseek": {
+          "relevant": {
+            "value": true,
+            "probability": 0.82
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.9
+          },
+          "topic": {
+            "value": "agent_reliability",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.7
+          },
+          "implementation_relevance": {
+            "value": 3,
+            "probability": null
+          }
+        },
+        "gemini": {
+          "relevant": {
+            "value": false,
+            "probability": 0.1
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.9
+          },
+          "topic": {
+            "value": "none",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": false,
+            "probability": 0.05
+          },
+          "implementation_relevance": {
+            "value": 0,
+            "probability": null
+          }
+        },
+        "openai": {
+          "relevant": {
+            "value": true,
+            "probability": 0.87
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "evals_assurance",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.78
+          },
+          "implementation_relevance": {
+            "value": 2.5,
+            "probability": null
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2606.01987",
+      "stratum": "low_relevance_control",
+      "proxy_label": false,
+      "judgments": {
+        "jev": {
+          "relevant": {
+            "value": false,
+            "probability": 0.24
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.97
+          },
+          "topic": {
+            "value": "none",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.55
+          },
+          "implementation_relevance": {
+            "value": 1.91,
+            "probability": null
+          }
+        },
+        "deepseek": {
+          "relevant": {
+            "value": false,
+            "probability": 0.08
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.85
+          },
+          "topic": {
+            "value": "none",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": false,
+            "probability": 0.03
+          },
+          "implementation_relevance": {
+            "value": 1,
+            "probability": null
+          }
+        },
+        "gemini": {
+          "relevant": {
+            "value": false,
+            "probability": 0.0
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.9
+          },
+          "topic": {
+            "value": "none",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": false,
+            "probability": 0.0
+          },
+          "implementation_relevance": {
+            "value": 0,
+            "probability": null
+          }
+        },
+        "openai": {
+          "relevant": {
+            "value": false,
+            "probability": 0.01
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "none",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": false,
+            "probability": 0.01
+          },
+          "implementation_relevance": {
+            "value": 0,
+            "probability": null
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2606.30487",
+      "stratum": "low_relevance_control",
+      "proxy_label": false,
+      "judgments": {
+        "jev": {
+          "relevant": {
+            "value": false,
+            "probability": 0.34
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.91
+          },
+          "topic": {
+            "value": "none",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.59
+          },
+          "implementation_relevance": {
+            "value": 1.92,
+            "probability": null
+          }
+        },
+        "deepseek": {
+          "relevant": {
+            "value": false,
+            "probability": 0.12
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.82
+          },
+          "topic": {
+            "value": "none",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": false,
+            "probability": 0.03
+          },
+          "implementation_relevance": {
+            "value": 0,
+            "probability": null
+          }
+        },
+        "gemini": {
+          "relevant": {
+            "value": false,
+            "probability": 0.0
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.9
+          },
+          "topic": {
+            "value": "none",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": false,
+            "probability": 0.0
+          },
+          "implementation_relevance": {
+            "value": 0,
+            "probability": null
+          }
+        },
+        "openai": {
+          "relevant": {
+            "value": false,
+            "probability": 0.01
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "none",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": false,
+            "probability": 0.01
+          },
+          "implementation_relevance": {
+            "value": 0,
+            "probability": null
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2603.21521",
+      "stratum": "low_relevance_control",
+      "proxy_label": false,
+      "judgments": {
+        "jev": {
+          "relevant": {
+            "value": false,
+            "probability": 0.46
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.92
+          },
+          "topic": {
+            "value": "none",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.64
+          },
+          "implementation_relevance": {
+            "value": 1.64,
+            "probability": null
+          }
+        },
+        "deepseek": {
+          "relevant": {
+            "value": false,
+            "probability": 0.05
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.97
+          },
+          "topic": {
+            "value": "none",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": false,
+            "probability": 0.03
+          },
+          "implementation_relevance": {
+            "value": 0,
+            "probability": null
+          }
+        },
+        "gemini": {
+          "relevant": {
+            "value": false,
+            "probability": 0.0
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.9
+          },
+          "topic": {
+            "value": "none",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": false,
+            "probability": 0.0
+          },
+          "implementation_relevance": {
+            "value": 0,
+            "probability": null
+          }
+        },
+        "openai": {
+          "relevant": {
+            "value": false,
+            "probability": 0.01
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "none",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": false,
+            "probability": 0.01
+          },
+          "implementation_relevance": {
+            "value": 0,
+            "probability": null
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2606.15960",
+      "stratum": "low_relevance_control",
+      "proxy_label": false,
+      "judgments": {
+        "jev": {
+          "relevant": {
+            "value": true,
+            "probability": 0.66
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.91
+          },
+          "topic": {
+            "value": "other",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.64
+          },
+          "implementation_relevance": {
+            "value": 2.04,
+            "probability": null
+          }
+        },
+        "deepseek": {
+          "relevant": {
+            "value": true,
+            "probability": 0.7
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.75
+          },
+          "topic": {
+            "value": "other",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": true,
+            "probability": 0.55
+          },
+          "implementation_relevance": {
+            "value": 2,
+            "probability": null
+          }
+        },
+        "gemini": {
+          "relevant": {
+            "value": false,
+            "probability": 0.05
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.9
+          },
+          "topic": {
+            "value": "none",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": false,
+            "probability": 0.0
+          },
+          "implementation_relevance": {
+            "value": 0,
+            "probability": null
+          }
+        },
+        "openai": {
+          "relevant": {
+            "value": false,
+            "probability": 0.96
+          },
+          "empirical_evidence": {
+            "value": true,
+            "probability": 0.99
+          },
+          "topic": {
+            "value": "none",
+            "probability": null
+          },
+          "worth_escalating": {
+            "value": false,
+            "probability": 0.02
+          },
+          "implementation_relevance": {
+            "value": 0,
+            "probability": null
+          }
+        }
+      }
+    }
+  ]
+}

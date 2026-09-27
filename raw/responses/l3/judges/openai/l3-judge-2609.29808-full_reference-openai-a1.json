@@ -1,0 +1,49 @@
+{
+  "call_id": "l3-judge-2609.29808-full_reference-openai",
+  "attempt": 1,
+  "arm_id": "l3-blind-judge-openai",
+  "provider": "openai",
+  "model_id_sent": "gpt-6-luna",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "call_start_utc": "2026-09-26T22:54:09Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_schema strict",
+    "max_completion_tokens": 1300,
+    "blind": true
+  },
+  "http_status": 200,
+  "latency_ms": 8439,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "completion_tokens_details",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 7226,
+    "output_tokens": 286,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": 0,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+      "cached_input": "usage.prompt_tokens_details.cached_tokens"
+    }
+  },
+  "cost": {
+    "amount": 0.0008656,
+    "rates_used_usd_per_million": {
+      "input": 0.1,
+      "cached_input": 0.01,
+      "output": 0.5
+    },
+    "rate_source": "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC",
+    "tier": null
+  },
+  "output": "{\"scores\":[{\"blind_label\":\"A\",\"faithfulness\":3,\"evidence_support\":3,\"insight_depth\":2,\"novelty_identification\":1,\"systems_relevance\":3,\"actionability\":3,\"compression_information_density\":2,\"uncertainty_calibration\":2,\"durable_memory_precision_proxy\":2,\"brief_reason\":\"Most reported incident and benchmark details match the excerpts, but the artifact omits limitations and presents claims such as kernel enforcement being “proven” or the novelty of the work more strongly than the evidence warrants. The incident and guardrail-paradox material is relevant, though the insights largely repeat paper claims; practical recommendations are useful but need explicit scope and caveats.\"},{\"blind_label\":\"B\",\"faithfulness\":3,\"evidence_support\":3,\"insight_depth\":3,\"novelty_identification\":3,\"systems_relevance\":4,\"actionability\":4,\"compression_information_density\":3,\"uncertainty_calibration\":3,\"durable_memory_precision_proxy\":3,\"brief_reason\":\"Connects syscall-boundary enforcement, preemption, alert response, and checkpoint integrity to runtime and long-running workflow concerns, with concrete pilot actions and explicit limitations. Most cited claims align with the excerpts. Some assurances remain stronger than the excerpted evidence establishes—especially formal soundness and broad detection generalization—but novelty and confidence are generally qualified.\"}]}",
+  "provider_response_model_id": "gpt-6-luna",
+  "artifact": "raw/responses/l3/judges/openai/l3-judge-2609.29808-full_reference-openai-a1.json"
+}

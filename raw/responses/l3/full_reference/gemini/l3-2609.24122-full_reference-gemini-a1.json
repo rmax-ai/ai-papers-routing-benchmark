@@ -1,0 +1,43 @@
+{
+  "call_id": "l3-2609.24122-full_reference-gemini",
+  "attempt": 1,
+  "arm_id": "l3-full_reference-gemini",
+  "provider": "gemini",
+  "model_id_sent": "gemini-3.5-flash-lite",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+  "call_start_utc": "2026-09-26T22:51:04Z",
+  "settings": {
+    "thinkingConfig": {
+      "thinkingLevel": "low"
+    },
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 3000,
+    "prompt_revision": "concise-v4"
+  },
+  "http_status": 200,
+  "latency_ms": 29077,
+  "usage": {
+    "input_tokens": 44808,
+    "output_tokens": 1381,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": null,
+    "mapping": {
+      "input": "usageMetadata.promptTokenCount",
+      "output": "usageMetadata.candidatesTokenCount",
+      "cached_input": "usageMetadata.cachedContentTokenCount"
+    }
+  },
+  "cost": {
+    "amount": 0.0168949,
+    "rates_used_usd_per_million": {
+      "input": 0.3,
+      "cached_input": 0.3,
+      "output": 2.5
+    },
+    "rate_source": "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"paper\": {\n    \"contribution\": \"We propose auditing retrieval coverage by probing for evidence of missing documents rather than enumerating every relevant one, instantiated as Re:CAP (REtrieval Coverage Audit by iterative Probing).\",\n    \"key_claims\": [\n      {\n        \"claim\": \"Re:CAP recovers 9-29% of gold labels that flat BM25 top-500 cannot reach, rising to 48% on TREC-COVID.\",\n        \"evidence_items\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"On four public benchmarks, Re:CAP recovers 9–29% of gold labels that flat BM25 top-500 cannot reach, rising to 48% on TREC-COVID.\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"On MuSiQue Re:CAP beats flat hybrid top-500 by +12.9 pp on recall at less than half the document budget.\",\n        \"evidence_items\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"On MuSiQue Re:CAP beats flat hybrid top-500 by +12.9 pp on recall at less than half the document budget.\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"Human annotators judge that 78.9% of ensemble-missed structural documents add new information to the baseline answer.\",\n        \"evidence_items\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"human annotators judge that 78.9% of those structurally distinct documents add new information to the baseline answer (Fleiss κ = 0.79, n = 123)\"\n          }\n        ]\n      }\n    ],\n    \"limitations\": [\n      {\n        \"page\": 8,\n        \"section\": \"Limitations\",\n        \"quote\": \"Re:CAP requires multiple LLM calls per query ... At the default this totals 250–500 LLM calls per query ($0.59–$2.05 at GPT-4.1 pricing).\"\n      },\n      {\n        \"page\": 8,\n        \"section\": \"Limitations\",\n        \"quote\": \"Re:CAP discovers gaps only for topics that exist in the corpus. If the corpus itself lacks coverage of an aspect, no probing will find it.\"\n      },\n      {\n        \"page\": 8,\n        \"section\": \"Limitations\",\n        \"quote\": \"All experiments are on English-language datasets with English-language LLMs. The approach is language-agnostic in principle but unvalidated multilingually.\"\n      },\n      {\n        \"page\": 9,\n        \"section\": \"Limitations\",\n        \"quote\": \"The HotPotQA dense-D0 cell (−3.6 pp matched-Nq) shows the initial retriever interacts with the dataset’s evidence structure.\"\n      }\n    ]\n  },\n  \"insights\": [\n    {\n      \"insight\": \"Re:CAP uses iterative probing starting from an initial answer and retrieved context to discover retrieval gaps without exhaustive relevance labels.\",\n      \"why_it_matters\": \"Enables quality auditing in non-stationary production RAG pipelines where exhaustive per-query relevance labels are practically unavailable.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"Our method Re:CAP (REtrieval Coverage Audit by iterative Probing) is a reference-free audit loop applied to a deployed RAG pipeline’s initial answer and retrieved context\"\n        }\n      ],\n      \"confidence\": \"high\",\n      \"novelty\": \"proposes a reference-free audit loop based on gap probing\",\n      \"related_rmax_topics\": [\n        \"Ai Papers\"\n      ],\n      \"possible_action\": \"Deploy Re:CAP as an out-of-band periodic sampling auditor before promoting index or embedder changes.\"\n    },\n    {\n      \"insight\": \"The gap-question generator relies on an entity ledger and supporting guards to discover unretrieved information facets.\",\n      \"why_it_matters\": \"Mitigates failure modes like topic-coverage skew and low probe diversity during iterative retrieval.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 2,\n          \"section\": \"1 Introduction\",\n          \"quote\": \"whose gap-question generator combines one dominant anchoring mechanism — the entity ledger, which accounts for nearly all of the average-recall lift — with four supporting guards\"\n        }\n      ],\n      \"confidence\": \"high\",\n      \"novelty\": \"combines an entity ledger with four specific failure-mitigating guards for gap generation\",\n      \"related_rmax_topics\": [\n        \"Ai Papers\"\n      ],\n      \"possible_action\": \"Ensure entity ledger anchoring and probe role diversity are implemented in RAG auditing frameworks.\"\n    },\n    {\n      \"insight\": \"Human evaluation confirms that a large majority of Re:CAP-recovered documents missing from standard baselines carry genuinely novel information.\",\n      \"why_it_matters\": \"Validates that the discovered gaps represent substantive informational additions rather than artifacts of metric noise.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 3,\n          \"section\": \"1 Introduction\",\n          \"quote\": \"human annotators judge that 78.9% [71.5–86.2%] of n = 123 such documents add information beyond the D0-only baseline answer (Fleiss κ = 0.79)\"\n        }\n      ],\n      \"confidence\": \"high\",\n      \"novelty\": \"uses blinded human evaluation on the ensemble-unreachable stratum to measure substantive novelty\",\n      \"related_rmax_topics\": [\n        \"Ai Papers\"\n      ],\n      \"possible_action\": \"Incorporate human validation steps when testing new retrieval coverage evaluation mechanisms.\"\n    }\n  ],\n  \"connections\": [],\n  \"followups\": []\n}",
+  "provider_response_model_version": "gemini-3.5-flash-lite",
+  "artifact": "raw/responses/l3/full_reference/gemini/l3-2609.24122-full_reference-gemini-a1.json"
+}

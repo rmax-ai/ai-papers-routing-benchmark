@@ -1,0 +1,53 @@
+{
+  "call_id": "l2-2609.27263-A-pilot-r1",
+  "attempt": 1,
+  "arm_id": "l2-A-pilot",
+  "provider": "gemini",
+  "model_id_sent": "gemini-3.5-flash-lite",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+  "call_start_utc": "2026-09-25T15:31:02Z",
+  "settings": {
+    "thinkingConfig": {
+      "thinkingLevel": "low"
+    },
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 3000,
+    "strategy": "A-pilot",
+    "round": 1,
+    "page_numbers": null
+  },
+  "http_status": 200,
+  "latency_ms": 25729,
+  "usage": {
+    "input_tokens": 836,
+    "output_tokens": 563,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": null,
+    "mapping": {
+      "input": "usageMetadata.promptTokenCount",
+      "output": "usageMetadata.candidatesTokenCount",
+      "cached_input": "usageMetadata.cachedContentTokenCount"
+    }
+  },
+  "cost": {
+    "amount": 0.0016583,
+    "rates_used_usd_per_million": {
+      "input": 0.3,
+      "cached_input": 0.3,
+      "output": 2.5
+    },
+    "rate_source": "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"candidate_claims\": [\n    {\n      \"claim\": \"GitHub Agentic Workflows (gh-aw) allows developers to define recurring work executed automatically by AI agents using Markdown files that combine natural-language instructions with configuration.\",\n      \"evidence_refs\": [\n        {\n          \"page\": null,\n          \"quote\": \"GitHub Agentic Workflows (gh-aw) enables this approach through Markdown files that combine natural-language instructions with configuration and compile into executable GitHub Actions workflows.\"\n        }\n      ],\n      \"importance\": \"load_bearing\"\n    },\n    {\n      \"claim\": \"Workflow instructions are substantial, featuring a median of 556.5 words and code blocks in 62.1% of files.\",\n      \"evidence_refs\": [\n        {\n          \"page\": null,\n          \"quote\": \"Our results show that workflow instructions extend beyond short prompts, with a median of 556.5 words and code blocks in 62.1% of files.\"\n        }\n      ],\n      \"importance\": \"supporting\"\n    },\n    {\n      \"claim\": \"Only 9.4% of labeled workflows explicitly address prompt-injection defense.\",\n      \"evidence_refs\": [\n        {\n          \"page\": null,\n          \"quote\": \"Tasks, outputs, constraints, and process instructions each appear in over 93% of labeled workflows, yet only 9.4% explicitly address prompt-injection defense.\"\n        }\n      ],\n      \"importance\": \"load_bearing\"\n    }\n  ],\n  \"key_claims\": [\n    \"GitHub Agentic Workflows compile Markdown files containing natural language instructions and configurations into executable GitHub Actions.\",\n    \"Workflow instructions are typically long (median 556.5 words) and frequently include code blocks.\",\n    \"While tasks, outputs, constraints, and process instructions are common, only 9.4% of workflows explicitly address prompt-injection defense.\"\n  ],\n  \"limitations\": [\n    \"The study focuses specifically on GitHub Agentic Workflows (gh-aw) and may not generalize to all agentic workflow platforms.\"\n  ],\n  \"load_bearing_pages\": [\n    null\n  ],\n  \"requested_pages\": [\n    {\n      \"pages\": [\n        1,\n        2,\n        3\n      ],\n      \"reason\": \"Need full text to examine detailed methodology, classification taxonomy, and specific findings regarding agent reliability and workflow maintenance.\"\n    }\n  ],\n  \"stop_reason\": null\n}",
+  "provider_response_model_version": "gemini-3.5-flash-lite",
+  "artifact": "raw/responses/l2/A-pilot/l2-2609.27263-A-pilot-r1-a1.json",
+  "paper_id": "2609.27263",
+  "strategy": "A-pilot",
+  "round": 1,
+  "input_sha256": "25581a2e1fc313c47194a5ba0dfeaa76933bca8041f4f96622fc487c58d28b9d",
+  "page_numbers_sent": [],
+  "input_text_bytes": 3738,
+  "inline_part_bytes": 0,
+  "used_as_benchmark_measurement": false
+}

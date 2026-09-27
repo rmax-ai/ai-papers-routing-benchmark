@@ -1,0 +1,51 @@
+{
+  "call_id": "l3-2609.27263-selective-deepseek",
+  "attempt": 1,
+  "arm_id": "l3-selective-deepseek",
+  "provider": "deepseek",
+  "model_id_sent": "deepseek-flash",
+  "endpoint": "https://api.deepseek.com/chat/completions",
+  "call_start_utc": "2026-09-26T22:50:08Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_object",
+    "max_tokens": 4500,
+    "prompt_revision": "concise-v4"
+  },
+  "http_status": 200,
+  "latency_ms": 6063,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "prompt_cache_hit_tokens",
+      "prompt_cache_miss_tokens",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 12119,
+    "output_tokens": 1312,
+    "cached_input_tokens": 3456,
+    "reasoning_tokens": null,
+    "reasoning_content_present": false,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "cached_input": "usage.prompt_cache_hit_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+    }
+  },
+  "cost": {
+    "amount": 0.002097018,
+    "rates_used_usd_per_million": {
+      "input": 0.15,
+      "cached_input": 0.003,
+      "output": 0.6
+    },
+    "rate_source": "https://api-docs.deepseek.com/quick_start/pricing/; prior-art compare.ts constants reviewed 2026-09-24 UTC",
+    "tier": "offpeak"
+  },
+  "output": "{\n  \"paper\": {\n    \"contribution\": \"An empirical study of 1,248 gh-aw Markdown files from 276 repositories that characterizes instruction structure, maintenance, and content, and evaluates LLM label assignment.\",\n    \"key_claims\": [\n      \"Instruction files are substantial, with a median of 556.5 words and code blocks in 62.1% of files (p.1).\",\n      \"Many workflows remain active: 78.2% of files with ≥120 days of activity still receive updates in month 4 (p.1).\",\n      \"Prompt-injection defense is explicitly addressed in only 9.4% of labeled workflows, though tasks, outputs, constraints, and process instructions each appear in over 93% (p.1).\"\n    ],\n    \"evidence\": [\n      {\n        \"page\": 1,\n        \"section\": \"Abstract\",\n        \"quote\": \"workflow instructions extend beyond short prompts, with a median of 556.5 words and code blocks in 62.1% of files.\"\n      },\n      {\n        \"page\": 1,\n        \"section\": \"Abstract\",\n        \"quote\": \"78.2% still receive updates in month 4, while size-normalized churn decreases after the first month.\"\n      },\n      {\n        \"page\": 1,\n        \"section\": \"Abstract\",\n        \"quote\": \"Tasks, outputs, constraints, and process instructions each appear in over 93% of labeled workflows, yet only 9.4% explicitly address prompt-injection defense.\"\n      }\n    ],\n    \"limitations\": [\n      \"The analyses are descriptive of the sampled corpus and do not establish causality (p.2, p.14).\",\n      \"RQ2 uses only 43 projects with sufficient activity, limiting generalizability (p.14).\",\n      \"FRE scores are descriptive formula outputs, not validated comprehension measures, due to code and syntax (p.14).\",\n      \"Model comparisons are configuration-specific and not statistical superiority across repeated runs (p.14).\"\n    ]\n  },\n  \"insights\": [\n    {\n      \"insight\": \"Agentic workflow authoring is prose- and code-heavy rather than prompt-light, so instruction artifacts can be long-lived specifications in repositories (p.1).\",\n      \"why_it_matters\": \"Longer, code-embedded instructions increase review and maintenance burden for recurring agent behavior, especially when copied across repositories (p.1, p.14).\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"median of 556.5 words and code blocks in 62.1% of files.\"\n        },\n        {\n          \"page\": 14,\n          \"section\": \"Discussion\",\n          \"quote\": \"Developers should ... keep the two consistent as the workflow evolves.\"\n        }\n      ],\n      \"confidence\": \"medium\",\n      \"novelty\": \"Not established by the supplied text; no direct novelty comparison is provided.\",\n      \"related_rmax_topics\": [\n        \"agent reliability\",\n        \"evaluation/assurance\",\n        \"long-running workflows\"\n      ],\n      \"possible_action\": \"Add instruction-quality and consistency checks to workflow review for copied or long-lived gh-aw files (p.14).\"\n    },\n    {\n      \"insight\": \"Workflows persist beyond initial adoption, implying maintenance processes matter for recurring agent operations (p.1).\",\n      \"why_it_matters\": \"If files remain active for months, outdated or unclear instructions may affect repeated runs and generate review work (p.1).\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"78.2% still receive updates in month 4.\"\n        },\n        {\n          \"page\": 2,\n          \"section\": \"Introduction\",\n          \"quote\": \"An unclear requirement or outdated assumption may therefore affect successive runs.\"\n        }\n      ],\n      \"confidence\": \"medium\",\n      \"novelty\": \"Not established by the supplied text; the paper presents this as an empirical characterization.\",\n      \"related_rmax_topics\": [\n        \"harness/runtime\",\n        \"long-running workflows\",\n        \"MCP/governance\"\n      ],\n      \"possible_action\": \"Track maintenance and churn for agent workflow files alongside repository activity (p.14).\"\n    },\n    {\n      \"insight\": \"Safety guidance is underrepresented relative to task and output instructions, despite recurring autonomous execution (p.1).\",\n      \"why_it_matters\": \"Low explicit prompt-injection coverage may leave agentic workflows without documented safeguards for resource budgets and evidence credibility (p.1).\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"only 9.4% explicitly address prompt-injection defense.\"\n        },\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"consider adding prompt-injection defenses, resource budgets, and evidencecredibility checks where applicable.\"\n        }\n      ],\n      \"confidence\": \"medium\",\n      \"novelty\": \"Not established by the supplied text; proposed as a practical consideration.\",\n      \"related_rmax_topics\": [\n        \"evaluation/assurance\",\n        \"MCP/governance\",\n        \"tool use\"\n      ],\n      \"possible_action\": \"Add prompt-injection defense, budget, and evidence-credibility checks to workflow templates where applicable (p.1).\"\n    }\n  ],\n  \"connections\": [\n    \"Shares concerns with agent reliability, harness/runtime, MCP/governance, tool use, and long-running workflows.\",\n    \"Empirical maintenance of agentic specifications complements evaluation/assurance interests.\",\n    \"Low explicit safety guidance connects governance and prompt-injection defense concerns.\"\n  ],\n  \"followups\": [\n    \"Measure whether instruction patterns and revisions affect task success, reliability, cost, and safety (p.16).\",\n    \"Compare icon-based and text-based agent-facing Markdown under controlled settings (p.14).\",\n    \"Ablate resources, worked examples, communication roles, output templates, and budget constraints (p.14).\"\n  ]\n}",
+  "provider_response_model_id": "deepseek-flash",
+  "artifact": "raw/responses/l3/selective/deepseek/l3-2609.27263-selective-deepseek-a1.json"
+}

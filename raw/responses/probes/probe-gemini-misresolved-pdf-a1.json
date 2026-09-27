@@ -1,0 +1,36 @@
+{
+  "call_id": "probe-gemini-misresolved-pdf",
+  "attempt": 1,
+  "arm_id": "capability-gemini-initial-selector-error",
+  "provider": "gemini",
+  "model_id_sent": "gemini-3.8-flash-lite-tts",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash-lite-tts:generateContent",
+  "call_start_utc": "2026-09-25 (time unavailable)",
+  "settings": {
+    "initial_requested_alias": "gemini-3.5-flash-lite",
+    "submitted_configuration": "inlineData application/pdf; 881 bytes; thinkingLevel=low"
+  },
+  "http_status": null,
+  "latency_ms": null,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": null,
+    "data_recovery": "unavailable"
+  },
+  "cost": {
+    "amount": 0.0,
+    "rates_used_usd_per_million": {
+      "input": 0.3,
+      "cached_input": 0.3,
+      "output": 2.5
+    },
+    "rate_source": "prior-art video-summarization summarize_video.py PRICING_PER_MILLION",
+    "tier": null,
+    "usage_based_charge_recorded": 0.0
+  },
+  "output": null,
+  "reconstruction_note": "The initial control flow sent the required PDF smoke request to the wrong TTS sibling; exact status/latency/response body were lost to filename collision.",
+  "used_as_benchmark_measurement": false
+}

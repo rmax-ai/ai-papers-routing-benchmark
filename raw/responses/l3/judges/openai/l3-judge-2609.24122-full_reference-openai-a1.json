@@ -1,0 +1,49 @@
+{
+  "call_id": "l3-judge-2609.24122-full_reference-openai",
+  "attempt": 1,
+  "arm_id": "l3-blind-judge-openai",
+  "provider": "openai",
+  "model_id_sent": "gpt-6-luna",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "call_start_utc": "2026-09-26T23:02:48Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_schema strict",
+    "max_completion_tokens": 1300,
+    "blind": true
+  },
+  "http_status": 200,
+  "latency_ms": 8815,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "completion_tokens_details",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 4980,
+    "output_tokens": 290,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": 0,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+      "cached_input": "usage.prompt_tokens_details.cached_tokens"
+    }
+  },
+  "cost": {
+    "amount": 0.000643,
+    "rates_used_usd_per_million": {
+      "input": 0.1,
+      "cached_input": 0.01,
+      "output": 0.5
+    },
+    "rate_source": "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC",
+    "tier": null
+  },
+  "output": "{\"scores\":[{\"blind_label\":\"A\",\"faithfulness\":3,\"evidence_support\":2,\"insight_depth\":3,\"novelty_identification\":3,\"systems_relevance\":4,\"actionability\":3,\"compression_information_density\":3,\"uncertainty_calibration\":2,\"durable_memory_precision_proxy\":3,\"brief_reason\":\"Useful, agenda-relevant synthesis of gap-probing audits, ensemble-missed information, and cost/judge dependence. Core claims align with excerpts, but several claims have no evidence references and the empty evidence section weakens traceability; the cost limitation is supported, while some phrasing extrapolates beyond the cited snippets. Calibration is unobservable per judge note.\"},{\"blind_label\":\"B\",\"faithfulness\":3,\"evidence_support\":3,\"insight_depth\":2,\"novelty_identification\":2,\"systems_relevance\":2,\"actionability\":2,\"compression_information_density\":3,\"uncertainty_calibration\":2,\"durable_memory_precision_proxy\":2,\"brief_reason\":\"Mostly faithful and better structured with explicit evidence links, including the mechanism and human validation. However, several details are asserted without corresponding excerpts, the human-validation claim overstates what the 78.9% result establishes, and the insights are largely summary/recommendations rather than systems synthesis. Generic topic tags dilute agenda fit; calibration is unobservable per judge note.\"}]}",
+  "provider_response_model_id": "gpt-6-luna",
+  "artifact": "raw/responses/l3/judges/openai/l3-judge-2609.24122-full_reference-openai-a1.json"
+}

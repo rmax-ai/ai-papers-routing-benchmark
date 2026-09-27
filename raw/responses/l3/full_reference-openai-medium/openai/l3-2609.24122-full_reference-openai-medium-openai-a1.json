@@ -1,0 +1,49 @@
+{
+  "call_id": "l3-2609.24122-full_reference-openai-medium-openai",
+  "attempt": 1,
+  "arm_id": "l3-full_reference-openai-medium-openai",
+  "provider": "openai",
+  "model_id_sent": "gpt-6-luna",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "call_start_utc": "2026-09-26T22:53:48Z",
+  "settings": {
+    "reasoning_effort": "medium",
+    "structured_output": "json_schema strict",
+    "max_completion_tokens": 3600,
+    "prompt_revision": "concise-v4"
+  },
+  "http_status": 200,
+  "latency_ms": 21032,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "completion_tokens_details",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 40236,
+    "output_tokens": 2472,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": 934,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+      "cached_input": "usage.prompt_tokens_details.cached_tokens"
+    }
+  },
+  "cost": {
+    "amount": 0.0052596,
+    "rates_used_usd_per_million": {
+      "input": 0.1,
+      "cached_input": 0.01,
+      "output": 0.5
+    },
+    "rate_source": "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"paper\": {\n    \"contribution\": \"Re:CAP proposes a topic-based, iterative audit layer for discovering retrieval gaps without per-query gold labels (p.2, “a periodic sampling auditor rather than a per-query monitor”).\",\n    \"key_claims\": [\n      {\n        \"claim\": \"Measured on public benchmarks, Re:CAP recovers gold documents missed by flat retrieval, with results varying by dataset and retrieval regime.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 5,\n            \"section\": \"4.1 Re:CAP vs. flat retrieval\",\n            \"quote\": \"48% of its recovered gold is absent from flat BM25 top-500\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"The reported MuSiQue recall estimate was reproducible across three runs, while gap count was noisier.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 7,\n            \"section\": \"Table 5\",\n            \"quote\": \"Re:CAP recall 0.47%; gap count |G| 5.04%\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"Human annotators judged many recovered documents to add information missing from baseline answers, on benchmark and production samples.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 7,\n            \"section\": \"5 Human evaluation\",\n            \"quote\": \"78.9% ... add information beyond the D0-only baseline answer\"\n          },\n          {\n            \"page\": 16,\n            \"section\": \"F Human Evaluation on the Production Cohorts\",\n            \"quote\": \"73.9% overall\"\n          }\n        ]\n      }\n    ],\n    \"evidence\": [\n      {\n        \"claim\": \"The audit is intended for periodic sampled runs, not inline monitoring, and incurs substantial LLM-call volume.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 2,\n            \"section\": \"Introduction\",\n            \"quote\": \"At 250–500 LLM calls per audited query\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"On the bounded-evidence datasets, most missing-gold losses occurred before documents reached the judge.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 23,\n            \"section\": \"O Failure-Mode Analysis\",\n            \"quote\": \"95.3% no-surface\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"The paper recommends preserving retrieval access controls and notes prompt-injection exposure in document-processing steps.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 8,\n            \"section\": \"Ethical Considerations\",\n            \"quote\": \"those controls must be honoured during gap probing\"\n          }\n        ]\n      }\n    ],\n    \"limitations\": [\n      \"The audit is costly at default settings and may not suit tight monitoring budgets (p.8, “250–500 LLM calls per query”).\",\n      \"The LLM judge and generated probes can miss gaps; the paper reports that most bounded-evidence losses occur before judging (p.23, “never reached the candidate pool”).\",\n      \"Re:CAP measures retrieval gaps only where the corpus contains relevant material (p.8, “Re:CAP measures retrieval gaps, not corpus gaps”).\",\n      \"No MCP interface or MCP-specific governance is evaluated in the supplied paper; access-control relevance is indirect (p.8, “row-level access controls”).\"\n    ]\n  },\n  \"insights\": [\n    {\n      \"insight\": \"For agent reliability, answer faithfulness alone can leave retrieval omissions unmeasured; sampled gap audits offer a separate assurance signal.\",\n      \"why_it_matters\": \"A fluent answer can be supported by its retrieved context yet remain incomplete, so reliability evaluation should inspect what retrieval missed.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"1 Introduction\",\n          \"quote\": \"these metrics do not register the omission\"\n        },\n        {\n          \"page\": 2,\n          \"section\": \"Introduction\",\n          \"quote\": \"gap count, gap rate\"\n        }\n      ],\n      \"confidence\": 0.9,\n      \"novelty\": \"The paper presents this as retrieval-coverage auditing; this artifact makes no independent novelty assessment.\",\n      \"related_rmax_topics\": [\n        \"agent reliability\",\n        \"evaluation/assurance\"\n      ],\n      \"possible_action\": \"Add a sampled retrieval-coverage audit alongside answer-side metrics; do not treat its gap signals as calibrated production recall.\"\n    },\n    {\n      \"insight\": \"Treat Re:CAP as an offline evaluation harness with an explicit runtime and reproducibility budget, not as an inline agent tool.\",\n      \"why_it_matters\": \"Its measured stability can support periodic comparisons, but its call volume and per-query cost constrain audit frequency.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 2,\n          \"section\": \"Introduction\",\n          \"quote\": \"not inline on live traffic\"\n        },\n        {\n          \"page\": 7,\n          \"section\": \"Table 5\",\n          \"quote\": \"Re:CAP recall ... CV 0.47%\"\n        }\n      ],\n      \"confidence\": 0.92,\n      \"novelty\": \"Operational framing derived directly from the paper’s stated deployment model and measurements.\",\n      \"related_rmax_topics\": [\n        \"harness/runtime\",\n        \"long-running workflows\"\n      ],\n      \"possible_action\": \"Run on a fixed representative query sample before index, embedder, or ranker promotions, and track cost and run-to-run noise.\"\n    },\n    {\n      \"insight\": \"Tool and retrieval governance must carry user authorization into audit probes, while treating retrieved text as untrusted model input.\",\n      \"why_it_matters\": \"An audit that broadens retrieval can expose unauthorized documents or encounter prompt injection; the paper flags both risks but does not assess MCP.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 8,\n          \"section\": \"Ethical Considerations\",\n          \"quote\": \"passes the original retrieval ACL context through the loop\"\n        },\n        {\n          \"page\": 8,\n          \"section\": \"Ethical Considerations\",\n          \"quote\": \"exposed to prompt-injection attempts\"\n        }\n      ],\n      \"confidence\": 0.84,\n      \"novelty\": \"Governance implication drawn from the paper’s stated safeguards and risk disclosure, not an MCP-specific result.\",\n      \"related_rmax_topics\": [\n        \"MCP/governance\",\n        \"tool use\"\n      ],\n      \"possible_action\": \"Require ACL propagation and adversarial-document testing for any retrieval-audit integration; validate MCP-specific controls separately.\"\n    }\n  ],\n  \"connections\": [],\n  \"followups\": {\n    \"experiments\": [\n      \"Measure audit signal drift across repeated production samples and after retriever changes, separating retrieval changes from model-version changes.\"\n    ],\n    \"implementation_ideas\": [\n      \"Keep audits out-of-band, preserve the host pipeline’s access-control context, and record per-run cost and model versions.\"\n    ],\n    \"research_questions\": [\n      \"How well do Re:CAP gap signals transfer to agent tool chains or MCP-mediated retrieval, which the supplied paper does not evaluate?\"\n    ]\n  }\n}",
+  "provider_response_model_id": "gpt-6-luna",
+  "artifact": "raw/responses/l3/full_reference-openai-medium/openai/l3-2609.24122-full_reference-openai-medium-openai-a1.json"
+}

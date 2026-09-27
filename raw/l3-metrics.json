@@ -1,0 +1,3874 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "sample_n": 8,
+  "routing_policy": null,
+  "aggregate": {
+    "full_reference/gemini": {
+      "path": "full_reference",
+      "model": "gemini",
+      "papers": 8,
+      "responses": 7,
+      "attempts": 8,
+      "input_tokens": 251138,
+      "output_tokens": 11468,
+      "cost_usd": 0.1040114,
+      "latency_ms": 230687,
+      "failures": [
+        {
+          "paper_id": "2609.27263",
+          "path": "full_reference",
+          "model": "gemini",
+          "http_status": 200,
+          "provider_error": null,
+          "parse_error": "JSONDecodeError: Expecting property name enclosed in double quotes: line 77 column 7 (char 3947)",
+          "artifacts": [
+            "raw/responses/l3/full_reference/gemini/l3-2609.27263-full_reference-gemini-a1.json"
+          ]
+        }
+      ],
+      "http_200_attempts": 8,
+      "model_emitted_canonical_rate": 0.0,
+      "normalized_schema_pass_rate": 0.14285714285714285,
+      "page_valid_output_rate": 1.0,
+      "mean_quote_containment_cited_page": 0.2619047619047619,
+      "mean_quote_containment_any_page": 0.30952380952380953,
+      "mean_confidence": 0.6710526315789473,
+      "mean_insights_per_output": 2.7142857142857144
+    },
+    "full_reference/deepseek": {
+      "path": "full_reference",
+      "model": "deepseek",
+      "papers": 8,
+      "responses": 8,
+      "attempts": 11,
+      "input_tokens": 281113,
+      "output_tokens": 18790,
+      "cost_usd": 0.046046262000000004,
+      "latency_ms": 84356,
+      "failures": [],
+      "http_200_attempts": 10,
+      "model_emitted_canonical_rate": 0.0,
+      "normalized_schema_pass_rate": 0.25,
+      "page_valid_output_rate": 1.0,
+      "mean_quote_containment_cited_page": 0.74375,
+      "mean_quote_containment_any_page": 0.8243055555555555,
+      "mean_confidence": 0.53125,
+      "mean_insights_per_output": 3
+    },
+    "full_reference/openai": {
+      "path": "full_reference",
+      "model": "openai",
+      "papers": 8,
+      "responses": 8,
+      "attempts": 9,
+      "input_tokens": 248085,
+      "output_tokens": 16748,
+      "cost_usd": 0.0331825,
+      "latency_ms": 179360,
+      "failures": [],
+      "http_200_attempts": 9,
+      "model_emitted_canonical_rate": 1.0,
+      "normalized_schema_pass_rate": 1.0,
+      "page_valid_output_rate": 1.0,
+      "mean_quote_containment_cited_page": 0.7761363636363636,
+      "mean_quote_containment_any_page": 0.828219696969697,
+      "mean_confidence": 0.875,
+      "mean_insights_per_output": 3
+    },
+    "selective/deepseek": {
+      "path": "selective",
+      "model": "deepseek",
+      "papers": 8,
+      "responses": 8,
+      "attempts": 9,
+      "input_tokens": 62484,
+      "output_tokens": 10854,
+      "cost_usd": 0.012366407999999999,
+      "latency_ms": 47719,
+      "failures": [],
+      "http_200_attempts": 8,
+      "model_emitted_canonical_rate": 0.0,
+      "normalized_schema_pass_rate": 0.125,
+      "page_valid_output_rate": 1.0,
+      "mean_quote_containment_cited_page": 0.700189393939394,
+      "mean_quote_containment_any_page": 0.700189393939394,
+      "mean_confidence": 0.6041666666666666,
+      "mean_insights_per_output": 3
+    },
+    "selective/gemini": {
+      "path": "selective",
+      "model": "gemini",
+      "papers": 8,
+      "responses": 8,
+      "attempts": 9,
+      "input_tokens": 78338,
+      "output_tokens": 10740,
+      "cost_usd": 0.0503514,
+      "latency_ms": 251111,
+      "failures": [],
+      "http_200_attempts": 9,
+      "model_emitted_canonical_rate": 0.0,
+      "normalized_schema_pass_rate": 0.125,
+      "page_valid_output_rate": 1.0,
+      "mean_quote_containment_cited_page": 0.32529761904761906,
+      "mean_quote_containment_any_page": 0.3431547619047619,
+      "mean_confidence": 0.6527777777777778,
+      "mean_insights_per_output": 2.25
+    },
+    "selective/openai": {
+      "path": "selective",
+      "model": "openai",
+      "papers": 8,
+      "responses": 8,
+      "attempts": 8,
+      "input_tokens": 62865,
+      "output_tokens": 11052,
+      "cost_usd": 0.0118125,
+      "latency_ms": 137367,
+      "failures": [],
+      "http_200_attempts": 8,
+      "model_emitted_canonical_rate": 1.0,
+      "normalized_schema_pass_rate": 1.0,
+      "page_valid_output_rate": 1.0,
+      "mean_quote_containment_cited_page": 0.850534188034188,
+      "mean_quote_containment_any_page": 0.850534188034188,
+      "mean_confidence": 0.817391304347826,
+      "mean_insights_per_output": 2.875
+    }
+  },
+  "blind_judge_scores_0_to_4": {
+    "full_reference": {
+      "gemini": {
+        "faithfulness": {
+          "mean_0_to_4": 2.857142857142857,
+          "n": 7
+        },
+        "evidence_support": {
+          "mean_0_to_4": 2.7142857142857144,
+          "n": 7
+        },
+        "insight_depth": {
+          "mean_0_to_4": 2.142857142857143,
+          "n": 7
+        },
+        "novelty_identification": {
+          "mean_0_to_4": 1.7142857142857142,
+          "n": 7
+        },
+        "systems_relevance": {
+          "mean_0_to_4": 2.857142857142857,
+          "n": 7
+        },
+        "actionability": {
+          "mean_0_to_4": 2.7142857142857144,
+          "n": 7
+        },
+        "compression_information_density": {
+          "mean_0_to_4": 3,
+          "n": 7
+        },
+        "uncertainty_calibration": {
+          "mean_0_to_4": 2,
+          "n": 7
+        },
+        "durable_memory_precision_proxy": {
+          "mean_0_to_4": 2.4285714285714284,
+          "n": 7
+        }
+      },
+      "deepseek": {
+        "faithfulness": {
+          "mean_0_to_4": 3.3636363636363638,
+          "n": 11
+        },
+        "evidence_support": {
+          "mean_0_to_4": 3,
+          "n": 11
+        },
+        "insight_depth": {
+          "mean_0_to_4": 3.090909090909091,
+          "n": 11
+        },
+        "novelty_identification": {
+          "mean_0_to_4": 2.909090909090909,
+          "n": 11
+        },
+        "systems_relevance": {
+          "mean_0_to_4": 3.9,
+          "n": 10
+        },
+        "actionability": {
+          "mean_0_to_4": 3.7,
+          "n": 10
+        },
+        "compression_information_density": {
+          "mean_0_to_4": 3.272727272727273,
+          "n": 11
+        },
+        "uncertainty_calibration": {
+          "mean_0_to_4": 2,
+          "n": 11
+        },
+        "durable_memory_precision_proxy": {
+          "mean_0_to_4": 3.1818181818181817,
+          "n": 11
+        },
+        "systems_relevance_and_actionability": {
+          "mean_0_to_4": 3,
+          "n": 1
+        }
+      },
+      "openai": {
+        "faithfulness": {
+          "mean_0_to_4": 4,
+          "n": 4
+        },
+        "evidence_support": {
+          "mean_0_to_4": 4,
+          "n": 4
+        },
+        "insight_depth": {
+          "mean_0_to_4": 3.75,
+          "n": 4
+        },
+        "novelty_identification": {
+          "mean_0_to_4": 2.75,
+          "n": 4
+        },
+        "systems_relevance": {
+          "mean_0_to_4": 4,
+          "n": 3
+        },
+        "actionability": {
+          "mean_0_to_4": 4,
+          "n": 3
+        },
+        "compression_information_density": {
+          "mean_0_to_4": 3.5,
+          "n": 4
+        },
+        "uncertainty_calibration": {
+          "mean_0_to_4": 2,
+          "n": 4
+        },
+        "durable_memory_precision_proxy": {
+          "mean_0_to_4": 3.75,
+          "n": 4
+        },
+        "systems_relevance_and_actionability": {
+          "mean_0_to_4": 4,
+          "n": 1
+        }
+      },
+      "openai_none": {
+        "faithfulness": {
+          "mean_0_to_4": 4,
+          "n": 4
+        },
+        "evidence_support": {
+          "mean_0_to_4": 4,
+          "n": 4
+        },
+        "insight_depth": {
+          "mean_0_to_4": 3,
+          "n": 4
+        },
+        "novelty_identification": {
+          "mean_0_to_4": 2.75,
+          "n": 4
+        },
+        "systems_relevance": {
+          "mean_0_to_4": 4,
+          "n": 2
+        },
+        "actionability": {
+          "mean_0_to_4": 4,
+          "n": 2
+        },
+        "compression_information_density": {
+          "mean_0_to_4": 3,
+          "n": 4
+        },
+        "uncertainty_calibration": {
+          "mean_0_to_4": 2,
+          "n": 4
+        },
+        "durable_memory_precision_proxy": {
+          "mean_0_to_4": 3,
+          "n": 4
+        },
+        "systems_relevance_and_actionability": {
+          "mean_0_to_4": 3.5,
+          "n": 2
+        }
+      },
+      "openai_medium": {
+        "faithfulness": {
+          "mean_0_to_4": 4,
+          "n": 3
+        },
+        "evidence_support": {
+          "mean_0_to_4": 4,
+          "n": 3
+        },
+        "insight_depth": {
+          "mean_0_to_4": 3,
+          "n": 3
+        },
+        "novelty_identification": {
+          "mean_0_to_4": 2.6666666666666665,
+          "n": 3
+        },
+        "systems_relevance": {
+          "mean_0_to_4": 4,
+          "n": 1
+        },
+        "actionability": {
+          "mean_0_to_4": 4,
+          "n": 1
+        },
+        "compression_information_density": {
+          "mean_0_to_4": 3,
+          "n": 3
+        },
+        "uncertainty_calibration": {
+          "mean_0_to_4": 2,
+          "n": 3
+        },
+        "durable_memory_precision_proxy": {
+          "mean_0_to_4": 3,
+          "n": 3
+        },
+        "systems_relevance_and_actionability": {
+          "mean_0_to_4": 3.5,
+          "n": 2
+        }
+      }
+    },
+    "selective": {
+      "gemini": {
+        "faithfulness": {
+          "mean_0_to_4": 3.125,
+          "n": 8
+        },
+        "evidence_support": {
+          "mean_0_to_4": 2.875,
+          "n": 8
+        },
+        "insight_depth": {
+          "mean_0_to_4": 2,
+          "n": 8
+        },
+        "novelty_identification": {
+          "mean_0_to_4": 2,
+          "n": 8
+        },
+        "systems_relevance": {
+          "mean_0_to_4": 3.125,
+          "n": 8
+        },
+        "actionability": {
+          "mean_0_to_4": 2.625,
+          "n": 8
+        },
+        "compression_information_density": {
+          "mean_0_to_4": 3.125,
+          "n": 8
+        },
+        "uncertainty_calibration": {
+          "mean_0_to_4": 2,
+          "n": 8
+        },
+        "durable_memory_precision_proxy": {
+          "mean_0_to_4": 2.5,
+          "n": 8
+        }
+      },
+      "deepseek": {
+        "faithfulness": {
+          "mean_0_to_4": 3.5384615384615383,
+          "n": 13
+        },
+        "evidence_support": {
+          "mean_0_to_4": 2.769230769230769,
+          "n": 13
+        },
+        "insight_depth": {
+          "mean_0_to_4": 2.8461538461538463,
+          "n": 13
+        },
+        "novelty_identification": {
+          "mean_0_to_4": 2.8461538461538463,
+          "n": 13
+        },
+        "systems_relevance": {
+          "mean_0_to_4": 3.7,
+          "n": 10
+        },
+        "actionability": {
+          "mean_0_to_4": 3.4,
+          "n": 10
+        },
+        "compression_information_density": {
+          "mean_0_to_4": 3.230769230769231,
+          "n": 13
+        },
+        "uncertainty_calibration": {
+          "mean_0_to_4": 2,
+          "n": 13
+        },
+        "durable_memory_precision_proxy": {
+          "mean_0_to_4": 2.923076923076923,
+          "n": 13
+        },
+        "systems_relevance_and_actionability": {
+          "mean_0_to_4": 3,
+          "n": 3
+        }
+      },
+      "openai": {
+        "faithfulness": {
+          "mean_0_to_4": 4,
+          "n": 5
+        },
+        "evidence_support": {
+          "mean_0_to_4": 4,
+          "n": 5
+        },
+        "insight_depth": {
+          "mean_0_to_4": 3.2,
+          "n": 5
+        },
+        "novelty_identification": {
+          "mean_0_to_4": 3,
+          "n": 5
+        },
+        "compression_information_density": {
+          "mean_0_to_4": 3.2,
+          "n": 5
+        },
+        "systems_relevance_and_actionability": {
+          "mean_0_to_4": 3.6666666666666665,
+          "n": 3
+        },
+        "uncertainty_calibration": {
+          "mean_0_to_4": 2,
+          "n": 5
+        },
+        "durable_memory_precision_proxy": {
+          "mean_0_to_4": 3.2,
+          "n": 5
+        },
+        "systems_relevance": {
+          "mean_0_to_4": 4,
+          "n": 2
+        },
+        "actionability": {
+          "mean_0_to_4": 4,
+          "n": 2
+        }
+      }
+    }
+  },
+  "sensitivity": {
+    "2609.29808": {
+      "primary_checks": {
+        "schema_shape_pass": true,
+        "validation_errors": [],
+        "insight_count": 3,
+        "evidence_ref_count": 10,
+        "evidence_refs": [
+          {
+            "group": "key_claims",
+            "item": 0,
+            "ref": 0,
+            "page": 2,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "key_claims",
+            "item": 1,
+            "ref": 0,
+            "page": 15,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": false,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "key_claims",
+            "item": 2,
+            "ref": 0,
+            "page": 16,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": false,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "evidence",
+            "item": 0,
+            "ref": 0,
+            "page": 15,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "evidence",
+            "item": 1,
+            "ref": 0,
+            "page": 16,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "evidence",
+            "item": 2,
+            "ref": 0,
+            "page": 9,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 0,
+            "ref": 0,
+            "page": 9,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 0,
+            "ref": 1,
+            "page": 11,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 1,
+            "ref": 0,
+            "page": 16,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": false,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "insights",
+            "item": 2,
+            "ref": 0,
+            "page": 9,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          }
+        ],
+        "all_cited_pages_valid": true,
+        "quote_containment_any_page_rate": 0.7,
+        "quote_containment_cited_page_rate": 0.7,
+        "model_emitted_canonical_shape": true
+      },
+      "medium_checks": {
+        "schema_shape_pass": true,
+        "validation_errors": [],
+        "insight_count": 3,
+        "evidence_ref_count": 11,
+        "evidence_refs": [
+          {
+            "group": "key_claims",
+            "item": 0,
+            "ref": 0,
+            "page": 7,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": false,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "key_claims",
+            "item": 1,
+            "ref": 0,
+            "page": 15,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": false,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "key_claims",
+            "item": 1,
+            "ref": 1,
+            "page": 15,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": false,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "key_claims",
+            "item": 2,
+            "ref": 0,
+            "page": 16,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": false,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "evidence",
+            "item": 0,
+            "ref": 0,
+            "page": 16,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "evidence",
+            "item": 1,
+            "ref": 0,
+            "page": 16,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "evidence",
+            "item": 2,
+            "ref": 0,
+            "page": 9,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 0,
+            "ref": 0,
+            "page": 7,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 1,
+            "ref": 0,
+            "page": 16,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": false,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "insights",
+            "item": 1,
+            "ref": 1,
+            "page": 9,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": false,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "insights",
+            "item": 2,
+            "ref": 0,
+            "page": 12,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": false
+          }
+        ],
+        "all_cited_pages_valid": true,
+        "quote_containment_any_page_rate": 0.45454545454545453,
+        "quote_containment_cited_page_rate": 0.36363636363636365,
+        "model_emitted_canonical_shape": true
+      },
+      "primary_confidences": [
+        0.78,
+        0.66,
+        0.9
+      ],
+      "medium_confidences": [
+        0.66,
+        0.78,
+        0.63
+      ],
+      "primary_insights": 3,
+      "medium_insights": 3,
+      "blind_gemini_scores": {
+        "judge_provider": "gemini",
+        "judge_model_id": "gemini-3.5-flash-lite",
+        "call_artifacts": [
+          "raw/responses/l3/judges/gemini/l3-judge-2609.29808-full_reference-sensitivity-gemini-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 25633,
+        "output": {
+          "blind_label": "A",
+          "faithfulness": 4,
+          "evidence_support": 4,
+          "depth": 3,
+          "novelty": 3,
+          "systems_relevance": 4,
+          "actionability": 4,
+          "compression": 3,
+          "uncertainty_calibration": 2,
+          "durable_memory_precision": 3,
+          "justification": "Candidate A provides a comprehensive, well-structured analysis of the dual-plane containment architecture. It accurately cites specific page numbers and quotes regarding benchmarks, threat models, and empirical findings. The evaluation matches the agenda topics well (agent reliability, harness/runtime, tool use), and the scoring follows the instructions faithfully, including marking uncertainty calibration as 2 due to unobservable provenance."
+        },
+        "parse_error": null,
+        "blind_to_reasoning_setting": true,
+        "label_to_model_internal": {
+          "A": "openai_none",
+          "B": "openai_medium"
+        },
+        "same_vendor_candidate_models": []
+      }
+    },
+    "2609.29095": {
+      "primary_checks": {
+        "schema_shape_pass": true,
+        "validation_errors": [],
+        "insight_count": 3,
+        "evidence_ref_count": 15,
+        "evidence_refs": [
+          {
+            "group": "key_claims",
+            "item": 0,
+            "ref": 0,
+            "page": 10,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "key_claims",
+            "item": 1,
+            "ref": 0,
+            "page": 10,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "key_claims",
+            "item": 1,
+            "ref": 1,
+            "page": 4,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "key_claims",
+            "item": 2,
+            "ref": 0,
+            "page": 14,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "evidence",
+            "item": 0,
+            "ref": 0,
+            "page": 2,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "evidence",
+            "item": 0,
+            "ref": 1,
+            "page": 1,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "evidence",
+            "item": 1,
+            "ref": 0,
+            "page": 12,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "evidence",
+            "item": 1,
+            "ref": 1,
+            "page": 12,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "evidence",
+            "item": 2,
+            "ref": 0,
+            "page": 12,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 0,
+            "ref": 0,
+            "page": 10,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 0,
+            "ref": 1,
+            "page": 10,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 1,
+            "ref": 0,
+            "page": 12,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "insights",
+            "item": 1,
+            "ref": 1,
+            "page": 12,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": false,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "insights",
+            "item": 2,
+            "ref": 0,
+            "page": 12,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 2,
+            "ref": 1,
+            "page": 6,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          }
+        ],
+        "all_cited_pages_valid": true,
+        "quote_containment_any_page_rate": 0.9333333333333333,
+        "quote_containment_cited_page_rate": 0.6,
+        "model_emitted_canonical_shape": true
+      },
+      "medium_checks": {
+        "schema_shape_pass": true,
+        "validation_errors": [],
+        "insight_count": 3,
+        "evidence_ref_count": 14,
+        "evidence_refs": [
+          {
+            "group": "key_claims",
+            "item": 0,
+            "ref": 0,
+            "page": 10,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "key_claims",
+            "item": 0,
+            "ref": 1,
+            "page": 10,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "key_claims",
+            "item": 1,
+            "ref": 0,
+            "page": 11,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "key_claims",
+            "item": 1,
+            "ref": 1,
+            "page": 12,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": false,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "key_claims",
+            "item": 2,
+            "ref": 0,
+            "page": 14,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": false,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "evidence",
+            "item": 0,
+            "ref": 0,
+            "page": 6,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "evidence",
+            "item": 1,
+            "ref": 0,
+            "page": 12,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "evidence",
+            "item": 2,
+            "ref": 0,
+            "page": 15,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 0,
+            "ref": 0,
+            "page": 4,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "insights",
+            "item": 0,
+            "ref": 1,
+            "page": 10,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 1,
+            "ref": 0,
+            "page": 12,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 1,
+            "ref": 1,
+            "page": 14,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 2,
+            "ref": 0,
+            "page": 6,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 2,
+            "ref": 1,
+            "page": 12,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          }
+        ],
+        "all_cited_pages_valid": true,
+        "quote_containment_any_page_rate": 0.8571428571428571,
+        "quote_containment_cited_page_rate": 0.7857142857142857,
+        "model_emitted_canonical_shape": true
+      },
+      "primary_confidences": [
+        0.94,
+        0.91,
+        0.93
+      ],
+      "medium_confidences": [
+        0.96,
+        0.94,
+        0.94
+      ],
+      "primary_insights": 3,
+      "medium_insights": 3,
+      "blind_gemini_scores": {
+        "judge_provider": "gemini",
+        "judge_model_id": "gemini-3.5-flash-lite",
+        "call_artifacts": [
+          "raw/responses/l3/judges/gemini/l3-judge-2609.29095-full_reference-sensitivity-gemini-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 25712,
+        "output": {
+          "evaluations": [
+            {
+              "blind_label": "A",
+              "faithfulness": 4,
+              "evidence_support": 4,
+              "depth": 3,
+              "novelty": 2,
+              "systems_relevance": 4,
+              "actionability": 4,
+              "compression": 3,
+              "uncertainty_calibration": 2,
+              "durable_memory_precision": 3
+            },
+            {
+              "blind_label": "B",
+              "faithfulness": 4,
+              "evidence_support": 4,
+              "depth": 3,
+              "novelty": 2,
+              "systems_relevance": 4,
+              "actionability": 4,
+              "compression": 3,
+              "uncertainty_calibration": 2,
+              "durable_memory_precision": 3
+            }
+          ]
+        },
+        "parse_error": null,
+        "blind_to_reasoning_setting": true,
+        "label_to_model_internal": {
+          "A": "openai_none",
+          "B": "openai_medium"
+        },
+        "same_vendor_candidate_models": []
+      }
+    },
+    "2609.28614": {
+      "primary_checks": {
+        "schema_shape_pass": true,
+        "validation_errors": [],
+        "insight_count": 3,
+        "evidence_ref_count": 14,
+        "evidence_refs": [
+          {
+            "group": "key_claims",
+            "item": 0,
+            "ref": 0,
+            "page": 6,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "key_claims",
+            "item": 1,
+            "ref": 0,
+            "page": 7,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "key_claims",
+            "item": 1,
+            "ref": 1,
+            "page": 7,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "key_claims",
+            "item": 2,
+            "ref": 0,
+            "page": 10,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "key_claims",
+            "item": 2,
+            "ref": 1,
+            "page": 11,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "evidence",
+            "item": 0,
+            "ref": 0,
+            "page": 4,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "evidence",
+            "item": 1,
+            "ref": 0,
+            "page": 26,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "evidence",
+            "item": 2,
+            "ref": 0,
+            "page": 15,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 0,
+            "ref": 0,
+            "page": 14,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 0,
+            "ref": 1,
+            "page": 15,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 1,
+            "ref": 0,
+            "page": 10,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 1,
+            "ref": 1,
+            "page": 11,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 2,
+            "ref": 0,
+            "page": 15,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 2,
+            "ref": 1,
+            "page": 13,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          }
+        ],
+        "all_cited_pages_valid": true,
+        "quote_containment_any_page_rate": 1.0,
+        "quote_containment_cited_page_rate": 1.0,
+        "model_emitted_canonical_shape": true
+      },
+      "medium_checks": {
+        "schema_shape_pass": true,
+        "validation_errors": [],
+        "insight_count": 3,
+        "evidence_ref_count": 12,
+        "evidence_refs": [
+          {
+            "group": "key_claims",
+            "item": 0,
+            "ref": 0,
+            "page": 6,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "key_claims",
+            "item": 1,
+            "ref": 0,
+            "page": 7,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "key_claims",
+            "item": 2,
+            "ref": 0,
+            "page": 10,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "evidence",
+            "item": 0,
+            "ref": 0,
+            "page": 5,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "evidence",
+            "item": 1,
+            "ref": 0,
+            "page": 6,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "evidence",
+            "item": 2,
+            "ref": 0,
+            "page": 16,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 0,
+            "ref": 0,
+            "page": 6,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 0,
+            "ref": 1,
+            "page": 6,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 1,
+            "ref": 0,
+            "page": 7,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": false,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "insights",
+            "item": 1,
+            "ref": 1,
+            "page": 15,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "insights",
+            "item": 2,
+            "ref": 0,
+            "page": 10,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 2,
+            "ref": 1,
+            "page": 11,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": false
+          }
+        ],
+        "all_cited_pages_valid": true,
+        "quote_containment_any_page_rate": 0.9166666666666666,
+        "quote_containment_cited_page_rate": 0.75,
+        "model_emitted_canonical_shape": true
+      },
+      "primary_confidences": [
+        0.94,
+        0.88,
+        0.82
+      ],
+      "medium_confidences": [
+        0.88,
+        0.86,
+        0.83
+      ],
+      "primary_insights": 3,
+      "medium_insights": 3,
+      "blind_gemini_scores": {
+        "judge_provider": "gemini",
+        "judge_model_id": "gemini-3.5-flash-lite",
+        "call_artifacts": [
+          "raw/responses/l3/judges/gemini/l3-judge-2609.28614-full_reference-sensitivity-gemini-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 25930,
+        "output": {
+          "score_candidate_a": {
+            "faithfulness": 4,
+            "evidence_support": 4,
+            "depth": 3,
+            "novelty": 3,
+            "systems_relevance_and_actionability": 3,
+            "compression": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision": 3
+          },
+          "score_candidate_b": {
+            "faithfulness": 4,
+            "evidence_support": 4,
+            "depth": 3,
+            "novelty": 3,
+            "systems_relevance_and_actionability": 3,
+            "compression": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision": 3
+          },
+          "comparison_summary": "Both candidates extract accurate claims, evidence, and limitations from the source paper regarding autonomous research agent reward hacking, oversight evasion, and feedback loops. Candidate A's insights are slightly more structured and actionable for systems architecture and assurance design, while both accurately cite page numbers and quotes."
+        },
+        "parse_error": null,
+        "blind_to_reasoning_setting": true,
+        "label_to_model_internal": {
+          "A": "openai_none",
+          "B": "openai_medium"
+        },
+        "same_vendor_candidate_models": []
+      }
+    },
+    "2609.24122": {
+      "primary_checks": {
+        "schema_shape_pass": true,
+        "validation_errors": [],
+        "insight_count": 3,
+        "evidence_ref_count": 10,
+        "evidence_refs": [
+          {
+            "group": "key_claims",
+            "item": 0,
+            "ref": 0,
+            "page": 5,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": false,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "key_claims",
+            "item": 1,
+            "ref": 0,
+            "page": 5,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": false,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "key_claims",
+            "item": 2,
+            "ref": 0,
+            "page": 7,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "evidence",
+            "item": 0,
+            "ref": 0,
+            "page": 2,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": false,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "evidence",
+            "item": 1,
+            "ref": 0,
+            "page": 7,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": false,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "evidence",
+            "item": 2,
+            "ref": 0,
+            "page": 16,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 0,
+            "ref": 0,
+            "page": 1,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 1,
+            "ref": 0,
+            "page": 16,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 2,
+            "ref": 0,
+            "page": 23,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 2,
+            "ref": 1,
+            "page": 23,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          }
+        ],
+        "all_cited_pages_valid": true,
+        "quote_containment_any_page_rate": 0.6,
+        "quote_containment_cited_page_rate": 0.6,
+        "model_emitted_canonical_shape": true
+      },
+      "medium_checks": {
+        "schema_shape_pass": true,
+        "validation_errors": [],
+        "insight_count": 3,
+        "evidence_ref_count": 13,
+        "evidence_refs": [
+          {
+            "group": "key_claims",
+            "item": 0,
+            "ref": 0,
+            "page": 5,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "key_claims",
+            "item": 1,
+            "ref": 0,
+            "page": 7,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": false,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "key_claims",
+            "item": 2,
+            "ref": 0,
+            "page": 7,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": false,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "key_claims",
+            "item": 2,
+            "ref": 1,
+            "page": 16,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "evidence",
+            "item": 0,
+            "ref": 0,
+            "page": 2,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "evidence",
+            "item": 1,
+            "ref": 0,
+            "page": 23,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "evidence",
+            "item": 2,
+            "ref": 0,
+            "page": 8,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 0,
+            "ref": 0,
+            "page": 1,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 0,
+            "ref": 1,
+            "page": 2,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 1,
+            "ref": 0,
+            "page": 2,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 1,
+            "ref": 1,
+            "page": 7,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": false,
+            "quote_contained_cited_page": false
+          },
+          {
+            "group": "insights",
+            "item": 2,
+            "ref": 0,
+            "page": 8,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          },
+          {
+            "group": "insights",
+            "item": 2,
+            "ref": 1,
+            "page": 8,
+            "page_valid": true,
+            "quote_nonempty": true,
+            "quote_contained_any_page": true,
+            "quote_contained_cited_page": true
+          }
+        ],
+        "all_cited_pages_valid": true,
+        "quote_containment_any_page_rate": 0.7692307692307693,
+        "quote_containment_cited_page_rate": 0.7692307692307693,
+        "model_emitted_canonical_shape": true
+      },
+      "primary_confidences": [
+        0.9,
+        0.96,
+        0.86
+      ],
+      "medium_confidences": [
+        0.9,
+        0.92,
+        0.84
+      ],
+      "primary_insights": 3,
+      "medium_insights": 3,
+      "blind_gemini_scores": {
+        "judge_provider": "gemini",
+        "judge_model_id": "gemini-3.5-flash-lite",
+        "call_artifacts": [
+          "raw/responses/l3/judges/gemini/l3-judge-2609.24122-full_reference-sensitivity-gemini-a1.json"
+        ],
+        "http_status": 200,
+        "latency_ms": 25608,
+        "output": {
+          "paper_id": "2609.24122",
+          "evaluations": [
+            {
+              "candidate_label": "A",
+              "faithfulness": 4,
+              "evidence_support": 4,
+              "depth": 3,
+              "novelty": 3,
+              "systems_relevance_and_actionability": 4,
+              "compression": 3,
+              "uncertainty_calibration": 2,
+              "durable_memory_precision": 3
+            },
+            {
+              "candidate_label": "B",
+              "faithfulness": 4,
+              "evidence_support": 4,
+              "depth": 3,
+              "novelty": 3,
+              "systems_relevance_and_actionability": 4,
+              "compression": 3,
+              "uncertainty_calibration": 2,
+              "durable_memory_precision": 3
+            }
+          ]
+        },
+        "parse_error": null,
+        "blind_to_reasoning_setting": true,
+        "label_to_model_internal": {
+          "A": "openai_none",
+          "B": "openai_medium"
+        },
+        "same_vendor_candidate_models": []
+      }
+    }
+  },
+  "per_paper": {
+    "2609.29808": {
+      "generations": {
+        "full_reference": {
+          "gemini": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": true,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.5,
+            "quote_containment_any_page_rate": 0.5,
+            "insight_count": 4,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 21188,
+              "output_tokens": 1543,
+              "cost_usd": 0.0102139,
+              "latency_ms": 29591,
+              "http_200_attempts": 1
+            }
+          },
+          "deepseek": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": true,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.9166666666666666,
+            "quote_containment_any_page_rate": 0.9166666666666666,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 2,
+              "input_tokens": 39447,
+              "output_tokens": 4610,
+              "cost_usd": 0.0058042020000000005,
+              "latency_ms": 21061,
+              "http_200_attempts": 2
+            }
+          },
+          "openai": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": true,
+            "normalized_schema_pass": true,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.7,
+            "quote_containment_any_page_rate": 0.7,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 2,
+              "input_tokens": 38779,
+              "output_tokens": 4663,
+              "cost_usd": 0.0062094,
+              "latency_ms": 43391,
+              "http_200_attempts": 2
+            }
+          }
+        },
+        "selective": {
+          "deepseek": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": true,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.8181818181818182,
+            "quote_containment_any_page_rate": 0.8181818181818182,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 2,
+              "input_tokens": 7043,
+              "output_tokens": 1412,
+              "cost_usd": 0.00190365,
+              "latency_ms": 6335,
+              "http_200_attempts": 1
+            }
+          },
+          "gemini": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": false,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.25,
+            "quote_containment_any_page_rate": 0.25,
+            "insight_count": 2,
+            "calls": {
+              "attempts": 2,
+              "input_tokens": 16092,
+              "output_tokens": 2358,
+              "cost_usd": 0.010722599999999999,
+              "latency_ms": 54035,
+              "http_200_attempts": 2
+            }
+          },
+          "openai": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": true,
+            "normalized_schema_pass": true,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.8888888888888888,
+            "quote_containment_any_page_rate": 0.8888888888888888,
+            "insight_count": 2,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 7108,
+              "output_tokens": 1126,
+              "cost_usd": 0.0012738,
+              "latency_ms": 14825,
+              "http_200_attempts": 1
+            }
+          }
+        }
+      },
+      "judge_scores": {
+        "full_reference": {
+          "gemini": {
+            "faithfulness": 3,
+            "evidence_support": 3,
+            "insight_depth": 2,
+            "novelty_identification": 1,
+            "systems_relevance": 3,
+            "actionability": 3,
+            "compression_information_density": 2,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 2
+          },
+          "deepseek": {
+            "faithfulness": 3.5,
+            "evidence_support": 3.5,
+            "insight_depth": 3,
+            "novelty_identification": 3,
+            "systems_relevance": 4,
+            "actionability": 4,
+            "compression_information_density": 3.5,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3
+          },
+          "openai": {
+            "faithfulness": 4,
+            "evidence_support": 4,
+            "insight_depth": 3,
+            "novelty_identification": 3,
+            "systems_relevance": 4,
+            "actionability": 4,
+            "compression_information_density": 4,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3
+          },
+          "openai_none": {
+            "faithfulness": 4,
+            "evidence_support": 4,
+            "insight_depth": 3,
+            "novelty_identification": 3,
+            "systems_relevance": 4,
+            "actionability": 4,
+            "compression_information_density": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3
+          }
+        },
+        "selective": {
+          "gemini": {
+            "faithfulness": 3,
+            "evidence_support": 2,
+            "insight_depth": 2,
+            "novelty_identification": 2,
+            "systems_relevance": 4,
+            "actionability": 3,
+            "compression_information_density": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 2
+          },
+          "deepseek": {
+            "faithfulness": 3,
+            "evidence_support": 3,
+            "insight_depth": 3,
+            "novelty_identification": 3,
+            "systems_relevance": 4,
+            "actionability": 4,
+            "compression_information_density": 2,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 2
+          }
+        }
+      },
+      "judge_score_counts": {
+        "full_reference": {
+          "gemini": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          },
+          "deepseek": {
+            "faithfulness": 2,
+            "evidence_support": 2,
+            "insight_depth": 2,
+            "novelty_identification": 2,
+            "systems_relevance": 2,
+            "actionability": 2,
+            "compression_information_density": 2,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 2
+          },
+          "openai": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          },
+          "openai_none": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          }
+        },
+        "selective": {
+          "gemini": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          },
+          "deepseek": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          }
+        }
+      }
+    },
+    "2609.29095": {
+      "generations": {
+        "full_reference": {
+          "deepseek": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": false,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.6666666666666666,
+            "quote_containment_any_page_rate": 0.8333333333333334,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 2,
+              "input_tokens": 27109,
+              "output_tokens": 1588,
+              "cost_usd": 0.005000334,
+              "latency_ms": 8851,
+              "http_200_attempts": 1
+            }
+          },
+          "gemini": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": false,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.0,
+            "quote_containment_any_page_rate": 0.0,
+            "insight_count": 2,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 29464,
+              "output_tokens": 1541,
+              "cost_usd": 0.0126917,
+              "latency_ms": 29281,
+              "http_200_attempts": 1
+            }
+          },
+          "openai": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": true,
+            "normalized_schema_pass": true,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.6,
+            "quote_containment_any_page_rate": 0.9333333333333333,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 26677,
+              "output_tokens": 1662,
+              "cost_usd": 0.0034987,
+              "latency_ms": 18429,
+              "http_200_attempts": 1
+            }
+          }
+        },
+        "selective": {
+          "deepseek": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": false,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 1.0,
+            "quote_containment_any_page_rate": 1.0,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 8490,
+              "output_tokens": 1240,
+              "cost_usd": 0.001509468,
+              "latency_ms": 4809,
+              "http_200_attempts": 1
+            }
+          },
+          "gemini": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": false,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.0,
+            "quote_containment_any_page_rate": 0.0,
+            "insight_count": 1,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 9335,
+              "output_tokens": 978,
+              "cost_usd": 0.0052455,
+              "latency_ms": 27362,
+              "http_200_attempts": 1
+            }
+          },
+          "openai": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": true,
+            "normalized_schema_pass": true,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 1.0,
+            "quote_containment_any_page_rate": 1.0,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 8456,
+              "output_tokens": 1589,
+              "cost_usd": 0.0016401,
+              "latency_ms": 18553,
+              "http_200_attempts": 1
+            }
+          }
+        }
+      },
+      "judge_scores": {
+        "full_reference": {
+          "deepseek": {
+            "faithfulness": 3,
+            "evidence_support": 3,
+            "insight_depth": 3,
+            "novelty_identification": 3,
+            "systems_relevance": 4,
+            "actionability": 4,
+            "compression_information_density": 4,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3
+          },
+          "gemini": {
+            "faithfulness": 2,
+            "evidence_support": 2,
+            "insight_depth": 2,
+            "novelty_identification": 1,
+            "systems_relevance": 3,
+            "actionability": 3,
+            "compression_information_density": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 2
+          },
+          "openai": {
+            "faithfulness": 4,
+            "evidence_support": 4,
+            "insight_depth": 4,
+            "novelty_identification": 2,
+            "systems_relevance": 4,
+            "actionability": 4,
+            "compression_information_density": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 4
+          },
+          "openai_none": {
+            "faithfulness": 4,
+            "evidence_support": 4,
+            "insight_depth": 3,
+            "novelty_identification": 2,
+            "systems_relevance": 4,
+            "actionability": 4,
+            "compression_information_density": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3
+          },
+          "openai_medium": {
+            "faithfulness": 4,
+            "evidence_support": 4,
+            "insight_depth": 3,
+            "novelty_identification": 2,
+            "systems_relevance": 4,
+            "actionability": 4,
+            "compression_information_density": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3
+          }
+        },
+        "selective": {
+          "deepseek": {
+            "faithfulness": 4,
+            "evidence_support": 3.5,
+            "insight_depth": 3.5,
+            "novelty_identification": 3.5,
+            "systems_relevance": 4,
+            "actionability": 4,
+            "compression_information_density": 4,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3.5,
+            "systems_relevance_and_actionability": 4
+          },
+          "gemini": {
+            "faithfulness": 3,
+            "evidence_support": 3,
+            "insight_depth": 2,
+            "novelty_identification": 1,
+            "systems_relevance": 3,
+            "actionability": 3,
+            "compression_information_density": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 2
+          },
+          "openai": {
+            "faithfulness": 4,
+            "evidence_support": 4,
+            "insight_depth": 4,
+            "novelty_identification": 3,
+            "compression_information_density": 3,
+            "systems_relevance_and_actionability": 4,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 4
+          }
+        }
+      },
+      "judge_score_counts": {
+        "full_reference": {
+          "deepseek": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          },
+          "gemini": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          },
+          "openai": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          },
+          "openai_none": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          },
+          "openai_medium": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          }
+        },
+        "selective": {
+          "deepseek": {
+            "faithfulness": 2,
+            "evidence_support": 2,
+            "insight_depth": 2,
+            "novelty_identification": 2,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 2,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 2,
+            "systems_relevance_and_actionability": 1
+          },
+          "gemini": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          },
+          "openai": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "compression_information_density": 1,
+            "systems_relevance_and_actionability": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          }
+        }
+      }
+    },
+    "2609.28614": {
+      "generations": {
+        "full_reference": {
+          "deepseek": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": true,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.8333333333333334,
+            "quote_containment_any_page_rate": 0.9444444444444444,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 2,
+              "input_tokens": 60110,
+              "output_tokens": 4102,
+              "cost_usd": 0.007074756,
+              "latency_ms": 15865,
+              "http_200_attempts": 2
+            }
+          },
+          "gemini": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": false,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.6666666666666666,
+            "quote_containment_any_page_rate": 1.0,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 32029,
+              "output_tokens": 1634,
+              "cost_usd": 0.0136937,
+              "latency_ms": 29151,
+              "http_200_attempts": 1
+            }
+          },
+          "openai": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": true,
+            "normalized_schema_pass": true,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 1.0,
+            "quote_containment_any_page_rate": 1.0,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 29878,
+              "output_tokens": 2061,
+              "cost_usd": 0.0040183,
+              "latency_ms": 22116,
+              "http_200_attempts": 1
+            }
+          }
+        },
+        "selective": {
+          "deepseek": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": false,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 1.0,
+            "quote_containment_any_page_rate": 1.0,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 6750,
+              "output_tokens": 1198,
+              "cost_usd": 0.001223268,
+              "latency_ms": 5222,
+              "http_200_attempts": 1
+            }
+          },
+          "gemini": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": false,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 1.0,
+            "quote_containment_any_page_rate": 1.0,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 7516,
+              "output_tokens": 1249,
+              "cost_usd": 0.0053773,
+              "latency_ms": 28174,
+              "http_200_attempts": 1
+            }
+          },
+          "openai": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": true,
+            "normalized_schema_pass": true,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 1.0,
+            "quote_containment_any_page_rate": 1.0,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 6839,
+              "output_tokens": 1373,
+              "cost_usd": 0.0013704,
+              "latency_ms": 15146,
+              "http_200_attempts": 1
+            }
+          }
+        }
+      },
+      "judge_scores": {
+        "full_reference": {
+          "deepseek": {
+            "faithfulness": 4,
+            "evidence_support": 4,
+            "insight_depth": 4,
+            "novelty_identification": 3,
+            "systems_relevance": 4,
+            "actionability": 4,
+            "compression_information_density": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 4
+          },
+          "gemini": {
+            "faithfulness": 3,
+            "evidence_support": 3,
+            "insight_depth": 2,
+            "novelty_identification": 2,
+            "systems_relevance": 3,
+            "actionability": 3,
+            "compression_information_density": 4,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3
+          },
+          "openai_none": {
+            "faithfulness": 4,
+            "evidence_support": 4,
+            "insight_depth": 3,
+            "novelty_identification": 3,
+            "compression_information_density": 3,
+            "systems_relevance_and_actionability": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3
+          },
+          "openai_medium": {
+            "faithfulness": 4,
+            "evidence_support": 4,
+            "insight_depth": 3,
+            "novelty_identification": 3,
+            "compression_information_density": 3,
+            "systems_relevance_and_actionability": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3
+          }
+        },
+        "selective": {
+          "deepseek": {
+            "faithfulness": 3.5,
+            "evidence_support": 3,
+            "insight_depth": 2.5,
+            "novelty_identification": 2.5,
+            "systems_relevance": 4,
+            "actionability": 3,
+            "compression_information_density": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3,
+            "systems_relevance_and_actionability": 2
+          },
+          "gemini": {
+            "faithfulness": 3,
+            "evidence_support": 3,
+            "insight_depth": 2,
+            "novelty_identification": 3,
+            "systems_relevance": 4,
+            "actionability": 3,
+            "compression_information_density": 4,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 4
+          },
+          "openai": {
+            "faithfulness": 4,
+            "evidence_support": 4,
+            "insight_depth": 3,
+            "novelty_identification": 3,
+            "compression_information_density": 3,
+            "systems_relevance_and_actionability": 4,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3
+          }
+        }
+      },
+      "judge_score_counts": {
+        "full_reference": {
+          "deepseek": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          },
+          "gemini": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          },
+          "openai_none": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "compression_information_density": 1,
+            "systems_relevance_and_actionability": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          },
+          "openai_medium": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "compression_information_density": 1,
+            "systems_relevance_and_actionability": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          }
+        },
+        "selective": {
+          "deepseek": {
+            "faithfulness": 2,
+            "evidence_support": 2,
+            "insight_depth": 2,
+            "novelty_identification": 2,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 2,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 2,
+            "systems_relevance_and_actionability": 1
+          },
+          "gemini": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          },
+          "openai": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "compression_information_density": 1,
+            "systems_relevance_and_actionability": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          }
+        }
+      }
+    },
+    "2609.30217": {
+      "generations": {
+        "full_reference": {
+          "deepseek": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": false,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.6,
+            "quote_containment_any_page_rate": 0.8,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 28597,
+              "output_tokens": 1389,
+              "cost_usd": 0.005104134,
+              "latency_ms": 6639,
+              "http_200_attempts": 1
+            }
+          },
+          "gemini": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": false,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.3333333333333333,
+            "quote_containment_any_page_rate": 0.3333333333333333,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 30410,
+              "output_tokens": 1238,
+              "cost_usd": 0.012218,
+              "latency_ms": 28798,
+              "http_200_attempts": 1
+            }
+          },
+          "openai": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": true,
+            "normalized_schema_pass": true,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.9090909090909091,
+            "quote_containment_any_page_rate": 0.9090909090909091,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 28283,
+              "output_tokens": 1572,
+              "cost_usd": 0.0036143,
+              "latency_ms": 16619,
+              "http_200_attempts": 1
+            }
+          }
+        },
+        "selective": {
+          "deepseek": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": false,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.75,
+            "quote_containment_any_page_rate": 0.75,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 6090,
+              "output_tokens": 1035,
+              "cost_usd": 0.001045284,
+              "latency_ms": 5209,
+              "http_200_attempts": 1
+            }
+          },
+          "gemini": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": false,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.16666666666666666,
+            "quote_containment_any_page_rate": 0.16666666666666666,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 6874,
+              "output_tokens": 1326,
+              "cost_usd": 0.0053772,
+              "latency_ms": 28586,
+              "http_200_attempts": 1
+            }
+          },
+          "openai": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": true,
+            "normalized_schema_pass": true,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.9,
+            "quote_containment_any_page_rate": 0.9,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 6196,
+              "output_tokens": 1408,
+              "cost_usd": 0.0013236,
+              "latency_ms": 18737,
+              "http_200_attempts": 1
+            }
+          }
+        }
+      },
+      "judge_scores": {
+        "full_reference": {
+          "gemini": {
+            "faithfulness": 3,
+            "evidence_support": 3,
+            "insight_depth": 3,
+            "novelty_identification": 2,
+            "systems_relevance": 3,
+            "actionability": 3,
+            "compression_information_density": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3
+          },
+          "deepseek": {
+            "faithfulness": 3,
+            "evidence_support": 2,
+            "insight_depth": 3,
+            "novelty_identification": 2.5,
+            "systems_relevance": 4,
+            "actionability": 4,
+            "compression_information_density": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3,
+            "systems_relevance_and_actionability": 3
+          },
+          "openai": {
+            "faithfulness": 4,
+            "evidence_support": 4,
+            "insight_depth": 4,
+            "novelty_identification": 3,
+            "compression_information_density": 3,
+            "systems_relevance_and_actionability": 4,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 4
+          }
+        },
+        "selective": {
+          "gemini": {
+            "faithfulness": 3,
+            "evidence_support": 2,
+            "insight_depth": 2,
+            "novelty_identification": 2,
+            "systems_relevance": 3,
+            "actionability": 3,
+            "compression_information_density": 2,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 2
+          },
+          "deepseek": {
+            "faithfulness": 4,
+            "evidence_support": 3,
+            "insight_depth": 3,
+            "novelty_identification": 3,
+            "systems_relevance": 4,
+            "actionability": 4,
+            "compression_information_density": 4,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3
+          }
+        }
+      },
+      "judge_score_counts": {
+        "full_reference": {
+          "gemini": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          },
+          "deepseek": {
+            "faithfulness": 2,
+            "evidence_support": 2,
+            "insight_depth": 2,
+            "novelty_identification": 2,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 2,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 2,
+            "systems_relevance_and_actionability": 1
+          },
+          "openai": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "compression_information_density": 1,
+            "systems_relevance_and_actionability": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          }
+        },
+        "selective": {
+          "gemini": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          },
+          "deepseek": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          }
+        }
+      }
+    },
+    "2609.28585": {
+      "generations": {
+        "full_reference": {
+          "deepseek": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": false,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.6,
+            "quote_containment_any_page_rate": 0.6,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 29511,
+              "output_tokens": 2128,
+              "cost_usd": 0.005684634,
+              "latency_ms": 8890,
+              "http_200_attempts": 1
+            }
+          },
+          "gemini": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": false,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.3333333333333333,
+            "quote_containment_any_page_rate": 0.3333333333333333,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 32971,
+              "output_tokens": 1492,
+              "cost_usd": 0.0136213,
+              "latency_ms": 26978,
+              "http_200_attempts": 1
+            }
+          },
+          "openai": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": true,
+            "normalized_schema_pass": true,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.75,
+            "quote_containment_any_page_rate": 0.8333333333333334,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 29233,
+              "output_tokens": 1815,
+              "cost_usd": 0.0038308,
+              "latency_ms": 19898,
+              "http_200_attempts": 1
+            }
+          }
+        },
+        "selective": {
+          "deepseek": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": false,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.5,
+            "quote_containment_any_page_rate": 0.5,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 8031,
+              "output_tokens": 1692,
+              "cost_usd": 0.001711818,
+              "latency_ms": 6165,
+              "http_200_attempts": 1
+            }
+          },
+          "gemini": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": false,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.2857142857142857,
+            "quote_containment_any_page_rate": 0.42857142857142855,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 9148,
+              "output_tokens": 1487,
+              "cost_usd": 0.0064619,
+              "latency_ms": 28656,
+              "http_200_attempts": 1
+            }
+          },
+          "openai": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": true,
+            "normalized_schema_pass": true,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.6153846153846154,
+            "quote_containment_any_page_rate": 0.6153846153846154,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 8057,
+              "output_tokens": 1508,
+              "cost_usd": 0.0015597,
+              "latency_ms": 18668,
+              "http_200_attempts": 1
+            }
+          }
+        }
+      },
+      "judge_scores": {
+        "full_reference": {
+          "gemini": {
+            "faithfulness": 3,
+            "evidence_support": 3,
+            "insight_depth": 2,
+            "novelty_identification": 2,
+            "systems_relevance": 3,
+            "actionability": 3,
+            "compression_information_density": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 2
+          },
+          "deepseek": {
+            "faithfulness": 3,
+            "evidence_support": 3,
+            "insight_depth": 2.5,
+            "novelty_identification": 2.5,
+            "systems_relevance": 3.5,
+            "actionability": 3.5,
+            "compression_information_density": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3
+          },
+          "openai": {
+            "faithfulness": 4,
+            "evidence_support": 4,
+            "insight_depth": 4,
+            "novelty_identification": 3,
+            "systems_relevance": 4,
+            "actionability": 4,
+            "compression_information_density": 4,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 4
+          }
+        },
+        "selective": {
+          "gemini": {
+            "faithfulness": 3,
+            "evidence_support": 3,
+            "insight_depth": 2,
+            "novelty_identification": 2,
+            "systems_relevance": 3,
+            "actionability": 2,
+            "compression_information_density": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 2
+          },
+          "deepseek": {
+            "faithfulness": 3.5,
+            "evidence_support": 2.5,
+            "insight_depth": 2.5,
+            "novelty_identification": 2.5,
+            "systems_relevance": 3.5,
+            "actionability": 3,
+            "compression_information_density": 3.5,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 2.5
+          },
+          "openai": {
+            "faithfulness": 4,
+            "evidence_support": 4,
+            "insight_depth": 3,
+            "novelty_identification": 3,
+            "systems_relevance": 4,
+            "actionability": 4,
+            "compression_information_density": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3
+          }
+        }
+      },
+      "judge_score_counts": {
+        "full_reference": {
+          "gemini": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          },
+          "deepseek": {
+            "faithfulness": 2,
+            "evidence_support": 2,
+            "insight_depth": 2,
+            "novelty_identification": 2,
+            "systems_relevance": 2,
+            "actionability": 2,
+            "compression_information_density": 2,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 2
+          },
+          "openai": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          }
+        },
+        "selective": {
+          "gemini": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          },
+          "deepseek": {
+            "faithfulness": 2,
+            "evidence_support": 2,
+            "insight_depth": 2,
+            "novelty_identification": 2,
+            "systems_relevance": 2,
+            "actionability": 2,
+            "compression_information_density": 2,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 2
+          },
+          "openai": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          }
+        }
+      }
+    },
+    "2609.28586": {
+      "generations": {
+        "full_reference": {
+          "deepseek": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": false,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.6666666666666666,
+            "quote_containment_any_page_rate": 0.8333333333333334,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 28760,
+              "output_tokens": 1266,
+              "cost_usd": 0.005054784,
+              "latency_ms": 7410,
+              "http_200_attempts": 1
+            }
+          },
+          "gemini": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": false,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.0,
+            "quote_containment_any_page_rate": 0.0,
+            "insight_count": 1,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 31074,
+              "output_tokens": 1172,
+              "cost_usd": 0.0122522,
+              "latency_ms": 28178,
+              "http_200_attempts": 1
+            }
+          },
+          "openai": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": true,
+            "normalized_schema_pass": true,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.9166666666666666,
+            "quote_containment_any_page_rate": 0.9166666666666666,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 28516,
+              "output_tokens": 1743,
+              "cost_usd": 0.0037231,
+              "latency_ms": 21082,
+              "http_200_attempts": 1
+            }
+          }
+        },
+        "selective": {
+          "deepseek": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": false,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.8,
+            "quote_containment_any_page_rate": 0.8,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 7598,
+              "output_tokens": 1817,
+              "cost_usd": 0.001740684,
+              "latency_ms": 7469,
+              "http_200_attempts": 1
+            }
+          },
+          "gemini": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": false,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.0,
+            "quote_containment_any_page_rate": 0.0,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 8587,
+              "output_tokens": 1485,
+              "cost_usd": 0.0062886,
+              "latency_ms": 29230,
+              "http_200_attempts": 1
+            }
+          },
+          "openai": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": true,
+            "normalized_schema_pass": true,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.6,
+            "quote_containment_any_page_rate": 0.6,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 7650,
+              "output_tokens": 1437,
+              "cost_usd": 0.0014835,
+              "latency_ms": 18354,
+              "http_200_attempts": 1
+            }
+          }
+        }
+      },
+      "judge_scores": {
+        "full_reference": {
+          "deepseek": {
+            "faithfulness": 4,
+            "evidence_support": 4,
+            "insight_depth": 4,
+            "novelty_identification": 3,
+            "systems_relevance": 4,
+            "actionability": 4,
+            "compression_information_density": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 4
+          },
+          "gemini": {
+            "faithfulness": 3,
+            "evidence_support": 2,
+            "insight_depth": 2,
+            "novelty_identification": 2,
+            "systems_relevance": 3,
+            "actionability": 2,
+            "compression_information_density": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3
+          }
+        },
+        "selective": {
+          "deepseek": {
+            "faithfulness": 3,
+            "evidence_support": 2,
+            "insight_depth": 3,
+            "novelty_identification": 3,
+            "systems_relevance": 4,
+            "actionability": 3,
+            "compression_information_density": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3
+          },
+          "gemini": {
+            "faithfulness": 3,
+            "evidence_support": 3,
+            "insight_depth": 2,
+            "novelty_identification": 2,
+            "systems_relevance": 4,
+            "actionability": 3,
+            "compression_information_density": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3
+          }
+        }
+      },
+      "judge_score_counts": {
+        "full_reference": {
+          "deepseek": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          },
+          "gemini": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          }
+        },
+        "selective": {
+          "deepseek": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          },
+          "gemini": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          }
+        }
+      }
+    },
+    "2609.27263": {
+      "generations": {
+        "full_reference": {
+          "deepseek": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": false,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.6666666666666666,
+            "quote_containment_any_page_rate": 0.6666666666666666,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 26863,
+              "output_tokens": 1869,
+              "cost_usd": 0.005132034,
+              "latency_ms": 7837,
+              "http_200_attempts": 1
+            }
+          },
+          "gemini": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": null,
+            "normalized_schema_pass": null,
+            "all_cited_pages_valid": null,
+            "quote_containment_cited_page_rate": null,
+            "quote_containment_any_page_rate": null,
+            "insight_count": null,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 29194,
+              "output_tokens": 1467,
+              "cost_usd": 0.0124257,
+              "latency_ms": 29633,
+              "http_200_attempts": 1
+            }
+          },
+          "openai": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": true,
+            "normalized_schema_pass": true,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.7333333333333333,
+            "quote_containment_any_page_rate": 0.7333333333333333,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 26483,
+              "output_tokens": 1548,
+              "cost_usd": 0.0034223,
+              "latency_ms": 18976,
+              "http_200_attempts": 1
+            }
+          }
+        },
+        "selective": {
+          "deepseek": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": false,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.3333333333333333,
+            "quote_containment_any_page_rate": 0.3333333333333333,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 12119,
+              "output_tokens": 1312,
+              "cost_usd": 0.002097018,
+              "latency_ms": 6063,
+              "http_200_attempts": 1
+            }
+          },
+          "gemini": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": false,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.5,
+            "quote_containment_any_page_rate": 0.5,
+            "insight_count": 2,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 13600,
+              "output_tokens": 818,
+              "cost_usd": 0.006125,
+              "latency_ms": 27337,
+              "http_200_attempts": 1
+            }
+          },
+          "openai": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": true,
+            "normalized_schema_pass": true,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 1.0,
+            "quote_containment_any_page_rate": 1.0,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 12131,
+              "output_tokens": 1356,
+              "cost_usd": 0.0018911,
+              "latency_ms": 15103,
+              "http_200_attempts": 1
+            }
+          }
+        }
+      },
+      "judge_scores": {
+        "full_reference": {
+          "deepseek": {
+            "faithfulness": 4,
+            "evidence_support": 3,
+            "insight_depth": 3,
+            "novelty_identification": 4,
+            "systems_relevance": 4,
+            "actionability": 3,
+            "compression_information_density": 4,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3
+          }
+        },
+        "selective": {
+          "deepseek": {
+            "faithfulness": 4,
+            "evidence_support": 3.5,
+            "insight_depth": 3,
+            "novelty_identification": 3,
+            "systems_relevance": 4,
+            "actionability": 4,
+            "compression_information_density": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3.5,
+            "systems_relevance_and_actionability": 3
+          },
+          "gemini": {
+            "faithfulness": 3,
+            "evidence_support": 3,
+            "insight_depth": 2,
+            "novelty_identification": 2,
+            "systems_relevance": 2,
+            "actionability": 2,
+            "compression_information_density": 4,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3
+          },
+          "openai": {
+            "faithfulness": 4,
+            "evidence_support": 4,
+            "insight_depth": 3,
+            "novelty_identification": 3,
+            "compression_information_density": 3,
+            "systems_relevance_and_actionability": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3
+          }
+        }
+      },
+      "judge_score_counts": {
+        "full_reference": {
+          "deepseek": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          }
+        },
+        "selective": {
+          "deepseek": {
+            "faithfulness": 2,
+            "evidence_support": 2,
+            "insight_depth": 2,
+            "novelty_identification": 2,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 2,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 2,
+            "systems_relevance_and_actionability": 1
+          },
+          "gemini": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          },
+          "openai": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "compression_information_density": 1,
+            "systems_relevance_and_actionability": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          }
+        }
+      }
+    },
+    "2609.24122": {
+      "generations": {
+        "full_reference": {
+          "deepseek": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": false,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 1.0,
+            "quote_containment_any_page_rate": 1.0,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 40716,
+              "output_tokens": 1838,
+              "cost_usd": 0.007191384,
+              "latency_ms": 7803,
+              "http_200_attempts": 1
+            }
+          },
+          "gemini": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": false,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.0,
+            "quote_containment_any_page_rate": 0.0,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 44808,
+              "output_tokens": 1381,
+              "cost_usd": 0.0168949,
+              "latency_ms": 29077,
+              "http_200_attempts": 1
+            }
+          },
+          "openai": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": true,
+            "normalized_schema_pass": true,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.6,
+            "quote_containment_any_page_rate": 0.6,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 40236,
+              "output_tokens": 1684,
+              "cost_usd": 0.0048656,
+              "latency_ms": 18849,
+              "http_200_attempts": 1
+            }
+          }
+        },
+        "selective": {
+          "deepseek": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": false,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.4,
+            "quote_containment_any_page_rate": 0.4,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 6363,
+              "output_tokens": 1148,
+              "cost_usd": 0.001135218,
+              "latency_ms": 6447,
+              "http_200_attempts": 1
+            }
+          },
+          "gemini": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": false,
+            "normalized_schema_pass": true,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.4,
+            "quote_containment_any_page_rate": 0.4,
+            "insight_count": 1,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 7186,
+              "output_tokens": 1039,
+              "cost_usd": 0.0047533,
+              "latency_ms": 27731,
+              "http_200_attempts": 1
+            }
+          },
+          "openai": {
+            "http_status": 200,
+            "model_emitted_canonical_shape": true,
+            "normalized_schema_pass": true,
+            "all_cited_pages_valid": true,
+            "quote_containment_cited_page_rate": 0.8,
+            "quote_containment_any_page_rate": 0.8,
+            "insight_count": 3,
+            "calls": {
+              "attempts": 1,
+              "input_tokens": 6428,
+              "output_tokens": 1255,
+              "cost_usd": 0.0012703,
+              "latency_ms": 17981,
+              "http_200_attempts": 1
+            }
+          }
+        }
+      },
+      "judge_scores": {
+        "full_reference": {
+          "deepseek": {
+            "faithfulness": 3,
+            "evidence_support": 2,
+            "insight_depth": 3,
+            "novelty_identification": 3,
+            "systems_relevance": 4,
+            "actionability": 3,
+            "compression_information_density": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3
+          },
+          "gemini": {
+            "faithfulness": 3,
+            "evidence_support": 3,
+            "insight_depth": 2,
+            "novelty_identification": 2,
+            "systems_relevance": 2,
+            "actionability": 2,
+            "compression_information_density": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 2
+          },
+          "openai_none": {
+            "faithfulness": 4,
+            "evidence_support": 4,
+            "insight_depth": 3,
+            "novelty_identification": 3,
+            "compression_information_density": 3,
+            "systems_relevance_and_actionability": 4,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3
+          },
+          "openai_medium": {
+            "faithfulness": 4,
+            "evidence_support": 4,
+            "insight_depth": 3,
+            "novelty_identification": 3,
+            "compression_information_density": 3,
+            "systems_relevance_and_actionability": 4,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3
+          }
+        },
+        "selective": {
+          "gemini": {
+            "faithfulness": 4,
+            "evidence_support": 4,
+            "insight_depth": 2,
+            "novelty_identification": 2,
+            "systems_relevance": 2,
+            "actionability": 2,
+            "compression_information_density": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 2
+          },
+          "deepseek": {
+            "faithfulness": 3,
+            "evidence_support": 1.5,
+            "insight_depth": 2.5,
+            "novelty_identification": 2.5,
+            "systems_relevance": 3,
+            "actionability": 3,
+            "compression_information_density": 3,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 2.5
+          },
+          "openai": {
+            "faithfulness": 4,
+            "evidence_support": 4,
+            "insight_depth": 3,
+            "novelty_identification": 3,
+            "systems_relevance": 4,
+            "actionability": 4,
+            "compression_information_density": 4,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 3
+          }
+        }
+      },
+      "judge_score_counts": {
+        "full_reference": {
+          "deepseek": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          },
+          "gemini": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          },
+          "openai_none": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "compression_information_density": 1,
+            "systems_relevance_and_actionability": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          },
+          "openai_medium": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "compression_information_density": 1,
+            "systems_relevance_and_actionability": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          }
+        },
+        "selective": {
+          "gemini": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          },
+          "deepseek": {
+            "faithfulness": 2,
+            "evidence_support": 2,
+            "insight_depth": 2,
+            "novelty_identification": 2,
+            "systems_relevance": 2,
+            "actionability": 2,
+            "compression_information_density": 2,
+            "uncertainty_calibration": 2,
+            "durable_memory_precision_proxy": 2
+          },
+          "openai": {
+            "faithfulness": 1,
+            "evidence_support": 1,
+            "insight_depth": 1,
+            "novelty_identification": 1,
+            "systems_relevance": 1,
+            "actionability": 1,
+            "compression_information_density": 1,
+            "uncertainty_calibration": 1,
+            "durable_memory_precision_proxy": 1
+          }
+        }
+      }
+    }
+  },
+  "generation_failures": [
+    {
+      "paper_id": "2609.27263",
+      "path": "full_reference",
+      "model": "gemini",
+      "http_status": 200,
+      "provider_error": null,
+      "parse_error": "JSONDecodeError: Expecting property name enclosed in double quotes: line 77 column 7 (char 3947)",
+      "artifacts": [
+        "raw/responses/l3/full_reference/gemini/l3-2609.27263-full_reference-gemini-a1.json"
+      ]
+    }
+  ],
+  "judge_format_audit": {
+    "logical_calls": 36,
+    "calls_with_dimension_scores": 29,
+    "calls_without_dimension_scores": [
+      {
+        "paper_id": "2609.29808",
+        "judge_cell": "selective/gemini",
+        "format_issue": "no_candidate_dimension_scores",
+        "call_artifacts": [
+          "raw/responses/l3/judges/gemini/l3-judge-2609.29808-selective-gemini-a1.json"
+        ],
+        "winner_field_present": true
+      },
+      {
+        "paper_id": "2609.28614",
+        "judge_cell": "full_reference/gemini",
+        "format_issue": "no_candidate_dimension_scores",
+        "call_artifacts": [
+          "raw/responses/l3/judges/gemini/l3-judge-2609.28614-full_reference-gemini-a1.json"
+        ],
+        "winner_field_present": true
+      },
+      {
+        "paper_id": "2609.30217",
+        "judge_cell": "selective/gemini",
+        "format_issue": "no_candidate_dimension_scores",
+        "call_artifacts": [
+          "raw/responses/l3/judges/gemini/l3-judge-2609.30217-selective-gemini-a1.json"
+        ],
+        "winner_field_present": true
+      },
+      {
+        "paper_id": "2609.28586",
+        "judge_cell": "full_reference/gemini",
+        "format_issue": "no_candidate_dimension_scores",
+        "call_artifacts": [
+          "raw/responses/l3/judges/gemini/l3-judge-2609.28586-full_reference-gemini-a1.json"
+        ],
+        "winner_field_present": true
+      },
+      {
+        "paper_id": "2609.28586",
+        "judge_cell": "selective/gemini",
+        "format_issue": "no_candidate_dimension_scores",
+        "call_artifacts": [
+          "raw/responses/l3/judges/gemini/l3-judge-2609.28586-selective-gemini-a1.json"
+        ],
+        "winner_field_present": false
+      },
+      {
+        "paper_id": "2609.27263",
+        "judge_cell": "full_reference/gemini",
+        "format_issue": "non_object_output",
+        "call_artifacts": [
+          "raw/responses/l3/judges/gemini/l3-judge-2609.27263-full_reference-gemini-a1.json"
+        ],
+        "winner_field_present": false
+      },
+      {
+        "paper_id": "2609.24122",
+        "judge_cell": "full_reference/gemini",
+        "format_issue": "no_candidate_dimension_scores",
+        "call_artifacts": [
+          "raw/responses/l3/judges/gemini/l3-judge-2609.24122-full_reference-gemini-a1.json"
+        ],
+        "winner_field_present": true
+      }
+    ],
+    "calls_with_partial_scores": 6,
+    "normalized_candidates": 55
+  },
+  "judge_design": "OpenAI judges DeepSeek and Gemini; Gemini judges GPT-Luna and DeepSeek; a separate Gemini pair judge compares GPT-Luna none vs medium on four papers; all generator labels are blinded.",
+  "quality_dimensions_are_separate": [
+    "faithfulness",
+    "evidence_support",
+    "insight_depth",
+    "novelty_identification",
+    "systems_relevance",
+    "actionability",
+    "compression_information_density",
+    "systems_relevance_and_actionability",
+    "uncertainty_calibration",
+    "durable_memory_precision_proxy"
+  ]
+}

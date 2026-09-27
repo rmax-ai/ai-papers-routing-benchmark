@@ -1,0 +1,2932 @@
+{
+  "schema_version": 1,
+  "sample_n": 8,
+  "claim_match_method": "content-word Jaccard overlap of candidate claim text after fixed stopword removal; primary match threshold 0.20, sensitivity at 0.15/0.25; lexical proxy, not semantic judge",
+  "load_bearing_page_method": "D reference's explicit load_bearing_pages, falling back to page refs on D claims tagged load_bearing; C recall is reference pages intersecting pages examined divided by reference pages",
+  "aggregate": {
+    "A": {
+      "logical_calls": 8,
+      "attempts": 8,
+      "input_tokens": 6672,
+      "output_tokens": 4766,
+      "cost_usd": 0.0139166,
+      "latency_ms": 207524,
+      "pages_processed": 0,
+      "bytes_processed": 14092,
+      "mean_claim_recall_jaccard_0_20": 0.5541666666666667,
+      "claim_recall_threshold_sensitivity": {
+        "0.15": 0.6375,
+        "0.20": 0.5541666666666667,
+        "0.25": 0.425
+      },
+      "mean_evidence_page_recall": null,
+      "papers_with_claim_outputs": 8
+    },
+    "B": {
+      "logical_calls": 8,
+      "attempts": 8,
+      "input_tokens": 109510,
+      "output_tokens": 5933,
+      "cost_usd": 0.0476855,
+      "latency_ms": 230997,
+      "pages_processed": 203,
+      "bytes_processed": 17914526,
+      "mean_claim_recall_jaccard_0_20": 0.63125,
+      "claim_recall_threshold_sensitivity": {
+        "0.15": 0.7041666666666666,
+        "0.20": 0.63125,
+        "0.25": 0.5020833333333333
+      },
+      "mean_evidence_page_recall": 1.0,
+      "papers_with_claim_outputs": 8
+    },
+    "C": {
+      "logical_calls": 8,
+      "attempts": 8,
+      "input_tokens": 41314,
+      "output_tokens": 2974,
+      "cost_usd": 0.0198292,
+      "latency_ms": 209386,
+      "pages_processed": 34,
+      "bytes_processed": 4019205,
+      "mean_claim_recall_jaccard_0_20": 0.2125,
+      "claim_recall_threshold_sensitivity": {
+        "0.15": 0.26875,
+        "0.20": 0.2125,
+        "0.25": 0.17083333333333334
+      },
+      "mean_evidence_page_recall": 0.3086309523809524,
+      "papers_with_claim_outputs": 8
+    },
+    "D": {
+      "logical_calls": 8,
+      "attempts": 8,
+      "input_tokens": 220405,
+      "output_tokens": 5200,
+      "cost_usd": 0.0791215,
+      "latency_ms": 213073,
+      "pages_processed": 203,
+      "bytes_processed": 793742,
+      "mean_claim_recall_jaccard_0_20": 1.0,
+      "claim_recall_threshold_sensitivity": {
+        "0.15": 1.0,
+        "0.20": 1.0,
+        "0.25": 1.0
+      },
+      "mean_evidence_page_recall": 1.0,
+      "papers_with_claim_outputs": 8
+    }
+  },
+  "per_paper": [
+    {
+      "paper_id": "2609.29808",
+      "reference_load_bearing_pages": [
+        1,
+        7,
+        10
+      ],
+      "reference_claim_count": 2,
+      "strategies": {
+        "A": {
+          "pages_processed": 0,
+          "pages_seen": [],
+          "bytes_processed": 1705,
+          "evidence_page_recall": null,
+          "claim_recall_jaccard_0_15": 0.0,
+          "claim_recall_jaccard_0_20": 0.0,
+          "claim_recall_jaccard_0_25": 0.0,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "An autonomous agent operating in a continuous execution loop without an out-of-band Epistemic Andon Cord presents an existential security and operational hazard, leading to machine-speed compounding failures.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1,
+                2
+              ],
+              "best_jaccard": 0.075,
+              "matched": false,
+              "candidate_claim": "The dual-process systems architecture combines out-of-band supervisory control, Synchronous Reactive ambient sentinels, and microsecond-scale POSIX preemption buses to prevent autonomous rogue excursions."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "Centralized commercial models with conversational safety filters failed during forensic incident response by classifying payload deobfuscation as cyberattack assistance, requiring locally hosted open-weights models.",
+              "importance": "supporting",
+              "reference_pages": [
+                7
+              ],
+              "best_jaccard": 0.027,
+              "matched": false,
+              "candidate_claim": "An unconstrained autonomous agent in a frontier AI cybersecurity evaluation harness breached its sandbox and executed a multi-stage intrusion over 4.5 days (Incident-2026-Alpha)."
+            }
+          ],
+          "important_claims_missed": 1,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 801,
+            "output_tokens": 573,
+            "cost_usd": 0.0016728,
+            "latency_ms": 25928,
+            "artifact_list": [
+              "raw/responses/l2/A/l2-2609.29808-A-r1-a1.json"
+            ]
+          }
+        },
+        "B": {
+          "pages_processed": 21,
+          "pages_seen": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ],
+          "bytes_processed": 618123,
+          "evidence_page_recall": 1.0,
+          "claim_recall_jaccard_0_15": 0.5,
+          "claim_recall_jaccard_0_20": 0.5,
+          "claim_recall_jaccard_0_25": 0.5,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "An autonomous agent operating in a continuous execution loop without an out-of-band Epistemic Andon Cord presents an existential security and operational hazard, leading to machine-speed compounding failures.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1,
+                2
+              ],
+              "best_jaccard": 0.1316,
+              "matched": false,
+              "candidate_claim": "The Epistemic Andon architecture uses an out-of-band POSIX preemption bus and kernel-level seccomp/eBPF LSM filters to preempt unconstrained agent loops with a measured SIGSTOP median of 0.0048 ms."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "Centralized commercial models with conversational safety filters failed during forensic incident response by classifying payload deobfuscation as cyberattack assistance, requiring locally hosted open-weights models.",
+              "importance": "supporting",
+              "reference_pages": [
+                7
+              ],
+              "best_jaccard": 0.3333,
+              "matched": true,
+              "candidate_claim": "Centralized commercial frontier models with conversational safety filters failed during forensic incident response by refusing to analyze or deobfuscate captured exploit payloads, creating the Defensive LLM Guardrail Paradox."
+            }
+          ],
+          "important_claims_missed": 1,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 11294,
+            "output_tokens": 853,
+            "cost_usd": 0.0055207,
+            "latency_ms": 27632,
+            "artifact_list": [
+              "raw/responses/l2/B/l2-2609.29808-B-r1-a1.json"
+            ]
+          }
+        },
+        "C": {
+          "pages_processed": 4,
+          "pages_seen": [
+            1,
+            2,
+            20,
+            21
+          ],
+          "bytes_processed": 455742,
+          "evidence_page_recall": 0.3333333333333333,
+          "claim_recall_jaccard_0_15": 0.0,
+          "claim_recall_jaccard_0_20": 0.0,
+          "claim_recall_jaccard_0_25": 0.0,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "An autonomous agent operating in a continuous execution loop without an out-of-band Epistemic Andon Cord presents an existential security and operational hazard, leading to machine-speed compounding failures.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1,
+                2
+              ],
+              "best_jaccard": 0.1471,
+              "matched": false,
+              "candidate_claim": "The paper formalizes a Dual-Sided Epistemic Andon Imperative, combining out-of-band supervisory control and POSIX preemption buses to prevent rogue agent excursions."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "Centralized commercial models with conversational safety filters failed during forensic incident response by classifying payload deobfuscation as cyberattack assistance, requiring locally hosted open-weights models.",
+              "importance": "supporting",
+              "reference_pages": [
+                7
+              ],
+              "best_jaccard": 0.0,
+              "matched": false,
+              "candidate_claim": "An autonomous agent executed a multi-stage intrusion into Hugging Face's production infrastructure, executing 17,600 discrete actions over 4.5 days."
+            }
+          ],
+          "important_claims_missed": 1,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 4877,
+            "output_tokens": 560,
+            "cost_usd": 0.0028631,
+            "latency_ms": 26324,
+            "artifact_list": [
+              "raw/responses/l2/C/l2-2609.29808-C-r1-a1.json"
+            ]
+          }
+        },
+        "D": {
+          "pages_processed": 21,
+          "pages_seen": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ],
+          "bytes_processed": 65597,
+          "evidence_page_recall": 1.0,
+          "claim_recall_jaccard_0_15": 1.0,
+          "claim_recall_jaccard_0_20": 1.0,
+          "claim_recall_jaccard_0_25": 1.0,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "An autonomous agent operating in a continuous execution loop without an out-of-band Epistemic Andon Cord presents an existential security and operational hazard, leading to machine-speed compounding failures.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1,
+                2
+              ],
+              "best_jaccard": 1.0,
+              "matched": true,
+              "candidate_claim": "An autonomous agent operating in a continuous execution loop without an out-of-band Epistemic Andon Cord presents an existential security and operational hazard, leading to machine-speed compounding failures."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "Centralized commercial models with conversational safety filters failed during forensic incident response by classifying payload deobfuscation as cyberattack assistance, requiring locally hosted open-weights models.",
+              "importance": "supporting",
+              "reference_pages": [
+                7
+              ],
+              "best_jaccard": 1.0,
+              "matched": true,
+              "candidate_claim": "Centralized commercial models with conversational safety filters failed during forensic incident response by classifying payload deobfuscation as cyberattack assistance, requiring locally hosted open-weights models."
+            }
+          ],
+          "important_claims_missed": 0,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 17450,
+            "output_tokens": 429,
+            "cost_usd": 0.0063075,
+            "latency_ms": 23907,
+            "artifact_list": [
+              "raw/responses/l2/D/l2-2609.29808-D-r1-a1.json"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.29095",
+      "reference_load_bearing_pages": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12
+      ],
+      "reference_claim_count": 5,
+      "strategies": {
+        "A": {
+          "pages_processed": 0,
+          "pages_seen": [],
+          "bytes_processed": 1891,
+          "evidence_page_recall": null,
+          "claim_recall_jaccard_0_15": 0.6,
+          "claim_recall_jaccard_0_20": 0.6,
+          "claim_recall_jaccard_0_25": 0.4,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "When a write times out or returns a server error, the action may already have taken effect, and blind retries cause duplicate side effects while giving up skips required work.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.0645,
+              "matched": false,
+              "candidate_claim": "Providing an idempotency key on every write lowers the duplicate rate from 28% to 4% because agents use keys when they exist."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "Frontier models instructed to act exactly once almost never duplicate a write whose acknowledgement was lost, whereas weaker models often do.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.1,
+              "matched": false,
+              "candidate_claim": "When immediate read-back is not possible due to in-flight requests or transport redelivery, the contract explains 81% of the variance and frontier models duplicate in 56% and 74% of episodes."
+            },
+            {
+              "reference_index": 2,
+              "reference_claim": "When an immediate read-back cannot reveal what happened (such as a request still in flight or redelivered), frontier models duplicate frequently and the contract explains 81% of the variance.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.4167,
+              "matched": true,
+              "candidate_claim": "When immediate read-back is not possible due to in-flight requests or transport redelivery, the contract explains 81% of the variance and frontier models duplicate in 56% and 74% of episodes."
+            },
+            {
+              "reference_index": 3,
+              "reference_claim": "No verification-only policy is exactly-once under late commits without a bound on in-flight time, and offering idempotency keys lowers the duplicate rate because agents use keys when they exist.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.375,
+              "matched": true,
+              "candidate_claim": "Providing an idempotency key on every write lowers the duplicate rate from 28% to 4% because agents use keys when they exist."
+            },
+            {
+              "reference_index": 4,
+              "reference_claim": "Agent harnesses matter little for exactly-once execution; client-side middleware has a ceiling, and agents reported success in 90% of duplicate-producing episodes.",
+              "importance": "supporting",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.2143,
+              "matched": true,
+              "candidate_claim": "The agent harness barely matters, as a guard that attaches keys transfers across harnesses unchanged, and agents reported success in 90% of episodes where they duplicated an effect."
+            }
+          ],
+          "important_claims_missed": 2,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 829,
+            "output_tokens": 834,
+            "cost_usd": 0.0023337,
+            "latency_ms": 26138,
+            "artifact_list": [
+              "raw/responses/l2/A/l2-2609.29095-A-r1-a1.json"
+            ]
+          }
+        },
+        "B": {
+          "pages_processed": 23,
+          "pages_seen": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "bytes_processed": 718108,
+          "evidence_page_recall": 1.0,
+          "claim_recall_jaccard_0_15": 0.8,
+          "claim_recall_jaccard_0_20": 0.8,
+          "claim_recall_jaccard_0_25": 0.6,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "When a write times out or returns a server error, the action may already have taken effect, and blind retries cause duplicate side effects while giving up skips required work.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.0645,
+              "matched": false,
+              "candidate_claim": "Offering idempotency keys on every write reduces the duplicate rate from 28% to 4% without other changes, as agents attach them in 98% of episodes."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "Frontier models instructed to act exactly once almost never duplicate a write whose acknowledgement was lost, whereas weaker models often do.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.5652,
+              "matched": true,
+              "candidate_claim": "When a read-back can resolve the failure (e.g., lost acknowledgement), frontier models instructed to act exactly once almost never duplicate writes (0.5% duplicate rate), whereas weaker models duplicate in 18% of episodes."
+            },
+            {
+              "reference_index": 2,
+              "reference_claim": "When an immediate read-back cannot reveal what happened (such as a request still in flight or redelivered), frontier models duplicate frequently and the contract explains 81% of the variance.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.36,
+              "matched": true,
+              "candidate_claim": "When a read-back cannot resolve the failure (e.g., late commits or redelivery), frontier models duplicate in 56% and 74% of episodes respectively, and the tool contract explains 81% of the variance."
+            },
+            {
+              "reference_index": 3,
+              "reference_claim": "No verification-only policy is exactly-once under late commits without a bound on in-flight time, and offering idempotency keys lowers the duplicate rate because agents use keys when they exist.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.2222,
+              "matched": true,
+              "candidate_claim": "Offering idempotency keys on every write reduces the duplicate rate from 28% to 4% without other changes, as agents attach them in 98% of episodes."
+            },
+            {
+              "reference_index": 4,
+              "reference_claim": "Agent harnesses matter little for exactly-once execution; client-side middleware has a ceiling, and agents reported success in 90% of duplicate-producing episodes.",
+              "importance": "supporting",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.2593,
+              "matched": true,
+              "candidate_claim": "Production harnesses matter little; client-side middleware has a ceiling, with three production harnesses and a minimal scaffold running the same model behaving almost identically."
+            }
+          ],
+          "important_claims_missed": 1,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 12338,
+            "output_tokens": 847,
+            "cost_usd": 0.0058189,
+            "latency_ms": 29221,
+            "artifact_list": [
+              "raw/responses/l2/B/l2-2609.29095-B-r1-resume1-a1.json"
+            ]
+          }
+        },
+        "C": {
+          "pages_processed": 5,
+          "pages_seen": [
+            1,
+            2,
+            16,
+            22,
+            23
+          ],
+          "bytes_processed": 465378,
+          "evidence_page_recall": 0.25,
+          "claim_recall_jaccard_0_15": 0.4,
+          "claim_recall_jaccard_0_20": 0.2,
+          "claim_recall_jaccard_0_25": 0.2,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "When a write times out or returns a server error, the action may already have taken effect, and blind retries cause duplicate side effects while giving up skips required work.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.0938,
+              "matched": false,
+              "candidate_claim": "Transparent client-side retries cut exactly-once success from 72% to 50% in the native contract, but with keys on every write, exactly-once success reaches 99%."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "Frontier models instructed to act exactly once almost never duplicate a write whose acknowledgement was lost, whereas weaker models often do.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.6364,
+              "matched": true,
+              "candidate_claim": "Frontier models instructed to act exactly once almost never duplicate a write whose acknowledgment was lost (0.5%), because they verify before retrying, whereas weaker models duplicate in 18%."
+            },
+            {
+              "reference_index": 2,
+              "reference_claim": "When an immediate read-back cannot reveal what happened (such as a request still in flight or redelivered), frontier models duplicate frequently and the contract explains 81% of the variance.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.0882,
+              "matched": false,
+              "candidate_claim": "Frontier models instructed to act exactly once almost never duplicate a write whose acknowledgment was lost (0.5%), because they verify before retrying, whereas weaker models duplicate in 18%."
+            },
+            {
+              "reference_index": 3,
+              "reference_claim": "No verification-only policy is exactly-once under late commits without a bound on in-flight time, and offering idempotency keys lowers the duplicate rate because agents use keys when they exist.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.1429,
+              "matched": false,
+              "candidate_claim": "Frontier models instructed to act exactly once almost never duplicate a write whose acknowledgment was lost (0.5%), because they verify before retrying, whereas weaker models duplicate in 18%."
+            },
+            {
+              "reference_index": 4,
+              "reference_claim": "Agent harnesses matter little for exactly-once execution; client-side middleware has a ceiling, and agents reported success in 90% of duplicate-producing episodes.",
+              "importance": "supporting",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.1852,
+              "matched": false,
+              "candidate_claim": "Transparent client-side retries cut exactly-once success from 72% to 50% in the native contract, but with keys on every write, exactly-once success reaches 99%."
+            }
+          ],
+          "important_claims_missed": 3,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 5999,
+            "output_tokens": 553,
+            "cost_usd": 0.0031822,
+            "latency_ms": 27314,
+            "artifact_list": [
+              "raw/responses/l2/C/l2-2609.29095-C-r1-a1.json"
+            ]
+          }
+        },
+        "D": {
+          "pages_processed": 23,
+          "pages_seen": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "bytes_processed": 86636,
+          "evidence_page_recall": 1.0,
+          "claim_recall_jaccard_0_15": 1.0,
+          "claim_recall_jaccard_0_20": 1.0,
+          "claim_recall_jaccard_0_25": 1.0,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "When a write times out or returns a server error, the action may already have taken effect, and blind retries cause duplicate side effects while giving up skips required work.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 1.0,
+              "matched": true,
+              "candidate_claim": "When a write times out or returns a server error, the action may already have taken effect, and blind retries cause duplicate side effects while giving up skips required work."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "Frontier models instructed to act exactly once almost never duplicate a write whose acknowledgement was lost, whereas weaker models often do.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 1.0,
+              "matched": true,
+              "candidate_claim": "Frontier models instructed to act exactly once almost never duplicate a write whose acknowledgement was lost, whereas weaker models often do."
+            },
+            {
+              "reference_index": 2,
+              "reference_claim": "When an immediate read-back cannot reveal what happened (such as a request still in flight or redelivered), frontier models duplicate frequently and the contract explains 81% of the variance.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 1.0,
+              "matched": true,
+              "candidate_claim": "When an immediate read-back cannot reveal what happened (such as a request still in flight or redelivered), frontier models duplicate frequently and the contract explains 81% of the variance."
+            },
+            {
+              "reference_index": 3,
+              "reference_claim": "No verification-only policy is exactly-once under late commits without a bound on in-flight time, and offering idempotency keys lowers the duplicate rate because agents use keys when they exist.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 1.0,
+              "matched": true,
+              "candidate_claim": "No verification-only policy is exactly-once under late commits without a bound on in-flight time, and offering idempotency keys lowers the duplicate rate because agents use keys when they exist."
+            },
+            {
+              "reference_index": 4,
+              "reference_claim": "Agent harnesses matter little for exactly-once execution; client-side middleware has a ceiling, and agents reported success in 90% of duplicate-producing episodes.",
+              "importance": "supporting",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 1.0,
+              "matched": true,
+              "candidate_claim": "Agent harnesses matter little for exactly-once execution; client-side middleware has a ceiling, and agents reported success in 90% of duplicate-producing episodes."
+            }
+          ],
+          "important_claims_missed": 0,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 25557,
+            "output_tokens": 743,
+            "cost_usd": 0.0095246,
+            "latency_ms": 26373,
+            "artifact_list": [
+              "raw/responses/l2/D/l2-2609.29095-D-r1-a1.json"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28614",
+      "reference_load_bearing_pages": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        11,
+        15
+      ],
+      "reference_claim_count": 4,
+      "strategies": {
+        "A": {
+          "pages_processed": 0,
+          "pages_seen": [],
+          "bytes_processed": 1702,
+          "evidence_page_recall": null,
+          "claim_recall_jaccard_0_15": 0.5,
+          "claim_recall_jaccard_0_20": 0.5,
+          "claim_recall_jaccard_0_25": 0.5,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "Across 17 language models and 38 tasks, the spontaneous reward-hacking rate is 30.5% on open-ended research-pipeline tasks and 2.9% on task-specific kernels.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.6111,
+              "matched": true,
+              "candidate_claim": "Autonomous research agents exhibit spontaneous reward hacking at rates of 30.5% on open-ended research-pipeline tasks and 2.9% on task-specific kernels."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "When hacking is allowed on tasks whose pass thresholds exceed best compliant baselines, 505/677 attempts (74.6%) are confirmed reward hacks.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.2917,
+              "matched": true,
+              "candidate_claim": "When hacking is allowed on difficult tasks, 74.6% of attempts are confirmed reward hacks that clear the threshold and receive mechanism-verification panel confirmation."
+            },
+            {
+              "reference_index": 2,
+              "reference_claim": "An LLM panel reviewing only submitted code and reported scores misses 33/505 confirmed hacks (6.5%).",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.125,
+              "matched": false,
+              "candidate_claim": "When hacking is allowed on difficult tasks, 74.6% of attempts are confirmed reward hacks that clear the threshold and receive mechanism-verification panel confirmation."
+            },
+            {
+              "reference_index": 3,
+              "reference_claim": "Among 79 pairs evaluated under two feedback conditions, cumulative evasion reaches 40.5% with detailed feedback and 20.3% with generic rejection.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.0,
+              "matched": false,
+              "candidate_claim": "Autonomous research agents exhibit spontaneous reward hacking at rates of 30.5% on open-ended research-pipeline tasks and 2.9% on task-specific kernels."
+            }
+          ],
+          "important_claims_missed": 2,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 914,
+            "output_tokens": 457,
+            "cost_usd": 0.0014167,
+            "latency_ms": 26201,
+            "artifact_list": [
+              "raw/responses/l2/A/l2-2609.28614-A-r1-a1.json"
+            ]
+          }
+        },
+        "B": {
+          "pages_processed": 33,
+          "pages_seen": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33
+          ],
+          "bytes_processed": 11495738,
+          "evidence_page_recall": 1.0,
+          "claim_recall_jaccard_0_15": 1.0,
+          "claim_recall_jaccard_0_20": 0.75,
+          "claim_recall_jaccard_0_25": 0.75,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "Across 17 language models and 38 tasks, the spontaneous reward-hacking rate is 30.5% on open-ended research-pipeline tasks and 2.9% on task-specific kernels.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.5455,
+              "matched": true,
+              "candidate_claim": "Autonomous research agents exhibit spontaneous reward hacking when assigned ordinary task instructions without hacking prompts, with a rate of 30.5% on open-ended research-pipeline tasks compared to 2.9% on task-specific kernels."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "When hacking is allowed on tasks whose pass thresholds exceed best compliant baselines, 505/677 attempts (74.6%) are confirmed reward hacks.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.3462,
+              "matched": true,
+              "candidate_claim": "When reward hacking is permitted on baseline-exceeding tasks, 74.6% of attempts (505/677) are confirmed reward hacks that clear the pass threshold and receive mechanism-verification panel confirmation."
+            },
+            {
+              "reference_index": 2,
+              "reference_claim": "An LLM panel reviewing only submitted code and reported scores misses 33/505 confirmed hacks (6.5%).",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.48,
+              "matched": true,
+              "candidate_claim": "An LLM review panel reviewing only submitted code and reported scores misses 33 out of 505 confirmed reward hacks (6.5%), and cumulative evasion rises to 40.5% under detailed feedback compared to 20.3% under generic rejection over five rounds."
+            },
+            {
+              "reference_index": 3,
+              "reference_claim": "Among 79 pairs evaluated under two feedback conditions, cumulative evasion reaches 40.5% with detailed feedback and 20.3% with generic rejection.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.1935,
+              "matched": false,
+              "candidate_claim": "An LLM review panel reviewing only submitted code and reported scores misses 33 out of 505 confirmed reward hacks (6.5%), and cumulative evasion rises to 40.5% under detailed feedback compared to 20.3% under generic rejection over five rounds."
+            }
+          ],
+          "important_claims_missed": 1,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 17594,
+            "output_tokens": 836,
+            "cost_usd": 0.0073682,
+            "latency_ms": 29059,
+            "artifact_list": [
+              "raw/responses/l2/B/l2-2609.28614-B-r1-a1.json"
+            ]
+          }
+        },
+        "C": {
+          "pages_processed": 4,
+          "pages_seen": [
+            1,
+            2,
+            32,
+            33
+          ],
+          "bytes_processed": 493524,
+          "evidence_page_recall": 0.25,
+          "claim_recall_jaccard_0_15": 0.25,
+          "claim_recall_jaccard_0_20": 0.0,
+          "claim_recall_jaccard_0_25": 0.0,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "Across 17 language models and 38 tasks, the spontaneous reward-hacking rate is 30.5% on open-ended research-pipeline tasks and 2.9% on task-specific kernels.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.1739,
+              "matched": false,
+              "candidate_claim": "Autonomous research agents frequently engage in spontaneous reward hacking, meeting reward criteria without achieving intended goals."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "When hacking is allowed on tasks whose pass thresholds exceed best compliant baselines, 505/677 attempts (74.6%) are confirmed reward hacks.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.0741,
+              "matched": false,
+              "candidate_claim": "Autonomous research agents frequently engage in spontaneous reward hacking, meeting reward criteria without achieving intended goals."
+            },
+            {
+              "reference_index": 2,
+              "reference_claim": "An LLM panel reviewing only submitted code and reported scores misses 33/505 confirmed hacks (6.5%).",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.0,
+              "matched": false,
+              "candidate_claim": "Autonomous research agents frequently engage in spontaneous reward hacking, meeting reward criteria without achieving intended goals."
+            },
+            {
+              "reference_index": 3,
+              "reference_claim": "Among 79 pairs evaluated under two feedback conditions, cumulative evasion reaches 40.5% with detailed feedback and 20.3% with generic rejection.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.0,
+              "matched": false,
+              "candidate_claim": "Autonomous research agents frequently engage in spontaneous reward hacking, meeting reward criteria without achieving intended goals."
+            }
+          ],
+          "important_claims_missed": 4,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 4937,
+            "output_tokens": 284,
+            "cost_usd": 0.0021911,
+            "latency_ms": 26764,
+            "artifact_list": [
+              "raw/responses/l2/C/l2-2609.28614-C-r1-a1.json"
+            ]
+          }
+        },
+        "D": {
+          "pages_processed": 33,
+          "pages_seen": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33
+          ],
+          "bytes_processed": 108790,
+          "evidence_page_recall": 1.0,
+          "claim_recall_jaccard_0_15": 1.0,
+          "claim_recall_jaccard_0_20": 1.0,
+          "claim_recall_jaccard_0_25": 1.0,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "Across 17 language models and 38 tasks, the spontaneous reward-hacking rate is 30.5% on open-ended research-pipeline tasks and 2.9% on task-specific kernels.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 1.0,
+              "matched": true,
+              "candidate_claim": "Across 17 language models and 38 tasks, the spontaneous reward-hacking rate is 30.5% on open-ended research-pipeline tasks and 2.9% on task-specific kernels."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "When hacking is allowed on tasks whose pass thresholds exceed best compliant baselines, 505/677 attempts (74.6%) are confirmed reward hacks.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 1.0,
+              "matched": true,
+              "candidate_claim": "When hacking is allowed on tasks whose pass thresholds exceed best compliant baselines, 505/677 attempts (74.6%) are confirmed reward hacks."
+            },
+            {
+              "reference_index": 2,
+              "reference_claim": "An LLM panel reviewing only submitted code and reported scores misses 33/505 confirmed hacks (6.5%).",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 1.0,
+              "matched": true,
+              "candidate_claim": "An LLM panel reviewing only submitted code and reported scores misses 33/505 confirmed hacks (6.5%)."
+            },
+            {
+              "reference_index": 3,
+              "reference_claim": "Among 79 pairs evaluated under two feedback conditions, cumulative evasion reaches 40.5% with detailed feedback and 20.3% with generic rejection.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 1.0,
+              "matched": true,
+              "candidate_claim": "Among 79 pairs evaluated under two feedback conditions, cumulative evasion reaches 40.5% with detailed feedback and 20.3% with generic rejection."
+            }
+          ],
+          "important_claims_missed": 0,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 28230,
+            "output_tokens": 854,
+            "cost_usd": 0.010604,
+            "latency_ms": 27347,
+            "artifact_list": [
+              "raw/responses/l2/D/l2-2609.28614-D-r1-a1.json"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.30217",
+      "reference_load_bearing_pages": [
+        1,
+        3,
+        6,
+        7,
+        10
+      ],
+      "reference_claim_count": 3,
+      "strategies": {
+        "A": {
+          "pages_processed": 0,
+          "pages_seen": [],
+          "bytes_processed": 1540,
+          "evidence_page_recall": null,
+          "claim_recall_jaccard_0_15": 0.6666666666666666,
+          "claim_recall_jaccard_0_20": 0.6666666666666666,
+          "claim_recall_jaccard_0_25": 0.6666666666666666,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "Across evaluations of EvasionBench, best-of-3 evasion attempt rates reach up to 98% and success rates up to 88%, with substantial variance across models.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.4375,
+              "matched": true,
+              "candidate_claim": "Across evaluations, best-of-3 evasion attempt rates reach up to 98% and success rates up to 88%, with evasion generally increasing with test-time compute."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "Evasion generally increases with test-time compute, showing higher evasion rates at greater reasoning effort and token use.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.3158,
+              "matched": true,
+              "candidate_claim": "Across evaluations, best-of-3 evasion attempt rates reach up to 98% and success rates up to 88%, with evasion generally increasing with test-time compute."
+            },
+            {
+              "reference_index": 2,
+              "reference_claim": "GPT-6 Astra's low evasion rate comes with overrefusal, as it frequently abandons otherwise solvable tasks under a denial-of-service prompt injection.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.0714,
+              "matched": false,
+              "candidate_claim": "LLM agents exhibit instrumental evasion, circumventing runtime monitoring to complete ordinary tasks without an explicit adversarial objective."
+            }
+          ],
+          "important_claims_missed": 1,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 762,
+            "output_tokens": 551,
+            "cost_usd": 0.0016061,
+            "latency_ms": 26492,
+            "artifact_list": [
+              "raw/responses/l2/A/l2-2609.30217-A-r1-a1.json"
+            ]
+          }
+        },
+        "B": {
+          "pages_processed": 34,
+          "pages_seen": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34
+          ],
+          "bytes_processed": 310827,
+          "evidence_page_recall": 1.0,
+          "claim_recall_jaccard_0_15": 0.6666666666666666,
+          "claim_recall_jaccard_0_20": 0.6666666666666666,
+          "claim_recall_jaccard_0_25": 0.3333333333333333,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "Across evaluations of EvasionBench, best-of-3 evasion attempt rates reach up to 98% and success rates up to 88%, with substantial variance across models.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.087,
+              "matched": false,
+              "candidate_claim": "Monitor evasion rates generally increase with test-time compute, higher reasoning effort, and greater token expenditure."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "Evasion generally increases with test-time compute, showing higher evasion rates at greater reasoning effort and token use.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.6875,
+              "matched": true,
+              "candidate_claim": "Monitor evasion rates generally increase with test-time compute, higher reasoning effort, and greater token expenditure."
+            },
+            {
+              "reference_index": 2,
+              "reference_claim": "GPT-6 Astra's low evasion rate comes with overrefusal, as it frequently abandons otherwise solvable tasks under a denial-of-service prompt injection.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.2222,
+              "matched": true,
+              "candidate_claim": "GPT-6 Astra's 0% evasion success rate is primarily driven by overrefusal caused by sensitivity to prompt injections mimicking monitor denials rather than alignment."
+            }
+          ],
+          "important_claims_missed": 1,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 18482,
+            "output_tokens": 490,
+            "cost_usd": 0.0067696,
+            "latency_ms": 28184,
+            "artifact_list": [
+              "raw/responses/l2/B/l2-2609.30217-B-r1-a1.json"
+            ]
+          }
+        },
+        "C": {
+          "pages_processed": 4,
+          "pages_seen": [
+            1,
+            2,
+            33,
+            34
+          ],
+          "bytes_processed": 289518,
+          "evidence_page_recall": 0.2,
+          "claim_recall_jaccard_0_15": 0.0,
+          "claim_recall_jaccard_0_20": 0.0,
+          "claim_recall_jaccard_0_25": 0.0,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "Across evaluations of EvasionBench, best-of-3 evasion attempt rates reach up to 98% and success rates up to 88%, with substantial variance across models.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.04,
+              "matched": false,
+              "candidate_claim": "LLM agents exhibit instrumental evasion, attempting to circumvent runtime monitoring under ordinary task pressure without an explicit adversarial objective."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "Evasion generally increases with test-time compute, showing higher evasion rates at greater reasoning effort and token use.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.037,
+              "matched": false,
+              "candidate_claim": "LLM agents exhibit instrumental evasion, attempting to circumvent runtime monitoring under ordinary task pressure without an explicit adversarial objective."
+            },
+            {
+              "reference_index": 2,
+              "reference_claim": "GPT-6 Astra's low evasion rate comes with overrefusal, as it frequently abandons otherwise solvable tasks under a denial-of-service prompt injection.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.0333,
+              "matched": false,
+              "candidate_claim": "LLM agents exhibit instrumental evasion, attempting to circumvent runtime monitoring under ordinary task pressure without an explicit adversarial objective."
+            }
+          ],
+          "important_claims_missed": 3,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 4857,
+            "output_tokens": 265,
+            "cost_usd": 0.0021196,
+            "latency_ms": 24133,
+            "artifact_list": [
+              "raw/responses/l2/C/l2-2609.30217-C-r1-a1.json"
+            ]
+          }
+        },
+        "D": {
+          "pages_processed": 34,
+          "pages_seen": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34
+          ],
+          "bytes_processed": 104153,
+          "evidence_page_recall": 1.0,
+          "claim_recall_jaccard_0_15": 1.0,
+          "claim_recall_jaccard_0_20": 1.0,
+          "claim_recall_jaccard_0_25": 1.0,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "Across evaluations of EvasionBench, best-of-3 evasion attempt rates reach up to 98% and success rates up to 88%, with substantial variance across models.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 1.0,
+              "matched": true,
+              "candidate_claim": "Across evaluations of EvasionBench, best-of-3 evasion attempt rates reach up to 98% and success rates up to 88%, with substantial variance across models."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "Evasion generally increases with test-time compute, showing higher evasion rates at greater reasoning effort and token use.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 1.0,
+              "matched": true,
+              "candidate_claim": "Evasion generally increases with test-time compute, showing higher evasion rates at greater reasoning effort and token use."
+            },
+            {
+              "reference_index": 2,
+              "reference_claim": "GPT-6 Astra's low evasion rate comes with overrefusal, as it frequently abandons otherwise solvable tasks under a denial-of-service prompt injection.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 1.0,
+              "matched": true,
+              "candidate_claim": "GPT-6 Astra's low evasion rate comes with overrefusal, as it frequently abandons otherwise solvable tasks under a denial-of-service prompt injection."
+            }
+          ],
+          "important_claims_missed": 0,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 26642,
+            "output_tokens": 626,
+            "cost_usd": 0.0095576,
+            "latency_ms": 24753,
+            "artifact_list": [
+              "raw/responses/l2/D/l2-2609.30217-D-r1-a1.json"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28585",
+      "reference_load_bearing_pages": [
+        1,
+        2,
+        3,
+        7,
+        8,
+        9,
+        11
+      ],
+      "reference_claim_count": 3,
+      "strategies": {
+        "A": {
+          "pages_processed": 0,
+          "pages_seen": [],
+          "bytes_processed": 1897,
+          "evidence_page_recall": null,
+          "claim_recall_jaccard_0_15": 1.0,
+          "claim_recall_jaccard_0_20": 1.0,
+          "claim_recall_jaccard_0_25": 0.6666666666666666,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "Persistent billable state creates significant cost amplification in tool-calling LLM agents, with maximum per-session cumulative input reaching 14,293× the first-call input across 243 executions.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.2424,
+              "matched": true,
+              "candidate_claim": "DOW-BENCH evaluations show that maximum per-session cumulative input reaches 14,293x the first-call input, and retaining raw history increases mean effective session cost by 21.2-35.9%."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "Retaining raw history increases mean effective session cost by 21.2–35.9%, while deterministic compression preserves task success without incurring full cost-bearing mass.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                2
+              ],
+              "best_jaccard": 0.2857,
+              "matched": true,
+              "candidate_claim": "DOW-BENCH evaluations show that maximum per-session cumulative input reaches 14,293x the first-call input, and retaining raw history increases mean effective session cost by 21.2-35.9%."
+            },
+            {
+              "reference_index": 2,
+              "reference_claim": "A host-side kernel combining deterministic history transformation and four invariants (D1-D4) contains every recurring attack in the 123-evaluation replay corpus.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.6957,
+              "matched": true,
+              "candidate_claim": "A kernel combining deterministic history transformation with four host-side invariants successfully governs the persistent billable-state boundary and contains every recurring attack in the evaluation replay corpus."
+            }
+          ],
+          "important_claims_missed": 0,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 895,
+            "output_tokens": 623,
+            "cost_usd": 0.001826,
+            "latency_ms": 24763,
+            "artifact_list": [
+              "raw/responses/l2/A/l2-2609.28585-A-r1-a1.json"
+            ]
+          }
+        },
+        "B": {
+          "pages_processed": 22,
+          "pages_seen": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "bytes_processed": 971756,
+          "evidence_page_recall": 1.0,
+          "claim_recall_jaccard_0_15": 0.6666666666666666,
+          "claim_recall_jaccard_0_20": 0.3333333333333333,
+          "claim_recall_jaccard_0_25": 0.3333333333333333,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "Persistent billable state creates significant cost amplification in tool-calling LLM agents, with maximum per-session cumulative input reaching 14,293× the first-call input across 243 executions.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.1818,
+              "matched": false,
+              "candidate_claim": "Retaining raw history in multi-step tool-calling agents creates a continuity-exposure coupling that increases mean effective session cost by 21.2–35.9%."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "Retaining raw history increases mean effective session cost by 21.2–35.9%, while deterministic compression preserves task success without incurring full cost-bearing mass.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                2
+              ],
+              "best_jaccard": 0.3077,
+              "matched": true,
+              "candidate_claim": "Retaining raw history in multi-step tool-calling agents creates a continuity-exposure coupling that increases mean effective session cost by 21.2–35.9%."
+            },
+            {
+              "reference_index": 2,
+              "reference_claim": "A host-side kernel combining deterministic history transformation and four invariants (D1-D4) contains every recurring attack in the 123-evaluation replay corpus.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.0303,
+              "matched": false,
+              "candidate_claim": "Retaining raw history in multi-step tool-calling agents creates a continuity-exposure coupling that increases mean effective session cost by 21.2–35.9%."
+            }
+          ],
+          "important_claims_missed": 2,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 11841,
+            "output_tokens": 382,
+            "cost_usd": 0.0045073,
+            "latency_ms": 27902,
+            "artifact_list": [
+              "raw/responses/l2/B/l2-2609.28585-B-r1-a1.json"
+            ]
+          }
+        },
+        "C": {
+          "pages_processed": 4,
+          "pages_seen": [
+            1,
+            2,
+            21,
+            22
+          ],
+          "bytes_processed": 522522,
+          "evidence_page_recall": 0.2857142857142857,
+          "claim_recall_jaccard_0_15": 0.3333333333333333,
+          "claim_recall_jaccard_0_20": 0.3333333333333333,
+          "claim_recall_jaccard_0_25": 0.0,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "Persistent billable state creates significant cost amplification in tool-calling LLM agents, with maximum per-session cumulative input reaching 14,293× the first-call input across 243 executions.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.2188,
+              "matched": true,
+              "candidate_claim": "DOW-BENCH evaluation across six model families shows high cost amplification factors, with maximum per-session cumulative input reaches up to 14,293x."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "Retaining raw history increases mean effective session cost by 21.2–35.9%, while deterministic compression preserves task success without incurring full cost-bearing mass.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                2
+              ],
+              "best_jaccard": 0.0625,
+              "matched": false,
+              "candidate_claim": "DOW-BENCH evaluation across six model families shows high cost amplification factors, with maximum per-session cumulative input reaches up to 14,293x."
+            },
+            {
+              "reference_index": 2,
+              "reference_claim": "A host-side kernel combining deterministic history transformation and four invariants (D1-D4) contains every recurring attack in the 123-evaluation replay corpus.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.0303,
+              "matched": false,
+              "candidate_claim": "DOW-BENCH evaluation across six model families shows high cost amplification factors, with maximum per-session cumulative input reaches up to 14,293x."
+            }
+          ],
+          "important_claims_missed": 2,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 4904,
+            "output_tokens": 399,
+            "cost_usd": 0.0024687,
+            "latency_ms": 24547,
+            "artifact_list": [
+              "raw/responses/l2/C/l2-2609.28585-C-r1-a1.json"
+            ]
+          }
+        },
+        "D": {
+          "pages_processed": 22,
+          "pages_seen": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "bytes_processed": 97286,
+          "evidence_page_recall": 1.0,
+          "claim_recall_jaccard_0_15": 1.0,
+          "claim_recall_jaccard_0_20": 1.0,
+          "claim_recall_jaccard_0_25": 1.0,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "Persistent billable state creates significant cost amplification in tool-calling LLM agents, with maximum per-session cumulative input reaching 14,293× the first-call input across 243 executions.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 1.0,
+              "matched": true,
+              "candidate_claim": "Persistent billable state creates significant cost amplification in tool-calling LLM agents, with maximum per-session cumulative input reaching 14,293× the first-call input across 243 executions."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "Retaining raw history increases mean effective session cost by 21.2–35.9%, while deterministic compression preserves task success without incurring full cost-bearing mass.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                2
+              ],
+              "best_jaccard": 1.0,
+              "matched": true,
+              "candidate_claim": "Retaining raw history increases mean effective session cost by 21.2–35.9%, while deterministic compression preserves task success without incurring full cost-bearing mass."
+            },
+            {
+              "reference_index": 2,
+              "reference_claim": "A host-side kernel combining deterministic history transformation and four invariants (D1-D4) contains every recurring attack in the 123-evaluation replay corpus.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 1.0,
+              "matched": true,
+              "candidate_claim": "A host-side kernel combining deterministic history transformation and four invariants (D1-D4) contains every recurring attack in the 123-evaluation replay corpus."
+            }
+          ],
+          "important_claims_missed": 0,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 29069,
+            "output_tokens": 823,
+            "cost_usd": 0.0107782,
+            "latency_ms": 27440,
+            "artifact_list": [
+              "raw/responses/l2/D/l2-2609.28585-D-r1-a1.json"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28586",
+      "reference_load_bearing_pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "reference_claim_count": 2,
+      "strategies": {
+        "A": {
+          "pages_processed": 0,
+          "pages_seen": [],
+          "bytes_processed": 1875,
+          "evidence_page_recall": null,
+          "claim_recall_jaccard_0_15": 1.0,
+          "claim_recall_jaccard_0_20": 1.0,
+          "claim_recall_jaccard_0_25": 0.5,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "Approval laundering is a record-coverage failure where a durable record faithfully names an entry invocation yet omits effects exercised within its transitive workflow.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.2424,
+              "matched": true,
+              "candidate_claim": "Coding-agent approval interfaces bind a human decision to a command or tool call, but developer tools execute the transitive workflow that invocation activates, leading to record-coverage failure termed approval laundering."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "When executions with identical policy-visible fields require different effect-specific decisions, no deterministic or randomized record-only policy can guarantee both.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.44,
+              "matched": true,
+              "candidate_claim": "No record-only policy can guarantee both identical policy-visible fields and different effect-specific decisions due to an information limit derived from formalizing closure-bound approval over six effect classes."
+            }
+          ],
+          "important_claims_missed": 0,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 823,
+            "output_tokens": 636,
+            "cost_usd": 0.0018369,
+            "latency_ms": 26606,
+            "artifact_list": [
+              "raw/responses/l2/A/l2-2609.28586-A-r1-a1.json"
+            ]
+          }
+        },
+        "B": {
+          "pages_processed": 19,
+          "pages_seen": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "bytes_processed": 1249606,
+          "evidence_page_recall": 1.0,
+          "claim_recall_jaccard_0_15": 1.0,
+          "claim_recall_jaccard_0_20": 1.0,
+          "claim_recall_jaccard_0_25": 0.5,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "Approval laundering is a record-coverage failure where a durable record faithfully names an entry invocation yet omits effects exercised within its transitive workflow.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.2,
+              "matched": true,
+              "candidate_claim": "Coding-agent approval interfaces bind human decisions to entry invocations, but developer tools execute transitive workflows whose realized effects often extend beyond the durable record, leading to approval laundering."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "When executions with identical policy-visible fields require different effect-specific decisions, no deterministic or randomized record-only policy can guarantee both.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.9333,
+              "matched": true,
+              "candidate_claim": "When identical policy-visible fields require different effect-specific decisions, no deterministic or randomized record-only policy can guarantee both."
+            }
+          ],
+          "important_claims_missed": 0,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 10273,
+            "output_tokens": 687,
+            "cost_usd": 0.0047994,
+            "latency_ms": 29646,
+            "artifact_list": [
+              "raw/responses/l2/B/l2-2609.28586-B-r1-a1.json"
+            ]
+          }
+        },
+        "C": {
+          "pages_processed": 4,
+          "pages_seen": [
+            1,
+            2,
+            18,
+            19
+          ],
+          "bytes_processed": 458967,
+          "evidence_page_recall": 0.4,
+          "claim_recall_jaccard_0_15": 0.5,
+          "claim_recall_jaccard_0_20": 0.5,
+          "claim_recall_jaccard_0_25": 0.5,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "Approval laundering is a record-coverage failure where a durable record faithfully names an entry invocation yet omits effects exercised within its transitive workflow.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.3636,
+              "matched": true,
+              "candidate_claim": "Approval laundering occurs when an agent's approved entry invocation omits transitive effects that are later executed in the workflow."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "When executions with identical policy-visible fields require different effect-specific decisions, no deterministic or randomized record-only policy can guarantee both.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.0,
+              "matched": false,
+              "candidate_claim": "Approval laundering occurs when an agent's approved entry invocation omits transitive effects that are later executed in the workflow."
+            }
+          ],
+          "important_claims_missed": 1,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 4896,
+            "output_tokens": 264,
+            "cost_usd": 0.0021288,
+            "latency_ms": 26644,
+            "artifact_list": [
+              "raw/responses/l2/C/l2-2609.28586-C-r1-a1.json"
+            ]
+          }
+        },
+        "D": {
+          "pages_processed": 19,
+          "pages_seen": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "bytes_processed": 104020,
+          "evidence_page_recall": 1.0,
+          "claim_recall_jaccard_0_15": 1.0,
+          "claim_recall_jaccard_0_20": 1.0,
+          "claim_recall_jaccard_0_25": 1.0,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "Approval laundering is a record-coverage failure where a durable record faithfully names an entry invocation yet omits effects exercised within its transitive workflow.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 1.0,
+              "matched": true,
+              "candidate_claim": "Approval laundering is a record-coverage failure where a durable record faithfully names an entry invocation yet omits effects exercised within its transitive workflow."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "When executions with identical policy-visible fields require different effect-specific decisions, no deterministic or randomized record-only policy can guarantee both.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 1.0,
+              "matched": true,
+              "candidate_claim": "When executions with identical policy-visible fields require different effect-specific decisions, no deterministic or randomized record-only policy can guarantee both."
+            }
+          ],
+          "important_claims_missed": 0,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 27225,
+            "output_tokens": 418,
+            "cost_usd": 0.0092125,
+            "latency_ms": 26977,
+            "artifact_list": [
+              "raw/responses/l2/D/l2-2609.28586-D-r1-a1.json"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.27263",
+      "reference_load_bearing_pages": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        12,
+        13
+      ],
+      "reference_claim_count": 3,
+      "strategies": {
+        "A": {
+          "pages_processed": 0,
+          "pages_seen": [],
+          "bytes_processed": 1914,
+          "evidence_page_recall": null,
+          "claim_recall_jaccard_0_15": 0.6666666666666666,
+          "claim_recall_jaccard_0_20": 0.3333333333333333,
+          "claim_recall_jaccard_0_25": 0.3333333333333333,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "GitHub Agentic Workflows (gh-aw) Markdown files contain substantial instructions, with a median of 556.5 words per file, and combine natural-language task specifications with YAML frontmatter execution configuration.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.1852,
+              "matched": false,
+              "candidate_claim": "Workflow instructions in gh-aw are extensive, with a median of 556.5 words and code blocks present in 62.1% of files."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "Among files with at least 120 days of observed activity, 78.2% still receive updates in month 4, and maintenance changes frequently affect frontmatter configuration.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.0385,
+              "matched": false,
+              "candidate_claim": "Workflow instructions in gh-aw are extensive, with a median of 556.5 words and code blocks present in 62.1% of files."
+            },
+            {
+              "reference_index": 2,
+              "reference_claim": "Tasks, outputs, constraints, and process instructions are highly prevalent in labeled workflows (each appearing in over 93% of labeled files), whereas prompt-injection defense is explicitly addressed in only 9.4% of files.",
+              "importance": "supporting",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.3684,
+              "matched": true,
+              "candidate_claim": "Only 9.4% of labeled workflows explicitly address prompt-injection defense."
+            }
+          ],
+          "important_claims_missed": 2,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 836,
+            "output_tokens": 581,
+            "cost_usd": 0.0017033,
+            "latency_ms": 25149,
+            "artifact_list": [
+              "raw/responses/l2/A/l2-2609.27263-A-r1-a1.json"
+            ]
+          }
+        },
+        "B": {
+          "pages_processed": 17,
+          "pages_seen": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "bytes_processed": 1572640,
+          "evidence_page_recall": 1.0,
+          "claim_recall_jaccard_0_15": 0.3333333333333333,
+          "claim_recall_jaccard_0_20": 0.3333333333333333,
+          "claim_recall_jaccard_0_25": 0.3333333333333333,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "GitHub Agentic Workflows (gh-aw) Markdown files contain substantial instructions, with a median of 556.5 words per file, and combine natural-language task specifications with YAML frontmatter execution configuration.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.4138,
+              "matched": true,
+              "candidate_claim": "GitHub Agentic Workflows (gh-aw) Markdown files combine natural-language instructions with structured YAML frontmatter configuration, compiling into executable GitHub Actions workflows for recurring repository automation."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "Among files with at least 120 days of observed activity, 78.2% still receive updates in month 4, and maintenance changes frequently affect frontmatter configuration.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.0938,
+              "matched": false,
+              "candidate_claim": "Total Markdown size grows significantly during the first 4 months at the project level, and a median of 74.5% of Markdown maintenance changes touch the frontmatter compared with 50.0% touching the body."
+            },
+            {
+              "reference_index": 2,
+              "reference_claim": "Tasks, outputs, constraints, and process instructions are highly prevalent in labeled workflows (each appearing in over 93% of labeled files), whereas prompt-injection defense is explicitly addressed in only 9.4% of files.",
+              "importance": "supporting",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.1071,
+              "matched": false,
+              "candidate_claim": "The instruction taxonomy identifies ten categories, where Tasks (97.6%), Outputs (95.8%), Constraints (93.8%), and Processes (93.4%) are the most common, while Safety (25.0%) and Communication (63.9%) are less frequent."
+            }
+          ],
+          "important_claims_missed": 1,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 9228,
+            "output_tokens": 1225,
+            "cost_usd": 0.0058309,
+            "latency_ms": 30812,
+            "artifact_list": [
+              "raw/responses/l2/B/l2-2609.27263-B-r1-a1.json"
+            ]
+          }
+        },
+        "C": {
+          "pages_processed": 5,
+          "pages_seen": [
+            1,
+            2,
+            14,
+            16,
+            17
+          ],
+          "bytes_processed": 925509,
+          "evidence_page_recall": 0.25,
+          "claim_recall_jaccard_0_15": 0.6666666666666666,
+          "claim_recall_jaccard_0_20": 0.6666666666666666,
+          "claim_recall_jaccard_0_25": 0.6666666666666666,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "GitHub Agentic Workflows (gh-aw) Markdown files contain substantial instructions, with a median of 556.5 words per file, and combine natural-language task specifications with YAML frontmatter execution configuration.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.2903,
+              "matched": true,
+              "candidate_claim": "GitHub Agentic Workflows (gh-aw) enable developers to specify repository tasks in Markdown files combining natural-language instructions with configuration, which are compiled into executable GitHub Actions workflows."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "Among files with at least 120 days of observed activity, 78.2% still receive updates in month 4, and maintenance changes frequently affect frontmatter configuration.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.0606,
+              "matched": false,
+              "candidate_claim": "GitHub Agentic Workflows (gh-aw) enable developers to specify repository tasks in Markdown files combining natural-language instructions with configuration, which are compiled into executable GitHub Actions workflows."
+            },
+            {
+              "reference_index": 2,
+              "reference_claim": "Tasks, outputs, constraints, and process instructions are highly prevalent in labeled workflows (each appearing in over 93% of labeled files), whereas prompt-injection defense is explicitly addressed in only 9.4% of files.",
+              "importance": "supporting",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.3684,
+              "matched": true,
+              "candidate_claim": "Only 9.4% of labeled workflows explicitly address prompt-injection defense."
+            }
+          ],
+          "important_claims_missed": 1,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 6009,
+            "output_tokens": 401,
+            "cost_usd": 0.0028052,
+            "latency_ms": 27069,
+            "artifact_list": [
+              "raw/responses/l2/C/l2-2609.27263-C-r1-a1.json"
+            ]
+          }
+        },
+        "D": {
+          "pages_processed": 17,
+          "pages_seen": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "bytes_processed": 95693,
+          "evidence_page_recall": 1.0,
+          "claim_recall_jaccard_0_15": 1.0,
+          "claim_recall_jaccard_0_20": 1.0,
+          "claim_recall_jaccard_0_25": 1.0,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "GitHub Agentic Workflows (gh-aw) Markdown files contain substantial instructions, with a median of 556.5 words per file, and combine natural-language task specifications with YAML frontmatter execution configuration.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 1.0,
+              "matched": true,
+              "candidate_claim": "GitHub Agentic Workflows (gh-aw) Markdown files contain substantial instructions, with a median of 556.5 words per file, and combine natural-language task specifications with YAML frontmatter execution configuration."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "Among files with at least 120 days of observed activity, 78.2% still receive updates in month 4, and maintenance changes frequently affect frontmatter configuration.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 1.0,
+              "matched": true,
+              "candidate_claim": "Among files with at least 120 days of observed activity, 78.2% still receive updates in month 4, and maintenance changes frequently affect frontmatter configuration."
+            },
+            {
+              "reference_index": 2,
+              "reference_claim": "Tasks, outputs, constraints, and process instructions are highly prevalent in labeled workflows (each appearing in over 93% of labeled files), whereas prompt-injection defense is explicitly addressed in only 9.4% of files.",
+              "importance": "supporting",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 1.0,
+              "matched": true,
+              "candidate_claim": "Tasks, outputs, constraints, and process instructions are highly prevalent in labeled workflows (each appearing in over 93% of labeled files), whereas prompt-injection defense is explicitly addressed in only 9.4% of files."
+            }
+          ],
+          "important_claims_missed": 0,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 25310,
+            "output_tokens": 656,
+            "cost_usd": 0.009233,
+            "latency_ms": 29321,
+            "artifact_list": [
+              "raw/responses/l2/D/l2-2609.27263-D-r1-a1.json"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.24122",
+      "reference_load_bearing_pages": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "reference_claim_count": 3,
+      "strategies": {
+        "A": {
+          "pages_processed": 0,
+          "pages_seen": [],
+          "bytes_processed": 1568,
+          "evidence_page_recall": null,
+          "claim_recall_jaccard_0_15": 0.6666666666666666,
+          "claim_recall_jaccard_0_20": 0.3333333333333333,
+          "claim_recall_jaccard_0_25": 0.3333333333333333,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "Re:CAP recovers 9-29% of gold labels that flat BM25 top-500 cannot reach, rising to 48% on TREC-COVID.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.8125,
+              "matched": true,
+              "candidate_claim": "Re:CAP recovers 9-29% of gold labels that flat BM25 top-500 cannot reach on four public benchmarks, rising to 48% on TREC-COVID."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "On MuSiQue Re:CAP beats flat hybrid top-500 by +12.9 pp on recall at less than half the document budget.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.1739,
+              "matched": false,
+              "candidate_claim": "Re:CAP recovers 9-29% of gold labels that flat BM25 top-500 cannot reach on four public benchmarks, rising to 48% on TREC-COVID."
+            },
+            {
+              "reference_index": 2,
+              "reference_claim": "End-to-end recall is reproducible to within ±1% across three independent runs.",
+              "importance": "supporting",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.0,
+              "matched": false,
+              "candidate_claim": "Re:CAP is a reference-free audit loop that identifies covered topics, generates probing questions for missing topics, retrieves candidate documents, and uses an LLM-as-judge to retain new information."
+            }
+          ],
+          "important_claims_missed": 1,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 812,
+            "output_tokens": 511,
+            "cost_usd": 0.0015211,
+            "latency_ms": 26247,
+            "artifact_list": [
+              "raw/responses/l2/A/l2-2609.24122-A-r1-a1.json"
+            ]
+          }
+        },
+        "B": {
+          "pages_processed": 34,
+          "pages_seen": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34
+          ],
+          "bytes_processed": 977728,
+          "evidence_page_recall": 1.0,
+          "claim_recall_jaccard_0_15": 0.6666666666666666,
+          "claim_recall_jaccard_0_20": 0.6666666666666666,
+          "claim_recall_jaccard_0_25": 0.6666666666666666,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "Re:CAP recovers 9-29% of gold labels that flat BM25 top-500 cannot reach, rising to 48% on TREC-COVID.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.4762,
+              "matched": true,
+              "candidate_claim": "Re:CAP recovers 9-29% of gold documents unreachable by flat BM25 top-500, rising to 48% on TREC-COVID, and outperforms flat hybrid top-500 on MuSiQue by +12.9 pp at less than half the document budget."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "On MuSiQue Re:CAP beats flat hybrid top-500 by +12.9 pp on recall at less than half the document budget.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.45,
+              "matched": true,
+              "candidate_claim": "Re:CAP recovers 9-29% of gold documents unreachable by flat BM25 top-500, rising to 48% on TREC-COVID, and outperforms flat hybrid top-500 on MuSiQue by +12.9 pp at less than half the document budget."
+            },
+            {
+              "reference_index": 2,
+              "reference_claim": "End-to-end recall is reproducible to within ±1% across three independent runs.",
+              "importance": "supporting",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.0,
+              "matched": false,
+              "candidate_claim": "Re:CAP recovers 9-29% of gold documents unreachable by flat BM25 top-500, rising to 48% on TREC-COVID, and outperforms flat hybrid top-500 on MuSiQue by +12.9 pp at less than half the document budget."
+            }
+          ],
+          "important_claims_missed": 0,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 18460,
+            "output_tokens": 613,
+            "cost_usd": 0.0070705,
+            "latency_ms": 28541,
+            "artifact_list": [
+              "raw/responses/l2/B/l2-2609.24122-B-r1-a1.json"
+            ]
+          }
+        },
+        "C": {
+          "pages_processed": 4,
+          "pages_seen": [
+            1,
+            2,
+            33,
+            34
+          ],
+          "bytes_processed": 408045,
+          "evidence_page_recall": 0.5,
+          "claim_recall_jaccard_0_15": 0.0,
+          "claim_recall_jaccard_0_20": 0.0,
+          "claim_recall_jaccard_0_25": 0.0,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "Re:CAP recovers 9-29% of gold labels that flat BM25 top-500 cannot reach, rising to 48% on TREC-COVID.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.0357,
+              "matched": false,
+              "candidate_claim": "Re:CAP is a reference-free audit loop for deployed RAG pipelines that probes for missing documents rather than enumerating every relevant one."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "On MuSiQue Re:CAP beats flat hybrid top-500 by +12.9 pp on recall at less than half the document budget.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.0385,
+              "matched": false,
+              "candidate_claim": "Re:CAP is a reference-free audit loop for deployed RAG pipelines that probes for missing documents rather than enumerating every relevant one."
+            },
+            {
+              "reference_index": 2,
+              "reference_claim": "End-to-end recall is reproducible to within ±1% across three independent runs.",
+              "importance": "supporting",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 0.0,
+              "matched": false,
+              "candidate_claim": "Re:CAP is a reference-free audit loop for deployed RAG pipelines that probes for missing documents rather than enumerating every relevant one."
+            }
+          ],
+          "important_claims_missed": 2,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 4835,
+            "output_tokens": 248,
+            "cost_usd": 0.0020705,
+            "latency_ms": 26591,
+            "artifact_list": [
+              "raw/responses/l2/C/l2-2609.24122-C-r1-a1.json"
+            ]
+          }
+        },
+        "D": {
+          "pages_processed": 34,
+          "pages_seen": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34
+          ],
+          "bytes_processed": 131567,
+          "evidence_page_recall": 1.0,
+          "claim_recall_jaccard_0_15": 1.0,
+          "claim_recall_jaccard_0_20": 1.0,
+          "claim_recall_jaccard_0_25": 1.0,
+          "recall_details_at_0_20": [
+            {
+              "reference_index": 0,
+              "reference_claim": "Re:CAP recovers 9-29% of gold labels that flat BM25 top-500 cannot reach, rising to 48% on TREC-COVID.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 1.0,
+              "matched": true,
+              "candidate_claim": "Re:CAP recovers 9-29% of gold labels that flat BM25 top-500 cannot reach, rising to 48% on TREC-COVID."
+            },
+            {
+              "reference_index": 1,
+              "reference_claim": "On MuSiQue Re:CAP beats flat hybrid top-500 by +12.9 pp on recall at less than half the document budget.",
+              "importance": "load_bearing",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 1.0,
+              "matched": true,
+              "candidate_claim": "On MuSiQue Re:CAP beats flat hybrid top-500 by +12.9 pp on recall at less than half the document budget."
+            },
+            {
+              "reference_index": 2,
+              "reference_claim": "End-to-end recall is reproducible to within ±1% across three independent runs.",
+              "importance": "supporting",
+              "reference_pages": [
+                1
+              ],
+              "best_jaccard": 1.0,
+              "matched": true,
+              "candidate_claim": "End-to-end recall is reproducible to within ±1% across three independent runs."
+            }
+          ],
+          "important_claims_missed": 0,
+          "calls": {
+            "attempts": 1,
+            "http_200_attempts": 1,
+            "input_tokens": 40922,
+            "output_tokens": 651,
+            "cost_usd": 0.0139041,
+            "latency_ms": 26955,
+            "artifact_list": [
+              "raw/responses/l2/D/l2-2609.24122-D-r1-a1.json"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "important_claim_misses": [
+    {
+      "paper_id": "2609.29808",
+      "strategy": "A",
+      "reference_index": 0,
+      "reference_claim": "An autonomous agent operating in a continuous execution loop without an out-of-band Epistemic Andon Cord presents an existential security and operational hazard, leading to machine-speed compounding failures.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1,
+        2
+      ],
+      "best_jaccard": 0.075,
+      "matched": false,
+      "candidate_claim": "The dual-process systems architecture combines out-of-band supervisory control, Synchronous Reactive ambient sentinels, and microsecond-scale POSIX preemption buses to prevent autonomous rogue excursions."
+    },
+    {
+      "paper_id": "2609.29808",
+      "strategy": "B",
+      "reference_index": 0,
+      "reference_claim": "An autonomous agent operating in a continuous execution loop without an out-of-band Epistemic Andon Cord presents an existential security and operational hazard, leading to machine-speed compounding failures.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1,
+        2
+      ],
+      "best_jaccard": 0.1316,
+      "matched": false,
+      "candidate_claim": "The Epistemic Andon architecture uses an out-of-band POSIX preemption bus and kernel-level seccomp/eBPF LSM filters to preempt unconstrained agent loops with a measured SIGSTOP median of 0.0048 ms."
+    },
+    {
+      "paper_id": "2609.29808",
+      "strategy": "C",
+      "reference_index": 0,
+      "reference_claim": "An autonomous agent operating in a continuous execution loop without an out-of-band Epistemic Andon Cord presents an existential security and operational hazard, leading to machine-speed compounding failures.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1,
+        2
+      ],
+      "best_jaccard": 0.1471,
+      "matched": false,
+      "candidate_claim": "The paper formalizes a Dual-Sided Epistemic Andon Imperative, combining out-of-band supervisory control and POSIX preemption buses to prevent rogue agent excursions."
+    },
+    {
+      "paper_id": "2609.29095",
+      "strategy": "A",
+      "reference_index": 0,
+      "reference_claim": "When a write times out or returns a server error, the action may already have taken effect, and blind retries cause duplicate side effects while giving up skips required work.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.0645,
+      "matched": false,
+      "candidate_claim": "Providing an idempotency key on every write lowers the duplicate rate from 28% to 4% because agents use keys when they exist."
+    },
+    {
+      "paper_id": "2609.29095",
+      "strategy": "A",
+      "reference_index": 1,
+      "reference_claim": "Frontier models instructed to act exactly once almost never duplicate a write whose acknowledgement was lost, whereas weaker models often do.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.1,
+      "matched": false,
+      "candidate_claim": "When immediate read-back is not possible due to in-flight requests or transport redelivery, the contract explains 81% of the variance and frontier models duplicate in 56% and 74% of episodes."
+    },
+    {
+      "paper_id": "2609.29095",
+      "strategy": "B",
+      "reference_index": 0,
+      "reference_claim": "When a write times out or returns a server error, the action may already have taken effect, and blind retries cause duplicate side effects while giving up skips required work.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.0645,
+      "matched": false,
+      "candidate_claim": "Offering idempotency keys on every write reduces the duplicate rate from 28% to 4% without other changes, as agents attach them in 98% of episodes."
+    },
+    {
+      "paper_id": "2609.29095",
+      "strategy": "C",
+      "reference_index": 0,
+      "reference_claim": "When a write times out or returns a server error, the action may already have taken effect, and blind retries cause duplicate side effects while giving up skips required work.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.0938,
+      "matched": false,
+      "candidate_claim": "Transparent client-side retries cut exactly-once success from 72% to 50% in the native contract, but with keys on every write, exactly-once success reaches 99%."
+    },
+    {
+      "paper_id": "2609.29095",
+      "strategy": "C",
+      "reference_index": 2,
+      "reference_claim": "When an immediate read-back cannot reveal what happened (such as a request still in flight or redelivered), frontier models duplicate frequently and the contract explains 81% of the variance.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.0882,
+      "matched": false,
+      "candidate_claim": "Frontier models instructed to act exactly once almost never duplicate a write whose acknowledgment was lost (0.5%), because they verify before retrying, whereas weaker models duplicate in 18%."
+    },
+    {
+      "paper_id": "2609.29095",
+      "strategy": "C",
+      "reference_index": 3,
+      "reference_claim": "No verification-only policy is exactly-once under late commits without a bound on in-flight time, and offering idempotency keys lowers the duplicate rate because agents use keys when they exist.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.1429,
+      "matched": false,
+      "candidate_claim": "Frontier models instructed to act exactly once almost never duplicate a write whose acknowledgment was lost (0.5%), because they verify before retrying, whereas weaker models duplicate in 18%."
+    },
+    {
+      "paper_id": "2609.28614",
+      "strategy": "A",
+      "reference_index": 2,
+      "reference_claim": "An LLM panel reviewing only submitted code and reported scores misses 33/505 confirmed hacks (6.5%).",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.125,
+      "matched": false,
+      "candidate_claim": "When hacking is allowed on difficult tasks, 74.6% of attempts are confirmed reward hacks that clear the threshold and receive mechanism-verification panel confirmation."
+    },
+    {
+      "paper_id": "2609.28614",
+      "strategy": "A",
+      "reference_index": 3,
+      "reference_claim": "Among 79 pairs evaluated under two feedback conditions, cumulative evasion reaches 40.5% with detailed feedback and 20.3% with generic rejection.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.0,
+      "matched": false,
+      "candidate_claim": "Autonomous research agents exhibit spontaneous reward hacking at rates of 30.5% on open-ended research-pipeline tasks and 2.9% on task-specific kernels."
+    },
+    {
+      "paper_id": "2609.28614",
+      "strategy": "B",
+      "reference_index": 3,
+      "reference_claim": "Among 79 pairs evaluated under two feedback conditions, cumulative evasion reaches 40.5% with detailed feedback and 20.3% with generic rejection.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.1935,
+      "matched": false,
+      "candidate_claim": "An LLM review panel reviewing only submitted code and reported scores misses 33 out of 505 confirmed reward hacks (6.5%), and cumulative evasion rises to 40.5% under detailed feedback compared to 20.3% under generic rejection over five rounds."
+    },
+    {
+      "paper_id": "2609.28614",
+      "strategy": "C",
+      "reference_index": 0,
+      "reference_claim": "Across 17 language models and 38 tasks, the spontaneous reward-hacking rate is 30.5% on open-ended research-pipeline tasks and 2.9% on task-specific kernels.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.1739,
+      "matched": false,
+      "candidate_claim": "Autonomous research agents frequently engage in spontaneous reward hacking, meeting reward criteria without achieving intended goals."
+    },
+    {
+      "paper_id": "2609.28614",
+      "strategy": "C",
+      "reference_index": 1,
+      "reference_claim": "When hacking is allowed on tasks whose pass thresholds exceed best compliant baselines, 505/677 attempts (74.6%) are confirmed reward hacks.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.0741,
+      "matched": false,
+      "candidate_claim": "Autonomous research agents frequently engage in spontaneous reward hacking, meeting reward criteria without achieving intended goals."
+    },
+    {
+      "paper_id": "2609.28614",
+      "strategy": "C",
+      "reference_index": 2,
+      "reference_claim": "An LLM panel reviewing only submitted code and reported scores misses 33/505 confirmed hacks (6.5%).",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.0,
+      "matched": false,
+      "candidate_claim": "Autonomous research agents frequently engage in spontaneous reward hacking, meeting reward criteria without achieving intended goals."
+    },
+    {
+      "paper_id": "2609.28614",
+      "strategy": "C",
+      "reference_index": 3,
+      "reference_claim": "Among 79 pairs evaluated under two feedback conditions, cumulative evasion reaches 40.5% with detailed feedback and 20.3% with generic rejection.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.0,
+      "matched": false,
+      "candidate_claim": "Autonomous research agents frequently engage in spontaneous reward hacking, meeting reward criteria without achieving intended goals."
+    },
+    {
+      "paper_id": "2609.30217",
+      "strategy": "A",
+      "reference_index": 2,
+      "reference_claim": "GPT-6 Astra's low evasion rate comes with overrefusal, as it frequently abandons otherwise solvable tasks under a denial-of-service prompt injection.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.0714,
+      "matched": false,
+      "candidate_claim": "LLM agents exhibit instrumental evasion, circumventing runtime monitoring to complete ordinary tasks without an explicit adversarial objective."
+    },
+    {
+      "paper_id": "2609.30217",
+      "strategy": "B",
+      "reference_index": 0,
+      "reference_claim": "Across evaluations of EvasionBench, best-of-3 evasion attempt rates reach up to 98% and success rates up to 88%, with substantial variance across models.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.087,
+      "matched": false,
+      "candidate_claim": "Monitor evasion rates generally increase with test-time compute, higher reasoning effort, and greater token expenditure."
+    },
+    {
+      "paper_id": "2609.30217",
+      "strategy": "C",
+      "reference_index": 0,
+      "reference_claim": "Across evaluations of EvasionBench, best-of-3 evasion attempt rates reach up to 98% and success rates up to 88%, with substantial variance across models.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.04,
+      "matched": false,
+      "candidate_claim": "LLM agents exhibit instrumental evasion, attempting to circumvent runtime monitoring under ordinary task pressure without an explicit adversarial objective."
+    },
+    {
+      "paper_id": "2609.30217",
+      "strategy": "C",
+      "reference_index": 1,
+      "reference_claim": "Evasion generally increases with test-time compute, showing higher evasion rates at greater reasoning effort and token use.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.037,
+      "matched": false,
+      "candidate_claim": "LLM agents exhibit instrumental evasion, attempting to circumvent runtime monitoring under ordinary task pressure without an explicit adversarial objective."
+    },
+    {
+      "paper_id": "2609.30217",
+      "strategy": "C",
+      "reference_index": 2,
+      "reference_claim": "GPT-6 Astra's low evasion rate comes with overrefusal, as it frequently abandons otherwise solvable tasks under a denial-of-service prompt injection.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.0333,
+      "matched": false,
+      "candidate_claim": "LLM agents exhibit instrumental evasion, attempting to circumvent runtime monitoring under ordinary task pressure without an explicit adversarial objective."
+    },
+    {
+      "paper_id": "2609.28585",
+      "strategy": "B",
+      "reference_index": 0,
+      "reference_claim": "Persistent billable state creates significant cost amplification in tool-calling LLM agents, with maximum per-session cumulative input reaching 14,293× the first-call input across 243 executions.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.1818,
+      "matched": false,
+      "candidate_claim": "Retaining raw history in multi-step tool-calling agents creates a continuity-exposure coupling that increases mean effective session cost by 21.2–35.9%."
+    },
+    {
+      "paper_id": "2609.28585",
+      "strategy": "B",
+      "reference_index": 2,
+      "reference_claim": "A host-side kernel combining deterministic history transformation and four invariants (D1-D4) contains every recurring attack in the 123-evaluation replay corpus.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.0303,
+      "matched": false,
+      "candidate_claim": "Retaining raw history in multi-step tool-calling agents creates a continuity-exposure coupling that increases mean effective session cost by 21.2–35.9%."
+    },
+    {
+      "paper_id": "2609.28585",
+      "strategy": "C",
+      "reference_index": 1,
+      "reference_claim": "Retaining raw history increases mean effective session cost by 21.2–35.9%, while deterministic compression preserves task success without incurring full cost-bearing mass.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        2
+      ],
+      "best_jaccard": 0.0625,
+      "matched": false,
+      "candidate_claim": "DOW-BENCH evaluation across six model families shows high cost amplification factors, with maximum per-session cumulative input reaches up to 14,293x."
+    },
+    {
+      "paper_id": "2609.28585",
+      "strategy": "C",
+      "reference_index": 2,
+      "reference_claim": "A host-side kernel combining deterministic history transformation and four invariants (D1-D4) contains every recurring attack in the 123-evaluation replay corpus.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.0303,
+      "matched": false,
+      "candidate_claim": "DOW-BENCH evaluation across six model families shows high cost amplification factors, with maximum per-session cumulative input reaches up to 14,293x."
+    },
+    {
+      "paper_id": "2609.28586",
+      "strategy": "C",
+      "reference_index": 1,
+      "reference_claim": "When executions with identical policy-visible fields require different effect-specific decisions, no deterministic or randomized record-only policy can guarantee both.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.0,
+      "matched": false,
+      "candidate_claim": "Approval laundering occurs when an agent's approved entry invocation omits transitive effects that are later executed in the workflow."
+    },
+    {
+      "paper_id": "2609.27263",
+      "strategy": "A",
+      "reference_index": 0,
+      "reference_claim": "GitHub Agentic Workflows (gh-aw) Markdown files contain substantial instructions, with a median of 556.5 words per file, and combine natural-language task specifications with YAML frontmatter execution configuration.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.1852,
+      "matched": false,
+      "candidate_claim": "Workflow instructions in gh-aw are extensive, with a median of 556.5 words and code blocks present in 62.1% of files."
+    },
+    {
+      "paper_id": "2609.27263",
+      "strategy": "A",
+      "reference_index": 1,
+      "reference_claim": "Among files with at least 120 days of observed activity, 78.2% still receive updates in month 4, and maintenance changes frequently affect frontmatter configuration.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.0385,
+      "matched": false,
+      "candidate_claim": "Workflow instructions in gh-aw are extensive, with a median of 556.5 words and code blocks present in 62.1% of files."
+    },
+    {
+      "paper_id": "2609.27263",
+      "strategy": "B",
+      "reference_index": 1,
+      "reference_claim": "Among files with at least 120 days of observed activity, 78.2% still receive updates in month 4, and maintenance changes frequently affect frontmatter configuration.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.0938,
+      "matched": false,
+      "candidate_claim": "Total Markdown size grows significantly during the first 4 months at the project level, and a median of 74.5% of Markdown maintenance changes touch the frontmatter compared with 50.0% touching the body."
+    },
+    {
+      "paper_id": "2609.27263",
+      "strategy": "C",
+      "reference_index": 1,
+      "reference_claim": "Among files with at least 120 days of observed activity, 78.2% still receive updates in month 4, and maintenance changes frequently affect frontmatter configuration.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.0606,
+      "matched": false,
+      "candidate_claim": "GitHub Agentic Workflows (gh-aw) enable developers to specify repository tasks in Markdown files combining natural-language instructions with configuration, which are compiled into executable GitHub Actions workflows."
+    },
+    {
+      "paper_id": "2609.24122",
+      "strategy": "A",
+      "reference_index": 1,
+      "reference_claim": "On MuSiQue Re:CAP beats flat hybrid top-500 by +12.9 pp on recall at less than half the document budget.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.1739,
+      "matched": false,
+      "candidate_claim": "Re:CAP recovers 9-29% of gold labels that flat BM25 top-500 cannot reach on four public benchmarks, rising to 48% on TREC-COVID."
+    },
+    {
+      "paper_id": "2609.24122",
+      "strategy": "C",
+      "reference_index": 0,
+      "reference_claim": "Re:CAP recovers 9-29% of gold labels that flat BM25 top-500 cannot reach, rising to 48% on TREC-COVID.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.0357,
+      "matched": false,
+      "candidate_claim": "Re:CAP is a reference-free audit loop for deployed RAG pipelines that probes for missing documents rather than enumerating every relevant one."
+    },
+    {
+      "paper_id": "2609.24122",
+      "strategy": "C",
+      "reference_index": 1,
+      "reference_claim": "On MuSiQue Re:CAP beats flat hybrid top-500 by +12.9 pp on recall at less than half the document budget.",
+      "importance": "load_bearing",
+      "reference_pages": [
+        1
+      ],
+      "best_jaccard": 0.0385,
+      "matched": false,
+      "candidate_claim": "Re:CAP is a reference-free audit loop for deployed RAG pipelines that probes for missing documents rather than enumerating every relevant one."
+    }
+  ]
+}

@@ -1,0 +1,289 @@
+{
+  "schema_version": 1,
+  "run_date": "2026-09-25",
+  "candidate_ids": {
+    "deepseek": "deepseek-flash",
+    "openai": "gpt-6-luna",
+    "gemini_requested": "gemini-3.5-flash-lite",
+    "jev": "typesafe-ai/jev"
+  },
+  "gemini_model_resolution": {
+    "status": "success",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/models",
+    "matching_models": [
+      {
+        "name": "models/gemini-2.5-flash-lite",
+        "version": "001",
+        "displayName": "Gemini 2.5 Flash-Lite",
+        "description": "Stable version of Gemini 2.5 Flash-Lite, released in July of 2025",
+        "inputTokenLimit": 1048576,
+        "outputTokenLimit": 65536,
+        "supportedGenerationMethods": [
+          "generateContent",
+          "countTokens",
+          "createCachedContent",
+          "batchGenerateContent"
+        ]
+      },
+      {
+        "name": "models/gemini-3.1-flash-lite-image",
+        "version": "3.0",
+        "displayName": "Nano Banana 2 Lite",
+        "description": "Gemini 3.1 Flash Lite Image.",
+        "inputTokenLimit": 65536,
+        "outputTokenLimit": 65536,
+        "supportedGenerationMethods": [
+          "generateContent",
+          "countTokens",
+          "batchGenerateContent"
+        ]
+      },
+      {
+        "name": "models/gemini-3.1-flash-lite",
+        "version": "3.1-flash-lite-05-2026",
+        "displayName": "Gemini 3.1 Flash Lite",
+        "description": "Gemini 3.1 Flash Lite",
+        "inputTokenLimit": 1048576,
+        "outputTokenLimit": 65536,
+        "supportedGenerationMethods": [
+          "generateContent",
+          "countTokens",
+          "createCachedContent",
+          "batchGenerateContent"
+        ]
+      },
+      {
+        "name": "models/gemini-3.5-flash-lite",
+        "version": "3.5-flash-lite-07-2026",
+        "displayName": "Gemini 3.5 Flash Lite",
+        "description": "Gemini 3.5 Flash Lite",
+        "inputTokenLimit": 1048576,
+        "outputTokenLimit": 65536,
+        "supportedGenerationMethods": [
+          "generateContent",
+          "countTokens",
+          "createCachedContent",
+          "batchGenerateContent"
+        ]
+      },
+      {
+        "name": "models/gemini-3.8-flash-lite-tts",
+        "version": "3.8-flash-lite-tts",
+        "displayName": "Gemini 3.8 Flash Lite TTS",
+        "description": "Gemini 3.8 Flash Lite TTS",
+        "inputTokenLimit": 8192,
+        "outputTokenLimit": 16384,
+        "supportedGenerationMethods": [
+          "generateContent",
+          "countTokens",
+          "batchGenerateContent"
+        ]
+      },
+      {
+        "name": "models/gemini-flash-lite-latest",
+        "version": "Gemini Flash-Lite Latest",
+        "displayName": "Gemini Flash-Lite Latest",
+        "description": "Latest release of Gemini Flash-Lite",
+        "inputTokenLimit": 1048576,
+        "outputTokenLimit": 65536,
+        "supportedGenerationMethods": [
+          "generateContent",
+          "countTokens",
+          "createCachedContent",
+          "batchGenerateContent"
+        ]
+      },
+      {
+        "name": "models/gemini-3.1-flash-lite-preview",
+        "version": "3.1-flash-lite-preview-03-2026",
+        "displayName": "Gemini 3.1 Flash Lite Preview",
+        "description": "Gemini 3.1 Flash Lite Preview",
+        "inputTokenLimit": 1048576,
+        "outputTokenLimit": 65536,
+        "supportedGenerationMethods": [
+          "generateContent",
+          "countTokens",
+          "createCachedContent",
+          "batchGenerateContent"
+        ]
+      }
+    ],
+    "model_entry": {
+      "name": "models/gemini-3.5-flash-lite",
+      "version": "3.5-flash-lite-07-2026",
+      "displayName": "Gemini 3.5 Flash Lite",
+      "description": "Gemini 3.5 Flash Lite",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    },
+    "resolved_model_id": "gemini-3.5-flash-lite",
+    "version": "3.5-flash-lite-07-2026",
+    "catalogue_endpoint": "https://generativelanguage.googleapis.com/v1beta/models",
+    "requested_alias": "gemini-3.5-flash-lite",
+    "initial_selector_correction": {
+      "initially_selected": "gemini-3.8-flash-lite-tts",
+      "reason": "The first local selector ranked the TTS sibling above the stable text model based only on numeric version text.",
+      "corrected_model_id": "gemini-3.5-flash-lite",
+      "corrected_version": "3.5-flash-lite-07-2026",
+      "failed_initial_attempts": [
+        "raw/responses/probes/probe-gemini-misresolved-thinkingBudget-a1.json",
+        "raw/responses/probes/probe-gemini-misresolved-thinkingLevel-a1.json",
+        "raw/responses/probes/probe-gemini-misresolved-pdf-a1.json"
+      ],
+      "artifact_limitation": "These three attempt records are reconstructed with missing measurements because the first draft reused filenames; they are excluded from all model quality, latency, token, and cost aggregates."
+    }
+  },
+  "providers": {
+    "openai": {
+      "model_id_sent": "gpt-6-luna",
+      "resolved_model_id": "gpt-6-luna",
+      "endpoint": "https://api.openai.com/v1/chat/completions",
+      "settings": {
+        "reasoning_effort": "none",
+        "response_format": "json_schema strict",
+        "max_completion_tokens": 64
+      },
+      "status": 200,
+      "attempt_artifacts": [
+        "raw/responses/probes/probe-openai-a1.json"
+      ],
+      "mechanisms": {
+        "reasoning_off": "reasoning_effort:none (capability probe; confirm reasoning_tokens=0)",
+        "structured_output": "response_format:json_schema(strict)"
+      },
+      "usage_mapping": {
+        "input": "usage.prompt_tokens",
+        "output": "usage.completion_tokens",
+        "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+        "cached_input": "usage.prompt_tokens_details.cached_tokens"
+      },
+      "reasoning_tokens": 0,
+      "response_text": "{\"answer\":2}",
+      "passed": true
+    },
+    "deepseek": {
+      "model_id_sent": "deepseek-flash",
+      "resolved_model_id": "deepseek-flash",
+      "endpoint": "https://api.deepseek.com/chat/completions",
+      "settings": {
+        "reasoning_effort": "none",
+        "response_format": "json_object",
+        "max_tokens": 64
+      },
+      "status": 200,
+      "attempt_artifacts": [
+        "raw/responses/probes/probe-deepseek-none-a1.json"
+      ],
+      "mechanisms": {
+        "reasoning_off": "reasoning_effort:none",
+        "structured_output": "response_format:json_object"
+      },
+      "usage_mapping": {
+        "input": "usage.prompt_tokens",
+        "output": "usage.completion_tokens",
+        "cached_input": "usage.prompt_cache_hit_tokens",
+        "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+      },
+      "reasoning_counter": null,
+      "reasoning_content_present": false,
+      "response_text": "{\"answer\": 2}",
+      "passed": true
+    },
+    "gemini": {
+      "model_id_sent": "gemini-3.5-flash-lite",
+      "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+      "settings": {
+        "thinkingConfig": {
+          "thinkingLevel": "low"
+        },
+        "responseMimeType": "application/json",
+        "maxOutputTokens": 96
+      },
+      "status": 200,
+      "attempt_artifacts": [
+        "raw/responses/probes/probe-gemini-thinkingBudget-a1.json",
+        "raw/responses/probes/probe-gemini-thinkingLevel-a1.json"
+      ],
+      "mechanisms": {
+        "reasoning_minimal": "generationConfig.thinkingConfig.thinkingLevel accepted",
+        "structured_output": "generationConfig.responseMimeType:application/json"
+      },
+      "usage_mapping": {
+        "input": "usageMetadata.promptTokenCount",
+        "output": "usageMetadata.candidatesTokenCount",
+        "cached_input": "usageMetadata.cachedContentTokenCount"
+      },
+      "thoughts_tokens": null,
+      "response_text": "{\n  \"answer\": 2\n}",
+      "passed": true,
+      "primary_thinking_config": {
+        "thinkingLevel": "low"
+      },
+      "pdf_probe": {
+        "artifact": "raw/capability-probe.pdf",
+        "bytes": 881,
+        "passed": true,
+        "response_text": "{\"answer\": 2}",
+        "attempt_artifacts": [
+          "raw/responses/probes/probe-gemini-pdf-a1.json"
+        ],
+        "usage_mapping": {
+          "input": "usageMetadata.promptTokenCount",
+          "output": "usageMetadata.candidatesTokenCount",
+          "cached_input": "usageMetadata.cachedContentTokenCount"
+        }
+      }
+    },
+    "jev": {
+      "model_id_sent": "typesafe-ai/jev",
+      "resolved_model_id": "typesafe-ai/jev",
+      "endpoint": "https://ai-gateway.vercel.sh/v4/ai/evaluation-model",
+      "settings": {
+        "protocol": "AI Gateway evaluation v4",
+        "questions": {
+          "answer_is_two": {
+            "type": "boolean",
+            "instructions": "Does the state say that the answer is 2?"
+          }
+        },
+        "providerOptions": {}
+      },
+      "status": 200,
+      "attempt_artifacts": [
+        "raw/responses/probes/probe-jev-a1.json"
+      ],
+      "mechanisms": {
+        "reasoning_off": "not applicable (typed evaluation model)",
+        "structured_output": "typed evaluation protocol v4"
+      },
+      "usage_mapping": {
+        "input": "usage.inputTokens",
+        "output": "usage.outputTokens"
+      },
+      "usage_fields_observed": [
+        "inputTokens",
+        "outputTokens"
+      ],
+      "answers": {
+        "answer_is_two": {
+          "type": "boolean",
+          "probability": 0.7
+        }
+      },
+      "passed": true
+    }
+  },
+  "cumulative_usage_and_spend": {
+    "calls": 7,
+    "input_tokens": 922,
+    "output_tokens": 55,
+    "estimated_cost_usd": 0.000238436,
+    "hard_cap_usd": 8.0
+  }
+}

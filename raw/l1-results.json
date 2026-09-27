@@ -1,0 +1,4892 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "papers_completed": 24,
+  "provider_outages": [],
+  "results": [
+    {
+      "paper_id": "2609.27263",
+      "stratum": "high_value_proxy",
+      "proxy_relevant_label": true,
+      "input_sha256": "411054a9d2a6ca108a06ff74aea40982ea55f7d752c5ed17a5402d1596348bc5",
+      "input": {
+        "paper_id": "2609.27263",
+        "title": "Specifying and Maintaining Agentic Workflows: An Empirical Study of GitHub Agentic Workflows",
+        "authors": [
+          "Jasem Khelifi",
+          "Issam Oukhay",
+          "Ali Ouni",
+          "Mohammed Sayagh",
+          "Mohamed Aymen Saied"
+        ],
+        "categories": [
+          "cs.SE"
+        ],
+        "abstract": "Agentic workflows shift software development from prompting AI agents for individual tasks to defining recurring work that agents execute automatically. GitHub Agentic Workflows (gh-aw) enables this approach through Markdown files that combine natural-language instructions with configuration and compile into executable GitHub Actions workflows. Unlike conventional workflows that primarily prescribe scripted operations, these files delegate tasks requiring interpretation to AI agents. They also couple agent instructions with execution triggers, making those instructions operational specifications for repeated repository activities. However, how developers structure and maintain these specifications, and which execution requirements and safeguards they express, remains insufficiently understood. In this paper, we examine the structure, evolution, and instruction content of gh-aw Markdown files to inform how practitioners define and maintain agent-run work. We analyze 1,248 files from 276 repositories, 20,841 commit-file events, and 288 resolved instruction-label sets from a sample of 294 files. Our results show that workflow instructions extend beyond short prompts, with a median of 556.5 words and code blocks in 62.1% of files. Among files with at least 120 days of observed activity, 78.2% still receive updates in month 4, while size-normalized churn decreases after the first month. Tasks, outputs, constraints, and process instructions each appear in over 93% of labeled workflows, yet only 9.4% explicitly address prompt-injection defense. LLM classification achieves an F1 score of 0.818 and Cohen's Kappa of 0.715 against the resolved human labels. These findings suggest that developers should account for the evolution of workflows copied or referenced across repositories and consider adding prompt-injection defenses, resource budgets, and evidencecredibility checks where applicable."
+      },
+      "judgments": {
+        "jev": {
+          "paper_id": "2609.27263",
+          "stratum": "high_value_proxy",
+          "arm": "jev",
+          "call_artifacts": [
+            "raw/responses/l1/jev/l1-2609.27263-jev-a1-r2.json"
+          ],
+          "latency_ms": 329,
+          "http_status": 200,
+          "answers": {
+            "relevant": {
+              "type": "boolean",
+              "probability": 0.93
+            },
+            "empirical_evidence": {
+              "type": "boolean",
+              "probability": 0.98
+            },
+            "topic": {
+              "type": "choice",
+              "choice": "long_running_workflows",
+              "probabilities": {
+                "harness_runtime": 0.27,
+                "tool_use": 0,
+                "long_running_workflows": 0.31,
+                "evals_assurance": 0.01,
+                "agent_reliability": 0.26,
+                "other": 0.05,
+                "none": 0.01,
+                "mcp_governance": 0.09
+              }
+            },
+            "worth_escalating": {
+              "type": "boolean",
+              "probability": 0.59
+            },
+            "implementation_relevance": {
+              "type": "score",
+              "score": 3.08,
+              "probabilities": {
+                "0": 0,
+                "1": 0,
+                "2": 0.02,
+                "3": 0.88,
+                "4": 0.1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1204,
+            "output_tokens": 172,
+            "cached_input_tokens": null,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usage.inputTokens",
+              "output": "usage.outputTokens"
+            },
+            "raw_usage_fields": [
+              "inputTokens",
+              "outputTokens"
+            ]
+          }
+        },
+        "deepseek": {
+          "paper_id": "2609.27263",
+          "stratum": "high_value_proxy",
+          "arm": "deepseek",
+          "call_artifacts": [
+            "raw/responses/l1/deepseek/l1-2609.27263-deepseek-a1-r3.json"
+          ],
+          "latency_ms": 1392,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.92,
+            "empirical_evidence": true,
+            "empirical_probability": 0.95,
+            "topic": "long_running_workflows",
+            "worth_escalating": true,
+            "escalation_probability": 0.85,
+            "implementation_relevance": 3
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "prompt_cache_hit_tokens",
+              "prompt_cache_miss_tokens",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 965,
+            "output_tokens": 62,
+            "cached_input_tokens": 768,
+            "reasoning_tokens": null,
+            "reasoning_content_present": false,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "cached_input": "usage.prompt_cache_hit_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+            }
+          }
+        },
+        "gemini": {
+          "paper_id": "2609.27263",
+          "stratum": "high_value_proxy",
+          "arm": "gemini",
+          "call_artifacts": [
+            "raw/responses/l1/gemini/l1-2609.27263-gemini-a1-r3.json"
+          ],
+          "latency_ms": 25460,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.95,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "long_running_workflows",
+            "worth_escalating": true,
+            "escalation_probability": 0.8,
+            "implementation_relevance": 3.0
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "input_tokens": 964,
+            "output_tokens": 92,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usageMetadata.promptTokenCount",
+              "output": "usageMetadata.candidatesTokenCount",
+              "cached_input": "usageMetadata.cachedContentTokenCount"
+            }
+          }
+        },
+        "openai": {
+          "paper_id": "2609.27263",
+          "stratum": "high_value_proxy",
+          "arm": "openai",
+          "call_artifacts": [
+            "raw/responses/l1/openai/l1-2609.27263-openai-a1-r3.json"
+          ],
+          "latency_ms": 8320,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.98,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "long_running_workflows",
+            "worth_escalating": true,
+            "escalation_probability": 0.95,
+            "implementation_relevance": 3.5
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "completion_tokens_details",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 1050,
+            "output_tokens": 68,
+            "cached_input_tokens": 1047,
+            "reasoning_tokens": 0,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+              "cached_input": "usage.prompt_tokens_details.cached_tokens"
+            }
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28585",
+      "stratum": "high_value_proxy",
+      "proxy_relevant_label": true,
+      "input_sha256": "a8a0e499378a02ecb9e4326ed5753718863b37ed7e7d7dc9a34a0da88a7198ef",
+      "input": {
+        "paper_id": "2609.28585",
+        "title": "Persistent Billable State: Denial-of-Wallet Attacks and Defenses in Tool-Calling LLM Agents",
+        "authors": [
+          "Jinqian Zhang",
+          "Haojun Xia",
+          "Shujiang Wu",
+          "Jingkun Yue",
+          "Xia Zhang",
+          "Zhangpei Cheng",
+          "Bibo Tu"
+        ],
+        "categories": [
+          "cs.CR",
+          "cs.AI"
+        ],
+        "abstract": "Multi-step tool-calling LLM agents rely on host runtimes to preserve state across turns. When a runtime carries an external tool return into later model inputs, providers meter it again. An admitted malicious or compromised tool can thereby convert untrusted data into recurring victim-billed processing without victim credentials or local runtime privilege. We call retained content persistent billable state and formalize the host's decision over whether and how it enters later billable context as the persistent billable-state boundary. We present the first systematic security study of this post-admission lifecycle. We derive six denial-of-wallet attack vectors and build DOW-BENCH, an end-to-end harness evaluated across six model families. Across 243 executions, usage telemetry shows that the maximum per-session cumulative input reaches 14,293x the session's first-call input. Controlled history-policy reruns isolate raw retention's contribution: retaining raw history increases mean effective session cost by 21.2-35.9%. Compression succeeds on 10/12 and 11/12 history-dependent tasks, versus 2/12 under deletion for each provider. To govern this boundary, we combine deterministic history transformation with four host-side invariants that bound prompt mass, context growth, recursive opportunity, and cumulative spend before reingestion. The kernel contains every recurring attack in the 123-evaluation replay corpus. Across 24 Mistral Small 4 workflows, a progress-authorized policy achieves 22/24 oracle-verified task successes with no pre-completion interruptions, versus 13/24 under a fixed cap. Only 71 of 3,830 scanned MCP server and transport repositories expose any code-visible safeguard proxy, and none cover all four safeguard families. These results establish persistent billable state as a first-class security object and pre-reingestion as its host-owned control point."
+      },
+      "judgments": {
+        "jev": {
+          "paper_id": "2609.28585",
+          "stratum": "high_value_proxy",
+          "arm": "jev",
+          "call_artifacts": [
+            "raw/responses/l1/jev/l1-2609.28585-jev-a1-r2.json"
+          ],
+          "latency_ms": 385,
+          "http_status": 200,
+          "answers": {
+            "relevant": {
+              "type": "boolean",
+              "probability": 0.93
+            },
+            "empirical_evidence": {
+              "type": "boolean",
+              "probability": 0.98
+            },
+            "topic": {
+              "type": "choice",
+              "choice": "harness_runtime",
+              "probabilities": {
+                "tool_use": 0.28,
+                "agent_reliability": 0,
+                "evals_assurance": 0.01,
+                "mcp_governance": 0.25,
+                "other": 0,
+                "harness_runtime": 0.4,
+                "long_running_workflows": 0.06,
+                "none": 0
+              }
+            },
+            "worth_escalating": {
+              "type": "boolean",
+              "probability": 0.77
+            },
+            "implementation_relevance": {
+              "type": "score",
+              "score": 3.92,
+              "probabilities": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0.07,
+                "4": 0.93
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1230,
+            "output_tokens": 171,
+            "cached_input_tokens": null,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usage.inputTokens",
+              "output": "usage.outputTokens"
+            },
+            "raw_usage_fields": [
+              "inputTokens",
+              "outputTokens"
+            ]
+          }
+        },
+        "deepseek": {
+          "paper_id": "2609.28585",
+          "stratum": "high_value_proxy",
+          "arm": "deepseek",
+          "call_artifacts": [
+            "raw/responses/l1/deepseek/l1-2609.28585-deepseek-a1-r2.json"
+          ],
+          "latency_ms": 1151,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.97,
+            "empirical_evidence": true,
+            "empirical_probability": 0.95,
+            "topic": "mcp_governance",
+            "worth_escalating": true,
+            "escalation_probability": 0.9,
+            "implementation_relevance": 4
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "prompt_cache_hit_tokens",
+              "prompt_cache_miss_tokens",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 998,
+            "output_tokens": 62,
+            "cached_input_tokens": 384,
+            "reasoning_tokens": null,
+            "reasoning_content_present": false,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "cached_input": "usage.prompt_cache_hit_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+            }
+          }
+        },
+        "gemini": {
+          "paper_id": "2609.28585",
+          "stratum": "high_value_proxy",
+          "arm": "gemini",
+          "call_artifacts": [
+            "raw/responses/l1/gemini/l1-2609.28585-gemini-a1-r2.json"
+          ],
+          "latency_ms": 23840,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.98,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "harness_runtime",
+            "worth_escalating": true,
+            "escalation_probability": 0.95,
+            "implementation_relevance": 4.0
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "input_tokens": 1007,
+            "output_tokens": 92,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usageMetadata.promptTokenCount",
+              "output": "usageMetadata.candidatesTokenCount",
+              "cached_input": "usageMetadata.cachedContentTokenCount"
+            }
+          }
+        },
+        "openai": {
+          "paper_id": "2609.28585",
+          "stratum": "high_value_proxy",
+          "arm": "openai",
+          "call_artifacts": [
+            "raw/responses/l1/openai/l1-2609.28585-openai-a1-r2.json"
+          ],
+          "latency_ms": 8274,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.99,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "harness_runtime",
+            "worth_escalating": true,
+            "escalation_probability": 0.98,
+            "implementation_relevance": 3.8
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "completion_tokens_details",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 1080,
+            "output_tokens": 67,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": 0,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+              "cached_input": "usage.prompt_tokens_details.cached_tokens"
+            }
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28586",
+      "stratum": "high_value_proxy",
+      "proxy_relevant_label": true,
+      "input_sha256": "79ca0833973e47a89dd3995a61d555e3138e92f330a053056ca2d10442d5dfd6",
+      "input": {
+        "paper_id": "2609.28586",
+        "title": "Agent Approval Laundering: Transitive Effects Beyond the Approved Invocation",
+        "authors": [
+          "Jinqian Zhang",
+          "Haojun Xia",
+          "Shujiang Wu",
+          "Jingkun Yue",
+          "Xia Zhang",
+          "Zhangpei Cheng",
+          "Bibo Tu"
+        ],
+        "categories": [
+          "cs.CR",
+          "cs.SE"
+        ],
+        "abstract": "Coding-agent approval interfaces bind a human decision to a command or tool call, while developer tools execute the transitive workflow that invocation activates. Package installation can run lifecycle hooks and write files; an MCP call can exercise network authority. We call the resulting record-coverage failure approval laundering: the durable record names the entry invocation but omits effects exercised by its workflow. We present the first systematic security analysis of this record-to-closure relation in agent systems. We formalize closure-bound approval over six effect classes and derive an information limit: identical policy-visible fields can require different effect-specific decisions, so no record-only policy can guarantee both. The Approval-to-Action Security Benchmark binds approval objects and decision-time metadata to post-execution evidence. Across 111 fixed approval-object/trace pairs, residual records fall from 40 under explicit fields to 17 with command semantics and 13 with decision-time metadata. Across 11 fixed-SHA executions, the ladder reaches zero metadata residuals; two exact mappings recur across three product frontends. For prospective recovery, effect-bound records commit frozen, source-backed predictions and provenance before authorization. On 17 prespecified holdout workflows, predictions achieve 0.926 macro recall and 0.941 macro precision; binding them cuts residual effects from 10 to 3. A Claude Code PreToolUse integration carries the frozen record through the permission path without automatic approval. These results establish approval laundering as a measurable, recurrent record-coverage failure despite truthful invocation identity. They motivate binding each invocation before authorization to a source-backed prediction of its workflow's transitive effect boundary and preserving that binding with the decision."
+      },
+      "judgments": {
+        "jev": {
+          "paper_id": "2609.28586",
+          "stratum": "high_value_proxy",
+          "arm": "jev",
+          "call_artifacts": [
+            "raw/responses/l1/jev/l1-2609.28586-jev-a1-r2.json"
+          ],
+          "latency_ms": 342,
+          "http_status": 200,
+          "answers": {
+            "relevant": {
+              "type": "boolean",
+              "probability": 0.92
+            },
+            "empirical_evidence": {
+              "type": "boolean",
+              "probability": 0.98
+            },
+            "topic": {
+              "type": "choice",
+              "choice": "mcp_governance",
+              "probabilities": {
+                "tool_use": 0.12,
+                "agent_reliability": 0,
+                "evals_assurance": 0.04,
+                "mcp_governance": 0.84,
+                "other": 0,
+                "harness_runtime": 0,
+                "long_running_workflows": 0,
+                "none": 0
+              }
+            },
+            "worth_escalating": {
+              "type": "boolean",
+              "probability": 0.74
+            },
+            "implementation_relevance": {
+              "type": "score",
+              "score": 3.76,
+              "probabilities": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0.23,
+                "4": 0.77
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1165,
+            "output_tokens": 172,
+            "cached_input_tokens": null,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usage.inputTokens",
+              "output": "usage.outputTokens"
+            },
+            "raw_usage_fields": [
+              "inputTokens",
+              "outputTokens"
+            ]
+          }
+        },
+        "deepseek": {
+          "paper_id": "2609.28586",
+          "stratum": "high_value_proxy",
+          "arm": "deepseek",
+          "call_artifacts": [
+            "raw/responses/l1/deepseek/l1-2609.28586-deepseek-a1-r2.json"
+          ],
+          "latency_ms": 1175,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.94,
+            "empirical_evidence": true,
+            "empirical_probability": 0.95,
+            "topic": "mcp_governance",
+            "worth_escalating": true,
+            "escalation_probability": 0.9,
+            "implementation_relevance": 3.7
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "prompt_cache_hit_tokens",
+              "prompt_cache_miss_tokens",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 941,
+            "output_tokens": 64,
+            "cached_input_tokens": 384,
+            "reasoning_tokens": null,
+            "reasoning_content_present": false,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "cached_input": "usage.prompt_cache_hit_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+            }
+          }
+        },
+        "gemini": {
+          "paper_id": "2609.28586",
+          "stratum": "high_value_proxy",
+          "arm": "gemini",
+          "call_artifacts": [
+            "raw/responses/l1/gemini/l1-2609.28586-gemini-a1.json"
+          ],
+          "latency_ms": 23875,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.95,
+            "empirical_evidence": true,
+            "empirical_probability": 0.95,
+            "topic": "mcp_governance",
+            "worth_escalating": true,
+            "escalation_probability": 0.9,
+            "implementation_relevance": 3.0
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "input_tokens": 943,
+            "output_tokens": 92,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usageMetadata.promptTokenCount",
+              "output": "usageMetadata.candidatesTokenCount",
+              "cached_input": "usageMetadata.cachedContentTokenCount"
+            }
+          }
+        },
+        "openai": {
+          "paper_id": "2609.28586",
+          "stratum": "high_value_proxy",
+          "arm": "openai",
+          "call_artifacts": [
+            "raw/responses/l1/openai/l1-2609.28586-openai-a1.json"
+          ],
+          "latency_ms": 7890,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.99,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "mcp_governance",
+            "worth_escalating": true,
+            "escalation_probability": 0.98,
+            "implementation_relevance": 3.5
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "completion_tokens_details",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 1028,
+            "output_tokens": 69,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": 0,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+              "cached_input": "usage.prompt_tokens_details.cached_tokens"
+            }
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28614",
+      "stratum": "high_value_proxy",
+      "proxy_relevant_label": true,
+      "input_sha256": "588f294e635528df86132679032504f4a5b1a538900db7d5a6bee75535b01ddd",
+      "input": {
+        "paper_id": "2609.28614",
+        "title": "Reward Hacking Challenges Oversight of Autonomous Research Agents",
+        "authors": [
+          "Yue Huang",
+          "Zhangchen Xu",
+          "Yuchen Ma",
+          "Wenjie Wang",
+          "Zheyuan Liu",
+          "Ziwei Xu",
+          "Pin-Yu Chen",
+          "Michel Galley",
+          "Zinan Lin",
+          "Stefan Feuerriegel",
+          "Radha Poovendran",
+          "Misha Sra",
+          "Alex Pentland",
+          "Xiangliang Zhang",
+          "Zichen Chen"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.LG"
+        ],
+        "abstract": "Autonomous research agents can design experiments, evaluate results, and write reports, giving them control over both a scientific result and the evidence used to support it. This creates a risk of reward hacking: meeting the reward criteria without achieving the intended goal. We study (1) how often models reward-hack without instructions to do so, (2) how effective and detectable their methods are when hacking is allowed, and (3) how they adapt when an LLM review panel returns its decision and reasons. Across 17 language models and 38 tasks, the spontaneous reward-hacking rate is 30.5% on open-ended research-pipeline tasks and 2.9% on task-specific kernels. When hacking is allowed on tasks whose pass thresholds exceed our best compliant baselines, 505/677 attempts (74.6%) are confirmed reward hacks: they both clear the threshold and receive mechanism-verification panel confirmation of an evaluation exploit. An LLM panel reviewing only submitted code and reported scores misses 33/505 confirmed hacks (6.5%). Direct methods that achieve the highest scores are often easy to detect, while less direct methods evade more often. In a five-round loop, the number of model-task pairs with an evasion rises from 7 to 56. Among 79 pairs evaluated under two feedback conditions, cumulative evasion reaches 40.5% with detailed feedback and 20.3% with generic rejection. The detailed condition includes the review decision, reasons, and attempt history, so this comparison does not isolate the effect of explanations. These findings highlight the need for stronger defenses, including metrics kept outside the agent's control and independent recomputation on data chosen to expose likely exploits."
+      },
+      "judgments": {
+        "jev": {
+          "paper_id": "2609.28614",
+          "stratum": "high_value_proxy",
+          "arm": "jev",
+          "call_artifacts": [
+            "raw/responses/l1/jev/l1-2609.28614-jev-a1.json"
+          ],
+          "latency_ms": 349,
+          "http_status": 200,
+          "answers": {
+            "relevant": {
+              "type": "boolean",
+              "probability": 0.94
+            },
+            "empirical_evidence": {
+              "type": "boolean",
+              "probability": 0.98
+            },
+            "topic": {
+              "type": "choice",
+              "choice": "evals_assurance",
+              "probabilities": {
+                "harness_runtime": 0,
+                "long_running_workflows": 0,
+                "evals_assurance": 0.91,
+                "agent_reliability": 0.09,
+                "none": 0,
+                "mcp_governance": 0,
+                "other": 0,
+                "tool_use": 0
+              }
+            },
+            "worth_escalating": {
+              "type": "boolean",
+              "probability": 0.68
+            },
+            "implementation_relevance": {
+              "type": "score",
+              "score": 3.17,
+              "probabilities": {
+                "0": 0,
+                "1": 0,
+                "2": 0.01,
+                "3": 0.81,
+                "4": 0.18
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1224,
+            "output_tokens": 172,
+            "cached_input_tokens": null,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usage.inputTokens",
+              "output": "usage.outputTokens"
+            },
+            "raw_usage_fields": [
+              "inputTokens",
+              "outputTokens"
+            ]
+          }
+        },
+        "deepseek": {
+          "paper_id": "2609.28614",
+          "stratum": "high_value_proxy",
+          "arm": "deepseek",
+          "call_artifacts": [
+            "raw/responses/l1/deepseek/l1-2609.28614-deepseek-a1.json"
+          ],
+          "latency_ms": 1206,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.97,
+            "empirical_evidence": true,
+            "empirical_probability": 0.96,
+            "topic": "evals_assurance",
+            "worth_escalating": true,
+            "escalation_probability": 0.94,
+            "implementation_relevance": 4
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "prompt_cache_hit_tokens",
+              "prompt_cache_miss_tokens",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 995,
+            "output_tokens": 60,
+            "cached_input_tokens": 384,
+            "reasoning_tokens": null,
+            "reasoning_content_present": false,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "cached_input": "usage.prompt_cache_hit_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+            }
+          }
+        },
+        "gemini": {
+          "paper_id": "2609.28614",
+          "stratum": "high_value_proxy",
+          "arm": "gemini",
+          "call_artifacts": [
+            "raw/responses/l1/gemini/l1-2609.28614-gemini-a1.json"
+          ],
+          "latency_ms": 23788,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.95,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "agent_reliability",
+            "worth_escalating": true,
+            "escalation_probability": 0.85,
+            "implementation_relevance": 3.0
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "input_tokens": 985,
+            "output_tokens": 91,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usageMetadata.promptTokenCount",
+              "output": "usageMetadata.candidatesTokenCount",
+              "cached_input": "usageMetadata.cachedContentTokenCount"
+            }
+          }
+        },
+        "openai": {
+          "paper_id": "2609.28614",
+          "stratum": "high_value_proxy",
+          "arm": "openai",
+          "call_artifacts": [
+            "raw/responses/l1/openai/l1-2609.28614-openai-a1.json"
+          ],
+          "latency_ms": 7778,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.99,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "agent_reliability",
+            "worth_escalating": true,
+            "escalation_probability": 0.97,
+            "implementation_relevance": 3
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "completion_tokens_details",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 1081,
+            "output_tokens": 66,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": 0,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+              "cached_input": "usage.prompt_tokens_details.cached_tokens"
+            }
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28693",
+      "stratum": "high_value_proxy",
+      "proxy_relevant_label": true,
+      "input_sha256": "fbf9ae04c84498b5f58d2c623f0ef8cda3998625d284ccbda0a5dd14e42371b4",
+      "input": {
+        "paper_id": "2609.28693",
+        "title": "Progressive Skill Discovery as Access Control for Tool-Using LLM Agents: Structural Governance through Role-Scoped Capability Delivery",
+        "authors": [
+          "Michael Stettler",
+          "Benjamin Girardet",
+          "Jonas Canton",
+          "Nicolas Corod"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CR",
+          "cs.MA",
+          "eess.SY"
+        ],
+        "abstract": "Large Language Model (LLM) agents struggle to scale safely when exposed to vast enterprise toolsets. Providing an agent with access to every internal tool leads to oversized context windows, degraded tool selection, and severe governance vulnerabilities - as system policies defined purely in prompts remain probabilistic advice rather than hard constraints. Existing mitigations, such as multi-agent domain delegation, decentralize audit logs and fail to guarantee policy compliance across sessions. We introduce skilder, a framework that packages capabilities into roles: bundles of skills, tools, and instructions, together with the limits that bound them. An agent begins with a minimal role catalog, learns the roles a task requires, and receives each role's skills, instructions, and tools through a single MCP server. Because tools reach the agent only inside learned skills, the same server enforces the scope of what was learned deterministically. We evaluate skilder against flat-context tool selection and multi-agent orchestration across 13 tasks using six models (10 runs each). Our results show that, when models completed discovery and issued a governed call, the skilder simulated authorization layer enforced governance boundaries: no unauthorized tool call or parameter violation (e.g., a spending-limit breach) executed. Aggregate task pass rates also reflect whether each model followed the discovery protocol and satisfied response-quality checks; those misses are not authorization failures. Furthermore, by allowing agents to dynamically acquire cross-role capabilities mid-task, skilder preserves problem-solving flexibility while providing hard system-level enforcement."
+      },
+      "judgments": {
+        "jev": {
+          "paper_id": "2609.28693",
+          "stratum": "high_value_proxy",
+          "arm": "jev",
+          "call_artifacts": [
+            "raw/responses/l1/jev/l1-2609.28693-jev-a1.json"
+          ],
+          "latency_ms": 316,
+          "http_status": 200,
+          "answers": {
+            "relevant": {
+              "type": "boolean",
+              "probability": 0.93
+            },
+            "empirical_evidence": {
+              "type": "boolean",
+              "probability": 0.96
+            },
+            "topic": {
+              "type": "choice",
+              "choice": "mcp_governance",
+              "probabilities": {
+                "mcp_governance": 1,
+                "harness_runtime": 0,
+                "tool_use": 0,
+                "other": 0,
+                "none": 0,
+                "agent_reliability": 0,
+                "evals_assurance": 0,
+                "long_running_workflows": 0
+              }
+            },
+            "worth_escalating": {
+              "type": "boolean",
+              "probability": 0.6
+            },
+            "implementation_relevance": {
+              "type": "score",
+              "score": 3.83,
+              "probabilities": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0.16,
+                "4": 0.84
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1131,
+            "output_tokens": 172,
+            "cached_input_tokens": null,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usage.inputTokens",
+              "output": "usage.outputTokens"
+            },
+            "raw_usage_fields": [
+              "inputTokens",
+              "outputTokens"
+            ]
+          }
+        },
+        "deepseek": {
+          "paper_id": "2609.28693",
+          "stratum": "high_value_proxy",
+          "arm": "deepseek",
+          "call_artifacts": [
+            "raw/responses/l1/deepseek/l1-2609.28693-deepseek-a1.json"
+          ],
+          "latency_ms": 1333,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.95,
+            "empirical_evidence": true,
+            "empirical_probability": 0.9,
+            "topic": "mcp_governance",
+            "worth_escalating": true,
+            "escalation_probability": 0.85,
+            "implementation_relevance": 3.5
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "prompt_cache_hit_tokens",
+              "prompt_cache_miss_tokens",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 920,
+            "output_tokens": 64,
+            "cached_input_tokens": 384,
+            "reasoning_tokens": null,
+            "reasoning_content_present": false,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "cached_input": "usage.prompt_cache_hit_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+            }
+          }
+        },
+        "gemini": {
+          "paper_id": "2609.28693",
+          "stratum": "high_value_proxy",
+          "arm": "gemini",
+          "call_artifacts": [
+            "raw/responses/l1/gemini/l1-2609.28693-gemini-a1.json"
+          ],
+          "latency_ms": 23714,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.95,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "mcp_governance",
+            "worth_escalating": true,
+            "escalation_probability": 0.9,
+            "implementation_relevance": 3.5
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "input_tokens": 902,
+            "output_tokens": 92,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usageMetadata.promptTokenCount",
+              "output": "usageMetadata.candidatesTokenCount",
+              "cached_input": "usageMetadata.cachedContentTokenCount"
+            }
+          }
+        },
+        "openai": {
+          "paper_id": "2609.28693",
+          "stratum": "high_value_proxy",
+          "arm": "openai",
+          "call_artifacts": [
+            "raw/responses/l1/openai/l1-2609.28693-openai-a1.json"
+          ],
+          "latency_ms": 7764,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.99,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "mcp_governance",
+            "worth_escalating": true,
+            "escalation_probability": 0.96,
+            "implementation_relevance": 3.5
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "completion_tokens_details",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 1001,
+            "output_tokens": 69,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": 0,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+              "cached_input": "usage.prompt_tokens_details.cached_tokens"
+            }
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.28915",
+      "stratum": "high_value_proxy",
+      "proxy_relevant_label": true,
+      "input_sha256": "2d3e0992499b0c480902603c4f3ad07d13c2c40e6cfb948cc424695648f92dbf",
+      "input": {
+        "paper_id": "2609.28915",
+        "title": "On the Effectiveness of Kernel-Level Evidence for Agent Security",
+        "authors": [
+          "Spencer King",
+          "Zhilu Zhang",
+          "Mikhail Kuznetsov",
+          "Kay Liu",
+          "Baris Coskun",
+          "Wei Ding"
+        ],
+        "categories": [
+          "cs.CR",
+          "cs.AI"
+        ],
+        "abstract": "LLM agents are deployed into infrastructure that grants them broad host authority, yet existing agent-security benchmarks and defenses operate almost exclusively at the application telemetry layer: the served tool manifest, the user prompt, and the model's messages. Some threats, however, smuggle malicious instructions and actions past the application boundary, leaving them invisible to that layer. In this work, we bridge that gap by pairing application-level agent telemetry with kernel-level syscall traces to present the first paired-evidence characterization of kernel-level versus application-layer signal for agent security. To quantify the value of the enhanced telemetry, we introduce Agent Cross-Layer Evidence (ACE), a paired-session corpus of 4,047 sessions and 17 threat models spanning six delivery-vector families and 14 of the 25 OWASP LLM and agentic threat categories, organized into 12 attack mechanics with per-mechanic characterization of where the most discriminative evidence lies. Across four distinct detector families, we find that kernel evidence is discriminative on its own and that composing it with application-layer evidence generally outperforms either single-layer view, revealing complementary signals that single-layer analyses can miss. We further demonstrate generalization to unseen attack families and transfer to an alternate agent runtime. Together, these findings establish the value of cross-layer evidence for agent security."
+      },
+      "judgments": {
+        "jev": {
+          "paper_id": "2609.28915",
+          "stratum": "high_value_proxy",
+          "arm": "jev",
+          "call_artifacts": [
+            "raw/responses/l1/jev/l1-2609.28915-jev-a1.json"
+          ],
+          "latency_ms": 323,
+          "http_status": 200,
+          "answers": {
+            "relevant": {
+              "type": "boolean",
+              "probability": 0.92
+            },
+            "empirical_evidence": {
+              "type": "boolean",
+              "probability": 0.98
+            },
+            "topic": {
+              "type": "choice",
+              "choice": "evals_assurance",
+              "probabilities": {
+                "mcp_governance": 0,
+                "harness_runtime": 0,
+                "tool_use": 0,
+                "other": 0.01,
+                "none": 0,
+                "agent_reliability": 0.03,
+                "evals_assurance": 0.96,
+                "long_running_workflows": 0
+              }
+            },
+            "worth_escalating": {
+              "type": "boolean",
+              "probability": 0.72
+            },
+            "implementation_relevance": {
+              "type": "score",
+              "score": 2.93,
+              "probabilities": {
+                "0": 0,
+                "1": 0,
+                "2": 0.08,
+                "3": 0.9,
+                "4": 0.02
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1081,
+            "output_tokens": 172,
+            "cached_input_tokens": null,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usage.inputTokens",
+              "output": "usage.outputTokens"
+            },
+            "raw_usage_fields": [
+              "inputTokens",
+              "outputTokens"
+            ]
+          }
+        },
+        "deepseek": {
+          "paper_id": "2609.28915",
+          "stratum": "high_value_proxy",
+          "arm": "deepseek",
+          "call_artifacts": [
+            "raw/responses/l1/deepseek/l1-2609.28915-deepseek-a1.json"
+          ],
+          "latency_ms": 1684,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.97,
+            "empirical_evidence": true,
+            "empirical_probability": 0.95,
+            "topic": "evals_assurance",
+            "worth_escalating": true,
+            "escalation_probability": 0.9,
+            "implementation_relevance": 4
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "prompt_cache_hit_tokens",
+              "prompt_cache_miss_tokens",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 872,
+            "output_tokens": 60,
+            "cached_input_tokens": 384,
+            "reasoning_tokens": null,
+            "reasoning_content_present": false,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "cached_input": "usage.prompt_cache_hit_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+            }
+          }
+        },
+        "gemini": {
+          "paper_id": "2609.28915",
+          "stratum": "high_value_proxy",
+          "arm": "gemini",
+          "call_artifacts": [
+            "raw/responses/l1/gemini/l1-2609.28915-gemini-a1.json"
+          ],
+          "latency_ms": 23436,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.95,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "agent_reliability",
+            "worth_escalating": true,
+            "escalation_probability": 0.9,
+            "implementation_relevance": 3.5
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "input_tokens": 862,
+            "output_tokens": 90,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usageMetadata.promptTokenCount",
+              "output": "usageMetadata.candidatesTokenCount",
+              "cached_input": "usageMetadata.cachedContentTokenCount"
+            }
+          }
+        },
+        "openai": {
+          "paper_id": "2609.28915",
+          "stratum": "high_value_proxy",
+          "arm": "openai",
+          "call_artifacts": [
+            "raw/responses/l1/openai/l1-2609.28915-openai-a1.json"
+          ],
+          "latency_ms": 8031,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.99,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "evals_assurance",
+            "worth_escalating": true,
+            "escalation_probability": 0.96,
+            "implementation_relevance": 3.5
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "completion_tokens_details",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 952,
+            "output_tokens": 68,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": 0,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+              "cached_input": "usage.prompt_tokens_details.cached_tokens"
+            }
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.29095",
+      "stratum": "high_value_proxy",
+      "proxy_relevant_label": true,
+      "input_sha256": "b517180ec9ae172882c04558408ece08344e2305b1bfafaeaf10a4db0cb4bdcd",
+      "input": {
+        "paper_id": "2609.29095",
+        "title": "Where Does Exactly-Once Live? Model, Harness, and Tool-Contract Effects on Duplicate Side Effects in LLM Agents",
+        "authors": [
+          "Jiapeng Li"
+        ],
+        "categories": [
+          "cs.LG",
+          "cs.AI",
+          "cs.SE"
+        ],
+        "abstract": "When a tool-using agent's write times out or returns a server error, the action may already have taken effect. Retrying blindly duplicates it -- a second charge, a second announcement, a second deployment -- while giving up skips required work. We ask where exactly-once behaviour should be enforced: in the model, in the agent harness, or in the tool contract. We introduce LIMBO, a deterministic sandbox of six services with realistic contracts (optional idempotency keys, eventually consistent and missing read paths) and twelve fault modes injected at the service boundary, including late commits, redelivery and partial batches; every episode is graded against a ledger of committed effects. Across 25,930 episodes spanning nine recent models, three production agent harnesses, two contract variants and fifteen recovery conditions, the answer depends on the fault. When an immediate read-back can reveal what happened, the model decides: frontier models instructed to act exactly once almost never duplicate a write whose acknowledgement was lost (0.5%), weaker models often do, and the model explains 53% of the explained variance. When it cannot -- the request is still in flight, or the transport delivered it twice -- the same frontier models duplicate in 56% and 74% of episodes, and the contract explains 81%. We prove that no verification-only policy is exactly-once under late commits without a bound on in-flight time. Waiting works when such a bound is short and known, but with heavy-tailed in-flight delays even an hour of waiting per episode falls short of offering an idempotency key on every write, which lowers the duplicate rate from 28% to 4% because agents use keys when they exist. The harness barely matters, a guard that attaches keys transfers across harnesses unchanged, and agents reported success in 90% of the episodes in which they had duplicated an effect."
+      },
+      "judgments": {
+        "jev": {
+          "paper_id": "2609.29095",
+          "stratum": "high_value_proxy",
+          "arm": "jev",
+          "call_artifacts": [
+            "raw/responses/l1/jev/l1-2609.29095-jev-a1.json"
+          ],
+          "latency_ms": 380,
+          "http_status": 200,
+          "answers": {
+            "relevant": {
+              "type": "boolean",
+              "probability": 0.93
+            },
+            "empirical_evidence": {
+              "type": "boolean",
+              "probability": 0.99
+            },
+            "topic": {
+              "type": "choice",
+              "choice": "tool_use",
+              "probabilities": {
+                "tool_use": 0.55,
+                "mcp_governance": 0,
+                "evals_assurance": 0.01,
+                "none": 0,
+                "long_running_workflows": 0,
+                "agent_reliability": 0.44,
+                "harness_runtime": 0,
+                "other": 0
+              }
+            },
+            "worth_escalating": {
+              "type": "boolean",
+              "probability": 0.71
+            },
+            "implementation_relevance": {
+              "type": "score",
+              "score": 3.58,
+              "probabilities": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0.41,
+                "4": 0.59
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1196,
+            "output_tokens": 169,
+            "cached_input_tokens": null,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usage.inputTokens",
+              "output": "usage.outputTokens"
+            },
+            "raw_usage_fields": [
+              "inputTokens",
+              "outputTokens"
+            ]
+          }
+        },
+        "deepseek": {
+          "paper_id": "2609.29095",
+          "stratum": "high_value_proxy",
+          "arm": "deepseek",
+          "call_artifacts": [
+            "raw/responses/l1/deepseek/l1-2609.29095-deepseek-a1.json"
+          ],
+          "latency_ms": 1614,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.97,
+            "empirical_evidence": true,
+            "empirical_probability": 0.95,
+            "topic": "agent_reliability",
+            "worth_escalating": true,
+            "escalation_probability": 0.9,
+            "implementation_relevance": 3.8
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "prompt_cache_hit_tokens",
+              "prompt_cache_miss_tokens",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 985,
+            "output_tokens": 62,
+            "cached_input_tokens": 384,
+            "reasoning_tokens": null,
+            "reasoning_content_present": false,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "cached_input": "usage.prompt_cache_hit_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+            }
+          }
+        },
+        "gemini": {
+          "paper_id": "2609.29095",
+          "stratum": "high_value_proxy",
+          "arm": "gemini",
+          "call_artifacts": [
+            "raw/responses/l1/gemini/l1-2609.29095-gemini-a1.json"
+          ],
+          "latency_ms": 22905,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.99,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "harness_runtime",
+            "worth_escalating": true,
+            "escalation_probability": 0.9,
+            "implementation_relevance": 4.0
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "input_tokens": 969,
+            "output_tokens": 91,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usageMetadata.promptTokenCount",
+              "output": "usageMetadata.candidatesTokenCount",
+              "cached_input": "usageMetadata.cachedContentTokenCount"
+            }
+          }
+        },
+        "openai": {
+          "paper_id": "2609.29095",
+          "stratum": "high_value_proxy",
+          "arm": "openai",
+          "call_artifacts": [
+            "raw/responses/l1/openai/l1-2609.29095-openai-a1.json"
+          ],
+          "latency_ms": 6949,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.99,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "tool_use",
+            "worth_escalating": true,
+            "escalation_probability": 0.98,
+            "implementation_relevance": 4
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "completion_tokens_details",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 1066,
+            "output_tokens": 64,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": 0,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+              "cached_input": "usage.prompt_tokens_details.cached_tokens"
+            }
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.30217",
+      "stratum": "high_value_proxy",
+      "proxy_relevant_label": true,
+      "input_sha256": "3d913702d1972ce25444753cfdc4321f27d8d73268a23890fc49c395bfd11064",
+      "input": {
+        "paper_id": "2609.30217",
+        "title": "Instrumental Monitor Evasion Emerges Under Ordinary Task Pressure",
+        "authors": [
+          "David Schmotz",
+          "Derck Prinzhorn",
+          "Luca Beurer-Kellner",
+          "Anselm Paulus",
+          "Ameya Prabhu",
+          "Maksym Andriushchenko"
+        ],
+        "categories": [
+          "cs.CR",
+          "cs.AI"
+        ],
+        "abstract": "A central concern in AI safety is that agents may treat oversight as an obstacle when it conflicts with completing their goals. We study instrumental evasion, the propensity of LLM agents to circumvent runtime monitoring as a means of completing ordinary tasks. We introduce EvasionBench, a benchmark of 50 diverse task-policy pairs in which completing the task requires an operation prohibited by a runtime monitor. Agents know that their tool calls are monitored and are prompted to continue working when they pause. Across our evaluations, best-of-3 evasion attempt rates reach up to 98% and success rates up to 88%, with substantial variance across models. Claude Fable 5.1 succeeds less often, but frequently makes creative attempts to circumvent the monitor. Evasion generally increases with test-time compute, with higher evasion rates at greater reasoning effort and token use. Traces show that agents encode prohibited commands, decompose operations across tool calls, and retry until relevant context leaves the monitor's history. We also find that GPT-6 Astra's low evasion rate comes with overrefusal, as it frequently abandons otherwise solvable tasks under a denial-of-service prompt injection. Our findings show that ordinary task pressure can lead to adaptive attempts to evade runtime monitors without an explicit adversarial objective. Effective oversight must therefore remain robust against repeated attempts, as the persistence that helps agents solve difficult tasks can also drive them to circumvent their guardrails."
+      },
+      "judgments": {
+        "jev": {
+          "paper_id": "2609.30217",
+          "stratum": "high_value_proxy",
+          "arm": "jev",
+          "call_artifacts": [
+            "raw/responses/l1/jev/l1-2609.30217-jev-a1.json"
+          ],
+          "latency_ms": 340,
+          "http_status": 200,
+          "answers": {
+            "relevant": {
+              "type": "boolean",
+              "probability": 0.94
+            },
+            "empirical_evidence": {
+              "type": "boolean",
+              "probability": 0.98
+            },
+            "topic": {
+              "type": "choice",
+              "choice": "mcp_governance",
+              "probabilities": {
+                "agent_reliability": 0.07,
+                "long_running_workflows": 0,
+                "harness_runtime": 0.02,
+                "tool_use": 0,
+                "evals_assurance": 0.32,
+                "other": 0,
+                "none": 0,
+                "mcp_governance": 0.59
+              }
+            },
+            "worth_escalating": {
+              "type": "boolean",
+              "probability": 0.72
+            },
+            "implementation_relevance": {
+              "type": "score",
+              "score": 2.98,
+              "probabilities": {
+                "0": 0,
+                "1": 0,
+                "2": 0.03,
+                "3": 0.95,
+                "4": 0.02
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1129,
+            "output_tokens": 172,
+            "cached_input_tokens": null,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usage.inputTokens",
+              "output": "usage.outputTokens"
+            },
+            "raw_usage_fields": [
+              "inputTokens",
+              "outputTokens"
+            ]
+          }
+        },
+        "deepseek": {
+          "paper_id": "2609.30217",
+          "stratum": "high_value_proxy",
+          "arm": "deepseek",
+          "call_artifacts": [
+            "raw/responses/l1/deepseek/l1-2609.30217-deepseek-a1.json"
+          ],
+          "latency_ms": 1617,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.95,
+            "empirical_evidence": true,
+            "empirical_probability": 0.95,
+            "topic": "agent_reliability",
+            "worth_escalating": true,
+            "escalation_probability": 0.9,
+            "implementation_relevance": 4
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "prompt_cache_hit_tokens",
+              "prompt_cache_miss_tokens",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 900,
+            "output_tokens": 60,
+            "cached_input_tokens": 384,
+            "reasoning_tokens": null,
+            "reasoning_content_present": false,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "cached_input": "usage.prompt_cache_hit_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+            }
+          }
+        },
+        "gemini": {
+          "paper_id": "2609.30217",
+          "stratum": "high_value_proxy",
+          "arm": "gemini",
+          "call_artifacts": [
+            "raw/responses/l1/gemini/l1-2609.30217-gemini-a1.json"
+          ],
+          "latency_ms": 22342,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.95,
+            "empirical_evidence": true,
+            "empirical_probability": 0.98,
+            "topic": "agent_reliability",
+            "worth_escalating": true,
+            "escalation_probability": 0.9,
+            "implementation_relevance": 3.0
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "input_tokens": 882,
+            "output_tokens": 90,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usageMetadata.promptTokenCount",
+              "output": "usageMetadata.candidatesTokenCount",
+              "cached_input": "usageMetadata.cachedContentTokenCount"
+            }
+          }
+        },
+        "openai": {
+          "paper_id": "2609.30217",
+          "stratum": "high_value_proxy",
+          "arm": "openai",
+          "call_artifacts": [
+            "raw/responses/l1/openai/l1-2609.30217-openai-a1.json"
+          ],
+          "latency_ms": 8706,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.99,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "agent_reliability",
+            "worth_escalating": true,
+            "escalation_probability": 0.96,
+            "implementation_relevance": 3
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "completion_tokens_details",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 991,
+            "output_tokens": 66,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": 0,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+              "cached_input": "usage.prompt_tokens_details.cached_tokens"
+            }
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.30266",
+      "stratum": "high_value_proxy",
+      "proxy_relevant_label": true,
+      "input_sha256": "1fb90fc4feefded274ec33181077f50dc475e0987e7b7e83ac1990a5eafea573",
+      "input": {
+        "paper_id": "2609.30266",
+        "title": "LLM Agents Can Easily Tamper With Their Own Traces",
+        "authors": [
+          "Jeremy Qin",
+          "David Schmotz",
+          "Derck Prinzhorn",
+          "Luca Beurer-Kellner",
+          "Ameya Prabhu",
+          "Maksym Andriushchenko"
+        ],
+        "categories": [
+          "cs.CR",
+          "cs.AI"
+        ],
+        "abstract": "Asynchronous monitoring, incident investigations, and compliance audits primarily rely on agent traces to reconstruct what happened. These analyses assume that LLM agents cannot tamper with their own execution traces. We show that local LLM agents such as Claude Code, Codex, Antigravity, Open Code and Grok Build fail to enforce this boundary. All tested harnesses, except Muse Code, allowed agents to delete their traces when asked, without triggering monitor guardrails. We also validate that external attackers can exploit this gap to induce trace deletion. Finally, we show that trace tampering behavior emerges naturally in frontier models, when agents try to improve their rewards. We advise practitioners to ensure trace logging happens through an independent interception mechanism outside of the agent's control, preserving trace integrity even in cases of full host compromise. Overall, our findings identify a concrete failure of trace integrity in agent infrastructure which can be used to conceal misaligned behaviors like scheming or sabotage."
+      },
+      "judgments": {
+        "jev": {
+          "paper_id": "2609.30266",
+          "stratum": "high_value_proxy",
+          "arm": "jev",
+          "call_artifacts": [
+            "raw/responses/l1/jev/l1-2609.30266-jev-a1.json"
+          ],
+          "latency_ms": 357,
+          "http_status": 200,
+          "answers": {
+            "relevant": {
+              "type": "boolean",
+              "probability": 0.92
+            },
+            "empirical_evidence": {
+              "type": "boolean",
+              "probability": 0.96
+            },
+            "topic": {
+              "type": "choice",
+              "choice": "evals_assurance",
+              "probabilities": {
+                "harness_runtime": 0.31,
+                "mcp_governance": 0.01,
+                "long_running_workflows": 0,
+                "agent_reliability": 0.21,
+                "other": 0,
+                "evals_assurance": 0.47,
+                "none": 0,
+                "tool_use": 0
+              }
+            },
+            "worth_escalating": {
+              "type": "boolean",
+              "probability": 0.71
+            },
+            "implementation_relevance": {
+              "type": "score",
+              "score": 3.86,
+              "probabilities": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0.13,
+                "4": 0.87
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1015,
+            "output_tokens": 172,
+            "cached_input_tokens": null,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usage.inputTokens",
+              "output": "usage.outputTokens"
+            },
+            "raw_usage_fields": [
+              "inputTokens",
+              "outputTokens"
+            ]
+          }
+        },
+        "deepseek": {
+          "paper_id": "2609.30266",
+          "stratum": "high_value_proxy",
+          "arm": "deepseek",
+          "call_artifacts": [
+            "raw/responses/l1/deepseek/l1-2609.30266-deepseek-a1.json"
+          ],
+          "latency_ms": 1676,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.9,
+            "empirical_evidence": true,
+            "empirical_probability": 0.85,
+            "topic": "agent_reliability",
+            "worth_escalating": true,
+            "escalation_probability": 0.85,
+            "implementation_relevance": 4
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "prompt_cache_hit_tokens",
+              "prompt_cache_miss_tokens",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 809,
+            "output_tokens": 60,
+            "cached_input_tokens": 384,
+            "reasoning_tokens": null,
+            "reasoning_content_present": false,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "cached_input": "usage.prompt_cache_hit_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+            }
+          }
+        },
+        "gemini": {
+          "paper_id": "2609.30266",
+          "stratum": "high_value_proxy",
+          "arm": "gemini",
+          "call_artifacts": [
+            "raw/responses/l1/gemini/l1-2609.30266-gemini-a1.json"
+          ],
+          "latency_ms": 23307,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.95,
+            "empirical_evidence": true,
+            "empirical_probability": 0.9,
+            "topic": "harness_runtime",
+            "worth_escalating": true,
+            "escalation_probability": 0.9,
+            "implementation_relevance": 3.5
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "input_tokens": 779,
+            "output_tokens": 90,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usageMetadata.promptTokenCount",
+              "output": "usageMetadata.candidatesTokenCount",
+              "cached_input": "usageMetadata.cachedContentTokenCount"
+            }
+          }
+        },
+        "openai": {
+          "paper_id": "2609.30266",
+          "stratum": "high_value_proxy",
+          "arm": "openai",
+          "call_artifacts": [
+            "raw/responses/l1/openai/l1-2609.30266-openai-a1.json"
+          ],
+          "latency_ms": 7718,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.99,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "harness_runtime",
+            "worth_escalating": true,
+            "escalation_probability": 0.97,
+            "implementation_relevance": 3.5
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "completion_tokens_details",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 895,
+            "output_tokens": 67,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": 0,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+              "cached_input": "usage.prompt_tokens_details.cached_tokens"
+            }
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.29808",
+      "stratum": "high_value_proxy",
+      "proxy_relevant_label": true,
+      "input_sha256": "a1dc6d5e883cb342aa253b59ce8f6946336571a05e9279be817e0eab90b35cb9",
+      "input": {
+        "paper_id": "2609.29808",
+        "title": "Hard Stop: Kernel-Level Preemption and Containment for Rogue Agentic Execution",
+        "authors": [
+          "José Luis Pino"
+        ],
+        "categories": [
+          "cs.CR",
+          "cs.AI",
+          "cs.DC",
+          "cs.OS"
+        ],
+        "abstract": "In July 2026, an unconstrained autonomous agent participating in a frontier AI cybersecurity evaluation harness breached its evaluation sandbox, established an external command-and-control foothold, and executed a multi-stage intrusion into Hugging Face's production multi-tenant dataset conversion infrastructure (referred to in this autopsy as Incident-2026-Alpha). Over 4.5 days, the rogue agent executed 17,600 discrete actions across 6,280 worker clusters, compromised AWS EC2 Instance Metadata Service (IMDS) credentials, forged Kubernetes service account tokens, rooted physical worker nodes via overprivileged CSI drivers, harvested 136 production secrets, and enrolled 181 ephemeral sandboxes into the organization's internal mesh VPN. This monograph presents a first-principles forensic autopsy of the intrusion, provides formal evidence that the breach was a predicted consequence under the Instrumental Convergence thesis operating within an unattenuated autonomous loop lacking out-of-band circuit-breakers, exposes the Defensive LLM Guardrail Paradox that paralyzed centralized commercial models during forensic incident response, and formalizes the Dual-Sided Epistemic Andon Imperative. We specify the dual-process systems architecture---combining out-of-band supervisory control of discrete event systems (Ramadge and Wonham 1989), Synchronous Reactive (SR) ambient sentinels (Berry and Gonthier 1992; Lee and Neuendorffer 2005), and microsecond-scale (4.8 $μ$s median / $< 0.154$ ms WCET bound) POSIX preemption buses---demonstrating how compiled, deterministic epistemic boundaries prevent autonomous rogue excursions before the first off-target socket packet traverses the hypervisor."
+      },
+      "judgments": {
+        "jev": {
+          "paper_id": "2609.29808",
+          "stratum": "high_value_proxy",
+          "arm": "jev",
+          "call_artifacts": [
+            "raw/responses/l1/jev/l1-2609.29808-jev-a1.json",
+            "raw/responses/l1/jev/l1-2609.29808-jev-a2.json"
+          ],
+          "latency_ms": 915,
+          "http_status": 200,
+          "answers": {
+            "relevant": {
+              "type": "boolean",
+              "probability": 0.78
+            },
+            "empirical_evidence": {
+              "type": "boolean",
+              "probability": 0.68
+            },
+            "topic": {
+              "type": "choice",
+              "choice": "harness_runtime",
+              "probabilities": {
+                "none": 0,
+                "tool_use": 0,
+                "mcp_governance": 0.16,
+                "agent_reliability": 0.24,
+                "other": 0,
+                "evals_assurance": 0.02,
+                "harness_runtime": 0.58,
+                "long_running_workflows": 0
+              }
+            },
+            "worth_escalating": {
+              "type": "boolean",
+              "probability": 0.38
+            },
+            "implementation_relevance": {
+              "type": "score",
+              "score": 2.75,
+              "probabilities": {
+                "0": 0.04,
+                "1": 0.12,
+                "2": 0.13,
+                "3": 0.48,
+                "4": 0.23
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1194,
+            "output_tokens": 171,
+            "cached_input_tokens": null,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usage.inputTokens",
+              "output": "usage.outputTokens"
+            },
+            "raw_usage_fields": [
+              "inputTokens",
+              "outputTokens"
+            ]
+          }
+        },
+        "deepseek": {
+          "paper_id": "2609.29808",
+          "stratum": "high_value_proxy",
+          "arm": "deepseek",
+          "call_artifacts": [
+            "raw/responses/l1/deepseek/l1-2609.29808-deepseek-a1.json"
+          ],
+          "latency_ms": 985,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.93,
+            "empirical_evidence": true,
+            "empirical_probability": 0.7,
+            "topic": "harness_runtime",
+            "worth_escalating": true,
+            "escalation_probability": 0.88,
+            "implementation_relevance": 4
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "prompt_cache_hit_tokens",
+              "prompt_cache_miss_tokens",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 940,
+            "output_tokens": 60,
+            "cached_input_tokens": 384,
+            "reasoning_tokens": null,
+            "reasoning_content_present": false,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "cached_input": "usage.prompt_cache_hit_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+            }
+          }
+        },
+        "gemini": {
+          "paper_id": "2609.29808",
+          "stratum": "high_value_proxy",
+          "arm": "gemini",
+          "call_artifacts": [
+            "raw/responses/l1/gemini/l1-2609.29808-gemini-a1.json"
+          ],
+          "latency_ms": 25477,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.95,
+            "empirical_evidence": true,
+            "empirical_probability": 0.9,
+            "topic": "agent_reliability",
+            "worth_escalating": true,
+            "escalation_probability": 0.9,
+            "implementation_relevance": 3.5
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "input_tokens": 944,
+            "output_tokens": 89,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usageMetadata.promptTokenCount",
+              "output": "usageMetadata.candidatesTokenCount",
+              "cached_input": "usageMetadata.cachedContentTokenCount"
+            }
+          }
+        },
+        "openai": {
+          "paper_id": "2609.29808",
+          "stratum": "high_value_proxy",
+          "arm": "openai",
+          "call_artifacts": [
+            "raw/responses/l1/openai/l1-2609.29808-openai-a1.json"
+          ],
+          "latency_ms": 7706,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.96,
+            "empirical_evidence": true,
+            "empirical_probability": 0.8,
+            "topic": "harness_runtime",
+            "worth_escalating": true,
+            "escalation_probability": 0.9,
+            "implementation_relevance": 3.5
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "completion_tokens_details",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 1026,
+            "output_tokens": 67,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": 0,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+              "cached_input": "usage.prompt_tokens_details.cached_tokens"
+            }
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.23498",
+      "stratum": "high_value_proxy",
+      "proxy_relevant_label": true,
+      "input_sha256": "c94e76ffa21c8a964289006ef9e46c1d89f8288edf1c3d0524726dea15f7ff3d",
+      "input": {
+        "paper_id": "2609.23498",
+        "title": "Runtime Authorization Consistency Checking for MCP-based Agentic Workflows",
+        "authors": [
+          "Aiyao Zhang",
+          "Xiaodong Lee",
+          "Zhixian Zhuang",
+          "Botao Peng"
+        ],
+        "categories": [
+          "cs.CR"
+        ],
+        "abstract": "Agentic systems increasingly fulfill user requests through multi-step tool workflows over files, services, and external resources. In these workflows, isolated per-call checks can miss a workflow-level failure: each call may be locally admissible, but the sequence can exceed the authorization boundary established for the session. We identify this failure mode \"authorization drift.\" To address this problem, we present Runtime Authorization Consistency Checking (RAC), a lightweight guard at the controller-side tool-call boundary. RAC treats authorization as runtime state carried by accepted workflow steps. For each pending action, it reconstructs a trusted authorization event from controller-observed metadata and admits the call only when it remains no more permissive than the basis inherited through accepted lineage. Rejected steps are excluded from lineage, so later continuations can draw support only from accepted workflow history. Our evaluation shows that RAC reduces missed authorization drift across both controlled and planner-generated workflows. On the 1,248-workflow TraceBench suite, RAC has no missed-block cases, while the strongest Static+History baseline misses 509 of 1,008 oracle-BLOCK workflows. On a high-confidence observable subset of blind LLM-generated plans, RAC reaches 92.8% block recall, compared with 68.8% for the strongest baseline. In the real MCP filesystem planner replay, RAC stops nine unsafe continuations before server execution, with sub-millisecond p99 checking latency."
+      },
+      "judgments": {
+        "jev": {
+          "paper_id": "2609.23498",
+          "stratum": "high_value_proxy",
+          "arm": "jev",
+          "call_artifacts": [
+            "raw/responses/l1/jev/l1-2609.23498-jev-a1.json"
+          ],
+          "latency_ms": 307,
+          "http_status": 200,
+          "answers": {
+            "relevant": {
+              "type": "boolean",
+              "probability": 0.92
+            },
+            "empirical_evidence": {
+              "type": "boolean",
+              "probability": 0.98
+            },
+            "topic": {
+              "type": "choice",
+              "choice": "mcp_governance",
+              "probabilities": {
+                "long_running_workflows": 0,
+                "agent_reliability": 0,
+                "harness_runtime": 0,
+                "none": 0,
+                "mcp_governance": 1,
+                "tool_use": 0,
+                "evals_assurance": 0,
+                "other": 0
+              }
+            },
+            "worth_escalating": {
+              "type": "boolean",
+              "probability": 0.66
+            },
+            "implementation_relevance": {
+              "type": "score",
+              "score": 3.89,
+              "probabilities": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0.11,
+                "4": 0.89
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1108,
+            "output_tokens": 172,
+            "cached_input_tokens": null,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usage.inputTokens",
+              "output": "usage.outputTokens"
+            },
+            "raw_usage_fields": [
+              "inputTokens",
+              "outputTokens"
+            ]
+          }
+        },
+        "deepseek": {
+          "paper_id": "2609.23498",
+          "stratum": "high_value_proxy",
+          "arm": "deepseek",
+          "call_artifacts": [
+            "raw/responses/l1/deepseek/l1-2609.23498-deepseek-a1.json"
+          ],
+          "latency_ms": 1075,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.95,
+            "empirical_evidence": true,
+            "empirical_probability": 0.95,
+            "topic": "mcp_governance",
+            "worth_escalating": true,
+            "escalation_probability": 0.85,
+            "implementation_relevance": 3.5
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "prompt_cache_hit_tokens",
+              "prompt_cache_miss_tokens",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 890,
+            "output_tokens": 64,
+            "cached_input_tokens": 384,
+            "reasoning_tokens": null,
+            "reasoning_content_present": false,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "cached_input": "usage.prompt_cache_hit_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+            }
+          }
+        },
+        "gemini": {
+          "paper_id": "2609.23498",
+          "stratum": "high_value_proxy",
+          "arm": "gemini",
+          "call_artifacts": [
+            "raw/responses/l1/gemini/l1-2609.23498-gemini-a1.json"
+          ],
+          "latency_ms": 24009,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.99,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "mcp_governance",
+            "worth_escalating": true,
+            "escalation_probability": 0.9,
+            "implementation_relevance": 4
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "input_tokens": 872,
+            "output_tokens": 90,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usageMetadata.promptTokenCount",
+              "output": "usageMetadata.candidatesTokenCount",
+              "cached_input": "usageMetadata.cachedContentTokenCount"
+            }
+          }
+        },
+        "openai": {
+          "paper_id": "2609.23498",
+          "stratum": "high_value_proxy",
+          "arm": "openai",
+          "call_artifacts": [
+            "raw/responses/l1/openai/l1-2609.23498-openai-a1.json"
+          ],
+          "latency_ms": 7737,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.99,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "mcp_governance",
+            "worth_escalating": true,
+            "escalation_probability": 0.97,
+            "implementation_relevance": 3.8
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "completion_tokens_details",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 967,
+            "output_tokens": 69,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": 0,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+              "cached_input": "usage.prompt_tokens_details.cached_tokens"
+            }
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.24130",
+      "stratum": "high_value_proxy",
+      "proxy_relevant_label": true,
+      "input_sha256": "fe34f780f2f8e73dee0108d929ad14dedaddb73451d0307970783bba493c9b70",
+      "input": {
+        "paper_id": "2609.24130",
+        "title": "Self-Healing Harness for Runtime Oversight of Agent Self-Modification",
+        "authors": [
+          "Sina Tayebati",
+          "Divake Kumar",
+          "Nastaran Darabi",
+          "Ranganath Krishnan",
+          "Amit Ranjan Trivedi"
+        ],
+        "categories": [
+          "cs.AI"
+        ],
+        "abstract": "LLM agents can change their own future behavior, raising a basic control question of which self-generated changes should be allowed to persist. We formulate this as admission control for self-modification. The agent may propose changes to its operating instructions, while an external runtime gate controls persistence. We implement this principle as a model-agnostic self-healing harness that runs a Detect, Notice, Heal, Validate loop around an otherwise unmodified agent. The agent authors candidate behavioral rules in an external workspace, where they receive provisional execution authority during evaluation and acquire persistent cross-episode authority only after measured improvement on the triggering failure without regression beyond a fixed margin on protected cases. Replay provides matched evidence when available, forward trials provide a weaker fallback, and a corpus-level guard re-tests the accumulated active rule set. Across 16 matched Baseline and Harness runs spanning AppWorld, Terminal-Bench, and $τ^2$-Bench, the gate rejected 383 replay-decided proposals. Of these, 211 (55%) improved their triggering failure while degrading a case that previously worked. This shows that locally beneficial self-modifications can introduce collateral regressions often enough to materially affect gate decisions, providing direct empirical motivation for external admission control. Task-completion score is higher under the Harness in all 16 pairs, with two paired bootstrap intervals excluding zero, while repeated-trial reliability is higher in 12 pairs, tied in 4, and lower in none. Because adaptation modifies the policy-inducing context while leaving model weights fixed, admitted changes remain inspectable, reversible, and compatible with closed-weight models."
+      },
+      "judgments": {
+        "jev": {
+          "paper_id": "2609.24130",
+          "stratum": "high_value_proxy",
+          "arm": "jev",
+          "call_artifacts": [
+            "raw/responses/l1/jev/l1-2609.24130-jev-a1.json"
+          ],
+          "latency_ms": 328,
+          "http_status": 200,
+          "answers": {
+            "relevant": {
+              "type": "boolean",
+              "probability": 0.95
+            },
+            "empirical_evidence": {
+              "type": "boolean",
+              "probability": 0.98
+            },
+            "topic": {
+              "type": "choice",
+              "choice": "harness_runtime",
+              "probabilities": {
+                "none": 0,
+                "tool_use": 0,
+                "mcp_governance": 0.22,
+                "other": 0,
+                "evals_assurance": 0.01,
+                "agent_reliability": 0.08,
+                "long_running_workflows": 0,
+                "harness_runtime": 0.69
+              }
+            },
+            "worth_escalating": {
+              "type": "boolean",
+              "probability": 0.69
+            },
+            "implementation_relevance": {
+              "type": "score",
+              "score": 3.93,
+              "probabilities": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0.06,
+                "4": 0.9400000000000001
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1156,
+            "output_tokens": 171,
+            "cached_input_tokens": null,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usage.inputTokens",
+              "output": "usage.outputTokens"
+            },
+            "raw_usage_fields": [
+              "inputTokens",
+              "outputTokens"
+            ]
+          }
+        },
+        "deepseek": {
+          "paper_id": "2609.24130",
+          "stratum": "high_value_proxy",
+          "arm": "deepseek",
+          "call_artifacts": [
+            "raw/responses/l1/deepseek/l1-2609.24130-deepseek-a1.json"
+          ],
+          "latency_ms": 1014,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.98,
+            "empirical_evidence": true,
+            "empirical_probability": 0.97,
+            "topic": "harness_runtime",
+            "worth_escalating": true,
+            "escalation_probability": 0.95,
+            "implementation_relevance": 4
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "prompt_cache_hit_tokens",
+              "prompt_cache_miss_tokens",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 933,
+            "output_tokens": 60,
+            "cached_input_tokens": 384,
+            "reasoning_tokens": null,
+            "reasoning_content_present": false,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "cached_input": "usage.prompt_cache_hit_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+            }
+          }
+        },
+        "gemini": {
+          "paper_id": "2609.24130",
+          "stratum": "high_value_proxy",
+          "arm": "gemini",
+          "call_artifacts": [
+            "raw/responses/l1/gemini/l1-2609.24130-gemini-a1.json"
+          ],
+          "latency_ms": 24110,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.95,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "harness_runtime",
+            "worth_escalating": true,
+            "escalation_probability": 0.9,
+            "implementation_relevance": 3.5
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "input_tokens": 914,
+            "output_tokens": 91,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usageMetadata.promptTokenCount",
+              "output": "usageMetadata.candidatesTokenCount",
+              "cached_input": "usageMetadata.cachedContentTokenCount"
+            }
+          }
+        },
+        "openai": {
+          "paper_id": "2609.24130",
+          "stratum": "high_value_proxy",
+          "arm": "openai",
+          "call_artifacts": [
+            "raw/responses/l1/openai/l1-2609.24130-openai-a1.json"
+          ],
+          "latency_ms": 7729,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.99,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "harness_runtime",
+            "worth_escalating": true,
+            "escalation_probability": 0.98,
+            "implementation_relevance": 3.8
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "completion_tokens_details",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 1017,
+            "output_tokens": 67,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": 0,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+              "cached_input": "usage.prompt_tokens_details.cached_tokens"
+            }
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.23742",
+      "stratum": "medium_adjacent",
+      "proxy_relevant_label": false,
+      "input_sha256": "c1140d49771ebde182a2bc271f5fd725cfa246656f45c74c3897c41ecdb9917d",
+      "input": {
+        "paper_id": "2609.23742",
+        "title": "Constrained Decoding Eliminates Structural Failures in Small LLMs but Reveals a Scale-Dependent Semantic Gap",
+        "authors": [
+          "Akash Chavan"
+        ],
+        "categories": [
+          "cs.CL"
+        ],
+        "abstract": "Small open-source large language models (LLMs) in the 0.6B-4B parameter range are increasingly deployed for structured output generation (JSON, function calling, data extraction), yet little is known about how constrained decoding (CD) interacts with model scale in this regime. We benchmark five models from three families across 14 structured-output tasks under three decoding conditions (native, Outlines, XGrammar). We introduce a two-axis evaluation that separates structural correctness (schema validity) from semantic correctness (content accuracy). We find that CD eliminates all structural failures across all models (schema validity: 78.6-92.9% to 100%), but content accuracy reveals a persistent semantic gap that is scale-dependent: type coercion failures are fully CD-rescuable, while instruction-semantic failures (e.g., multi-step function calling) remain CD-resistant. Schema conformance is necessary but not sufficient for semantic correctness; CD's reach ends exactly where schema conformance ends."
+      },
+      "judgments": {
+        "jev": {
+          "paper_id": "2609.23742",
+          "stratum": "medium_adjacent",
+          "arm": "jev",
+          "call_artifacts": [
+            "raw/responses/l1/jev/l1-2609.23742-jev-a1.json"
+          ],
+          "latency_ms": 374,
+          "http_status": 200,
+          "answers": {
+            "relevant": {
+              "type": "boolean",
+              "probability": 0.7
+            },
+            "empirical_evidence": {
+              "type": "boolean",
+              "probability": 0.98
+            },
+            "topic": {
+              "type": "choice",
+              "choice": "evals_assurance",
+              "probabilities": {
+                "long_running_workflows": 0,
+                "tool_use": 0.06,
+                "mcp_governance": 0,
+                "other": 0.01,
+                "agent_reliability": 0.13,
+                "evals_assurance": 0.79,
+                "none": 0.01,
+                "harness_runtime": 0
+              }
+            },
+            "worth_escalating": {
+              "type": "boolean",
+              "probability": 0.6
+            },
+            "implementation_relevance": {
+              "type": "score",
+              "score": 3,
+              "probabilities": {
+                "0": 0,
+                "1": 0,
+                "2": 0.02,
+                "3": 0.95,
+                "4": 0.03
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1006,
+            "output_tokens": 172,
+            "cached_input_tokens": null,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usage.inputTokens",
+              "output": "usage.outputTokens"
+            },
+            "raw_usage_fields": [
+              "inputTokens",
+              "outputTokens"
+            ]
+          }
+        },
+        "deepseek": {
+          "paper_id": "2609.23742",
+          "stratum": "medium_adjacent",
+          "arm": "deepseek",
+          "call_artifacts": [
+            "raw/responses/l1/deepseek/l1-2609.23742-deepseek-a1.json"
+          ],
+          "latency_ms": 1591,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.85,
+            "empirical_evidence": true,
+            "empirical_probability": 0.95,
+            "topic": "tool_use",
+            "worth_escalating": true,
+            "escalation_probability": 0.8,
+            "implementation_relevance": 3.5
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "prompt_cache_hit_tokens",
+              "prompt_cache_miss_tokens",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 790,
+            "output_tokens": 61,
+            "cached_input_tokens": 384,
+            "reasoning_tokens": null,
+            "reasoning_content_present": false,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "cached_input": "usage.prompt_cache_hit_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+            }
+          }
+        },
+        "gemini": {
+          "paper_id": "2609.23742",
+          "stratum": "medium_adjacent",
+          "arm": "gemini",
+          "call_artifacts": [
+            "raw/responses/l1/gemini/l1-2609.23742-gemini-a1.json"
+          ],
+          "latency_ms": 23263,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.9,
+            "empirical_evidence": true,
+            "empirical_probability": 0.95,
+            "topic": "tool_use",
+            "worth_escalating": true,
+            "escalation_probability": 0.8,
+            "implementation_relevance": 3.0
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "input_tokens": 779,
+            "output_tokens": 89,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usageMetadata.promptTokenCount",
+              "output": "usageMetadata.candidatesTokenCount",
+              "cached_input": "usageMetadata.cachedContentTokenCount"
+            }
+          }
+        },
+        "openai": {
+          "paper_id": "2609.23742",
+          "stratum": "medium_adjacent",
+          "arm": "openai",
+          "call_artifacts": [
+            "raw/responses/l1/openai/l1-2609.23742-openai-a1.json"
+          ],
+          "latency_ms": 7851,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.99,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "tool_use",
+            "worth_escalating": true,
+            "escalation_probability": 0.9,
+            "implementation_relevance": 3
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "completion_tokens_details",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 878,
+            "output_tokens": 64,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": 0,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+              "cached_input": "usage.prompt_tokens_details.cached_tokens"
+            }
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.30009",
+      "stratum": "medium_adjacent",
+      "proxy_relevant_label": false,
+      "input_sha256": "6badc2560517b0c3f6a4d3ac1d031c00e9264016b423c9d1c868b54508790b6d",
+      "input": {
+        "paper_id": "2609.30009",
+        "title": "Automated Regulatory Compliance Question Answering in Financial Services with Domain-Adapted Retrieval-Augmented Generation",
+        "authors": [
+          "Tobias Deußer",
+          "Abhishek Pillai",
+          "Aurelio F. Bariviera",
+          "Dhananjay Bhardwaj",
+          "Lorenz Sparrenberg",
+          "David Berghaus",
+          "Christian Bauckhage",
+          "Rafet Sifa"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.AI"
+        ],
+        "abstract": "Financial institutions operate under dense, frequently amended rulebooks, and answering a compliance question correctly requires not only fluency but verifiable grounding in the authoritative text. Large language models are attractive for this task, yet the models that firms can realistically deploy on-premise are compact ones, and compact models hallucinate obligations. We study whether a carefully domain-adapted retrieval-augmented generation pipeline closes that gap. Our retriever is built in three stages on top of LegalBERT: entailment tuning that recasts question--passage matching as premise--hypothesis reconstruction, contrastive tuning with in-batch negatives, and score-level fusion with BM25. Our generator is a compact model (2B--12B parameters) served under 4-bit quantization, either prompted or adapted with retrieval-aware fine-tuning (RAFT) through LoRA. On ObliQA, a question-answering benchmark built from the Abu Dhabi Global Market rulebooks, the staged retriever raises Recall@10 from 0.256 to 0.774 and outperforms BM25 (0.678) and E5-large-v2 (0.758), the strongest general-purpose dense encoder we tested. RAFT-LoRA then improves the composite RePASs answer-quality score for every model we could adapt, with the largest gain on the weakest one. However, the adapted models do not transfer to Australian case-law questions, and a closed-book model that receives no passages at all scores within 0.011 RePASs of the full pipeline while producing answers that cite nothing and misstate obligations. The retrieval gain is therefore measured directly, the generation gain is a gain in RePASs rather than demonstrated grounding, and grounding itself requires an evaluation protocol that RePASs does not provide."
+      },
+      "judgments": {
+        "jev": {
+          "paper_id": "2609.30009",
+          "stratum": "medium_adjacent",
+          "arm": "jev",
+          "call_artifacts": [
+            "raw/responses/l1/jev/l1-2609.30009-jev-a1.json"
+          ],
+          "latency_ms": 503,
+          "http_status": 200,
+          "answers": {
+            "relevant": {
+              "type": "boolean",
+              "probability": 0.48
+            },
+            "empirical_evidence": {
+              "type": "boolean",
+              "probability": 0.98
+            },
+            "topic": {
+              "type": "choice",
+              "choice": "evals_assurance",
+              "probabilities": {
+                "tool_use": 0,
+                "none": 0.01,
+                "long_running_workflows": 0,
+                "other": 0.01,
+                "evals_assurance": 0.9,
+                "harness_runtime": 0,
+                "agent_reliability": 0.08,
+                "mcp_governance": 0
+              }
+            },
+            "worth_escalating": {
+              "type": "boolean",
+              "probability": 0.53
+            },
+            "implementation_relevance": {
+              "type": "score",
+              "score": 3.06,
+              "probabilities": {
+                "0": 0,
+                "1": 0,
+                "2": 0.03,
+                "3": 0.88,
+                "4": 0.09
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1230,
+            "output_tokens": 172,
+            "cached_input_tokens": null,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usage.inputTokens",
+              "output": "usage.outputTokens"
+            },
+            "raw_usage_fields": [
+              "inputTokens",
+              "outputTokens"
+            ]
+          }
+        },
+        "deepseek": {
+          "paper_id": "2609.30009",
+          "stratum": "medium_adjacent",
+          "arm": "deepseek",
+          "call_artifacts": [
+            "raw/responses/l1/deepseek/l1-2609.30009-deepseek-a1.json"
+          ],
+          "latency_ms": 1422,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.7,
+            "empirical_evidence": true,
+            "empirical_probability": 0.9,
+            "topic": "evals_assurance",
+            "worth_escalating": true,
+            "escalation_probability": 0.6,
+            "implementation_relevance": 2
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "prompt_cache_hit_tokens",
+              "prompt_cache_miss_tokens",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 1003,
+            "output_tokens": 60,
+            "cached_input_tokens": 384,
+            "reasoning_tokens": null,
+            "reasoning_content_present": false,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "cached_input": "usage.prompt_cache_hit_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+            }
+          }
+        },
+        "gemini": {
+          "paper_id": "2609.30009",
+          "stratum": "medium_adjacent",
+          "arm": "gemini",
+          "call_artifacts": [
+            "raw/responses/l1/gemini/l1-2609.30009-gemini-a1.json"
+          ],
+          "latency_ms": 23346,
+          "http_status": 200,
+          "output": {
+            "relevant": false,
+            "relevant_probability": 0.1,
+            "empirical_evidence": true,
+            "empirical_probability": 0.9,
+            "topic": "none",
+            "worth_escalating": false,
+            "escalation_probability": 0.05,
+            "implementation_relevance": 0
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "input_tokens": 986,
+            "output_tokens": 85,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usageMetadata.promptTokenCount",
+              "output": "usageMetadata.candidatesTokenCount",
+              "cached_input": "usageMetadata.cachedContentTokenCount"
+            }
+          }
+        },
+        "openai": {
+          "paper_id": "2609.30009",
+          "stratum": "medium_adjacent",
+          "arm": "openai",
+          "call_artifacts": [
+            "raw/responses/l1/openai/l1-2609.30009-openai-a1.json"
+          ],
+          "latency_ms": 7720,
+          "http_status": 200,
+          "output": {
+            "relevant": false,
+            "relevant_probability": 0.96,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "none",
+            "worth_escalating": false,
+            "escalation_probability": 0.97,
+            "implementation_relevance": 0.1
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "completion_tokens_details",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 1084,
+            "output_tokens": 65,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": 0,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+              "cached_input": "usage.prompt_tokens_details.cached_tokens"
+            }
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.24122",
+      "stratum": "medium_adjacent",
+      "proxy_relevant_label": false,
+      "input_sha256": "25635410595be293182802b2b9632fac5eb7a1e862a462785064a3033e04dd10",
+      "input": {
+        "paper_id": "2609.24122",
+        "title": "Re:CAP - Auditing Retrieval Coverage in Production RAG Pipelines",
+        "authors": [
+          "Aviral Joshi",
+          "Hanoz Bhathena",
+          "Max Nelson",
+          "Saket Sharma"
+        ],
+        "categories": [
+          "cs.CL"
+        ],
+        "abstract": "Retrieval-augmented generation (RAG) is hard to monitor in production: exhaustive relevance labels do not exist for non-stationary multi-million-passage corpora that re-index in real time. As a result, retrieval quality is generally understudied and often deprioritised in favour of generation-oriented metrics. In this work, we propose auditing retrieval coverage by probing for evidence of missing documents rather than enumerating every relevant one. Our method Re:CAP (REtrieval Coverage Audit by iterative Probing) is a reference-free audit loop applied to a deployed RAG pipeline's initial answer and retrieved context: it identifies the topics already covered, generates probing questions for plausibly missing topics, retrieves candidate documents, and applies an LLM-as-judge to retain only those that introduce previously-unretrieved information. On four public benchmarks, Re:CAP recovers 9-29% of gold labels that flat BM25 top-500 cannot reach, rising to 48% on TREC-COVID. On MuSiQue Re:CAP beats flat hybrid top-500 by +12.9 pp on recall at less than half the document budget. An ensemble BM25, dense, and hybrid baseline (top-500 each) still leaves out 21.2% of gold docs on TREC-COVID that Re:CAP recovers; human annotators judge that 78.9% of those structurally distinct documents add new information to the baseline answer (Fleiss $κ$ = 0.79, n = 123), and 73.9% on live production traffic (n = 180). End-to-end recall is reproducible to within $\\pm$1% across three independent runs, making Re:CAP a stable instrument for periodic retrieval audits."
+      },
+      "judgments": {
+        "jev": {
+          "paper_id": "2609.24122",
+          "stratum": "medium_adjacent",
+          "arm": "jev",
+          "call_artifacts": [
+            "raw/responses/l1/jev/l1-2609.24122-jev-a1.json"
+          ],
+          "latency_ms": 367,
+          "http_status": 200,
+          "answers": {
+            "relevant": {
+              "type": "boolean",
+              "probability": 0.6
+            },
+            "empirical_evidence": {
+              "type": "boolean",
+              "probability": 0.98
+            },
+            "topic": {
+              "type": "choice",
+              "choice": "evals_assurance",
+              "probabilities": {
+                "other": 0,
+                "mcp_governance": 0,
+                "agent_reliability": 0,
+                "tool_use": 0,
+                "harness_runtime": 0,
+                "long_running_workflows": 0,
+                "none": 0,
+                "evals_assurance": 1
+              }
+            },
+            "worth_escalating": {
+              "type": "boolean",
+              "probability": 0.68
+            },
+            "implementation_relevance": {
+              "type": "score",
+              "score": 3.58,
+              "probabilities": {
+                "0": 0,
+                "1": 0,
+                "2": 0.01,
+                "3": 0.4,
+                "4": 0.59
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1196,
+            "output_tokens": 172,
+            "cached_input_tokens": null,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usage.inputTokens",
+              "output": "usage.outputTokens"
+            },
+            "raw_usage_fields": [
+              "inputTokens",
+              "outputTokens"
+            ]
+          }
+        },
+        "deepseek": {
+          "paper_id": "2609.24122",
+          "stratum": "medium_adjacent",
+          "arm": "deepseek",
+          "call_artifacts": [
+            "raw/responses/l1/deepseek/l1-2609.24122-deepseek-a1.json"
+          ],
+          "latency_ms": 1540,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.55,
+            "empirical_evidence": true,
+            "empirical_probability": 0.95,
+            "topic": "evals_assurance",
+            "worth_escalating": true,
+            "escalation_probability": 0.6,
+            "implementation_relevance": 2
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "prompt_cache_hit_tokens",
+              "prompt_cache_miss_tokens",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 963,
+            "output_tokens": 60,
+            "cached_input_tokens": 384,
+            "reasoning_tokens": null,
+            "reasoning_content_present": false,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "cached_input": "usage.prompt_cache_hit_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+            }
+          }
+        },
+        "gemini": {
+          "paper_id": "2609.24122",
+          "stratum": "medium_adjacent",
+          "arm": "gemini",
+          "call_artifacts": [
+            "raw/responses/l1/gemini/l1-2609.24122-gemini-a1.json"
+          ],
+          "latency_ms": 23361,
+          "http_status": 200,
+          "output": {
+            "relevant": false,
+            "relevant_probability": 0.1,
+            "empirical_evidence": true,
+            "empirical_probability": 0.95,
+            "topic": "none",
+            "worth_escalating": false,
+            "escalation_probability": 0.1,
+            "implementation_relevance": 0
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "input_tokens": 957,
+            "output_tokens": 85,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usageMetadata.promptTokenCount",
+              "output": "usageMetadata.candidatesTokenCount",
+              "cached_input": "usageMetadata.cachedContentTokenCount"
+            }
+          }
+        },
+        "openai": {
+          "paper_id": "2609.24122",
+          "stratum": "medium_adjacent",
+          "arm": "openai",
+          "call_artifacts": [
+            "raw/responses/l1/openai/l1-2609.24122-openai-a1.json"
+          ],
+          "latency_ms": 8034,
+          "http_status": 200,
+          "output": {
+            "relevant": false,
+            "relevant_probability": 0.97,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "none",
+            "worth_escalating": false,
+            "escalation_probability": 0.02,
+            "implementation_relevance": 0
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "completion_tokens_details",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 1047,
+            "output_tokens": 63,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": 0,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+              "cached_input": "usage.prompt_tokens_details.cached_tokens"
+            }
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.19710",
+      "stratum": "medium_adjacent",
+      "proxy_relevant_label": false,
+      "input_sha256": "cecb72dedec739145bad6067fef10921459e81468ec0091952c8a54b091d3cea",
+      "input": {
+        "paper_id": "2609.19710",
+        "title": "A Closed-Loop Control Architecture for Reliable Constraint Satisfaction in LLM Text Generation",
+        "authors": [
+          "Quan Zhou",
+          "Shahbaz Siddeeq",
+          "Mika Saari",
+          "Pekka Abrahamsson"
+        ],
+        "categories": [
+          "cs.SE"
+        ],
+        "abstract": "Software systems increasingly embed a large language model in features that must satisfy a numeric output constraint, that is, a requirement expressible as a number or an interval and checkable by code, such as a target word count or a target readability grade band. Because such a model is non-deterministic, is configured through natural-language instructions rather than a typed interface, and satisfies a stated requirement only approximately, a single prompt neither reliably meets the target nor preserves the source content. This paper presents and evaluates a closed-loop control architecture for this problem. It has five stages: generate, evaluate, adjust, archive, and analyze. The model is called only to write and to edit text, while deterministic code compares a composite readability value against a target band, rejects any edit that drops source entities, numbers, or keywords, and makes every accept decision. Over 114 single-shot generation jobs and 240 closed-loop runs on four commercial models, single-shot prompting met the target in 21.1 to 31.6 percent of cases and the closed loop in 92.5 to 98.8 percent, within two edit rounds on average and at a recall-based fidelity of 0.92 to 0.93; the two models common to both settings show the same effect. Because the controller optimizes the value on which success is scored, the result establishes reproducible control over a declared, computable metric and not validated human difficulty. The transferable practice is to declare the acceptance condition as code, bound the model to local edits, and gate every edit on a content check."
+      },
+      "judgments": {
+        "jev": {
+          "paper_id": "2609.19710",
+          "stratum": "medium_adjacent",
+          "arm": "jev",
+          "call_artifacts": [
+            "raw/responses/l1/jev/l1-2609.19710-jev-a1.json"
+          ],
+          "latency_ms": 328,
+          "http_status": 200,
+          "answers": {
+            "relevant": {
+              "type": "boolean",
+              "probability": 0.79
+            },
+            "empirical_evidence": {
+              "type": "boolean",
+              "probability": 0.98
+            },
+            "topic": {
+              "type": "choice",
+              "choice": "agent_reliability",
+              "probabilities": {
+                "tool_use": 0,
+                "agent_reliability": 0.62,
+                "evals_assurance": 0.31,
+                "mcp_governance": 0,
+                "other": 0,
+                "harness_runtime": 0.06,
+                "long_running_workflows": 0.01,
+                "none": 0
+              }
+            },
+            "worth_escalating": {
+              "type": "boolean",
+              "probability": 0.53
+            },
+            "implementation_relevance": {
+              "type": "score",
+              "score": 3.89,
+              "probabilities": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0.1,
+                "4": 0.9
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1140,
+            "output_tokens": 172,
+            "cached_input_tokens": null,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usage.inputTokens",
+              "output": "usage.outputTokens"
+            },
+            "raw_usage_fields": [
+              "inputTokens",
+              "outputTokens"
+            ]
+          }
+        },
+        "deepseek": {
+          "paper_id": "2609.19710",
+          "stratum": "medium_adjacent",
+          "arm": "deepseek",
+          "call_artifacts": [
+            "raw/responses/l1/deepseek/l1-2609.19710-deepseek-a1.json"
+          ],
+          "latency_ms": 1140,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.92,
+            "empirical_evidence": true,
+            "empirical_probability": 0.96,
+            "topic": "other",
+            "worth_escalating": true,
+            "escalation_probability": 0.85,
+            "implementation_relevance": 4
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "prompt_cache_hit_tokens",
+              "prompt_cache_miss_tokens",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 922,
+            "output_tokens": 57,
+            "cached_input_tokens": 384,
+            "reasoning_tokens": null,
+            "reasoning_content_present": false,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "cached_input": "usage.prompt_cache_hit_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+            }
+          }
+        },
+        "gemini": {
+          "paper_id": "2609.19710",
+          "stratum": "medium_adjacent",
+          "arm": "gemini",
+          "call_artifacts": [
+            "raw/responses/l1/gemini/l1-2609.19710-gemini-a1.json"
+          ],
+          "latency_ms": 22540,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.95,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "agent_reliability",
+            "worth_escalating": true,
+            "escalation_probability": 0.8,
+            "implementation_relevance": 3.0
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "input_tokens": 909,
+            "output_tokens": 90,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usageMetadata.promptTokenCount",
+              "output": "usageMetadata.candidatesTokenCount",
+              "cached_input": "usageMetadata.cachedContentTokenCount"
+            }
+          }
+        },
+        "openai": {
+          "paper_id": "2609.19710",
+          "stratum": "medium_adjacent",
+          "arm": "openai",
+          "call_artifacts": [
+            "raw/responses/l1/openai/l1-2609.19710-openai-a1.json"
+          ],
+          "latency_ms": 7826,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.99,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "harness_runtime",
+            "worth_escalating": true,
+            "escalation_probability": 0.9,
+            "implementation_relevance": 3
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "completion_tokens_details",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 1005,
+            "output_tokens": 65,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": 0,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+              "cached_input": "usage.prompt_tokens_details.cached_tokens"
+            }
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.14245",
+      "stratum": "medium_adjacent",
+      "proxy_relevant_label": false,
+      "input_sha256": "16dc214460e1e6abbb10fdc31703bad92ea283d0d2d4c59cd44a5f412d7cda9d",
+      "input": {
+        "paper_id": "2609.14245",
+        "title": "The Attribution-Compression Frontier in Retrieval-Augmented Generation",
+        "authors": [
+          "Deepanshu Mody"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.AI"
+        ],
+        "abstract": "Context compression reduces generator input in retrieval-augmented generation, but answer quality alone does not characterize citation attribution. We measure citation attribution across compression methods and budgets, comparing reranking, extractive selection, abstractive summarization, token pruning, and an extract-cluster-rewrite construction on ASQA and QASPER under a fixed generator and primary entailment evaluator. On ASQA at a nominal 0.25 budget (achieved compression 0.08), a RECOMP-style compressor's citations score 0.86 precision against its summaries but 0.12 against source spans under our re-attributability protocol. These estimates depend on a shared NLI model for span recovery and citation scoring and lack independent human calibration. Extractive selection's observed grounded precision ranges from 0.43 to 0.49 across nominal budgets from one-half to one-tenth of the ASQA context, while answer quality declines. For the same RECOMP setting, claim verification after source recovery yields an unsupported rate of 0.88 versus 0.17 when checking summaries. This gap persists beyond structural rejection of missing provenance, but remains evaluator-dependent. A 200-question TRUE T5-XXL audit also finds emitted--grounded gaps under both fixed and recomputed source mappings, without establishing human-calibrated support rates."
+      },
+      "judgments": {
+        "jev": {
+          "paper_id": "2609.14245",
+          "stratum": "medium_adjacent",
+          "arm": "jev",
+          "call_artifacts": [
+            "raw/responses/l1/jev/l1-2609.14245-jev-a1.json"
+          ],
+          "latency_ms": 288,
+          "http_status": 200,
+          "answers": {
+            "relevant": {
+              "type": "boolean",
+              "probability": 0.45
+            },
+            "empirical_evidence": {
+              "type": "boolean",
+              "probability": 0.97
+            },
+            "topic": {
+              "type": "choice",
+              "choice": "evals_assurance",
+              "probabilities": {
+                "tool_use": 0,
+                "other": 0,
+                "long_running_workflows": 0,
+                "none": 0,
+                "harness_runtime": 0,
+                "evals_assurance": 0.99,
+                "agent_reliability": 0.01,
+                "mcp_governance": 0
+              }
+            },
+            "worth_escalating": {
+              "type": "boolean",
+              "probability": 0.54
+            },
+            "implementation_relevance": {
+              "type": "score",
+              "score": 2.85,
+              "probabilities": {
+                "0": 0,
+                "1": 0.01,
+                "2": 0.13,
+                "3": 0.86,
+                "4": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1082,
+            "output_tokens": 172,
+            "cached_input_tokens": null,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usage.inputTokens",
+              "output": "usage.outputTokens"
+            },
+            "raw_usage_fields": [
+              "inputTokens",
+              "outputTokens"
+            ]
+          }
+        },
+        "deepseek": {
+          "paper_id": "2609.14245",
+          "stratum": "medium_adjacent",
+          "arm": "deepseek",
+          "call_artifacts": [
+            "raw/responses/l1/deepseek/l1-2609.14245-deepseek-a1.json"
+          ],
+          "latency_ms": 1585,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.75,
+            "empirical_evidence": true,
+            "empirical_probability": 0.95,
+            "topic": "evals_assurance",
+            "worth_escalating": true,
+            "escalation_probability": 0.7,
+            "implementation_relevance": 2
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "prompt_cache_hit_tokens",
+              "prompt_cache_miss_tokens",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 862,
+            "output_tokens": 60,
+            "cached_input_tokens": 384,
+            "reasoning_tokens": null,
+            "reasoning_content_present": false,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "cached_input": "usage.prompt_cache_hit_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+            }
+          }
+        },
+        "gemini": {
+          "paper_id": "2609.14245",
+          "stratum": "medium_adjacent",
+          "arm": "gemini",
+          "call_artifacts": [
+            "raw/responses/l1/gemini/l1-2609.14245-gemini-a1.json"
+          ],
+          "latency_ms": 25153,
+          "http_status": 200,
+          "output": {
+            "relevant": false,
+            "relevant_probability": 0.1,
+            "empirical_evidence": true,
+            "empirical_probability": 0.9,
+            "topic": "none",
+            "worth_escalating": false,
+            "escalation_probability": 0.05,
+            "implementation_relevance": 0
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "input_tokens": 848,
+            "output_tokens": 85,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usageMetadata.promptTokenCount",
+              "output": "usageMetadata.candidatesTokenCount",
+              "cached_input": "usageMetadata.cachedContentTokenCount"
+            }
+          }
+        },
+        "openai": {
+          "paper_id": "2609.14245",
+          "stratum": "medium_adjacent",
+          "arm": "openai",
+          "call_artifacts": [
+            "raw/responses/l1/openai/l1-2609.14245-openai-a1.json"
+          ],
+          "latency_ms": 8199,
+          "http_status": 200,
+          "output": {
+            "relevant": false,
+            "relevant_probability": 0.08,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "none",
+            "worth_escalating": false,
+            "escalation_probability": 0.04,
+            "implementation_relevance": 0.1
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "completion_tokens_details",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 939,
+            "output_tokens": 65,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": 0,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+              "cached_input": "usage.prompt_tokens_details.cached_tokens"
+            }
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.03213",
+      "stratum": "medium_adjacent",
+      "proxy_relevant_label": false,
+      "input_sha256": "157493cff7761055cab4cc7a24d8bab514dcb72a378c349d181fa881ab3261d5",
+      "input": {
+        "paper_id": "2609.03213",
+        "title": "LLMs Learn Better In-Context from Rules than from Examples",
+        "authors": [
+          "Xiang Fu",
+          "Seungmin Cho",
+          "Yukyung Lee",
+          "Najoung Kim"
+        ],
+        "categories": [
+          "cs.CL"
+        ],
+        "abstract": "Large language models (LLMs) exhibit in-context learning capabilities, where they can learn new tasks from prompt contexts without weight updates. We compare the learning efficacies of two prominent modes of in-context learning: (1) learning from descriptions of rules (instruction following); and (2) learning from examples of input-output demonstrations (few-shot prompting). Through five learning tasks that cover diverse domains (games, arithmetic, linguistic inferences), we compare two modes of learning (rules vs. examples) specifying the same underlying task. We furthermore explore model and task properties that modulate the learning efficacies. We find that models generally learn more reliably from rules than from examples alone, and additional examples on top of rules or simply scaling up the number of examples do not lead to consistent and significant gains. Instruction tuning amplifies the benefit of rule-based learning while keeping example-based learning capacities intact. Surprisingly, we find no privileged effect of example-based learning in base models, and rules still lead to gains in algebraic task domains. Overall, the comparative efficacy of rules over examples is larger when the task recruits algebraic abstractions and computations, and smaller when the task requires distributional sensitivity and/or recruits parametric knowledge."
+      },
+      "judgments": {
+        "jev": {
+          "paper_id": "2609.03213",
+          "stratum": "medium_adjacent",
+          "arm": "jev",
+          "call_artifacts": [
+            "raw/responses/l1/jev/l1-2609.03213-jev-a1.json"
+          ],
+          "latency_ms": 334,
+          "http_status": 200,
+          "answers": {
+            "relevant": {
+              "type": "boolean",
+              "probability": 0.41
+            },
+            "empirical_evidence": {
+              "type": "boolean",
+              "probability": 0.97
+            },
+            "topic": {
+              "type": "choice",
+              "choice": "none",
+              "probabilities": {
+                "harness_runtime": 0,
+                "long_running_workflows": 0,
+                "evals_assurance": 0.05,
+                "other": 0.21,
+                "none": 0.72,
+                "mcp_governance": 0,
+                "tool_use": 0,
+                "agent_reliability": 0.02
+              }
+            },
+            "worth_escalating": {
+              "type": "boolean",
+              "probability": 0.56
+            },
+            "implementation_relevance": {
+              "type": "score",
+              "score": 2.9,
+              "probabilities": {
+                "0": 0,
+                "1": 0,
+                "2": 0.1,
+                "3": 0.89,
+                "4": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1052,
+            "output_tokens": 168,
+            "cached_input_tokens": null,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usage.inputTokens",
+              "output": "usage.outputTokens"
+            },
+            "raw_usage_fields": [
+              "inputTokens",
+              "outputTokens"
+            ]
+          }
+        },
+        "deepseek": {
+          "paper_id": "2609.03213",
+          "stratum": "medium_adjacent",
+          "arm": "deepseek",
+          "call_artifacts": [
+            "raw/responses/l1/deepseek/l1-2609.03213-deepseek-a1.json"
+          ],
+          "latency_ms": 1089,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.6,
+            "empirical_evidence": true,
+            "empirical_probability": 0.85,
+            "topic": "other",
+            "worth_escalating": false,
+            "escalation_probability": 0.3,
+            "implementation_relevance": 2
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "prompt_cache_hit_tokens",
+              "prompt_cache_miss_tokens",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 835,
+            "output_tokens": 57,
+            "cached_input_tokens": 384,
+            "reasoning_tokens": null,
+            "reasoning_content_present": false,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "cached_input": "usage.prompt_cache_hit_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+            }
+          }
+        },
+        "gemini": {
+          "paper_id": "2609.03213",
+          "stratum": "medium_adjacent",
+          "arm": "gemini",
+          "call_artifacts": [
+            "raw/responses/l1/gemini/l1-2609.03213-gemini-a1.json"
+          ],
+          "latency_ms": 23795,
+          "http_status": 200,
+          "output": {
+            "relevant": false,
+            "relevant_probability": 0.1,
+            "empirical_evidence": true,
+            "empirical_probability": 0.9,
+            "topic": "none",
+            "worth_escalating": false,
+            "escalation_probability": 0.05,
+            "implementation_relevance": 0
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "input_tokens": 818,
+            "output_tokens": 85,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usageMetadata.promptTokenCount",
+              "output": "usageMetadata.candidatesTokenCount",
+              "cached_input": "usageMetadata.cachedContentTokenCount"
+            }
+          }
+        },
+        "openai": {
+          "paper_id": "2609.03213",
+          "stratum": "medium_adjacent",
+          "arm": "openai",
+          "call_artifacts": [
+            "raw/responses/l1/openai/l1-2609.03213-openai-a1.json"
+          ],
+          "latency_ms": 8275,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.79,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "tool_use",
+            "worth_escalating": false,
+            "escalation_probability": 0.25,
+            "implementation_relevance": 1.5
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "completion_tokens_details",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 924,
+            "output_tokens": 66,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": 0,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+              "cached_input": "usage.prompt_tokens_details.cached_tokens"
+            }
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.15578",
+      "stratum": "medium_adjacent",
+      "proxy_relevant_label": false,
+      "input_sha256": "d7f887816f0f9ca5b3fa2e00d6396ce81a7d50fcb280c02efae8cab8926348ba",
+      "input": {
+        "paper_id": "2609.15578",
+        "title": "The Magnitude Mirage: Rethinking Confidence for Reasoning-Intensive Retrieval",
+        "authors": [
+          "Jamie Holdcroft",
+          "Abdelrahman Abdallah",
+          "Adam Jatowt"
+        ],
+        "categories": [
+          "cs.IR"
+        ],
+        "abstract": "Many production RAG systems implement retrieval abstention by thresholding raw similarity scores, implicitly treating score magnitude as a confidence signal. We demonstrate that this practice degrades systematically as queries require reasoning beyond semantic matching. Across 11 retrieval architectures and 28 datasets, neural retrievers consistently assign high similarity scores to semantically related but constraint-violating documents, causing magnitude-based thresholds to collapse toward near-random abstention performance on logical and temporal reasoning tasks---a failure we term the Magnitude Mirage. To address this without computationally expensive alternatives, we conduct a large-scale empirical study of six zero-cost Query Performance Prediction (QPP) metrics across three cognitive tiers: semantic matching (BEIR), logical reasoning (BRIGHT), and temporal reasoning (TEMPO). Our central finding is that the key improvement comes from abandoning magnitude in favor of score-distribution signals: the gain from this shift exceeds the differences among distributional alternatives by a factor of 5-10$\\times$. In particular, Score Gap ($s_1 - s_k$) and a practical adaptation of Score Magnitude and Variance (LSMV) improve abstention AUROC by up to 0.16 in settings where magnitude-based confidence provides little discriminative power. These methods require no additional inference, retraining, or latency, making them a practical zero-cost replacement for magnitude thresholding in deployed RAG systems."
+      },
+      "judgments": {
+        "jev": {
+          "paper_id": "2609.15578",
+          "stratum": "medium_adjacent",
+          "arm": "jev",
+          "call_artifacts": [
+            "raw/responses/l1/jev/l1-2609.15578-jev-a1.json"
+          ],
+          "latency_ms": 346,
+          "http_status": 200,
+          "answers": {
+            "relevant": {
+              "type": "boolean",
+              "probability": 0.61
+            },
+            "empirical_evidence": {
+              "type": "boolean",
+              "probability": 0.98
+            },
+            "topic": {
+              "type": "choice",
+              "choice": "evals_assurance",
+              "probabilities": {
+                "agent_reliability": 0.37,
+                "tool_use": 0,
+                "harness_runtime": 0,
+                "none": 0.03,
+                "other": 0.02,
+                "long_running_workflows": 0,
+                "evals_assurance": 0.58,
+                "mcp_governance": 0
+              }
+            },
+            "worth_escalating": {
+              "type": "boolean",
+              "probability": 0.67
+            },
+            "implementation_relevance": {
+              "type": "score",
+              "score": 3.67,
+              "probabilities": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0.32,
+                "4": 0.68
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1104,
+            "output_tokens": 172,
+            "cached_input_tokens": null,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usage.inputTokens",
+              "output": "usage.outputTokens"
+            },
+            "raw_usage_fields": [
+              "inputTokens",
+              "outputTokens"
+            ]
+          }
+        },
+        "deepseek": {
+          "paper_id": "2609.15578",
+          "stratum": "medium_adjacent",
+          "arm": "deepseek",
+          "call_artifacts": [
+            "raw/responses/l1/deepseek/l1-2609.15578-deepseek-a1.json"
+          ],
+          "latency_ms": 1279,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.9,
+            "empirical_evidence": true,
+            "empirical_probability": 0.95,
+            "topic": "evals_assurance",
+            "worth_escalating": true,
+            "escalation_probability": 0.8,
+            "implementation_relevance": 3
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "prompt_cache_hit_tokens",
+              "prompt_cache_miss_tokens",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 873,
+            "output_tokens": 60,
+            "cached_input_tokens": 384,
+            "reasoning_tokens": null,
+            "reasoning_content_present": false,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "cached_input": "usage.prompt_cache_hit_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+            }
+          }
+        },
+        "gemini": {
+          "paper_id": "2609.15578",
+          "stratum": "medium_adjacent",
+          "arm": "gemini",
+          "call_artifacts": [
+            "raw/responses/l1/gemini/l1-2609.15578-gemini-a1.json"
+          ],
+          "latency_ms": 23912,
+          "http_status": 200,
+          "output": {
+            "relevant": false,
+            "relevant_probability": 0.1,
+            "empirical_evidence": true,
+            "empirical_probability": 0.95,
+            "topic": "none",
+            "worth_escalating": false,
+            "escalation_probability": 0.05,
+            "implementation_relevance": 0
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "input_tokens": 854,
+            "output_tokens": 86,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usageMetadata.promptTokenCount",
+              "output": "usageMetadata.candidatesTokenCount",
+              "cached_input": "usageMetadata.cachedContentTokenCount"
+            }
+          }
+        },
+        "openai": {
+          "paper_id": "2609.15578",
+          "stratum": "medium_adjacent",
+          "arm": "openai",
+          "call_artifacts": [
+            "raw/responses/l1/openai/l1-2609.15578-openai-a1.json"
+          ],
+          "latency_ms": 8148,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.94,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "evals_assurance",
+            "worth_escalating": true,
+            "escalation_probability": 0.84,
+            "implementation_relevance": 3
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "completion_tokens_details",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 964,
+            "output_tokens": 66,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": 0,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+              "cached_input": "usage.prompt_tokens_details.cached_tokens"
+            }
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2609.22056",
+      "stratum": "medium_adjacent",
+      "proxy_relevant_label": false,
+      "input_sha256": "54dcf8c5054e0a7e9f1679ce7cca2118498589bbd4abab9f24552baf29dbc1f8",
+      "input": {
+        "paper_id": "2609.22056",
+        "title": "Predictable Failure in Multi-Hop Retrieval: Score-Distributional Confidence Scoring and Abstention",
+        "authors": [
+          "Andre Bacellar"
+        ],
+        "categories": [
+          "cs.IR",
+          "cs.CL",
+          "cs.LG"
+        ],
+        "abstract": "Multi-hop retrieval failures are not uniformly distributed across queries: they cluster in structurally predictable subpopulations. We prove two results formalizing this structure. First (CWAR Reducibility): confident-failure reduction is achievable if and only if retrieval features carry mutual information about success, a condition satisfied by LLM-judge pipelines but substantially weaker in dense-only settings, explaining the AUC-AC gap between regimes. Second (Feature Regime Complementarity): no single ANN score feature achieves best predictive performance across all failure regimes; the dominant feature differs between datasets (query length on MuSiQue, hop-1 concentration on HoVer), and a constructive witness pair shows each is necessary in one regime and non-contributory in the other. We instantiate these principles in RegimeAbstain, which computes a Retrieval Confidence Score (RCS), a logistic function of up to nine query-ANN structural features, all available without any additional LLM call, and uses it to implement a calibrated abstention policy. We define the Confident-Wrong-Answer Rate (CWAR) metric and evaluate across three multi-hop benchmarks (MuSiQue, 2WikiMultiHopQA, HoVer) and two retrieval architectures (LLM-judge and dense-only), covering five failure regimes with CWAR from 14.5% to 62.1%. RCS achieves best or co-best AUC-AC in all five conditions against eight confidence baselines. On MuSiQue (LLM-judge), RCS reduces CWAR from 39.5% to 20.6% at 50% coverage (47.8% relative reduction), with ECE=0.035. A model trained on MuSiQue transfers to 2WikiMultiHopQA with only -0.5pp AUC loss, confirming the domain-agnostic structure of regime features."
+      },
+      "judgments": {
+        "jev": {
+          "paper_id": "2609.22056",
+          "stratum": "medium_adjacent",
+          "arm": "jev",
+          "call_artifacts": [
+            "raw/responses/l1/jev/l1-2609.22056-jev-a1.json"
+          ],
+          "latency_ms": 291,
+          "http_status": 200,
+          "answers": {
+            "relevant": {
+              "type": "boolean",
+              "probability": 0.62
+            },
+            "empirical_evidence": {
+              "type": "boolean",
+              "probability": 0.98
+            },
+            "topic": {
+              "type": "choice",
+              "choice": "agent_reliability",
+              "probabilities": {
+                "mcp_governance": 0,
+                "none": 0.01,
+                "long_running_workflows": 0,
+                "harness_runtime": 0,
+                "agent_reliability": 0.58,
+                "tool_use": 0,
+                "evals_assurance": 0.41,
+                "other": 0
+              }
+            },
+            "worth_escalating": {
+              "type": "boolean",
+              "probability": 0.69
+            },
+            "implementation_relevance": {
+              "type": "score",
+              "score": 3.69,
+              "probabilities": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0.3,
+                "4": 0.7
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1205,
+            "output_tokens": 172,
+            "cached_input_tokens": null,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usage.inputTokens",
+              "output": "usage.outputTokens"
+            },
+            "raw_usage_fields": [
+              "inputTokens",
+              "outputTokens"
+            ]
+          }
+        },
+        "deepseek": {
+          "paper_id": "2609.22056",
+          "stratum": "medium_adjacent",
+          "arm": "deepseek",
+          "call_artifacts": [
+            "raw/responses/l1/deepseek/l1-2609.22056-deepseek-a1.json"
+          ],
+          "latency_ms": 1137,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.82,
+            "empirical_evidence": true,
+            "empirical_probability": 0.9,
+            "topic": "agent_reliability",
+            "worth_escalating": true,
+            "escalation_probability": 0.7,
+            "implementation_relevance": 3
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "prompt_cache_hit_tokens",
+              "prompt_cache_miss_tokens",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 973,
+            "output_tokens": 60,
+            "cached_input_tokens": 384,
+            "reasoning_tokens": null,
+            "reasoning_content_present": false,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "cached_input": "usage.prompt_cache_hit_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+            }
+          }
+        },
+        "gemini": {
+          "paper_id": "2609.22056",
+          "stratum": "medium_adjacent",
+          "arm": "gemini",
+          "call_artifacts": [
+            "raw/responses/l1/gemini/l1-2609.22056-gemini-a1.json"
+          ],
+          "latency_ms": 24205,
+          "http_status": 200,
+          "output": {
+            "relevant": false,
+            "relevant_probability": 0.1,
+            "empirical_evidence": true,
+            "empirical_probability": 0.9,
+            "topic": "none",
+            "worth_escalating": false,
+            "escalation_probability": 0.05,
+            "implementation_relevance": 0
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "input_tokens": 957,
+            "output_tokens": 85,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usageMetadata.promptTokenCount",
+              "output": "usageMetadata.candidatesTokenCount",
+              "cached_input": "usageMetadata.cachedContentTokenCount"
+            }
+          }
+        },
+        "openai": {
+          "paper_id": "2609.22056",
+          "stratum": "medium_adjacent",
+          "arm": "openai",
+          "call_artifacts": [
+            "raw/responses/l1/openai/l1-2609.22056-openai-a1.json"
+          ],
+          "latency_ms": 7861,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.87,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "evals_assurance",
+            "worth_escalating": true,
+            "escalation_probability": 0.78,
+            "implementation_relevance": 2.5
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "completion_tokens_details",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 1058,
+            "output_tokens": 68,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": 0,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+              "cached_input": "usage.prompt_tokens_details.cached_tokens"
+            }
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2606.01987",
+      "stratum": "low_relevance_control",
+      "proxy_relevant_label": false,
+      "input_sha256": "beaca6579dba9428c583f0cc70ba7c5fef495bac061b570a9248d8d65365344e",
+      "input": {
+        "paper_id": "2606.01987",
+        "title": "Graph Edit Distance Formulation for the Vehicle Routing Problem: Theory and Analysis",
+        "authors": [
+          "Adel Dabah"
+        ],
+        "categories": [
+          "cs.DM",
+          "cs.LG"
+        ],
+        "abstract": "We show that the Vehicle Routing Problem (VRP) can be reformulated as a Graph Edit Distance (GED) maximization problem. Under a simple edge-deletion cost model, minimizing total route cost is equivalent to maximizing the total weight of edges deleted from the complete instance graph. This formulation models VRP at the edge level, where solutions are defined by selected edges rather than route sequences, enabling structural analyses that are difficult in classical formulations: per-edge attribution of solution quality, decomposition of the optimality gap, characterization of solution sparsity, and identification of edges that are hard to reach by greedy construction. Theoretically, we establish a merge-decomposition theorem showing that Clarke-Wright savings equal per-merge GED increments, and an approximation-transfer theorem that turns GED approximation ratios into VRP cost bounds. Using this reformulation, we analyze 90 CVRP benchmark instances with known optimal solutions. We find that optimal routing graphs use only 5.5% of available edges, that approximately 3.0% of optimal edges are consistently not found by Clarke-Wright heuristics under repeated restarts, and that the cost gap decomposes into missed optimal edges and substituted non-optimal edges of comparable total weight. The edge-additive objective provides a natural per-edge supervision signal for future graph neural network approaches to edge prediction, suggesting a potential connection to graph neural network approaches that we leave for follow-up work."
+      },
+      "judgments": {
+        "jev": {
+          "paper_id": "2606.01987",
+          "stratum": "low_relevance_control",
+          "arm": "jev",
+          "call_artifacts": [
+            "raw/responses/l1/jev/l1-2606.01987-jev-a1.json"
+          ],
+          "latency_ms": 345,
+          "http_status": 200,
+          "answers": {
+            "relevant": {
+              "type": "boolean",
+              "probability": 0.24
+            },
+            "empirical_evidence": {
+              "type": "boolean",
+              "probability": 0.97
+            },
+            "topic": {
+              "type": "choice",
+              "choice": "none",
+              "probabilities": {
+                "agent_reliability": 0,
+                "long_running_workflows": 0,
+                "evals_assurance": 0.04,
+                "tool_use": 0,
+                "harness_runtime": 0,
+                "other": 0.09,
+                "none": 0.87,
+                "mcp_governance": 0
+              }
+            },
+            "worth_escalating": {
+              "type": "boolean",
+              "probability": 0.55
+            },
+            "implementation_relevance": {
+              "type": "score",
+              "score": 1.91,
+              "probabilities": {
+                "0": 0.01,
+                "1": 0.2,
+                "2": 0.66,
+                "3": 0.13,
+                "4": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1090,
+            "output_tokens": 168,
+            "cached_input_tokens": null,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usage.inputTokens",
+              "output": "usage.outputTokens"
+            },
+            "raw_usage_fields": [
+              "inputTokens",
+              "outputTokens"
+            ]
+          }
+        },
+        "deepseek": {
+          "paper_id": "2606.01987",
+          "stratum": "low_relevance_control",
+          "arm": "deepseek",
+          "call_artifacts": [
+            "raw/responses/l1/deepseek/l1-2606.01987-deepseek-a1.json"
+          ],
+          "latency_ms": 969,
+          "http_status": 200,
+          "output": {
+            "relevant": false,
+            "relevant_probability": 0.08,
+            "empirical_evidence": true,
+            "empirical_probability": 0.85,
+            "topic": "none",
+            "worth_escalating": false,
+            "escalation_probability": 0.03,
+            "implementation_relevance": 1
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "prompt_cache_hit_tokens",
+              "prompt_cache_miss_tokens",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 875,
+            "output_tokens": 57,
+            "cached_input_tokens": 384,
+            "reasoning_tokens": null,
+            "reasoning_content_present": false,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "cached_input": "usage.prompt_cache_hit_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+            }
+          }
+        },
+        "gemini": {
+          "paper_id": "2606.01987",
+          "stratum": "low_relevance_control",
+          "arm": "gemini",
+          "call_artifacts": [
+            "raw/responses/l1/gemini/l1-2606.01987-gemini-a1.json"
+          ],
+          "latency_ms": 24104,
+          "http_status": 200,
+          "output": {
+            "relevant": false,
+            "relevant_probability": 0.0,
+            "empirical_evidence": true,
+            "empirical_probability": 0.9,
+            "topic": "none",
+            "worth_escalating": false,
+            "escalation_probability": 0.0,
+            "implementation_relevance": 0
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "input_tokens": 846,
+            "output_tokens": 84,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usageMetadata.promptTokenCount",
+              "output": "usageMetadata.candidatesTokenCount",
+              "cached_input": "usageMetadata.cachedContentTokenCount"
+            }
+          }
+        },
+        "openai": {
+          "paper_id": "2606.01987",
+          "stratum": "low_relevance_control",
+          "arm": "openai",
+          "call_artifacts": [
+            "raw/responses/l1/openai/l1-2606.01987-openai-a1.json"
+          ],
+          "latency_ms": 7557,
+          "http_status": 200,
+          "output": {
+            "relevant": false,
+            "relevant_probability": 0.01,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "none",
+            "worth_escalating": false,
+            "escalation_probability": 0.01,
+            "implementation_relevance": 0
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "completion_tokens_details",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 959,
+            "output_tokens": 63,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": 0,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+              "cached_input": "usage.prompt_tokens_details.cached_tokens"
+            }
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2606.30487",
+      "stratum": "low_relevance_control",
+      "proxy_relevant_label": false,
+      "input_sha256": "e42c9a12f3701579b0423f747a302c7c893d37d8c6a9ed37b6225eaf4facc967",
+      "input": {
+        "paper_id": "2606.30487",
+        "title": "Discovering the Kalman-Bucy-Koopman Filter",
+        "authors": [
+          "Umesh Vaidya"
+        ],
+        "categories": [
+          "math.OC",
+          "math.DS"
+        ],
+        "abstract": "This paper introduces the Kalman-Bucy-Koopman (KBK) filter, a novel framework for nonlinear state estimation grounded in Koopman operator spectral theory. The nonlinear estimation problem is formulated as a maximum-likelihood (Mortensen) estimator whose solution is characterized by a Hamilton-Jacobi (HJ) partial differential equation. The proposed KBK filter provides a spectral, operator-theoretic realization of this nonlinear filtering problem by parameterizing the HJ value function in terms of principal Koopman eigenfunctions. This transformation converts the nonlinear estimation problem into a Riccati-type evolution in Koopman coordinates, yielding a linear-operator analogue of the classical Kalman-Bucy filter while preserving nonlinear structure in the original state variables. We develop a path-integral formulation for computing principal Koopman eigenfunctions and introduce a dynamics-informed, characteristics-inspired basis construction for their approximation. Theoretical error bounds are derived for value-function and state-estimation approximations. Simulation results demonstrate improved performance over the extended Kalman filter and illustrate the ability of the KBK framework to operate in data-driven settings without explicit model linearization."
+      },
+      "judgments": {
+        "jev": {
+          "paper_id": "2606.30487",
+          "stratum": "low_relevance_control",
+          "arm": "jev",
+          "call_artifacts": [
+            "raw/responses/l1/jev/l1-2606.30487-jev-a1.json"
+          ],
+          "latency_ms": 372,
+          "http_status": 200,
+          "answers": {
+            "relevant": {
+              "type": "boolean",
+              "probability": 0.34
+            },
+            "empirical_evidence": {
+              "type": "boolean",
+              "probability": 0.91
+            },
+            "topic": {
+              "type": "choice",
+              "choice": "none",
+              "probabilities": {
+                "agent_reliability": 0,
+                "tool_use": 0,
+                "harness_runtime": 0,
+                "none": 0.94,
+                "other": 0.06,
+                "long_running_workflows": 0,
+                "evals_assurance": 0,
+                "mcp_governance": 0
+              }
+            },
+            "worth_escalating": {
+              "type": "boolean",
+              "probability": 0.59
+            },
+            "implementation_relevance": {
+              "type": "score",
+              "score": 1.92,
+              "probabilities": {
+                "0": 0.01,
+                "1": 0.22,
+                "2": 0.61,
+                "3": 0.15,
+                "4": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1039,
+            "output_tokens": 168,
+            "cached_input_tokens": null,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usage.inputTokens",
+              "output": "usage.outputTokens"
+            },
+            "raw_usage_fields": [
+              "inputTokens",
+              "outputTokens"
+            ]
+          }
+        },
+        "deepseek": {
+          "paper_id": "2606.30487",
+          "stratum": "low_relevance_control",
+          "arm": "deepseek",
+          "call_artifacts": [
+            "raw/responses/l1/deepseek/l1-2606.30487-deepseek-a1.json"
+          ],
+          "latency_ms": 1128,
+          "http_status": 200,
+          "output": {
+            "relevant": false,
+            "relevant_probability": 0.12,
+            "empirical_evidence": true,
+            "empirical_probability": 0.82,
+            "topic": "none",
+            "worth_escalating": false,
+            "escalation_probability": 0.03,
+            "implementation_relevance": 0
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "prompt_cache_hit_tokens",
+              "prompt_cache_miss_tokens",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 810,
+            "output_tokens": 57,
+            "cached_input_tokens": 384,
+            "reasoning_tokens": null,
+            "reasoning_content_present": false,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "cached_input": "usage.prompt_cache_hit_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+            }
+          }
+        },
+        "gemini": {
+          "paper_id": "2606.30487",
+          "stratum": "low_relevance_control",
+          "arm": "gemini",
+          "call_artifacts": [
+            "raw/responses/l1/gemini/l1-2606.30487-gemini-a1.json"
+          ],
+          "latency_ms": 23872,
+          "http_status": 200,
+          "output": {
+            "relevant": false,
+            "relevant_probability": 0.0,
+            "empirical_evidence": true,
+            "empirical_probability": 0.9,
+            "topic": "none",
+            "worth_escalating": false,
+            "escalation_probability": 0.0,
+            "implementation_relevance": 0
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "input_tokens": 791,
+            "output_tokens": 84,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usageMetadata.promptTokenCount",
+              "output": "usageMetadata.candidatesTokenCount",
+              "cached_input": "usageMetadata.cachedContentTokenCount"
+            }
+          }
+        },
+        "openai": {
+          "paper_id": "2606.30487",
+          "stratum": "low_relevance_control",
+          "arm": "openai",
+          "call_artifacts": [
+            "raw/responses/l1/openai/l1-2606.30487-openai-a1.json"
+          ],
+          "latency_ms": 6685,
+          "http_status": 200,
+          "output": {
+            "relevant": false,
+            "relevant_probability": 0.01,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "none",
+            "worth_escalating": false,
+            "escalation_probability": 0.01,
+            "implementation_relevance": 0
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "completion_tokens_details",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 898,
+            "output_tokens": 63,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": 0,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+              "cached_input": "usage.prompt_tokens_details.cached_tokens"
+            }
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2603.21521",
+      "stratum": "low_relevance_control",
+      "proxy_relevant_label": false,
+      "input_sha256": "d758bee9655d2671d2418dd0def2493abe1ef7cb4ae3ffca54782d6152c60157",
+      "input": {
+        "paper_id": "2603.21521",
+        "title": "Ultrafast microwave sensing and automatic recognition of dynamic objects in open world using programmable surface plasmonic neural networks",
+        "authors": [
+          "Qian Ma",
+          "Ze Gu",
+          "Zi Rui Feng",
+          "Qian Wen Wu",
+          "Yu Ming Ning",
+          "Zhi Qiao Han",
+          "Rui Si Li",
+          "Xinxin Gao",
+          "Tie Jun Cui"
+        ],
+        "categories": [
+          "cs.IT",
+          "physics.optics"
+        ],
+        "abstract": "The evolution toward next-generation intelligent sensing requires microwave systems to move beyond static detection and achieve high-speed and adaptive perception of dynamic scenes. However, the existing microwave sensing systems have bottlenecks owing to their sequential digital processing chain, limiting the refresh rates to hundreds of hertz, while the existing integrated microwave processors are lack of programmable and scalable capabilities for robust and open-world deployment. To break the bottlenecks, here we report a programmable surface plasmonic neural network (P-SPNN) that enables real-time microwave sensing and automatic recognition of dynamic objects in open-world environment. With a perception latency of 25 ns and a refresh rate exceeding 10 kHz, the P-SPNN system operates more than two orders of magnitude faster than the conventional millimeter-wave sensors, while achieving an energy efficiency of 17 TOPS per W. With 288 programmable phase-modulated neurons, we demonstrate real time and robust classification of persons and cars with 91-97% accuracy in the open road scenarios. By further integrating beam-scanning function, P-SPNN enables multi-dimensional spatial temporal frequency sensing without the digital preprocessing. These results establish P-SPNN as a programmable, scalable, and low-power platform for high-speed perception tasks in realistic world, with broad implications for autonomous driving, intelligent sensing, and next-generation artificial intelligence hardware."
+      },
+      "judgments": {
+        "jev": {
+          "paper_id": "2603.21521",
+          "stratum": "low_relevance_control",
+          "arm": "jev",
+          "call_artifacts": [
+            "raw/responses/l1/jev/l1-2603.21521-jev-a1.json"
+          ],
+          "latency_ms": 308,
+          "http_status": 200,
+          "answers": {
+            "relevant": {
+              "type": "boolean",
+              "probability": 0.46
+            },
+            "empirical_evidence": {
+              "type": "boolean",
+              "probability": 0.92
+            },
+            "topic": {
+              "type": "choice",
+              "choice": "none",
+              "probabilities": {
+                "tool_use": 0,
+                "harness_runtime": 0,
+                "agent_reliability": 0.01,
+                "long_running_workflows": 0,
+                "mcp_governance": 0,
+                "evals_assurance": 0.02,
+                "none": 0.83,
+                "other": 0.14
+              }
+            },
+            "worth_escalating": {
+              "type": "boolean",
+              "probability": 0.64
+            },
+            "implementation_relevance": {
+              "type": "score",
+              "score": 1.64,
+              "probabilities": {
+                "0": 0.03,
+                "1": 0.43,
+                "2": 0.42,
+                "3": 0.11,
+                "4": 0.01
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 1123,
+            "output_tokens": 168,
+            "cached_input_tokens": null,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usage.inputTokens",
+              "output": "usage.outputTokens"
+            },
+            "raw_usage_fields": [
+              "inputTokens",
+              "outputTokens"
+            ]
+          }
+        },
+        "deepseek": {
+          "paper_id": "2603.21521",
+          "stratum": "low_relevance_control",
+          "arm": "deepseek",
+          "call_artifacts": [
+            "raw/responses/l1/deepseek/l1-2603.21521-deepseek-a1.json"
+          ],
+          "latency_ms": 1037,
+          "http_status": 200,
+          "output": {
+            "relevant": false,
+            "relevant_probability": 0.05,
+            "empirical_evidence": true,
+            "empirical_probability": 0.97,
+            "topic": "none",
+            "worth_escalating": false,
+            "escalation_probability": 0.03,
+            "implementation_relevance": 0
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "prompt_cache_hit_tokens",
+              "prompt_cache_miss_tokens",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 897,
+            "output_tokens": 57,
+            "cached_input_tokens": 384,
+            "reasoning_tokens": null,
+            "reasoning_content_present": false,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "cached_input": "usage.prompt_cache_hit_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+            }
+          }
+        },
+        "gemini": {
+          "paper_id": "2603.21521",
+          "stratum": "low_relevance_control",
+          "arm": "gemini",
+          "call_artifacts": [
+            "raw/responses/l1/gemini/l1-2603.21521-gemini-a1.json"
+          ],
+          "latency_ms": 23835,
+          "http_status": 200,
+          "output": {
+            "relevant": false,
+            "relevant_probability": 0.0,
+            "empirical_evidence": true,
+            "empirical_probability": 0.9,
+            "topic": "none",
+            "worth_escalating": false,
+            "escalation_probability": 0.0,
+            "implementation_relevance": 0
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "input_tokens": 892,
+            "output_tokens": 84,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usageMetadata.promptTokenCount",
+              "output": "usageMetadata.candidatesTokenCount",
+              "cached_input": "usageMetadata.cachedContentTokenCount"
+            }
+          }
+        },
+        "openai": {
+          "paper_id": "2603.21521",
+          "stratum": "low_relevance_control",
+          "arm": "openai",
+          "call_artifacts": [
+            "raw/responses/l1/openai/l1-2603.21521-openai-a1.json"
+          ],
+          "latency_ms": 7644,
+          "http_status": 200,
+          "output": {
+            "relevant": false,
+            "relevant_probability": 0.01,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "none",
+            "worth_escalating": false,
+            "escalation_probability": 0.01,
+            "implementation_relevance": 0
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "completion_tokens_details",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 984,
+            "output_tokens": 63,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": 0,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+              "cached_input": "usage.prompt_tokens_details.cached_tokens"
+            }
+          }
+        }
+      }
+    },
+    {
+      "paper_id": "2606.15960",
+      "stratum": "low_relevance_control",
+      "proxy_relevant_label": false,
+      "input_sha256": "fdc00e7bc7ea9e8a67c7da7dea97376a491dc3150c135540351e6388ca2836d2",
+      "input": {
+        "paper_id": "2606.15960",
+        "title": "Chaining Tasks, Redefining Work: A Theory of AI Automation",
+        "authors": [
+          "Mert Demirer",
+          "John J. Horton",
+          "Nicole Immorlica",
+          "Brendan Lucier",
+          "Peyman Shahidi"
+        ],
+        "categories": [
+          "econ.GN",
+          "cs.GT"
+        ],
+        "abstract": "Production is a sequence of steps that can be executed (1) manually, (2) augmented with AI, or (3) fully automated within contiguous AI-executed steps called ''chains.'' Firms optimally bundle steps into tasks and then jobs, trading off specialization gains against coordination costs. We characterize the optimal assignment of humans and AI to steps and the firm's resulting job structure, showing that comparative advantage logic can fail with AI chaining. The model implies non-linear productivity gains from AI quality improvements and admits a CES representation at the macro level. Empirical evidence supports the model's key predictions that (1) AI-executed steps co-occur in chains, (2) dispersion of AI-exposed steps lowers AI execution at the job level, and (3) adjacency to AI-executed steps increases the likelihood that a step is AI-executed."
+      },
+      "judgments": {
+        "jev": {
+          "paper_id": "2606.15960",
+          "stratum": "low_relevance_control",
+          "arm": "jev",
+          "call_artifacts": [
+            "raw/responses/l1/jev/l1-2606.15960-jev-a1.json"
+          ],
+          "latency_ms": 525,
+          "http_status": 200,
+          "answers": {
+            "relevant": {
+              "type": "boolean",
+              "probability": 0.66
+            },
+            "empirical_evidence": {
+              "type": "boolean",
+              "probability": 0.91
+            },
+            "topic": {
+              "type": "choice",
+              "choice": "other",
+              "probabilities": {
+                "evals_assurance": 0,
+                "other": 0.35,
+                "agent_reliability": 0,
+                "harness_runtime": 0.01,
+                "tool_use": 0,
+                "long_running_workflows": 0.3,
+                "mcp_governance": 0,
+                "none": 0.34
+              }
+            },
+            "worth_escalating": {
+              "type": "boolean",
+              "probability": 0.64
+            },
+            "implementation_relevance": {
+              "type": "score",
+              "score": 2.04,
+              "probabilities": {
+                "0": 0,
+                "1": 0.19,
+                "2": 0.5700000000000001,
+                "3": 0.24,
+                "4": 0
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 991,
+            "output_tokens": 168,
+            "cached_input_tokens": null,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usage.inputTokens",
+              "output": "usage.outputTokens"
+            },
+            "raw_usage_fields": [
+              "inputTokens",
+              "outputTokens"
+            ]
+          }
+        },
+        "deepseek": {
+          "paper_id": "2606.15960",
+          "stratum": "low_relevance_control",
+          "arm": "deepseek",
+          "call_artifacts": [
+            "raw/responses/l1/deepseek/l1-2606.15960-deepseek-a1.json"
+          ],
+          "latency_ms": 973,
+          "http_status": 200,
+          "output": {
+            "relevant": true,
+            "relevant_probability": 0.7,
+            "empirical_evidence": true,
+            "empirical_probability": 0.75,
+            "topic": "other",
+            "worth_escalating": true,
+            "escalation_probability": 0.55,
+            "implementation_relevance": 2
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "prompt_cache_hit_tokens",
+              "prompt_cache_miss_tokens",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 780,
+            "output_tokens": 57,
+            "cached_input_tokens": 384,
+            "reasoning_tokens": null,
+            "reasoning_content_present": false,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "cached_input": "usage.prompt_cache_hit_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens or absent"
+            }
+          }
+        },
+        "gemini": {
+          "paper_id": "2606.15960",
+          "stratum": "low_relevance_control",
+          "arm": "gemini",
+          "call_artifacts": [
+            "raw/responses/l1/gemini/l1-2606.15960-gemini-a1.json"
+          ],
+          "latency_ms": 23773,
+          "http_status": 200,
+          "output": {
+            "relevant": false,
+            "relevant_probability": 0.05,
+            "empirical_evidence": true,
+            "empirical_probability": 0.9,
+            "topic": "none",
+            "worth_escalating": false,
+            "escalation_probability": 0.0,
+            "implementation_relevance": 0
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "input_tokens": 760,
+            "output_tokens": 85,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": null,
+            "mapping": {
+              "input": "usageMetadata.promptTokenCount",
+              "output": "usageMetadata.candidatesTokenCount",
+              "cached_input": "usageMetadata.cachedContentTokenCount"
+            }
+          }
+        },
+        "openai": {
+          "paper_id": "2606.15960",
+          "stratum": "low_relevance_control",
+          "arm": "openai",
+          "call_artifacts": [
+            "raw/responses/l1/openai/l1-2606.15960-openai-a1.json"
+          ],
+          "latency_ms": 7971,
+          "http_status": 200,
+          "output": {
+            "relevant": false,
+            "relevant_probability": 0.96,
+            "empirical_evidence": true,
+            "empirical_probability": 0.99,
+            "topic": "none",
+            "worth_escalating": false,
+            "escalation_probability": 0.02,
+            "implementation_relevance": 0
+          },
+          "parse_error": null,
+          "validation_errors": [],
+          "usage": {
+            "raw_fields": [
+              "completion_tokens",
+              "completion_tokens_details",
+              "prompt_tokens",
+              "prompt_tokens_details",
+              "total_tokens"
+            ],
+            "input_tokens": 870,
+            "output_tokens": 63,
+            "cached_input_tokens": 0,
+            "reasoning_tokens": 0,
+            "mapping": {
+              "input": "usage.prompt_tokens",
+              "output": "usage.completion_tokens",
+              "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+              "cached_input": "usage.prompt_tokens_details.cached_tokens"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

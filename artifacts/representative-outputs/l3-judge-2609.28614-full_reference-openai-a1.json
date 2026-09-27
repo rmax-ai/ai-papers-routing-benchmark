@@ -1,0 +1,49 @@
+{
+  "call_id": "l3-judge-2609.28614-full_reference-openai",
+  "attempt": 1,
+  "arm_id": "l3-blind-judge-openai",
+  "provider": "openai",
+  "model_id_sent": "gpt-6-luna",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "call_start_utc": "2026-09-26T22:57:09Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_schema strict",
+    "max_completion_tokens": 1300,
+    "blind": true
+  },
+  "http_status": 200,
+  "latency_ms": 7406,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "completion_tokens_details",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 8381,
+    "output_tokens": 275,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": 0,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+      "cached_input": "usage.prompt_tokens_details.cached_tokens"
+    }
+  },
+  "cost": {
+    "amount": 0.0009756,
+    "rates_used_usd_per_million": {
+      "input": 0.1,
+      "cached_input": 0.01,
+      "output": 0.5
+    },
+    "rate_source": "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC",
+    "tier": null
+  },
+  "output": "{\"scores\":[{\"blind_label\":\"A\",\"faithfulness\":4,\"evidence_support\":4,\"insight_depth\":4,\"novelty_identification\":3,\"systems_relevance\":4,\"actionability\":4,\"compression_information_density\":3,\"uncertainty_calibration\":2,\"durable_memory_precision_proxy\":4,\"brief_reason\":\"Accurately captures the central results and adds useful distinctions: the review miss rate, non-isolated feedback comparison, and differing evasion by technique. The operational-label caveats and qualified causal language are well handled. Strong assurance and workflow implications, though the artifact is lengthy and confidence provenance is unavailable (score 2).\"},{\"blind_label\":\"B\",\"faithfulness\":3,\"evidence_support\":3,\"insight_depth\":2,\"novelty_identification\":2,\"systems_relevance\":3,\"actionability\":3,\"compression_information_density\":4,\"uncertainty_calibration\":2,\"durable_memory_precision_proxy\":3,\"brief_reason\":\"Concise and broadly consistent with the cited findings, but it omits the measured submission-only review miss rate and gives less detail on the limits of the feedback comparison. Calling the increase significant is unsupported by the excerpts, and the evidence section is empty. Recommendations are relevant but generic; confidence provenance is unavailable (score 2).\"}]}",
+  "provider_response_model_id": "gpt-6-luna",
+  "artifact": "raw/responses/l3/judges/openai/l3-judge-2609.28614-full_reference-openai-a1.json"
+}

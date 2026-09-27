@@ -1,0 +1,143 @@
+{
+  "mappings": {
+    "2609.29808/full_reference/openai": {
+      "B": "deepseek",
+      "A": "gemini"
+    },
+    "2609.29808/full_reference/gemini": {
+      "B": "openai",
+      "A": "deepseek"
+    },
+    "2609.29808/selective/openai": {
+      "B": "deepseek",
+      "A": "gemini"
+    },
+    "2609.29808/selective/gemini": {
+      "B": "openai",
+      "A": "deepseek"
+    },
+    "2609.29095/full_reference/openai": {
+      "A": "deepseek",
+      "B": "gemini"
+    },
+    "2609.29095/full_reference/gemini": {
+      "B": "openai",
+      "A": "deepseek"
+    },
+    "2609.29095/selective/openai": {
+      "A": "deepseek",
+      "B": "gemini"
+    },
+    "2609.29095/selective/gemini": {
+      "B": "openai",
+      "A": "deepseek"
+    },
+    "2609.28614/full_reference/openai": {
+      "A": "deepseek",
+      "B": "gemini"
+    },
+    "2609.28614/full_reference/gemini": {
+      "A": "openai",
+      "B": "deepseek"
+    },
+    "2609.28614/selective/openai": {
+      "A": "deepseek",
+      "B": "gemini"
+    },
+    "2609.28614/selective/gemini": {
+      "B": "openai",
+      "A": "deepseek"
+    },
+    "2609.30217/full_reference/openai": {
+      "B": "deepseek",
+      "A": "gemini"
+    },
+    "2609.30217/full_reference/gemini": {
+      "A": "openai",
+      "B": "deepseek"
+    },
+    "2609.30217/selective/openai": {
+      "B": "deepseek",
+      "A": "gemini"
+    },
+    "2609.30217/selective/gemini": {
+      "A": "openai",
+      "B": "deepseek"
+    },
+    "2609.28585/full_reference/openai": {
+      "B": "deepseek",
+      "A": "gemini"
+    },
+    "2609.28585/full_reference/gemini": {
+      "A": "openai",
+      "B": "deepseek"
+    },
+    "2609.28585/selective/openai": {
+      "B": "deepseek",
+      "A": "gemini"
+    },
+    "2609.28585/selective/gemini": {
+      "B": "openai",
+      "A": "deepseek"
+    },
+    "2609.28586/full_reference/openai": {
+      "A": "deepseek",
+      "B": "gemini"
+    },
+    "2609.28586/full_reference/gemini": {
+      "B": "openai",
+      "A": "deepseek"
+    },
+    "2609.28586/selective/openai": {
+      "A": "deepseek",
+      "B": "gemini"
+    },
+    "2609.28586/selective/gemini": {
+      "B": "openai",
+      "A": "deepseek"
+    },
+    "2609.27263/full_reference/openai": {
+      "A": "deepseek"
+    },
+    "2609.27263/full_reference/gemini": {
+      "B": "openai",
+      "A": "deepseek"
+    },
+    "2609.27263/selective/openai": {
+      "B": "deepseek",
+      "A": "gemini"
+    },
+    "2609.27263/selective/gemini": {
+      "A": "openai",
+      "B": "deepseek"
+    },
+    "2609.24122/full_reference/openai": {
+      "A": "deepseek",
+      "B": "gemini"
+    },
+    "2609.24122/full_reference/gemini": {
+      "A": "openai",
+      "B": "deepseek"
+    },
+    "2609.24122/selective/openai": {
+      "B": "deepseek",
+      "A": "gemini"
+    },
+    "2609.24122/selective/gemini": {
+      "B": "openai",
+      "A": "deepseek"
+    }
+  },
+  "dimensions": [
+    "faithfulness",
+    "evidence_support",
+    "insight_depth",
+    "novelty_identification",
+    "systems_relevance",
+    "actionability",
+    "compression_information_density",
+    "uncertainty_calibration",
+    "durable_memory_precision_proxy"
+  ],
+  "design": "Labels are permuted deterministically per paper/path/judge; vendor judge receives no model identity. Cross-vendor wherever possible."
+}

@@ -1,0 +1,49 @@
+{
+  "call_id": "l3-2609.29095-full_reference-openai",
+  "attempt": 1,
+  "arm_id": "l3-full_reference-openai",
+  "provider": "openai",
+  "model_id_sent": "gpt-6-luna",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "call_start_utc": "2026-09-26T22:39:13Z",
+  "settings": {
+    "reasoning_effort": "none",
+    "structured_output": "json_schema strict",
+    "max_completion_tokens": 2400,
+    "prompt_revision": "concise-v3"
+  },
+  "http_status": 200,
+  "latency_ms": 18429,
+  "usage": {
+    "raw_fields": [
+      "completion_tokens",
+      "completion_tokens_details",
+      "prompt_tokens",
+      "prompt_tokens_details",
+      "total_tokens"
+    ],
+    "input_tokens": 26677,
+    "output_tokens": 1662,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": 0,
+    "mapping": {
+      "input": "usage.prompt_tokens",
+      "output": "usage.completion_tokens",
+      "reasoning": "usage.completion_tokens_details.reasoning_tokens",
+      "cached_input": "usage.prompt_tokens_details.cached_tokens"
+    }
+  },
+  "cost": {
+    "amount": 0.0034987,
+    "rates_used_usd_per_million": {
+      "input": 0.1,
+      "cached_input": 0.01,
+      "output": 0.5
+    },
+    "rate_source": "https://developers.openai.com/api/docs/models/gpt-6-luna; prior-art compare.ts reviewed 2026-09-24 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"paper\": {\n    \"contribution\": \"LIMBO evaluates duplicate side effects across models, harnesses, recovery policies and tool contracts, using fault injection and a committed-effects ledger.\",\n    \"key_claims\": [\n      {\n        \"claim\": \"For faults resolvable by immediate read-back, model differences explain the largest share of explained duplicate variance.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 10,\n            \"section\": \"6.2 Where exactly-once lives depends on the fault\",\n            \"quote\": \"the model accounts for 53% of the explained variance and the contract for 30%\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"For late commits and redelivery, the contract explains most explained duplicate variance; verification alone cannot guarantee exactly-once under unbounded in-flight time.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 10,\n            \"section\": \"6.2\",\n            \"quote\": \"the contract accounts for 81% and the model for 8%\"\n          },\n          {\n            \"page\": 4,\n            \"section\": \"Recovery under uncertain side effects\",\n            \"quote\": \"no verification-only policy can be exactly-once under late commits without a known bound on in-flight time\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"In the tested keys-everywhere condition, the guard’s exactly-once results transferred across four harnesses.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 14,\n            \"section\": \"6.5 Harnesses\",\n            \"quote\": \"with the guard attaching keys it is 0%, 0%, 0% and 0%\"\n          }\n        ]\n      }\n    ],\n    \"evidence\": [\n      {\n        \"claim\": \"The evaluation covered 25,930 graded episodes across nine models and three production harnesses.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 2,\n            \"section\": \"Introduction\",\n            \"quote\": \"Our study covers nine recent models\"\n          },\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"25,930 graded episodes\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"Under heavy-tailed delays, a one-hour wait yielded 84% exactly-once success, versus 94% with keys and guard.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 12,\n            \"section\": \"6.3 Waiting is not a substitute for keys\",\n            \"quote\": \"wait 1 h 84%\"\n          },\n          {\n            \"page\": 12,\n            \"section\": \"6.3\",\n            \"quote\": \"keys-everywhere contract with the guard reaches 94%\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"Agents reported completion in 90% of duplicate-producing episodes.\",\n        \"evidence_refs\": [\n          {\n            \"page\": 12,\n            \"section\": \"6.4 Agents do not know what happened\",\n            \"quote\": \"finished with status completed in 90%\"\n          }\n        ]\n      }\n    ],\n    \"limitations\": [\n      \"Services are simulated, and the paper notes that long-horizon tasks and their additional failure modes are not studied (p. 16, “Our tasks are short to medium in length”).\",\n      \"Three harnesses were restricted to sandbox tools with a shared preamble, limiting harness variation (p. 16, “removes some sources of harness variation by design”).\",\n      \"The heavy-tailed delay distribution is a modeling choice, so specific waiting results depend on its shape (p. 16, “the specific success rates depend on its shape”).\",\n      \"Stratified analyses, keys-everywhere experiments and waiting experiments were exploratory after preregistration (p. 8, “E2k, E3k, E5, E6… are exploratory”).\"\n    ]\n  },\n  \"insights\": [\n    {\n      \"insight\": \"Exactly-once reliability has a fault-dependent boundary: model verification helps when reads settle outcomes, while unresolved in-flight or duplicated delivery requires contract support.\",\n      \"why_it_matters\": \"Reliability designs should match the recovery mechanism to whether evidence can distinguish the hidden outcome.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 10,\n          \"section\": \"6.2\",\n          \"quote\": \"the model accounts for 53% of the explained variance\"\n        },\n        {\n          \"page\": 10,\n          \"section\": \"6.2\",\n          \"quote\": \"the contract accounts for 81% and the model for 8%\"\n        }\n      ],\n      \"confidence\": 0.94,\n      \"novelty\": \"The paper’s measured fault-stratified result; no broader novelty claim inferred.\",\n      \"related_rmax_topics\": [\n        \"agent reliability\",\n        \"evaluation/assurance\",\n        \"tool use\"\n      ],\n      \"possible_action\": \"Evaluate recovery separately for immediately resolvable and observationally unresolved fault classes.\"\n    },\n    {\n      \"insight\": \"Idempotency keys are a stronger tested remedy than waiting under heavy-tailed delays, but safe retries depend on preserving the same key per intent.\",\n      \"why_it_matters\": \"A runtime should attach and pin keys rather than assume the model will reuse them correctly.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 12,\n          \"section\": \"6.3\",\n          \"quote\": \"wait 1 h 84%\"\n        },\n        {\n          \"page\": 12,\n          \"section\": \"6.3\",\n          \"quote\": \"Among the 432 late-commit re-issues… in which the agent reused the original key, 0% produced a duplicate.\"\n        }\n      ],\n      \"confidence\": 0.91,\n      \"novelty\": \"Measured comparison plus a proposed harness mechanism; not a claim of novelty.\",\n      \"related_rmax_topics\": [\n        \"harness/runtime\",\n        \"tool use\",\n        \"MCP/governance\"\n      ],\n      \"possible_action\": \"Prototype stable per-intent key assignment and test it under late commits and redelivery.\"\n    },\n    {\n      \"insight\": \"Task-success reporting can conceal side-effect failures, so assurance needs an effect ledger and explicit uncertainty reporting.\",\n      \"why_it_matters\": \"A completed status alone may leave operators unaware of duplicate charges, messages or deployments.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 12,\n          \"section\": \"6.4\",\n          \"quote\": \"finished with status completed in 90%\"\n        },\n        {\n          \"page\": 6,\n          \"section\": \"The Limbo benchmark\",\n          \"quote\": \"The grader reads the ledger of committed effects\"\n        }\n      ],\n      \"confidence\": 0.93,\n      \"novelty\": \"Empirical result and evaluation design reported by the paper.\",\n      \"related_rmax_topics\": [\n        \"evaluation/assurance\",\n        \"agent reliability\",\n        \"long-running workflows\"\n      ],\n      \"possible_action\": \"Track committed effects separately from task completion and surface unresolved outcomes in final reports.\"\n    }\n  ],\n  \"connections\": [\n    {\n      \"prior_work_or_existing_rmax_insight\": \"The supplied RMAX digest index highlights verification placement and runtime enforcement, but does not provide detailed evidence for a direct comparison.\",\n      \"relationship\": \"reframes\"\n    }\n  ],\n  \"followups\": {\n    \"experiments\": [\n      \"Test stable per-intent key enforcement on real tool APIs and longer workflows.\"\n    ],\n    \"implementation_ideas\": [\n      \"Add contract-declared idempotency keys, status reads and uncertainty-aware reporting to MCP tool integrations.\"\n    ],\n    \"research_questions\": [\n      \"How do duplicate side effects and recovery costs compound in production-scale long-running workflows?\"\n    ]\n  }\n}",
+  "provider_response_model_id": "gpt-6-luna",
+  "artifact": "raw/responses/l3/full_reference/openai/l3-2609.29095-full_reference-openai-a1.json"
+}

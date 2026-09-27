@@ -1,0 +1,48 @@
+{
+  "status": "format-pilot-excluded",
+  "paper_id": "2609.27263",
+  "parse_error": null,
+  "candidate_claims": [
+    {
+      "claim": "GitHub Agentic Workflows (gh-aw) allows developers to define recurring work executed automatically by AI agents using Markdown files that combine natural-language instructions with configuration.",
+      "evidence_refs": [
+        {
+          "page": null,
+          "quote": "GitHub Agentic Workflows (gh-aw) enables this approach through Markdown files that combine natural-language instructions with configuration and compile into executable GitHub Actions workflows."
+        }
+      ],
+      "importance": "load_bearing"
+    },
+    {
+      "claim": "Workflow instructions are substantial, featuring a median of 556.5 words and code blocks in 62.1% of files.",
+      "evidence_refs": [
+        {
+          "page": null,
+          "quote": "Our results show that workflow instructions extend beyond short prompts, with a median of 556.5 words and code blocks in 62.1% of files."
+        }
+      ],
+      "importance": "supporting"
+    },
+    {
+      "claim": "Only 9.4% of labeled workflows explicitly address prompt-injection defense.",
+      "evidence_refs": [
+        {
+          "page": null,
+          "quote": "Tasks, outputs, constraints, and process instructions each appear in over 93% of labeled workflows, yet only 9.4% explicitly address prompt-injection defense."
+        }
+      ],
+      "importance": "load_bearing"
+    }
+  ],
+  "keys": [
+    "candidate_claims",
+    "key_claims",
+    "limitations",
+    "load_bearing_pages",
+    "requested_pages",
+    "stop_reason"
+  ],
+  "call_artifacts": [
+    "raw/responses/l2/A-pilot/l2-2609.27263-A-pilot-r1-a1.json"
+  ]
+}

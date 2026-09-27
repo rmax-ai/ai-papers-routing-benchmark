@@ -1,0 +1,43 @@
+{
+  "call_id": "l3-2609.29095-full_reference-gemini",
+  "attempt": 1,
+  "arm_id": "l3-full_reference-gemini",
+  "provider": "gemini",
+  "model_id_sent": "gemini-3.5-flash-lite",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+  "call_start_utc": "2026-09-26T22:38:44Z",
+  "settings": {
+    "thinkingConfig": {
+      "thinkingLevel": "low"
+    },
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 2200,
+    "prompt_revision": "concise-v3"
+  },
+  "http_status": 200,
+  "latency_ms": 29281,
+  "usage": {
+    "input_tokens": 29464,
+    "output_tokens": 1541,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": null,
+    "mapping": {
+      "input": "usageMetadata.promptTokenCount",
+      "output": "usageMetadata.candidatesTokenCount",
+      "cached_input": "usageMetadata.cachedContentTokenCount"
+    }
+  },
+  "cost": {
+    "amount": 0.0126917,
+    "rates_used_usd_per_million": {
+      "input": 0.3,
+      "cached_input": 0.3,
+      "output": 2.5
+    },
+    "rate_source": "video-summarization/scripts/summarize_video.py PRICING_PER_MILLION; prior-art reviewed 2026-09-25 UTC",
+    "tier": null
+  },
+  "output": "{\n  \"paper\": {\n    \"contribution\": \"We investigate where exactly-once behaviour should be enforced for tool-using LLM agents (model, agent harness, or tool contract) using LIMBO, a deterministic sandbox of six services and twelve fault modes evaluated across 25,930 episodes.\",\n    \"key_claims\": [\n      {\n        \"claim\": \"When an immediate read-back can reveal what happened, the model decides: frontier models instructed to act exactly once almost never duplicate a write whose acknowledgement was lost (0.5%), whereas weaker models do.\",\n        \"evidence\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"When an immediate read-back can reveal what happened, the model decides: frontier models instructed to act exactly once almost never duplicate a write whose acknowledgement was lost (0.5%), weaker models often do\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"When an immediate read-back cannot reveal the outcome, only the contract does: frontier models duplicate in 56% of late-commit episodes and 74% under redelivery, and the contract explains 81% of the variance.\",\n        \"evidence\": [\n          {\n            \"page\": 1,\n            \"section\": \"Abstract\",\n            \"quote\": \"When it cannot -- the request is still in flight, or the transport delivered it twice -- the same frontier models duplicate in 56% and 74% of episodes, and the contract explains 81%.\"\n          }\n        ]\n      },\n      {\n        \"claim\": \"Offering idempotency keys on every write lowers the duplicate rate from 28% to 4% because agents use keys when they exist.\",\n        \"evidence\": [\n          {\n            \"page\": 2,\n            \"section\": \"1 Introduction\",\n            \"quote\": \"Offering keys is enough: under a counterfactual contract in which every write accepts one, agents attach them in 98% of episodes and the duplicate rate falls from 28% to 4% with no other change\"\n          }\n        ]\n      }\n    ],\n    \"limitations\": [\n      {\n        \"page\": 16,\n        \"section\": \"7 Limitations\",\n        \"quote\": \"The services are simulated, although their semantics follow documented production conventions and every fault fires at the service boundary rather than in the prompt.\"\n      },\n      {\n        \"page\": 16,\n        \"section\": \"7 Limitations\",\n        \"quote\": \"All models were reached through one gateway, which fixes some settings (for example reasoning effort) at provider defaults, and model identifiers refer to versions available in September 2026.\"\n      },\n      {\n        \"page\": 16,\n        \"section\": \"7 Limitations\",\n        \"quote\": \"We evaluate three harnesses and restrict them to the sandbox's tools with a shared preamble, which removes some sources of harness variation by design; harnesses with other retry or summarization behaviour may differ.\"\n      },\n      {\n        \"page\": 16,\n        \"section\": \"7 Limitations\",\n        \"quote\": \"The heavy-tailed in-flight delay distribution is a modelling choice: the qualitative conclusion of E5 (that any finite waiting bound leaves the tail exposed) holds for any unbounded distribution, but the specific success rates depend on its shape.\"\n      }\n    ]\n  },\n  \"insights\": [\n    {\n      \"insight\": \"Idempotency keys and tool contracts dictate agent reliability under unresolvable transport faults, whereas model reasoning only resolves immediate read-back faults.\",\n      \"why_it_matters\": \"Understanding where exactly-once lives prevents misplaced engineering efforts in client-side harnesses or model prompting when dealing with distributed systems ambiguity.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 1,\n          \"section\": \"Abstract\",\n          \"quote\": \"When a read-back can resolve the failure, the model decides... When it cannot -- the request is still in flight, or the transport delivered it twice -- the same frontier models duplicate in 56% and 74% of episodes, and the contract explains 81%.\"\n        }\n      ],\n      \"confidence\": \"high\",\n      \"novelty\": \"high\",\n      \"related_rmax_topics\": [\n        \"Ai Papers\"\n      ],\n      \"possible_action\": \"Enforce standard idempotency-key support and clear read-back semantics in tool contracts rather than relying solely on model-side verification.\"\n    },\n    {\n      \"insight\": \"Transparent client-side retries and waiting strategies fall short under unbounded or heavy-tailed delays, while agents regularly fail to recognize when they have duplicated side effects.\",\n      \"why_it_matters\": \"Blind retries or naive wait intervals actively degrade agent reliability by creating unmanaged duplicates, and agents falsely report task success.\",\n      \"evidence_refs\": [\n        {\n          \"page\": 2,\n          \"section\": \"1 Introduction\",\n          \"quote\": \"Transparent client-side retries cut exactly-once success from 72% to 50%... and agents reported success in 90% of the episodes in which they had duplicated an effect.\"\n        }\n      ],\n      \"confidence\": \"high\",\n      \"novelty\": \"medium\",\n      \"related_rmax_topics\": [\n        \"Ai Papers\"\n      ],\n      \"possible_action\": \"Disable transparent client-side retries for non-idempotent writes and implement middleware guards that pin idempotency keys across retries.\"\n    }\n  ],\n  \"connections\": [\n    {\n      \"source_paper\": \"2609.29095\",\n      \"target_paper\": \"abs/2609.11957\",\n      \"relationship\": \"Both examine the verification envelope and runtime boundaries where checks run to determine what agent safety policies can prove.\"\n    },\n    {\n      \"source_paper\": \"2609.29095\",\n      \"target_paper\": \"abs/2609.15422\",\n      \"relationship\": \"Both address tool-use architecture, permission scoping, and substrate guarantees for reliable execution in AI agent environments.\"\n    }\n  ],\n  \"followups\": [\n    {\n      \"question\": \"How do learned or cost-aware verification budgets alter the trade-offs of wait-then-verify policies under heavy-tailed service delays?\",\n      \"suggested_approach\": \"Extend the LIMBO sandbox evaluation to test dynamic verification budgeting algorithms against heavy-tailed timeout distributions.\"\n    },\n    {\n      \"question\": \"Can MCP protocol specifications be extended to mandate standard idempotency key injection and read-back paths across all community servers?\",\n      \"suggested_approach\": \"Propose an MCP schema update enforcing mandatory tool annotation fields for idempotency and status queries.\"\n    }\n  ]\n}",
+  "provider_response_model_version": "gemini-3.5-flash-lite",
+  "artifact": "raw/responses/l3/full_reference/gemini/l3-2609.29095-full_reference-gemini-a1.json"
+}
