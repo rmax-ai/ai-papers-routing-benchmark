@@ -1,0 +1,3 @@
+arm,papers_with_output,load_bearing_page_recall,claim_recall_015,claim_recall_020,claim_recall_025,native_schema_passes,normalized_schema_passes,citation_refs,page_valid_refs,cited_quote_matches,claims_unsupported_or_weak,claims_total,insights_unsupported_or_weak,insights_total,cost_usd,mean_cost_per_paper_usd,median_latency_ms
+A,8,0.5089285714285714,0.5541666666666667,0.4395833333333333,0.24791666666666667,8,8,97,97,78,6,45,2,24,0.0291103,0.0036387875,15393.5
+B,8,0.2733630952380952,0.7145833333333333,0.6520833333333333,0.6270833333333333,8,7,78,78,51,19,44,4,20,0.0872562,0.010907025,39771.0

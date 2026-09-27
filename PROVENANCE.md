@@ -56,3 +56,7 @@ The total includes capability probes, pilots, retries, invalid but billed respon
 The publication build performs no provider calls, corpus-store reads, or benchmark pipeline stages: the raw bundle, report, and selected artifacts are a frozen record of the earlier run. The recovery header in the terminal synthesis is retained because the host stall and checkpoint resume explain why outage-window artifacts appear alongside successful records.
 
 This repository's checksums are generated last, after the table CSVs and authored documentation are complete; they are the verification boundary for the publication tree.
+
+## Follow-up run (DQ84)
+
+A second, controlled benchmark was added on 2026-09-27 atop release `8fdc741` under `dq84-luna-vs-gemini/`: one-pass GPT-6 Luna versus a Gemini Flash-Lite evidence-extraction stage feeding the same GPT-6 Luna synthesis (source: [rmax-ai/delegation-queue#84](https://github.com/rmax-ai/delegation-queue/issues/84)). It reused this tree's eight-paper subset, reference claims/pages, canonical schema and checks, and rate card, with byte-exact input compatibility (8/8 request-body SHA256 match) and a measured spend of $0.188291. Its integrity records live under `dq84-luna-vs-gemini/checksums/` (SHA256SUMS.txt, MANIFEST.json). The DQ79 release records in the root `checksums/` remain pinned to their original content and are not re-issued by this addition.

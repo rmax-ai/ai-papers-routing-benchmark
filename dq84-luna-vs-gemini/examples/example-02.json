@@ -1,0 +1,9 @@
+{
+  "arm": "A",
+  "rank": "worst (tied)",
+  "paper_id": "2609.24122",
+  "mean_gemini_judge_score": 4,
+  "insight_excerpt": "Treat retrieval coverage as a separate assurance dimension from answer faithfulness, using Re:CAP as a sampled audit rather than a live per-request reliability signal.",
+  "evidence_quote_excerpt": "these metrics do not register the omission",
+  "excerpt_note": "Short generated insight and a source quote capped at 25 words; scores are blind-judge means, not a gold label."
+}

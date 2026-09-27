@@ -1,0 +1,9 @@
+{
+  "arm": "B",
+  "rank": "worst",
+  "paper_id": "2609.29808",
+  "mean_gemini_judge_score": 2.142857142857143,
+  "insight_excerpt": "The described containment strategy places deterministic controls outside the agent loop, rather than relying solely on model-level safety.",
+  "evidence_quote_excerpt": "out-of-band supervisory control",
+  "excerpt_note": "Short generated insight and a source quote capped at 25 words; scores are blind-judge means, not a gold label."
+}

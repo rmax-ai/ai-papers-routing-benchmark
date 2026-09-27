@@ -1,0 +1,262 @@
+{
+  "unit_cost_basis": "Measured arm attempt cost / papers with at least one arm-stage call. Failed or incomplete papers remain in the denominator because their calls still consume measured tokens and cost; output completion counts are reported separately.",
+  "paper_scales": [
+    1000,
+    10000,
+    100000,
+    1000000
+  ],
+  "funnel_escalation_rates": [
+    0.1,
+    0.25,
+    0.5
+  ],
+  "worker_pools": [
+    1,
+    4,
+    8,
+    16
+  ],
+  "concurrency_model": "Workers process papers independently; each B paper performs Gemini extraction then Luna synthesis serially; mean end-to-end time uses measured per-paper calls including request retries and backoff. Throughput is K / mean end-to-end latency.",
+  "rate_limit_assumptions": "No rate-limit contention, provider queueing, or quota throttling is modeled. Retry/backoff behavior is represented only by this small serial sample; actual limits are provider/account specific and may lower throughput.",
+  "arms": {
+    "A": {
+      "measured_mean_cost_per_escalated_paper_usd": 0.0036387875,
+      "measured_serial_end_to_end_latency_mean_ms": 15331.75,
+      "modeled_escalated_papers": {
+        "1000": {
+          "modeled_cost_usd": 3.6387875,
+          "modeled_serial_hours": 4.258819444444445
+        },
+        "10000": {
+          "modeled_cost_usd": 36.387875,
+          "modeled_serial_hours": 42.58819444444445
+        },
+        "100000": {
+          "modeled_cost_usd": 363.87874999999997,
+          "modeled_serial_hours": 425.88194444444446
+        },
+        "1000000": {
+          "modeled_cost_usd": 3638.7875,
+          "modeled_serial_hours": 4258.819444444444
+        }
+      },
+      "modeled_funnel": [
+        {
+          "incoming_papers": 1000,
+          "escalation_rate": 0.1,
+          "escalated_papers": 100,
+          "modeled_cost_usd": 0.36387875
+        },
+        {
+          "incoming_papers": 1000,
+          "escalation_rate": 0.25,
+          "escalated_papers": 250,
+          "modeled_cost_usd": 0.909696875
+        },
+        {
+          "incoming_papers": 1000,
+          "escalation_rate": 0.5,
+          "escalated_papers": 500,
+          "modeled_cost_usd": 1.81939375
+        },
+        {
+          "incoming_papers": 10000,
+          "escalation_rate": 0.1,
+          "escalated_papers": 1000,
+          "modeled_cost_usd": 3.6387875
+        },
+        {
+          "incoming_papers": 10000,
+          "escalation_rate": 0.25,
+          "escalated_papers": 2500,
+          "modeled_cost_usd": 9.09696875
+        },
+        {
+          "incoming_papers": 10000,
+          "escalation_rate": 0.5,
+          "escalated_papers": 5000,
+          "modeled_cost_usd": 18.1939375
+        },
+        {
+          "incoming_papers": 100000,
+          "escalation_rate": 0.1,
+          "escalated_papers": 10000,
+          "modeled_cost_usd": 36.387875
+        },
+        {
+          "incoming_papers": 100000,
+          "escalation_rate": 0.25,
+          "escalated_papers": 25000,
+          "modeled_cost_usd": 90.96968749999999
+        },
+        {
+          "incoming_papers": 100000,
+          "escalation_rate": 0.5,
+          "escalated_papers": 50000,
+          "modeled_cost_usd": 181.93937499999998
+        },
+        {
+          "incoming_papers": 1000000,
+          "escalation_rate": 0.1,
+          "escalated_papers": 100000,
+          "modeled_cost_usd": 363.87874999999997
+        },
+        {
+          "incoming_papers": 1000000,
+          "escalation_rate": 0.25,
+          "escalated_papers": 250000,
+          "modeled_cost_usd": 909.696875
+        },
+        {
+          "incoming_papers": 1000000,
+          "escalation_rate": 0.5,
+          "escalated_papers": 500000,
+          "modeled_cost_usd": 1819.39375
+        }
+      ],
+      "modeled_worker_pool_throughput": [
+        {
+          "workers_K": 1,
+          "modeled_papers_per_second": 0.06522412640435697,
+          "modeled_papers_per_hour": 234.8068550556851
+        },
+        {
+          "workers_K": 4,
+          "modeled_papers_per_second": 0.2608965056174279,
+          "modeled_papers_per_hour": 939.2274202227404
+        },
+        {
+          "workers_K": 8,
+          "modeled_papers_per_second": 0.5217930112348558,
+          "modeled_papers_per_hour": 1878.4548404454808
+        },
+        {
+          "workers_K": 16,
+          "modeled_papers_per_second": 1.0435860224697115,
+          "modeled_papers_per_hour": 3756.9096808909617
+        }
+      ],
+      "source_status": "modeled from measured per-paper aggregate; values are never measured scale observations"
+    },
+    "B": {
+      "measured_mean_cost_per_escalated_paper_usd": 0.010907025,
+      "measured_serial_end_to_end_latency_mean_ms": 39395.75,
+      "modeled_escalated_papers": {
+        "1000": {
+          "modeled_cost_usd": 10.907025,
+          "modeled_serial_hours": 10.94326388888889
+        },
+        "10000": {
+          "modeled_cost_usd": 109.07025,
+          "modeled_serial_hours": 109.43263888888889
+        },
+        "100000": {
+          "modeled_cost_usd": 1090.7025,
+          "modeled_serial_hours": 1094.326388888889
+        },
+        "1000000": {
+          "modeled_cost_usd": 10907.025000000001,
+          "modeled_serial_hours": 10943.263888888889
+        }
+      },
+      "modeled_funnel": [
+        {
+          "incoming_papers": 1000,
+          "escalation_rate": 0.1,
+          "escalated_papers": 100,
+          "modeled_cost_usd": 1.0907025000000001
+        },
+        {
+          "incoming_papers": 1000,
+          "escalation_rate": 0.25,
+          "escalated_papers": 250,
+          "modeled_cost_usd": 2.72675625
+        },
+        {
+          "incoming_papers": 1000,
+          "escalation_rate": 0.5,
+          "escalated_papers": 500,
+          "modeled_cost_usd": 5.4535125
+        },
+        {
+          "incoming_papers": 10000,
+          "escalation_rate": 0.1,
+          "escalated_papers": 1000,
+          "modeled_cost_usd": 10.907025
+        },
+        {
+          "incoming_papers": 10000,
+          "escalation_rate": 0.25,
+          "escalated_papers": 2500,
+          "modeled_cost_usd": 27.2675625
+        },
+        {
+          "incoming_papers": 10000,
+          "escalation_rate": 0.5,
+          "escalated_papers": 5000,
+          "modeled_cost_usd": 54.535125
+        },
+        {
+          "incoming_papers": 100000,
+          "escalation_rate": 0.1,
+          "escalated_papers": 10000,
+          "modeled_cost_usd": 109.07025
+        },
+        {
+          "incoming_papers": 100000,
+          "escalation_rate": 0.25,
+          "escalated_papers": 25000,
+          "modeled_cost_usd": 272.675625
+        },
+        {
+          "incoming_papers": 100000,
+          "escalation_rate": 0.5,
+          "escalated_papers": 50000,
+          "modeled_cost_usd": 545.35125
+        },
+        {
+          "incoming_papers": 1000000,
+          "escalation_rate": 0.1,
+          "escalated_papers": 100000,
+          "modeled_cost_usd": 1090.7025
+        },
+        {
+          "incoming_papers": 1000000,
+          "escalation_rate": 0.25,
+          "escalated_papers": 250000,
+          "modeled_cost_usd": 2726.7562500000004
+        },
+        {
+          "incoming_papers": 1000000,
+          "escalation_rate": 0.5,
+          "escalated_papers": 500000,
+          "modeled_cost_usd": 5453.512500000001
+        }
+      ],
+      "modeled_worker_pool_throughput": [
+        {
+          "workers_K": 1,
+          "modeled_papers_per_second": 0.02538344872226065,
+          "modeled_papers_per_hour": 91.38041540013835
+        },
+        {
+          "workers_K": 4,
+          "modeled_papers_per_second": 0.1015337948890426,
+          "modeled_papers_per_hour": 365.5216616005534
+        },
+        {
+          "workers_K": 8,
+          "modeled_papers_per_second": 0.2030675897780852,
+          "modeled_papers_per_hour": 731.0433232011068
+        },
+        {
+          "workers_K": 16,
+          "modeled_papers_per_second": 0.4061351795561704,
+          "modeled_papers_per_hour": 1462.0866464022135
+        }
+      ],
+      "source_status": "modeled from measured per-paper aggregate; values are never measured scale observations"
+    }
+  }
+}

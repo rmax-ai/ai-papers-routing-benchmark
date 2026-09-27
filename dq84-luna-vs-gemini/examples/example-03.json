@@ -1,0 +1,9 @@
+{
+  "arm": "B",
+  "rank": "best",
+  "paper_id": "2609.29095",
+  "mean_gemini_judge_score": 3.5714285714285716,
+  "insight_excerpt": "Exactly-once reliability is conditional: model behavior appears strong when immediate read-back resolves uncertainty, while uncertain in-flight or redelivered writes show high duplicate rates.",
+  "evidence_quote_excerpt": "frontier models instructed to act exactly once almost never duplicate a write whose acknowledgement was lost (0.5%)",
+  "excerpt_note": "Short generated insight and a source quote capped at 25 words; scores are blind-judge means, not a gold label."
+}

@@ -1,0 +1,9 @@
+{
+  "arm": "A",
+  "rank": "best (tied)",
+  "paper_id": "2609.29808",
+  "mean_gemini_judge_score": 4,
+  "insight_excerpt": "The evaluated control point is the syscall/runtime boundary, not the agent’s planning quality; the reported tests favor kernel observation over literal string matching for obfuscated payloads.",
+  "evidence_quote_excerpt": "eBPF LSM Probe Detection Accuracy: 100.0% (500 / 500 payloads)",
+  "excerpt_note": "Short generated insight and a source quote capped at 25 words; scores are blind-judge means, not a gold label."
+}

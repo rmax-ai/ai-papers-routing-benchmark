@@ -1,0 +1,398 @@
+{
+  "aggregate": {
+    "arms": {
+      "A": {
+        "papers_with_output": 8,
+        "mean_load_bearing_page_recall": 0.5089285714285714,
+        "mean_reference_claim_recall": {
+          "0.15": 0.5541666666666667,
+          "0.20": 0.4395833333333333,
+          "0.25": 0.24791666666666667
+        },
+        "important_d_claim_misses": 12,
+        "important_d_claims_total": 21,
+        "native_schema_passes": 8,
+        "normalized_schema_passes": 8,
+        "normalized_json_schema_passes": 8,
+        "page_valid_outputs": 8,
+        "citation_ref_count": 97,
+        "page_valid_refs": 97,
+        "cited_page_quote_matches": 78,
+        "any_page_quote_matches": 80,
+        "claims": {
+          "total": 45,
+          "unsupported_or_weak": 6
+        },
+        "insights": {
+          "total": 24,
+          "unsupported_or_weak": 2
+        },
+        "performance": {
+          "papers_attempted": 8,
+          "attempts": 8.0,
+          "input_tokens": 228678.0,
+          "output_tokens": 12485.0,
+          "cached_input_tokens": 0.0,
+          "reasoning_tokens": 0.0,
+          "latency_ms_attempt_sum": 122232.0,
+          "cost_usd": 0.0291103,
+          "end_to_end_latency_ms": 122654.0,
+          "median_end_to_end_latency_ms": 15393.5,
+          "mean_cost_per_paper_usd": 0.0036387875
+        },
+        "important_d_claim_miss_rows": 12
+      },
+      "B": {
+        "papers_with_output": 8,
+        "mean_load_bearing_page_recall": 0.2733630952380952,
+        "mean_reference_claim_recall": {
+          "0.15": 0.7145833333333333,
+          "0.20": 0.6520833333333333,
+          "0.25": 0.6270833333333333
+        },
+        "important_d_claim_misses": 7,
+        "important_d_claims_total": 21,
+        "native_schema_passes": 8,
+        "normalized_schema_passes": 7,
+        "normalized_json_schema_passes": 8,
+        "page_valid_outputs": 8,
+        "citation_ref_count": 78,
+        "page_valid_refs": 78,
+        "cited_page_quote_matches": 51,
+        "any_page_quote_matches": 52,
+        "claims": {
+          "total": 44,
+          "unsupported_or_weak": 19
+        },
+        "insights": {
+          "total": 20,
+          "unsupported_or_weak": 4
+        },
+        "performance": {
+          "papers_attempted": 8,
+          "attempts": 16.0,
+          "input_tokens": 253877.0,
+          "output_tokens": 15163.0,
+          "cached_input_tokens": 0.0,
+          "reasoning_tokens": 838.0,
+          "latency_ms_attempt_sum": 314778.0,
+          "cost_usd": 0.0872562,
+          "end_to_end_latency_ms": 315166.0,
+          "median_end_to_end_latency_ms": 39771.0,
+          "mean_cost_per_paper_usd": 0.010907025
+        },
+        "important_d_claim_miss_rows": 7
+      }
+    },
+    "armB_gemini_packet": {
+      "papers_with_packet": 8,
+      "mean_evidence_ref_page_recall": 0.2305059523809524,
+      "mean_declared_page_recall": 0.7517857142857143,
+      "mean_reference_claim_recall": {
+        "0.15": 0.975,
+        "0.20": 0.975,
+        "0.25": 0.975
+      },
+      "packet_schema_passes": 8,
+      "packet_candidates": 49
+    },
+    "B_stage_performance": {
+      "Gemini_packet": {
+        "papers_attempted": 8,
+        "attempts": 8.0,
+        "input_tokens": 220405.0,
+        "output_tokens": 5103.0,
+        "cached_input_tokens": 0.0,
+        "reasoning_tokens": 838.0,
+        "latency_ms_attempt_sum": 209661.0,
+        "cost_usd": 0.078879,
+        "http_200_attempts": 8.0,
+        "http_failures": 0.0,
+        "transport_failures": 0.0,
+        "transient_retry_attempts": 0.0,
+        "truncation_retry_attempts": 0.0,
+        "mean_cost_per_paper_usd": 0.009859875,
+        "median_attempt_latency_ms": 26479.5
+      },
+      "Luna_final": {
+        "papers_attempted": 8,
+        "attempts": 8.0,
+        "input_tokens": 33472.0,
+        "output_tokens": 10060.0,
+        "cached_input_tokens": 0.0,
+        "reasoning_tokens": 0.0,
+        "latency_ms_attempt_sum": 105117.0,
+        "cost_usd": 0.0083772,
+        "http_200_attempts": 8.0,
+        "http_failures": 0.0,
+        "transport_failures": 0.0,
+        "transient_retry_attempts": 0.0,
+        "truncation_retry_attempts": 0.0,
+        "mean_cost_per_paper_usd": 0.00104715,
+        "median_attempt_latency_ms": 13027.0
+      }
+    }
+  },
+  "judges": {
+    "mean_scores": {
+      "gemini": {
+        "A": {
+          "faithfulness": {
+            "mean_0_to_4": 4,
+            "n": 7
+          },
+          "evidence_support": {
+            "mean_0_to_4": 4,
+            "n": 7
+          },
+          "insight_depth": {
+            "mean_0_to_4": 4,
+            "n": 7
+          },
+          "systems_relevance": {
+            "mean_0_to_4": 4,
+            "n": 7
+          },
+          "actionability": {
+            "mean_0_to_4": 4,
+            "n": 7
+          },
+          "compression_information_density": {
+            "mean_0_to_4": 4,
+            "n": 7
+          },
+          "durable_memory_precision_proxy": {
+            "mean_0_to_4": 4,
+            "n": 7
+          }
+        },
+        "B": {
+          "faithfulness": {
+            "mean_0_to_4": 3.2857142857142856,
+            "n": 7
+          },
+          "evidence_support": {
+            "mean_0_to_4": 2.7142857142857144,
+            "n": 7
+          },
+          "insight_depth": {
+            "mean_0_to_4": 2.7142857142857144,
+            "n": 7
+          },
+          "systems_relevance": {
+            "mean_0_to_4": 3.4285714285714284,
+            "n": 7
+          },
+          "actionability": {
+            "mean_0_to_4": 2.857142857142857,
+            "n": 7
+          },
+          "compression_information_density": {
+            "mean_0_to_4": 2.857142857142857,
+            "n": 7
+          },
+          "durable_memory_precision_proxy": {
+            "mean_0_to_4": 3,
+            "n": 7
+          }
+        }
+      },
+      "deepseek": {
+        "A": {
+          "faithfulness": {
+            "mean_0_to_4": null,
+            "n": 0
+          },
+          "evidence_support": {
+            "mean_0_to_4": null,
+            "n": 0
+          },
+          "insight_depth": {
+            "mean_0_to_4": null,
+            "n": 0
+          },
+          "systems_relevance": {
+            "mean_0_to_4": null,
+            "n": 0
+          },
+          "actionability": {
+            "mean_0_to_4": null,
+            "n": 0
+          },
+          "compression_information_density": {
+            "mean_0_to_4": null,
+            "n": 0
+          },
+          "durable_memory_precision_proxy": {
+            "mean_0_to_4": null,
+            "n": 0
+          }
+        },
+        "B": {
+          "faithfulness": {
+            "mean_0_to_4": null,
+            "n": 0
+          },
+          "evidence_support": {
+            "mean_0_to_4": null,
+            "n": 0
+          },
+          "insight_depth": {
+            "mean_0_to_4": null,
+            "n": 0
+          },
+          "systems_relevance": {
+            "mean_0_to_4": null,
+            "n": 0
+          },
+          "actionability": {
+            "mean_0_to_4": null,
+            "n": 0
+          },
+          "compression_information_density": {
+            "mean_0_to_4": null,
+            "n": 0
+          },
+          "durable_memory_precision_proxy": {
+            "mean_0_to_4": null,
+            "n": 0
+          }
+        }
+      }
+    },
+    "format_reliability": {
+      "gemini": {
+        "calls": 8,
+        "schema_pass": 0,
+        "parse_failures": 0
+      },
+      "deepseek": {
+        "calls": 2,
+        "schema_pass": 0,
+        "parse_failures": 1
+      }
+    },
+    "cell_details": [
+      {
+        "paper_id": "2609.29808",
+        "provider": "gemini",
+        "strict_schema_pass": false,
+        "strict_schema_issues": [
+          "scores must be an array"
+        ],
+        "dq79_numeric_score_normalization_issue": null,
+        "normalized_candidate_score_count": 2
+      },
+      {
+        "paper_id": "2609.29808",
+        "provider": "deepseek",
+        "strict_schema_pass": false,
+        "strict_schema_issues": [
+          "scores must be an array"
+        ],
+        "dq79_numeric_score_normalization_issue": "non_object_output",
+        "normalized_candidate_score_count": 0
+      },
+      {
+        "paper_id": "2609.29095",
+        "provider": "gemini",
+        "strict_schema_pass": false,
+        "strict_schema_issues": [
+          "A.brief_reason must be a nonempty string",
+          "B.brief_reason must be a nonempty string"
+        ],
+        "dq79_numeric_score_normalization_issue": null,
+        "normalized_candidate_score_count": 2
+      },
+      {
+        "paper_id": "2609.29095",
+        "provider": "deepseek",
+        "strict_schema_pass": false,
+        "strict_schema_issues": [
+          "scores must be an array"
+        ],
+        "dq79_numeric_score_normalization_issue": null,
+        "normalized_candidate_score_count": 2
+      },
+      {
+        "paper_id": "2609.28614",
+        "provider": "gemini",
+        "strict_schema_pass": false,
+        "strict_schema_issues": [
+          "scores must be an array"
+        ],
+        "dq79_numeric_score_normalization_issue": null,
+        "normalized_candidate_score_count": 2
+      },
+      {
+        "paper_id": "2609.30217",
+        "provider": "gemini",
+        "strict_schema_pass": false,
+        "strict_schema_issues": [
+          "A.brief_reason must be a nonempty string",
+          "B.brief_reason must be a nonempty string"
+        ],
+        "dq79_numeric_score_normalization_issue": null,
+        "normalized_candidate_score_count": 2
+      },
+      {
+        "paper_id": "2609.28585",
+        "provider": "gemini",
+        "strict_schema_pass": false,
+        "strict_schema_issues": [
+          "scores must be an array"
+        ],
+        "dq79_numeric_score_normalization_issue": "no_candidate_dimension_scores",
+        "normalized_candidate_score_count": 0
+      },
+      {
+        "paper_id": "2609.28586",
+        "provider": "gemini",
+        "strict_schema_pass": false,
+        "strict_schema_issues": [
+          "A.brief_reason must be a nonempty string",
+          "B.brief_reason must be a nonempty string"
+        ],
+        "dq79_numeric_score_normalization_issue": null,
+        "normalized_candidate_score_count": 2
+      },
+      {
+        "paper_id": "2609.27263",
+        "provider": "gemini",
+        "strict_schema_pass": false,
+        "strict_schema_issues": [
+          "A.brief_reason must be a nonempty string",
+          "B.brief_reason must be a nonempty string"
+        ],
+        "dq79_numeric_score_normalization_issue": null,
+        "normalized_candidate_score_count": 2
+      },
+      {
+        "paper_id": "2609.24122",
+        "provider": "gemini",
+        "strict_schema_pass": false,
+        "strict_schema_issues": [
+          "A.brief_reason must be a nonempty string",
+          "B.brief_reason must be a nonempty string"
+        ],
+        "dq79_numeric_score_normalization_issue": null,
+        "normalized_candidate_score_count": 2
+      }
+    ],
+    "normalization_method": "DQ79 l3_metrics.normalized_judge_scores; alternate A/B or evaluation shapes are deterministically mapped, and only numeric 0..4 values are scored. Preference/winner prose is never translated.",
+    "deepseek_second_judge_used": false,
+    "deepseek_second_judge_reason": "not used for quality means: fewer than two strict schema-compliant paired judge cells; all attempts remain in raw/judge-results.json",
+    "uncertainty_calibration": "N/A: no confidence/outcome series"
+  },
+  "arm_status": {
+    "A": "complete",
+    "B": "complete"
+  },
+  "judge_status": "complete",
+  "definitions": {
+    "claim_recall_operationalization": "D candidate_claims are references; candidates are deduplicated paper.key_claims[].claim + paper.evidence[].claim; match is maximum content-word Jaccard with DQ79 fixed stopwords, threshold 0.20 primary, sensitivity 0.15/0.25.",
+    "citation_proxy_definition": "In-range integer page and quote containment after case/whitespace normalization on cited page or any page; lexical resolvability proxies, not semantic entailment.",
+    "support_rate_definition": "Support-rate claim units are key_claims and evidence items counted separately, without deduplication; insight items are counted separately. A claim or insight is unsupported/weak if it has no refs, or if none of its refs has both an in-range integer page and a nonempty quote contained on that cited page.",
+    "page_recall_definition": "Union of canonical output evidence_refs[].page across key claims, evidence, and insights intersected with D load_bearing_pages; denominator is D load_bearing_pages count."
+  }
+}

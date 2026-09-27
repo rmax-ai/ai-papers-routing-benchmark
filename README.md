@@ -33,6 +33,10 @@ The seven measured pipeline cells had these direct inference costs for eight pap
 
 The L1 judge line was JEV at P(relevant) ≥0.70: precision **0.857** and recall **1.000** on the purposive proxy labels.
 
+## Follow-up benchmark (DQ84)
+
+[rmax-ai/delegation-queue#84](https://github.com/rmax-ai/delegation-queue/issues/84) asked whether a separate Gemini Flash-Lite evidence-extraction stage earns its keep over giving the same full text directly to GPT-6 Luna in one pass. The run reused this benchmark's eight-paper subset, reference claims/pages, canonical schema, deterministic checks, and rate card (input compatibility verified byte-for-byte), at a measured spend of $0.188291. One-pass Luna was ~3x cheaper per paper ($0.0036 vs $0.0109) and led on load-bearing-page recall (0.509 vs 0.273), cited-quote containment (0.804 vs 0.654), unsupported-claim rate (13% vs 43%), and blind-judge dimensions; the two-stage arm's only gain was lexical claim overlap against the (Gemini-generated) reference, partially lost at the packet-to-synthesis hand-off. The evidence does not establish that the extra stage earns its added cost and latency. Full subtree, report, and caveats: [`dq84-luna-vs-gemini/`](dq84-luna-vs-gemini/README.md).
+
 ## Caveats
 
 1. The sample is purposive: 24 papers, with 12/8/4 strata, not a random sample; labels are proxies, not gold.
@@ -50,6 +54,7 @@ report/          terminal report, synthesis comment, and generated tables
 artifacts/       metric, cost, failure, and representative-output indexes
 raw/             sanitized frozen evidence mirror, including 300 response records
 checksums/       checksums and manifest for this public tree
+dq84-luna-vs-gemini/  follow-up benchmark: one-pass GPT-6 Luna vs Gemini evidence extraction (DQ84)
 ```
 
 ## Reproduction

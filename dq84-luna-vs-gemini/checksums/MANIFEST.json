@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-09-27T08:32:28Z",
+  "file_count": 21,
+  "total_bytes": 255430,
+  "files": [
+    {
+      "path": "dq84-luna-vs-gemini/README.md",
+      "bytes": 3982,
+      "sha256": "0305741f678cb2d07a30cc820e4e72246225b846b743d39c1ac695b992b14b9c"
+    },
+    {
+      "path": "dq84-luna-vs-gemini/comparison-table.md",
+      "bytes": 859,
+      "sha256": "50e34bf6d45256f1fc60551f725c5774368ec886609b9ac13691a252739ef538"
+    },
+    {
+      "path": "dq84-luna-vs-gemini/examples/example-01.json",
+      "bytes": 547,
+      "sha256": "3efda5546d82aeae505c09ec82171a7f16c0e5faf60199da9fda4a1d4644fa46"
+    },
+    {
+      "path": "dq84-luna-vs-gemini/examples/example-02.json",
+      "bytes": 501,
+      "sha256": "2bf16fe988037fb6414c7b01450e35006aa85068be324813642a649db01ce2a6"
+    },
+    {
+      "path": "dq84-luna-vs-gemini/examples/example-03.json",
+      "bytes": 608,
+      "sha256": "36ecca4e74e160760c0933262673875f78743d01bb27f2f4c952ada9d8d0c67f"
+    },
+    {
+      "path": "dq84-luna-vs-gemini/examples/example-04.json",
+      "bytes": 470,
+      "sha256": "e10ad475ec60bde5b7a1de666a8f86e3f3c82e513680bec654b9ff93aa8d69e6"
+    },
+    {
+      "path": "dq84-luna-vs-gemini/findings.md",
+      "bytes": 580,
+      "sha256": "75b616a8b070617178163fcbde24f66700e2db07f67b8ebcba29def936fcee0c"
+    },
+    {
+      "path": "dq84-luna-vs-gemini/harness/analyze.py",
+      "bytes": 103753,
+      "sha256": "fd1b6285be46c156ffff8a69a40288a6d5e4d6312dc62525b88761e8aec8724a"
+    },
+    {
+      "path": "dq84-luna-vs-gemini/harness/bench.py",
+      "bytes": 60115,
+      "sha256": "7d55d1414c056dfef8af7a1ef8c680814178a7ab4b9e1747e66582cd516fb76c"
+    },
+    {
+      "path": "dq84-luna-vs-gemini/harness/run-providers.sh",
+      "bytes": 351,
+      "sha256": "fa1e5c6cb5938f51c7515a6099c045b74a7d17980c2de50c39a90e7a2d7b63bb"
+    },
+    {
+      "path": "dq84-luna-vs-gemini/metrics/aggregate.csv",
+      "bytes": 602,
+      "sha256": "8ecf0a5a5f1766e28380f61f82a82583afcca8c393324589f6e5b22df9eb17b7"
+    },
+    {
+      "path": "dq84-luna-vs-gemini/metrics/aggregate.json",
+      "bytes": 12637,
+      "sha256": "9bc58010b3a1ae0f4df96d315905230d901108637b54a4d1cfb73bbd55f03335"
+    },
+    {
+      "path": "dq84-luna-vs-gemini/metrics/per-paper.csv",
+      "bytes": 3382,
+      "sha256": "5f8d5a6733cbb2c17b7b2ba957ca7ada3832d2c04316e6eca93bb5bfc19a7af2"
+    },
+    {
+      "path": "dq84-luna-vs-gemini/metrics/per-paper.json",
+      "bytes": 13290,
+      "sha256": "7b2620601de8acde93d7c1a6535dedbbea151568420b44e25eeb486b88a0f5d1"
+    },
+    {
+      "path": "dq84-luna-vs-gemini/prompts/SHA256SUMS.txt",
+      "bytes": 336,
+      "sha256": "4bc5a0cbc3a0ba77688e1614c7a204bd1c1dbde5a74d03e657c320b7bf6ac5b4"
+    },
+    {
+      "path": "dq84-luna-vs-gemini/prompts/armA-luna.md",
+      "bytes": 1342,
+      "sha256": "4a89a70dc8ad815b915880261c36f076de001f5927d792f8615798db9b781b6e"
+    },
+    {
+      "path": "dq84-luna-vs-gemini/prompts/armB-luna.md",
+      "bytes": 1378,
+      "sha256": "040418e251830214a95a61c4c4447ea35c0ffa5de86e61b3681821616e5dadce"
+    },
+    {
+      "path": "dq84-luna-vs-gemini/prompts/canonical-output-schema.json",
+      "bytes": 5540,
+      "sha256": "b8421c285acaa61cd4ea76a4605c25768090e0d5292d5bec49c4e4e9ec65fa0f"
+    },
+    {
+      "path": "dq84-luna-vs-gemini/prompts/gemini-packet.md",
+      "bytes": 1436,
+      "sha256": "181faa44b7f140126b6b6f01244cdb234477c95521e38173431d186385d2f495"
+    },
+    {
+      "path": "dq84-luna-vs-gemini/report.md",
+      "bytes": 35562,
+      "sha256": "1ccd1a0f3d4d188e47b6330e459b8e65d537bfafa3da651691f82035ae4d2095"
+    },
+    {
+      "path": "dq84-luna-vs-gemini/scale-model.json",
+      "bytes": 8159,
+      "sha256": "1894d4b559e2e6b9b9f3ec124a31cb3656d9c992be62321ce662558132833c2c"
+    }
+  ]
+}

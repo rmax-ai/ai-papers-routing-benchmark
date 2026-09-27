@@ -1,0 +1,4 @@
+| Architecture | Evidence recall | Citation validity | Schema reliability | Insight quality | Cost/paper | Latency/paper | Operational complexity |
+|---|---|---|---|---|---:|---|---|
+| One-pass GPT-6 Luna | LB pages 0.509; D claims@.20 0.440 | page-valid 1.000; cited quote 0.804 | native 8/8; normalized 8/8 | faithfulness 4.000 (n=7); evidence support 4.000 (n=7); insight depth 4.000 (n=7) | $0.003639 | median 15.4s; mean 15.3s | 1 model call/paper; one vendor; schema + evidence guard |
+| Gemini packet → GPT-6 Luna | LB pages 0.273; D claims@.20 0.652 | page-valid 1.000; cited quote 0.654 | native 8/8; normalized 7/8 | faithfulness 3.286 (n=7); evidence support 2.714 (n=7); insight depth 2.714 (n=7) | $0.010907 | median 39.8s; mean 39.4s | 2 serial model stages/paper; cross-provider hand-off + packet validation + two provider failure surfaces |
